@@ -26,7 +26,8 @@ var is_dashing = false
 
 @export var player_number: int = 1
 
-@onready var anim = $AnimationPlayer
+#@onready var anim = $AnimationPlayer
+@onready var sprite = $Sprite2D2
 
 # ── READY ────────────────────────────────────────────────────────
 func _ready():
@@ -179,11 +180,12 @@ func update_hud():
 
 # ── ANIMATIONS ───────────────────────────────────────────────────
 func update_animation():
-	if is_attacking:
-		return
-	if not is_on_floor():
-		anim.play("jump" if velocity.y < 0 else "fall")
-	elif abs(velocity.x) > 10:
-		anim.play("run")
-	else:
-		anim.play("idle")
+	pass
+#	if is_attacking:
+#		return
+#	if not is_on_floor():
+#		anim.play("jump" if velocity.y < 0 else "fall")
+#	elif abs(velocity.x) > 10:
+#		anim.play("run")
+#	else:
+#		anim.play("idle")

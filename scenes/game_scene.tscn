@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cvpoakggmg31i" path="res://scenes/player.tscn" id="1_w5aja"]
 [ext_resource type="Script" uid="uid://dnprcxqaypmx5" path="res://scripts/player.gd" id="2_bw6k5"]
 [ext_resource type="Script" uid="uid://cgn1behbhvis2" path="res://scripts/camera_2d.gd" id="2_onqr8"]
+[ext_resource type="Texture2D" uid="uid://dlpik3tc0q74w" path="res://assets/sprites/math_prof.png" id="3_y3j0m"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxttp"]
@@ -81,15 +82,12 @@ position = Vector2(1, 121)
 
 [node name="Player" parent="." unique_id=2041489519 instance=ExtResource("1_w5aja")]
 modulate = Color(1, 0.023529412, 0.43529412, 1)
-position = Vector2(-314, -54)
+position = Vector2(316, -67)
 script = ExtResource("2_bw6k5")
 
-[node name="ColorRect" type="ColorRect" parent="Player" unique_id=1310366443]
-offset_left = -20.0
-offset_top = -30.0
-offset_right = 20.0
-offset_bottom = 30.0
-color = Color(0.03137255, 1, 1, 1)
+[node name="Sprite2D2" type="Sprite2D" parent="Player" unique_id=1469636812]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_y3j0m")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=938563523]
 position_smoothing_enabled = true
