@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://b6cjd3dxelqol"]
+
+[ext_resource type="PackedScene" uid="uid://cvpoakggmg31i" path="res://scenes/player.tscn" id="1_w5aja"]
+[ext_resource type="Script" uid="uid://cgn1behbhvis2" path="res://scripts/camera_2d.gd" id="2_onqr8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxttp"]
+size = Vector2(800, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5aja"]
+size = Vector2(248, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onqr8"]
+size = Vector2(207, 23)
+
+[node name="GameScene" type="Node2D" unique_id=2052335995]
+
+[node name="MainPlatform" type="StaticBody2D" parent="." unique_id=1955787088]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainPlatform" unique_id=886279966]
+shape = SubResource("RectangleShape2D_lxttp")
+
+[node name="ColorRect" type="ColorRect" parent="MainPlatform" unique_id=1650927269]
+offset_left = -400.0
+offset_top = -15.0
+offset_right = 400.0
+offset_bottom = 15.0
+color = Color(0.3681531, 0.6803558, 0.81999964, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1218308093]
+position = Vector2(-257, -156)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1429665911]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_w5aja")
+one_way_collision = true
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1833689943]
+offset_left = -100.0
+offset_top = -10.0
+offset_right = 148.0
+offset_bottom = 10.0
+color = Color(0.16470589, 1, 1, 1)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1398671965]
+position = Vector2(206, -156)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1411144233]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_onqr8")
+one_way_collision = true
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2" unique_id=1361922730]
+offset_left = -103.0
+offset_top = -12.0
+offset_right = 104.0
+offset_bottom = 11.0
+color = Color(0.5058824, 1, 0.16078432, 1)
+
+[node name="BlastzoneLeft" type="Area2D" parent="." unique_id=1329137969]
+position = Vector2(-539, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlastzoneLeft" unique_id=2103033705]
+
+[node name="BlastzoneRight" type="Area2D" parent="." unique_id=1065344018]
+position = Vector2(532, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlastzoneRight" unique_id=445339068]
+
+[node name="BlastzoneTop" type="Area2D" parent="." unique_id=58953580]
+position = Vector2(1, -267)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlastzoneTop" unique_id=317195787]
+
+[node name="BlastzoneBottom" type="Area2D" parent="." unique_id=1798537245]
+position = Vector2(1, 121)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlastzoneBottom" unique_id=2101419461]
+
+[node name="Player" parent="." unique_id=2041489519 instance=ExtResource("1_w5aja")]
+modulate = Color(1, 0.023529412, 0.43529412, 1)
+position = Vector2(-314, -54)
+
+[node name="ColorRect" type="ColorRect" parent="Player" unique_id=1310366443]
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 20.0
+offset_bottom = 30.0
+color = Color(0.03137255, 1, 1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=938563523]
+position_smoothing_enabled = true
+script = ExtResource("2_onqr8")
