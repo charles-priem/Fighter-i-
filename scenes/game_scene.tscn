@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://b6cjd3dxelqol"]
 
 [ext_resource type="PackedScene" uid="uid://cvpoakggmg31i" path="res://scenes/player.tscn" id="1_w5aja"]
+[ext_resource type="Script" uid="uid://dnprcxqaypmx5" path="res://scripts/player.gd" id="2_bw6k5"]
 [ext_resource type="Script" uid="uid://cgn1behbhvis2" path="res://scripts/camera_2d.gd" id="2_onqr8"]
+[ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxttp"]
 size = Vector2(800, 30)
@@ -15,6 +17,7 @@ size = Vector2(207, 23)
 [node name="GameScene" type="Node2D" unique_id=2052335995]
 
 [node name="MainPlatform" type="StaticBody2D" parent="." unique_id=1955787088]
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainPlatform" unique_id=886279966]
 shape = SubResource("RectangleShape2D_lxttp")
@@ -79,6 +82,7 @@ position = Vector2(1, 121)
 [node name="Player" parent="." unique_id=2041489519 instance=ExtResource("1_w5aja")]
 modulate = Color(1, 0.023529412, 0.43529412, 1)
 position = Vector2(-314, -54)
+script = ExtResource("2_bw6k5")
 
 [node name="ColorRect" type="ColorRect" parent="Player" unique_id=1310366443]
 offset_left = -20.0
@@ -90,3 +94,44 @@ color = Color(0.03137255, 1, 1, 1)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=938563523]
 position_smoothing_enabled = true
 script = ExtResource("2_onqr8")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1984876097]
+
+[node name="PlayerPanel" type="Control" parent="HUD" unique_id=201749791]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_ycayy")
+
+[node name="Player1" type="Label" parent="HUD/PlayerPanel" unique_id=1980441701]
+layout_mode = 0
+offset_left = -348.0
+offset_top = -324.0
+offset_right = -283.0
+offset_bottom = -301.0
+text = "Joueur 1"
+
+[node name="P1Percent" type="Label" parent="HUD/PlayerPanel" unique_id=2049811477]
+layout_mode = 0
+offset_left = -345.0
+offset_top = -298.0
+offset_right = -305.0
+offset_bottom = -275.0
+text = "0%"
+
+[node name="Player2" type="Label" parent="HUD/PlayerPanel" unique_id=1922368111]
+layout_mode = 0
+offset_left = 219.0
+offset_top = -317.0
+offset_right = 284.0
+offset_bottom = -294.0
+text = "Joueur 2"
+
+[node name="P2Percent" type="Label" parent="HUD/PlayerPanel" unique_id=2063939086]
+layout_mode = 0
+offset_left = 223.0
+offset_top = -287.0
+offset_right = 263.0
+offset_bottom = -264.0
+text = "0%"

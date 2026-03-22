@@ -43,6 +43,10 @@ _data = {
 &"smash": SubResource("Animation_fjrip")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 15.0
+height = 60.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
 height = 60.0
 
@@ -52,6 +56,7 @@ height = 60.0
 libraries/ = SubResource("AnimationLibrary_smehm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
+shape = SubResource("CapsuleShape2D_3vyb7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=951743100]
 

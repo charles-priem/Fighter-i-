@@ -66,7 +66,7 @@ func _process(_delta):
 func handle_jump():
 	var action = "p" + str(player_number) + "_jump"
 	if Input.is_action_just_pressed(action) and jumps_remaining > 0:
-		velocity.y = -JUMP_VELOCITY
+		velocity.y = JUMP_VELOCITY
 		jumps_remaining -= 1
 
 # ── MOUVEMENT HORIZONTAL ─────────────────────────────────────────
@@ -94,26 +94,26 @@ func handle_attack():
 
 func do_ground_attack():
 	is_attacking = true
-	$Hitbox.monitoring = true
+#	$Hitbox.monitoring = true
 	await get_tree().create_timer(0.15).timeout
-	$Hitbox.monitoring = false
+#	$Hitbox.monitoring = false
 	await get_tree().create_timer(0.20).timeout
 	is_attacking = false
 
 func do_air_attack():
 	is_attacking = true
-	$Hitbox.monitoring = true
+#	$Hitbox.monitoring = true
 	await get_tree().create_timer(0.12).timeout
-	$Hitbox.monitoring = false
+#	$Hitbox.monitoring = false
 	await get_tree().create_timer(0.15).timeout
 	is_attacking = false
 
 func do_smash_attack():
 	is_attacking = true
 	await get_tree().create_timer(0.12).timeout
-	$Hitbox.monitoring = true
+#	$Hitbox.monitoring = true
 	await get_tree().create_timer(0.25).timeout
-	$Hitbox.monitoring = false
+#	$Hitbox.monitoring = false
 	await get_tree().create_timer(0.35).timeout
 	is_attacking = false
 
@@ -157,6 +157,9 @@ func take_hit(damage: float, knockback_x: float, knockback_y: float,
 # ── MORT / RÉAPPARITION ──────────────────────────────────────────
 func die():
 	stocks -= 1
+	var hud = get_tree ().root. get_node("GameScene/HUD")
+	if hud:
+		hud.update_percent(player_number, damage_percent)
 	if stocks <= 0:
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	else:
