@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://b6cjd3dxelqol"]
 
+[ext_resource type="Texture2D" uid="uid://dyuc7ub53c47y" path="res://assets/sprites/platform.png" id="1_rurhu"]
 [ext_resource type="PackedScene" uid="uid://cvpoakggmg31i" path="res://scenes/player.tscn" id="1_w5aja"]
-[ext_resource type="Script" uid="uid://dnprcxqaypmx5" path="res://scripts/player.gd" id="2_bw6k5"]
 [ext_resource type="Script" uid="uid://cgn1behbhvis2" path="res://scripts/camera_2d.gd" id="2_onqr8"]
-[ext_resource type="Texture2D" uid="uid://dlpik3tc0q74w" path="res://assets/sprites/math_prof.png" id="3_y3j0m"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
+[ext_resource type="Texture2D" uid="uid://br2yrmdmk8faq" path="res://assets/sprites/mathprof.png" id="4_kk2rg"]
+[ext_resource type="Script" uid="uid://bn4v75flwdudd" path="res://scripts/ElYaagoubi.gd" id="6_mwyo0"]
+[ext_resource type="Texture2D" uid="uid://btcdxcxed85ko" path="res://assets/sprites/bg2.jpg" id="7_kk2rg"]
+[ext_resource type="Script" uid="uid://d3g6uol51pi4d" path="res://scripts/Dubois.gd" id="8_77hjl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxttp"]
 size = Vector2(800, 30)
@@ -23,12 +26,8 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainPlatform" unique_id=886279966]
 shape = SubResource("RectangleShape2D_lxttp")
 
-[node name="ColorRect" type="ColorRect" parent="MainPlatform" unique_id=1650927269]
-offset_left = -400.0
-offset_top = -15.0
-offset_right = 400.0
-offset_bottom = 15.0
-color = Color(0.3681531, 0.6803558, 0.81999964, 1)
+[node name="Sprite2D" type="Sprite2D" parent="MainPlatform" unique_id=1202237861]
+texture = ExtResource("1_rurhu")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1218308093]
 position = Vector2(-257, -156)
@@ -80,16 +79,28 @@ position = Vector2(1, 121)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlastzoneBottom" unique_id=2101419461]
 
-[node name="Player" parent="." unique_id=2041489519 instance=ExtResource("1_w5aja")]
+[node name="El Yaagoubi" parent="." unique_id=833932191 instance=ExtResource("1_w5aja")]
 modulate = Color(1, 0.023529412, 0.43529412, 1)
-position = Vector2(316, -67)
-script = ExtResource("2_bw6k5")
+position = Vector2(-351, -51)
+script = ExtResource("6_mwyo0")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Player" unique_id=1469636812]
+[node name="Sprite2D2" type="Sprite2D" parent="El Yaagoubi" unique_id=728737708]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("3_y3j0m")
+texture = ExtResource("4_kk2rg")
+
+[node name="Dubois" parent="." unique_id=1493220019 instance=ExtResource("1_w5aja")]
+modulate = Color(1, 0.023529412, 0.43529412, 1)
+position = Vector2(319, -50)
+script = ExtResource("8_77hjl")
+player_number = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="Dubois" unique_id=980078084]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_kk2rg")
+flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=938563523]
+position = Vector2(-4, -161)
 position_smoothing_enabled = true
 script = ExtResource("2_onqr8")
 
@@ -133,3 +144,9 @@ offset_top = -287.0
 offset_right = 263.0
 offset_bottom = -264.0
 text = "0%"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1750403046]
+z_index = -1
+position = Vector2(-3.500019, -161)
+scale = Vector2(0.5953124, 0.49687496)
+texture = ExtResource("7_kk2rg")

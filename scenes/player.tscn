@@ -62,5 +62,5 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 
 [node name="Hitbox" type="Area2D" parent="Sprite2D" unique_id=1372043165]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=1376289205]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Hitbox" unique_id=1376289205]
 shape = SubResource("CapsuleShape2D_u8vuu")
