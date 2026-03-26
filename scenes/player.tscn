@@ -1,46 +1,16 @@
 [gd_scene format=3 uid="uid://cvpoakggmg31i"]
 
-[sub_resource type="Animation" id="Animation_u8vuu"]
-resource_name = "air_attack"
-length = 0.3
-
-[sub_resource type="Animation" id="Animation_3vyb7"]
-resource_name = "attack"
-length = 0.35
-
-[sub_resource type="Animation" id="Animation_g2els"]
-resource_name = "fall"
-length = 0.3
-
-[sub_resource type="Animation" id="Animation_qhqgy"]
-resource_name = "hit"
-length = 0.3
-
 [sub_resource type="Animation" id="Animation_dqkch"]
 resource_name = "idle"
-
-[sub_resource type="Animation" id="Animation_qlg0r"]
-resource_name = "jump"
-length = 0.3
 
 [sub_resource type="Animation" id="Animation_tuyoq"]
 resource_name = "run"
 length = 0.5
 
-[sub_resource type="Animation" id="Animation_fjrip"]
-resource_name = "smash"
-length = 0.6
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_smehm"]
 _data = {
-&"air_attack": SubResource("Animation_u8vuu"),
-&"attack": SubResource("Animation_3vyb7"),
-&"fall": SubResource("Animation_g2els"),
-&"hit": SubResource("Animation_qhqgy"),
 &"idle": SubResource("Animation_dqkch"),
-&"jump": SubResource("Animation_qlg0r"),
-&"run": SubResource("Animation_tuyoq"),
-&"smash": SubResource("Animation_fjrip")
+&"run": SubResource("Animation_tuyoq")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]

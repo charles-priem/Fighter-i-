@@ -20,12 +20,12 @@ var facing_right     : bool  = true
 
 @export var player_number: int = 1
 
-@onready var sprite = $Sprite2D2
+@onready var sprite = $AnimatedSprite2D
 
 # READY 
 func _ready():
 	add_to_group("players")
-	sprite.modulate = character_color
+	#sprite.modulate = character_color
 
 # BOUCLE PHYSIQUE 
 func _physics_process(delta):

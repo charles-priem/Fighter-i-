@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cvpoakggmg31i" path="res://scenes/player.tscn" id="1_w5aja"]
 [ext_resource type="Script" uid="uid://cgn1behbhvis2" path="res://scripts/camera_2d.gd" id="2_onqr8"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
-[ext_resource type="Texture2D" uid="uid://br2yrmdmk8faq" path="res://assets/sprites/mathprof.png" id="4_kk2rg"]
+[ext_resource type="Texture2D" uid="uid://bgb68pv7ixas8" path="res://assets/aze-idle.png" id="4_mw25s"]
+[ext_resource type="Texture2D" uid="uid://cqxlijtoe32kx" path="res://assets/shared image.png" id="4_utbpp"]
 [ext_resource type="Script" uid="uid://bn4v75flwdudd" path="res://scripts/ElYaagoubi.gd" id="6_mwyo0"]
 [ext_resource type="Texture2D" uid="uid://btcdxcxed85ko" path="res://assets/sprites/bg2.jpg" id="7_kk2rg"]
 [ext_resource type="Script" uid="uid://d3g6uol51pi4d" path="res://scripts/Dubois.gd" id="8_77hjl"]
@@ -17,6 +18,94 @@ size = Vector2(248, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onqr8"]
 size = Vector2(207, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77hjl"]
+atlas = ExtResource("4_mw25s")
+region = Rect2(0, 0, 261, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw25s"]
+atlas = ExtResource("4_utbpp")
+region = Rect2(0, 0, 268, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcjrq"]
+atlas = ExtResource("4_utbpp")
+region = Rect2(268, 0, 268, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvs2r"]
+atlas = ExtResource("4_utbpp")
+region = Rect2(536, 0, 268, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqxxy"]
+atlas = ExtResource("4_utbpp")
+region = Rect2(804, 0, 268, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ay1a"]
+atlas = ExtResource("4_utbpp")
+region = Rect2(0, 253, 268, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldkr4"]
+atlas = ExtResource("4_utbpp")
+region = Rect2(268, 253, 268, 253)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liy57"]
+atlas = ExtResource("4_utbpp")
+region = Rect2(522, 259, 261, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwyo0"]
+atlas = ExtResource("4_utbpp")
+region = Rect2(783, 259, 261, 259)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s76x2"]
+atlas = ExtResource("4_utbpp")
+region = Rect2(0, 518, 261, 259)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_77hjl"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77hjl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mw25s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcjrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvs2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqxxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ay1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldkr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liy57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwyo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s76x2")
+}],
+"loop": true,
+"name": &"run",
+"speed": 25.0
+}]
 
 [node name="GameScene" type="Node2D" unique_id=2052335995]
 
@@ -83,10 +172,12 @@ position = Vector2(1, 121)
 modulate = Color(1, 0.023529412, 0.43529412, 1)
 position = Vector2(-351, -51)
 script = ExtResource("6_mwyo0")
+max_jumps = 3
 
-[node name="Sprite2D2" type="Sprite2D" parent="El Yaagoubi" unique_id=728737708]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_kk2rg")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="El Yaagoubi" unique_id=959956157]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_77hjl")
+animation = &"idle"
 
 [node name="Dubois" parent="." unique_id=1493220019 instance=ExtResource("1_w5aja")]
 modulate = Color(1, 0.023529412, 0.43529412, 1)
@@ -94,9 +185,11 @@ position = Vector2(319, -50)
 script = ExtResource("8_77hjl")
 player_number = 2
 
-[node name="Sprite2D2" type="Sprite2D" parent="Dubois" unique_id=980078084]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_kk2rg")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dubois" unique_id=1527996360]
+position = Vector2(-1, -2)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_77hjl")
+animation = &"idle"
 flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=938563523]
@@ -147,6 +240,6 @@ text = "0%"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1750403046]
 z_index = -1
-position = Vector2(-3.500019, -161)
-scale = Vector2(0.5953124, 0.49687496)
+position = Vector2(474.0002, -268)
+scale = Vector2(2.8989584, 2.45625)
 texture = ExtResource("7_kk2rg")
