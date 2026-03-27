@@ -16,12 +16,12 @@ func _physics_process(delta):
 	update_animation()
 
 func update_animation():
-#	if not is_on_floor():
-#		if velocity.y < 0:
-#			animated_sprite.play("jump")
-#		else:
-#			animated_sprite.play("fall")
-	if abs(velocity.x) > 20:
+	if not is_on_floor():
+		if velocity.y < 0:
+			animated_sprite.play("jump")
+		else:
+			animated_sprite.play("fall")
+	elif abs(velocity.x) > 20:
 		animated_sprite.play("run")
 	else:
 		animated_sprite.play("idle")
