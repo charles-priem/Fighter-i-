@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://btcdxcxed85ko" path="res://assets/sprites/bg2.jpg" id="9_utbpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxttp"]
-size = Vector2(800, 30)
+size = Vector2(910, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5aja"]
 size = Vector2(248, 20)
@@ -24,9 +24,12 @@ size = Vector2(207, 23)
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainPlatform" unique_id=886279966]
+position = Vector2(55, 0)
 shape = SubResource("RectangleShape2D_lxttp")
 
 [node name="Sprite2D" type="Sprite2D" parent="MainPlatform" unique_id=1202237861]
+position = Vector2(55.000015, 0)
+scale = Vector2(1.1375, 1)
 texture = ExtResource("1_rurhu")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1218308093]
@@ -132,11 +135,11 @@ scale = Vector2(2.8989584, 2.45625)
 texture = ExtResource("9_utbpp")
 
 [node name="ElYaagoubi" parent="." unique_id=2041489519 instance=ExtResource("5_rurhu")]
-position = Vector2(-343, -46)
+position = Vector2(-256, -405)
 script = ExtResource("6_b5spy")
 
 [node name="Dubois" parent="." unique_id=512612971 instance=ExtResource("6_kk2rg")]
-position = Vector2(322, -44)
+position = Vector2(236, -405)
 script = ExtResource("8_utbpp")
 max_jumps = 4
 player_number = 2

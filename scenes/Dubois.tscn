@@ -185,6 +185,9 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y56nc"]
+size = Vector2(3, 15.1875)
+
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=219465780]
@@ -204,6 +207,11 @@ shape = SubResource("CapsuleShape2D_u8vuu")
 position = Vector2(-29, -72)
 scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_34wqp")
-animation = &"fall"
-frame_progress = 0.19344091
+animation = &"idle"
 flip_h = true
+
+[node name="LedgeDetector" type="Area2D" parent="." unique_id=985585202]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=1420641610]
+position = Vector2(-7.015, -62.066)
+shape = SubResource("RectangleShape2D_y56nc")
