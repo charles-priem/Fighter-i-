@@ -199,9 +199,9 @@ func respawn():
 	velocity         = Vector2.ZERO
 	invincible_timer = 2.0
 	if player_number == 1:
-		position = Vector2(300, 100)
+		position = Vector2(-200, -400)
 	else:
-		position = Vector2(700, 100)
+		position = Vector2(200, -400)
 	sprite.modulate = Color(1, 1, 1, 0)
 	var tween = get_tree().create_tween()
 	tween.tween_property(sprite, "modulate", Color(1, 1, 1, 1), 0.5)
