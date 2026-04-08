@@ -31,6 +31,38 @@ normal = Vector2(0, 1)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tcjrq"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5spy"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0.5686275)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.91227055, 4.7168137e-06, 6.738305e-07, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utbpp"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0.22745098)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.009947663, 0.23879623, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="GameScene" type="Node2D" unique_id=2052335995]
 
 [node name="MainPlatform" type="StaticBody2D" parent="." unique_id=1955787088]
@@ -108,48 +140,6 @@ position = Vector2(-4, -161)
 position_smoothing_enabled = true
 script = ExtResource("2_onqr8")
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=1984876097]
-visible = false
-
-[node name="PlayerPanel" type="Control" parent="HUD" unique_id=201749791]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("3_ycayy")
-
-[node name="Player1" type="Label" parent="HUD/PlayerPanel" unique_id=1980441701]
-layout_mode = 0
-offset_left = -348.0
-offset_top = -324.0
-offset_right = -283.0
-offset_bottom = -301.0
-text = "Joueur 1"
-
-[node name="P1Percent" type="Label" parent="HUD/PlayerPanel" unique_id=2049811477]
-layout_mode = 0
-offset_left = -345.0
-offset_top = -298.0
-offset_right = -305.0
-offset_bottom = -275.0
-text = "0%"
-
-[node name="Player2" type="Label" parent="HUD/PlayerPanel" unique_id=1922368111]
-layout_mode = 0
-offset_left = 219.0
-offset_top = -317.0
-offset_right = 284.0
-offset_bottom = -294.0
-text = "Joueur 2"
-
-[node name="P2Percent" type="Label" parent="HUD/PlayerPanel" unique_id=2063939086]
-layout_mode = 0
-offset_left = 223.0
-offset_top = -287.0
-offset_right = 263.0
-offset_bottom = -264.0
-text = "0%"
-
 [node name="background" type="Sprite2D" parent="." unique_id=1750403046]
 z_index = -1
 position = Vector2(218.99997, 547.0001)
@@ -165,3 +155,70 @@ position = Vector2(236, -405)
 script = ExtResource("8_utbpp")
 max_jumps = 4
 player_number = 2
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1605162887]
+
+[node name="HUDControl" type="Control" parent="HUD" unique_id=1148448568]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_ycayy")
+
+[node name="P1Panel" type="PanelContainer" parent="HUD/HUDControl" unique_id=977925547]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 220.0
+offset_bottom = 171.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b5spy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/HUDControl/P1Panel" unique_id=1461022554]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="P1Name" type="Label" parent="HUD/HUDControl/P1Panel/VBoxContainer" unique_id=76834902]
+layout_mode = 2
+text = "Joueur 1"
+
+[node name="P1Percent" type="Label" parent="HUD/HUDControl/P1Panel/VBoxContainer" unique_id=1675985525]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+text = "0%"
+horizontal_alignment = 1
+
+[node name="P1Stocks" type="HBoxContainer" parent="HUD/HUDControl/P1Panel/VBoxContainer" unique_id=307571703]
+layout_mode = 2
+
+[node name="P2Panel" type="PanelContainer" parent="HUD/HUDControl" unique_id=1451034187]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 0
+offset_left = 1675.0
+offset_top = 20.0
+offset_right = 1875.0
+offset_bottom = 171.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_utbpp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/HUDControl/P2Panel" unique_id=2062939722]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="P2Name" type="Label" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=958592765]
+layout_mode = 2
+text = "Joueur 2"
+
+[node name="P2Percent" type="Label" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=1657415330]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+text = "0%"
+horizontal_alignment = 1
+
+[node name="P2Stocks" type="HBoxContainer" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=1346808228]
+layout_mode = 2

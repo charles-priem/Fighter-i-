@@ -181,7 +181,7 @@ func die():
 	stocks -= 1
 	emit_signal("stock_lost", player_number, stocks)
 
-	var hud = get_tree().root.get_node_or_null("GameScene/HUD/Control")
+	var hud = get_tree().root.get_node_or_null("GameScene/HUD/HUDControl")
 	if hud:
 		hud.update_stocks(player_number, stocks)
 
@@ -209,7 +209,7 @@ func respawn():
 
 # HUD 
 func update_hud():
-	var hud = get_tree().root.get_node_or_null("GameScene/HUD/Control")
+	var hud = get_tree().root.get_node_or_null("GameScene/HUD/HUDControl")
 	if hud:
 		hud.update_percent(player_number, damage_percent)
 
