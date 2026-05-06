@@ -1,3 +1,6 @@
 .godot/
 *.import
+project.godot
 export_presets.cfg
+.vs
+
