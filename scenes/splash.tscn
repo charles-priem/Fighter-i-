@@ -14,16 +14,16 @@ script = ExtResource("1_86pdq")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1376804504]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1384811267]
 layout_mode = 0
-offset_left = 283.0
-offset_top = 74.0
-offset_right = 795.0
-offset_bottom = 586.0
+offset_left = 642.0
+offset_top = 279.0
+offset_right = 1154.0
+offset_bottom = 791.0
 texture = ExtResource("2_10vqf")
 
 [node name="Label" type="Label" parent="." unique_id=1930145957]
