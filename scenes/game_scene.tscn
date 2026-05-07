@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://cgn1behbhvis2" path="res://scripts/camera_2d.gd" id="2_onqr8"]
 [ext_resource type="Script" uid="uid://bnk81mj5ys8rk" path="res://scripts/blastzone.gd" id="2_utbpp"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
-[ext_resource type="PackedScene" uid="uid://02s73tx6iorh" path="res://scenes/ElYaagoubi.tscn" id="5_rurhu"]
-[ext_resource type="Script" uid="uid://bn4v75flwdudd" path="res://scripts/ElYaagoubi.gd" id="6_b5spy"]
 [ext_resource type="PackedScene" uid="uid://dsx4geeimrikr" path="res://scenes/Dubois.tscn" id="6_kk2rg"]
+[ext_resource type="PackedScene" uid="uid://dxvl7p3lxn335" path="res://scenes/Fardoux.tscn" id="8_mw25s"]
 [ext_resource type="Script" uid="uid://d3g6uol51pi4d" path="res://scripts/Dubois.gd" id="8_utbpp"]
+[ext_resource type="Script" uid="uid://c8g0j2pwpmm6i" path="res://scripts/Fardoux.gd" id="9_mw25s"]
 [ext_resource type="Texture2D" uid="uid://btcdxcxed85ko" path="res://assets/sprites/bg2.jpg" id="9_utbpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxttp"]
@@ -146,10 +146,6 @@ position = Vector2(218.99997, 547.0001)
 scale = Vector2(2.8989584, 2.45625)
 texture = ExtResource("9_utbpp")
 
-[node name="ElYaagoubi" parent="." unique_id=2041489519 instance=ExtResource("5_rurhu")]
-position = Vector2(-256, -405)
-script = ExtResource("6_b5spy")
-
 [node name="Dubois" parent="." unique_id=512612971 instance=ExtResource("6_kk2rg")]
 position = Vector2(236, -405)
 script = ExtResource("8_utbpp")
@@ -222,3 +218,6 @@ horizontal_alignment = 1
 
 [node name="P2Stocks" type="HBoxContainer" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=1346808228]
 layout_mode = 2
+
+[node name="Fardoux" parent="." unique_id=2041489519 instance=ExtResource("8_mw25s")]
+script = ExtResource("9_mw25s")

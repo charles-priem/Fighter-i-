@@ -55,6 +55,10 @@ func _ready():
 	sprite.sprite_frames = sprite.sprite_frames.duplicate()
 	ledge_detector.body_entered.connect(_on_ledge_detected)
 	ledge_detector.body_exited.connect(_on_ledge_exited)
+	if player_number == 1:
+		position = Vector2(-200, -400)
+	else:
+		position = Vector2(200, -400)
 # BOUCLE PHYSIQUE 
 func _physics_process(delta):
 	# Gestion des timers
