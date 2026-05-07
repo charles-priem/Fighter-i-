@@ -118,7 +118,7 @@ func handle_movement():
 	)
 	if dir != 0:
 		velocity.x = dir * move_speed
-		facing_right = dir > 0
+		facing_right = dir < 0
 		sprite.flip_h = not facing_right
 	else:
 		velocity.x = move_toward(velocity.x, 0, move_speed)
