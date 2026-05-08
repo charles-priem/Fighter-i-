@@ -1,11 +1,8 @@
-[gd_scene format=3 uid="uid://02s73tx6iorh"]
+[gd_scene format=3 uid="uid://dhwifk5em3qd"]
 
-[ext_resource type="Texture2D" uid="uid://dr4361weqnaqh" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 1.png" id="2_koadh"]
-[ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="2_ovcwl"]
-[ext_resource type="Texture2D" uid="uid://c5aqavrt203u8" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 2.png" id="3_60jth"]
-[ext_resource type="Texture2D" uid="uid://b4la8mfeng5xr" path="res://assets/Fire Wizard/Run.png" id="3_koadh"]
-[ext_resource type="Texture2D" uid="uid://c6ikullty0igd" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 3.png" id="4_hqxsd"]
-[ext_resource type="Texture2D" uid="uid://u5pw3t2osw5y" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 4.png" id="5_tmmpp"]
+[ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="1_ktkxy"]
+[ext_resource type="Texture2D" uid="uid://daf56s7hq1jtn" path="res://assets/Fire Wizard/Idle.png" id="2_nnkjs"]
+[ext_resource type="Texture2D" uid="uid://b4la8mfeng5xr" path="res://assets/Fire Wizard/Run.png" id="3_doeik"]
 
 [sub_resource type="Animation" id="Animation_dqkch"]
 resource_name = "idle"
@@ -28,51 +25,79 @@ height = 60.0
 height = 60.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wv1as"]
-atlas = ExtResource("2_ovcwl")
+atlas = ExtResource("1_ktkxy")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t722n"]
-atlas = ExtResource("2_ovcwl")
+atlas = ExtResource("1_ktkxy")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_koadh"]
-atlas = ExtResource("2_ovcwl")
+atlas = ExtResource("1_ktkxy")
 region = Rect2(896, 0, 128, 128)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqxsd"]
+atlas = ExtResource("2_nnkjs")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmmpp"]
+atlas = ExtResource("2_nnkjs")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vu532"]
+atlas = ExtResource("2_nnkjs")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ptsh"]
+atlas = ExtResource("2_nnkjs")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxlfx"]
+atlas = ExtResource("2_nnkjs")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_104om"]
+atlas = ExtResource("2_nnkjs")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rh2yx"]
+atlas = ExtResource("2_nnkjs")
+region = Rect2(768, 0, 128, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ovcwl"]
-atlas = ExtResource("2_ovcwl")
+atlas = ExtResource("1_ktkxy")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0s23m"]
-atlas = ExtResource("3_koadh")
+atlas = ExtResource("3_doeik")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jjf2d"]
-atlas = ExtResource("3_koadh")
+atlas = ExtResource("3_doeik")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dudpi"]
-atlas = ExtResource("3_koadh")
+atlas = ExtResource("3_doeik")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eteif"]
-atlas = ExtResource("3_koadh")
+atlas = ExtResource("3_doeik")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gcbni"]
-atlas = ExtResource("3_koadh")
+atlas = ExtResource("3_doeik")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sxucn"]
-atlas = ExtResource("3_koadh")
+atlas = ExtResource("3_doeik")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_alhiy"]
-atlas = ExtResource("3_koadh")
+atlas = ExtResource("3_doeik")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l57pu"]
-atlas = ExtResource("3_koadh")
+atlas = ExtResource("3_doeik")
 region = Rect2(896, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owota"]
@@ -98,16 +123,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_koadh")
+"texture": SubResource("AtlasTexture_hqxsd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_60jth")
+"texture": SubResource("AtlasTexture_tmmpp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_hqxsd")
+"texture": SubResource("AtlasTexture_vu532")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_tmmpp")
+"texture": SubResource("AtlasTexture_1ptsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxlfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_104om")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rh2yx")
 }],
 "loop": true,
 "name": &"idle",
@@ -175,10 +209,10 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 shape = SubResource("CapsuleShape2D_u8vuu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1664251423]
-position = Vector2(0, -16)
-scale = Vector2(0.5, 0.5)
+position = Vector2(24, -72)
+scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_owota")
-animation = &"idle"
+animation = &"jump"
 
 [node name="LedgeDetector" type="Area2D" parent="." unique_id=507597316]
 

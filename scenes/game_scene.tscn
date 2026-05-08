@@ -5,9 +5,9 @@
 [ext_resource type="Script" uid="uid://bnk81mj5ys8rk" path="res://scripts/blastzone.gd" id="2_utbpp"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
 [ext_resource type="PackedScene" uid="uid://dsx4geeimrikr" path="res://scenes/Dubois.tscn" id="6_kk2rg"]
-[ext_resource type="PackedScene" uid="uid://ctylc4atkguf3" path="res://scenes/Benedito.tscn" id="8_mw25s"]
+[ext_resource type="PackedScene" uid="uid://02s73tx6iorh" path="res://scenes/ElYaagoubi.tscn" id="8_b5spy"]
 [ext_resource type="Script" uid="uid://d3g6uol51pi4d" path="res://scripts/Dubois.gd" id="8_utbpp"]
-[ext_resource type="Script" uid="uid://df0x01wofo0yv" path="res://scripts/Benedito.gd" id="9_tcjrq"]
+[ext_resource type="Script" uid="uid://bn4v75flwdudd" path="res://scripts/ElYaagoubi.gd" id="9_mw25s"]
 [ext_resource type="Texture2D" uid="uid://btcdxcxed85ko" path="res://assets/sprites/bg2.jpg" id="9_utbpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxttp"]
@@ -219,5 +219,5 @@ horizontal_alignment = 1
 [node name="P2Stocks" type="HBoxContainer" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=1346808228]
 layout_mode = 2
 
-[node name="Benedito" parent="." unique_id=2041489519 instance=ExtResource("8_mw25s")]
-script = ExtResource("9_tcjrq")
+[node name="El Yaagoubi" parent="." unique_id=2041489519 instance=ExtResource("8_b5spy")]
+script = ExtResource("9_mw25s")
