@@ -32,18 +32,6 @@ height = 60.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
 height = 60.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qv561"]
-load_path = "res://.godot/imported/fardoux fixe 1.png-c37cf1fc68afba9505a2612fc991bcb4.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_44e5w"]
-load_path = "res://.godot/imported/fardoux fixe 2.png-170cf325914e35b065634c1f8755c177.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_df7v0"]
-load_path = "res://.godot/imported/fardoux fixe 3.png-8e0461b64f062b55bc486599f6958fcb.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_25fku"]
-load_path = "res://.godot/imported/fardoux fixe 4.png-bda7905aa86f8ef7d22d5a6423f6b0f7.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_y56nc"]
 atlas = ExtResource("1_y5pk8")
 region = Rect2(640, 0, 128, 128)
@@ -62,19 +50,7 @@ region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
 animations = [{
-"frames": [{
-"duration": 0.5,
-"texture": SubResource("CompressedTexture2D_qv561")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_44e5w")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_df7v0")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_25fku")
-}],
+"frames": [],
 "loop": true,
 "name": &"default",
 "speed": 5.0
@@ -164,7 +140,7 @@ shape = SubResource("CapsuleShape2D_u8vuu")
 position = Vector2(0, -25)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_34wqp")
-animation = &"run"
+animation = &"idle"
 flip_h = true
 
 [node name="LedgeDetector" type="Area2D" parent="." unique_id=985585202]
