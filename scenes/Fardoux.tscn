@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://dxvl7p3lxn335"]
 
-[ext_resource type="Texture2D" uid="uid://cvrbeinor5sew" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png" id="1_x7skr"]
 [ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="1_y5pk8"]
-[ext_resource type="Texture2D" uid="uid://da08tol7t141b" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 2.png" id="2_s58tu"]
-[ext_resource type="Texture2D" uid="uid://b4la8mfeng5xr" path="res://assets/Fire Wizard/Run.png" id="3_plrtl"]
-[ext_resource type="Texture2D" uid="uid://u114cwe1glw" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 3.png" id="3_ubj5p"]
-[ext_resource type="Texture2D" uid="uid://c2flxv3ilyw6u" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 4.png" id="4_6plea"]
+[ext_resource type="Texture2D" uid="uid://c4wmtlnctpedl" path="res://assets/sprites/Personnages/Fardoux/Fardoux fixe 2.png" id="3_2e1u5"]
+[ext_resource type="Texture2D" uid="uid://b4u8dd3cqnj16" path="res://assets/sprites/Personnages/Fardoux/Fardoux fixe 3.png" id="4_qv561"]
+[ext_resource type="Texture2D" uid="uid://c2wbpteschm1s" path="res://assets/sprites/Personnages/Fardoux/Fardoux fixe 1.png" id="5_2e1u5"]
+[ext_resource type="Texture2D" uid="uid://c0gws2by7br0m" path="res://assets/sprites/Personnages/Fardoux/Fardoux fixe 4.png" id="5_d8j15"]
+[ext_resource type="Texture2D" uid="uid://cyybmxjv3k632" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 1.png" id="6_2e1u5"]
+[ext_resource type="Texture2D" uid="uid://bo52m08p8rohx" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 2.png" id="7_qv561"]
+[ext_resource type="Texture2D" uid="uid://ddfxkrfrpwog3" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 3.png" id="8_d8j15"]
+[ext_resource type="Texture2D" uid="uid://ey5u2gswhp7b" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 4.png" id="9_44e5w"]
+[ext_resource type="Texture2D" uid="uid://denglg7mfn0j8" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 5.png" id="10_df7v0"]
+[ext_resource type="Texture2D" uid="uid://csbmty375fef2" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 6.png" id="11_25fku"]
 
 [sub_resource type="Animation" id="Animation_dqkch"]
 resource_name = "idle"
@@ -27,6 +32,18 @@ height = 60.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
 height = 60.0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qv561"]
+load_path = "res://.godot/imported/fardoux fixe 1.png-c37cf1fc68afba9505a2612fc991bcb4.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_44e5w"]
+load_path = "res://.godot/imported/fardoux fixe 2.png-170cf325914e35b065634c1f8755c177.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_df7v0"]
+load_path = "res://.godot/imported/fardoux fixe 3.png-8e0461b64f062b55bc486599f6958fcb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_25fku"]
+load_path = "res://.godot/imported/fardoux fixe 4.png-bda7905aa86f8ef7d22d5a6423f6b0f7.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_y56nc"]
 atlas = ExtResource("1_y5pk8")
 region = Rect2(640, 0, 128, 128)
@@ -43,52 +60,20 @@ region = Rect2(896, 0, 128, 128)
 atlas = ExtResource("1_y5pk8")
 region = Rect2(512, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_se02q"]
-atlas = ExtResource("3_plrtl")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ih2sr"]
-atlas = ExtResource("3_plrtl")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gugml"]
-atlas = ExtResource("3_plrtl")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ij4k"]
-atlas = ExtResource("3_plrtl")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c77dw"]
-atlas = ExtResource("3_plrtl")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ouoee"]
-atlas = ExtResource("3_plrtl")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_egsoe"]
-atlas = ExtResource("3_plrtl")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i8jpj"]
-atlas = ExtResource("3_plrtl")
-region = Rect2(896, 0, 128, 128)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
 animations = [{
 "frames": [{
 "duration": 0.5,
-"texture": ExtResource("1_x7skr")
+"texture": SubResource("CompressedTexture2D_qv561")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_s58tu")
+"texture": SubResource("CompressedTexture2D_44e5w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_ubj5p")
+"texture": SubResource("CompressedTexture2D_df7v0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_6plea")
+"texture": SubResource("CompressedTexture2D_25fku")
 }],
 "loop": true,
 "name": &"default",
@@ -110,16 +95,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_x7skr")
+"texture": ExtResource("5_2e1u5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_s58tu")
+"texture": ExtResource("3_2e1u5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_ubj5p")
+"texture": ExtResource("4_qv561")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_6plea")
+"texture": ExtResource("5_d8j15")
 }],
 "loop": true,
 "name": &"idle",
@@ -135,28 +120,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_se02q")
+"texture": ExtResource("6_2e1u5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ih2sr")
+"texture": ExtResource("7_qv561")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gugml")
+"texture": ExtResource("8_d8j15")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6ij4k")
+"texture": ExtResource("9_44e5w")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c77dw")
+"texture": ExtResource("10_df7v0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ouoee")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_egsoe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i8jpj")
+"texture": ExtResource("11_25fku")
 }],
 "loop": true,
 "name": &"run",
@@ -182,10 +161,10 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 shape = SubResource("CapsuleShape2D_u8vuu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
-position = Vector2(0, -29)
-scale = Vector2(2.8, 2.8)
+position = Vector2(0, -25)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_34wqp")
-animation = &"idle"
+animation = &"run"
 flip_h = true
 
 [node name="LedgeDetector" type="Area2D" parent="." unique_id=985585202]
