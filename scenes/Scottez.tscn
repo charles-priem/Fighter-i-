@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cneyfp25vcbb5" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 2.png" id="3_ummwe"]
 [ext_resource type="Texture2D" uid="uid://bnpaob5x3n6fo" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 3.png" id="4_a81fl"]
 [ext_resource type="Texture2D" uid="uid://bkn4e2bkc0srl" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 4.png" id="5_u7o0s"]
+[ext_resource type="Script" uid="uid://brbhpsahw26qh" path="res://scripts/scottez.gd" id="7_ummwe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wv1as"]
 atlas = ExtResource("1_aroyw")
@@ -140,7 +141,8 @@ animations = [{
 radius = 31.0
 height = 106.0
 
-[node name="Player" type="CharacterBody2D" unique_id=2041489519]
+[node name="Scottez" type="CharacterBody2D" unique_id=2041489519]
+script = ExtResource("7_ummwe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1664251423]
 position = Vector2(0, -25)

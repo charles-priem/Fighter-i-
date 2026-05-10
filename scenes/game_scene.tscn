@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://b6cjd3dxelqol"]
 
+[ext_resource type="Script" uid="uid://bd7ypfuxertcc" path="res://scripts/platform.gd" id="1_b5spy"]
 [ext_resource type="Texture2D" uid="uid://dyuc7ub53c47y" path="res://assets/sprites/platform.png" id="1_rurhu"]
 [ext_resource type="Script" uid="uid://cgn1behbhvis2" path="res://scripts/camera_2d.gd" id="2_onqr8"]
 [ext_resource type="Script" uid="uid://bnk81mj5ys8rk" path="res://scripts/blastzone.gd" id="2_utbpp"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
-[ext_resource type="PackedScene" uid="uid://dsx4geeimrikr" path="res://scenes/Dubois.tscn" id="6_kk2rg"]
 [ext_resource type="PackedScene" uid="uid://ctylc4atkguf3" path="res://scenes/Benedito.tscn" id="7_kk2rg"]
+[ext_resource type="PackedScene" uid="uid://b7o41v2dkbjpn" path="res://scenes/Scottez.tscn" id="8_mw25s"]
 [ext_resource type="Texture2D" uid="uid://btcdxcxed85ko" path="res://assets/sprites/bg2.jpg" id="9_utbpp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b5spy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxttp"]
 size = Vector2(910, 30)
@@ -61,10 +64,12 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="GameScene" type="Node2D" unique_id=2052335995]
+[node name="GameScene" type="Node2D" unique_id=1171841260]
 
-[node name="MainPlatform" type="StaticBody2D" parent="." unique_id=1955787088]
+[node name="MainPlatform" type="StaticBody2D" parent="." unique_id=152687302]
 collision_mask = 0
+physics_material_override = SubResource("PhysicsMaterial_b5spy")
+script = ExtResource("1_b5spy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MainPlatform" unique_id=886279966]
 position = Vector2(55, 0)
@@ -144,11 +149,6 @@ position = Vector2(218.99997, 547.0001)
 scale = Vector2(2.8989584, 2.45625)
 texture = ExtResource("9_utbpp")
 
-[node name="Dubois" parent="." unique_id=512612971 instance=ExtResource("6_kk2rg")]
-position = Vector2(236, -405)
-max_jumps = 4
-player_number = 2
-
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1605162887]
 
 [node name="HUDControl" type="Control" parent="HUD" unique_id=1148448568]
@@ -217,3 +217,6 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="Benedito" parent="." unique_id=2041489519 instance=ExtResource("7_kk2rg")]
+
+[node name="Scottez" parent="." unique_id=1209383739 instance=ExtResource("8_mw25s")]
+player_number = 2

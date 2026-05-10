@@ -41,6 +41,7 @@ const DASH_SPEED     : float = 1000.0
 const DASH_DURATION  : float = 0.15
 const FAST_FALL_MULT : float = 2.5
 const PROJECTILE_SPEED : float = 2000.0
+const DEPLACEMENT_ATTAQUE : float = 50.
 
 # SIGNAUX
 signal stock_lost(player_num, stocks_remaining)
@@ -58,6 +59,7 @@ func _ready():
 	#ledge_detector.body_exited.connect(_on_ledge_exited)
 	if player_number == 1:
 		position = Vector2(-200, -400)
+		sprite.flip_h = true
 	else:
 		position = Vector2(200, -400)
 # BOUCLE PHYSIQUE 
@@ -177,7 +179,16 @@ func take_hit(dmg: float, kb_x: float, kb_y: float,
 	var vy = kb_y * mult
 	if not attacker_right:
 		vx = -vx
-	velocity         = Vector2(vx, vy)
+	velocity = Vector2(vx, vy)
+	
+	#calcul de la nouvelle position en fontion des dégats infligés
+	var new_position
+	if attacker_right:
+		new_position = position.x - DEPLACEMENT_ATTAQUE * mult
+	else:
+		new_position = position.x + DEPLACEMENT_ATTAQUE * mult
+	position.x = new_position
+	
 	invincible_timer = 0.5
 	update_hud()
 
