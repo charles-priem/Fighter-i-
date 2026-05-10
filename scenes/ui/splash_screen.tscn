@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://c1qoiocly2e7s"]
+
+[ext_resource type="Script" uid="uid://cl5cp1oby1o2k" path="res://scripts/splash.gd" id="1_eina6"]
+[ext_resource type="FontFile" uid="uid://d4beyjxkjfg6p" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="1_m0ilf"]
+[ext_resource type="Texture2D" uid="uid://bm63odsy2f2op" path="res://assets/Logo_Fight_I-removebg-preview.png" id="2_eina6"]
+
+[node name="SplashScreen" type="Control" unique_id=21870146]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eina6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1410917377]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DebugRect" type="ColorRect" parent="." unique_id=733057041]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="." unique_id=1868955759]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 73.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("1_m0ilf")
+text = "Fight I"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1657802926]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=1085097408]
+custom_minimum_size = Vector2(320, 320)
+layout_mode = 2
+texture = ExtResource("2_eina6")
+expand_mode = 1
+stretch_mode = 5
