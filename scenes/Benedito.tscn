@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://ctylc4atkguf3"]
 
+[ext_resource type="Script" uid="uid://df0x01wofo0yv" path="res://scripts/Benedito.gd" id="1_fmvww"]
 [ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="1_wjeal"]
 [ext_resource type="Texture2D" uid="uid://142w2upnvo7b" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 1.png" id="2_a0cdt"]
+[ext_resource type="PackedScene" uid="uid://cgxc3f0d46iga" path="res://scenes/tir_benedito.tscn" id="2_k63vh"]
 [ext_resource type="Texture2D" uid="uid://b4la8mfeng5xr" path="res://assets/Fire Wizard/Run.png" id="3_p712h"]
 [ext_resource type="Texture2D" uid="uid://vli6rm5wmmri" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 2.png" id="3_s4kpk"]
 [ext_resource type="Texture2D" uid="uid://bb4j03hbe0r0m" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 3.png" id="4_fmvww"]
@@ -141,12 +143,14 @@ radius = 15.0
 height = 60.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
+script = ExtResource("1_fmvww")
+tir = ExtResource("2_k63vh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1664251423]
 position = Vector2(3, -23)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_owota")
-animation = &"idle"
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
 shape = SubResource("CapsuleShape2D_3vyb7")

@@ -231,7 +231,7 @@ func do_attack(hitbox_name: String, startup: float,
 
 func throw_projectile(projectile):
 	is_attacking = true
-	projectile.get_node("AnimatedSprite2D").play("default")
+	projectile.get_node("Sprite2D")
 	projectile.global_position = global_position
 
 	var direction : Vector2
