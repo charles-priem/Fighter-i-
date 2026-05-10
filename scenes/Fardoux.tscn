@@ -1,36 +1,16 @@
 [gd_scene format=3 uid="uid://dxvl7p3lxn335"]
 
 [ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="1_y5pk8"]
-[ext_resource type="Texture2D" uid="uid://c4wmtlnctpedl" path="res://assets/sprites/Personnages/Fardoux/Fardoux fixe 2.png" id="3_2e1u5"]
-[ext_resource type="Texture2D" uid="uid://b4u8dd3cqnj16" path="res://assets/sprites/Personnages/Fardoux/Fardoux fixe 3.png" id="4_qv561"]
-[ext_resource type="Texture2D" uid="uid://c2wbpteschm1s" path="res://assets/sprites/Personnages/Fardoux/Fardoux fixe 1.png" id="5_2e1u5"]
-[ext_resource type="Texture2D" uid="uid://c0gws2by7br0m" path="res://assets/sprites/Personnages/Fardoux/Fardoux fixe 4.png" id="5_d8j15"]
+[ext_resource type="Texture2D" uid="uid://c4wmtlnctpedl" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 2.png" id="3_2e1u5"]
+[ext_resource type="Texture2D" uid="uid://b4u8dd3cqnj16" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 3.png" id="4_qv561"]
+[ext_resource type="Texture2D" uid="uid://c2wbpteschm1s" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png" id="5_2e1u5"]
+[ext_resource type="Texture2D" uid="uid://c0gws2by7br0m" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 4.png" id="5_d8j15"]
 [ext_resource type="Texture2D" uid="uid://cyybmxjv3k632" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 1.png" id="6_2e1u5"]
 [ext_resource type="Texture2D" uid="uid://bo52m08p8rohx" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 2.png" id="7_qv561"]
 [ext_resource type="Texture2D" uid="uid://ddfxkrfrpwog3" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 3.png" id="8_d8j15"]
 [ext_resource type="Texture2D" uid="uid://ey5u2gswhp7b" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 4.png" id="9_44e5w"]
 [ext_resource type="Texture2D" uid="uid://denglg7mfn0j8" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 5.png" id="10_df7v0"]
 [ext_resource type="Texture2D" uid="uid://csbmty375fef2" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 6.png" id="11_25fku"]
-
-[sub_resource type="Animation" id="Animation_dqkch"]
-resource_name = "idle"
-
-[sub_resource type="Animation" id="Animation_tuyoq"]
-resource_name = "run"
-length = 0.5
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_smehm"]
-_data = {
-&"idle": SubResource("Animation_dqkch"),
-&"run": SubResource("Animation_tuyoq")
-}
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
-radius = 15.0
-height = 60.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
-height = 60.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y56nc"]
 atlas = ExtResource("1_y5pk8")
@@ -118,23 +98,11 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y56nc"]
-size = Vector2(3, 15.1875)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 15.0
+height = 60.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=219465780]
-libraries/ = SubResource("AnimationLibrary_smehm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
-shape = SubResource("CapsuleShape2D_3vyb7")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=951743100]
-
-[node name="Hitbox" type="Area2D" parent="Sprite2D" unique_id=1372043165]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Hitbox" unique_id=1376289205]
-shape = SubResource("CapsuleShape2D_u8vuu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 position = Vector2(0, -25)
@@ -143,8 +111,5 @@ sprite_frames = SubResource("SpriteFrames_34wqp")
 animation = &"idle"
 flip_h = true
 
-[node name="LedgeDetector" type="Area2D" parent="." unique_id=985585202]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=1420641610]
-position = Vector2(-7.015, -62.066)
-shape = SubResource("RectangleShape2D_y56nc")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
+shape = SubResource("CapsuleShape2D_3vyb7")
