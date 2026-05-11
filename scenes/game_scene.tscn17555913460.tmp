@@ -217,6 +217,7 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="Scottez" parent="." unique_id=1209383739 instance=ExtResource("8_mw25s")]
+player_number = 2
 
 [node name="Dubois" parent="." unique_id=2041489519 instance=ExtResource("6_kk2rg")]
 player_number = 2

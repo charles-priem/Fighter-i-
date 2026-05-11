@@ -20,7 +20,7 @@ var damage_percent   : float = 0.0
 var stocks           : int   = 3
 var is_attacking     : bool  = false
 var invincible_timer : float = 0.0
-var facing_right     : bool  = true
+var facing_left     : bool  = true
 
 
 # Dash
@@ -34,12 +34,14 @@ var is_grabbing_ledge : bool  = false
 var ledge_timer       : float = 0.0
 const LEDGE_HOLD_TIME : float = 1.0  # secondes max accrochage
 
-@onready var ledge_detector = $LedgeDetector
+#@onready var ledge_detector = $LedgeDetector
 
 # CONSTANTES 
 const DASH_SPEED     : float = 1000.0
 const DASH_DURATION  : float = 0.15
 const FAST_FALL_MULT : float = 2.5
+const PROJECTILE_SPEED : float = 2000.0
+const DEPLACEMENT_ATTAQUE : float = 50.
 
 # SIGNAUX
 signal stock_lost(player_num, stocks_remaining)
@@ -53,10 +55,11 @@ func _ready():
 	add_to_group("players")
 	velocity = Vector2.ZERO
 	sprite.sprite_frames = sprite.sprite_frames.duplicate()
-	ledge_detector.body_entered.connect(_on_ledge_detected)
-	ledge_detector.body_exited.connect(_on_ledge_exited)
+	#ledge_detector.body_entered.connect(_on_ledge_detected)
+	#ledge_detector.body_exited.connect(_on_ledge_exited)
 	if player_number == 1:
 		position = Vector2(-200, -400)
+		sprite.flip_h = true
 	else:
 		position = Vector2(200, -400)
 # BOUCLE PHYSIQUE 
@@ -122,8 +125,8 @@ func handle_movement():
 	)
 	if dir != 0:
 		velocity.x = dir * move_speed
-		facing_right = dir < 0
-		sprite.flip_h = not facing_right
+		facing_left = dir < 0
+		sprite.flip_h = not facing_left
 	else:
 		velocity.x = move_toward(velocity.x, 0, move_speed)
 
@@ -141,7 +144,7 @@ func handle_dash_input():
 			
 			# Si aucune direction pressée, on dash vers l'avant par défaut
 			if input_dir == Vector2.ZERO:
-				input_dir.x = 1.0 if facing_right else -1.0
+				input_dir.x = 1.0 if !facing_left else -1.0
 			
 			# Lancement du dash
 			start_dash(input_dir.normalized())
@@ -176,7 +179,16 @@ func take_hit(dmg: float, kb_x: float, kb_y: float,
 	var vy = kb_y * mult
 	if not attacker_right:
 		vx = -vx
-	velocity         = Vector2(vx, vy)
+	velocity = Vector2(vx, vy)
+	
+	#calcul de la nouvelle position en fontion des dégats infligés
+	var new_position
+	if attacker_right:
+		new_position = position.x - DEPLACEMENT_ATTAQUE * mult
+	else:
+		new_position = position.x + DEPLACEMENT_ATTAQUE * mult
+	position.x = new_position
+	
 	invincible_timer = 0.5
 	update_hud()
 
@@ -227,6 +239,21 @@ func do_attack(hitbox_name: String, startup: float,
 	get_node(hitbox_name).monitoring = false
 	await get_tree().create_timer(recovery).timeout
 	is_attacking = false
+
+func throw_projectile(projectile):
+	is_attacking = true
+	projectile.get_node("Sprite2D")
+	projectile.global_position = global_position
+
+	var direction : Vector2
+	direction = Vector2.LEFT if !facing_left else Vector2.RIGHT
+
+	direction = direction.normalized()
+
+	projectile.direction = direction
+	projectile.speed = PROJECTILE_SPEED
+
+	is_attacking = false
 	
 	# LEDGE GRAB 
 func _on_ledge_detected(_body):
@@ -270,7 +297,7 @@ func climb_up():
 	is_grabbing_ledge = false
 	# Donner une impulsion vers le haut et dans la bonne direction
 	velocity.y = -jump_force
-	velocity.x = 150.0 if facing_right else -150.0
+	velocity.x = 150.0 if facing_left else -150.0
 	jumps_remaining = max_jumps
 
 func release_ledge():

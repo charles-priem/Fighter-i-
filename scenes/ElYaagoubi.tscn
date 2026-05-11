@@ -7,26 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://c6ikullty0igd" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 3.png" id="4_hqxsd"]
 [ext_resource type="Texture2D" uid="uid://u5pw3t2osw5y" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 4.png" id="5_tmmpp"]
 
-[sub_resource type="Animation" id="Animation_dqkch"]
-resource_name = "idle"
-
-[sub_resource type="Animation" id="Animation_tuyoq"]
-resource_name = "run"
-length = 0.5
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_smehm"]
-_data = {
-&"idle": SubResource("Animation_dqkch"),
-&"run": SubResource("Animation_tuyoq")
-}
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
-radius = 15.0
-height = 60.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
-height = 60.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_wv1as"]
 atlas = ExtResource("2_ovcwl")
 region = Rect2(640, 0, 128, 128)
@@ -156,23 +136,11 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wv1as"]
-size = Vector2(0.099999964, 1.0999999)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 15.0
+height = 60.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=219465780]
-libraries/ = SubResource("AnimationLibrary_smehm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
-shape = SubResource("CapsuleShape2D_3vyb7")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=951743100]
-
-[node name="Hitbox" type="Area2D" parent="Sprite2D" unique_id=1372043165]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Hitbox" unique_id=1376289205]
-shape = SubResource("CapsuleShape2D_u8vuu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1664251423]
 position = Vector2(0, -16)
@@ -180,9 +148,5 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_owota")
 animation = &"idle"
 
-[node name="LedgeDetector" type="Area2D" parent="." unique_id=507597316]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=251650850]
-position = Vector2(2.315, -62.35)
-scale = Vector2(10, 10)
-shape = SubResource("RectangleShape2D_wv1as")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
+shape = SubResource("CapsuleShape2D_3vyb7")
