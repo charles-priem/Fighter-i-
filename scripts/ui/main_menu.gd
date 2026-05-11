@@ -1,60 +1,57 @@
 extends Control
 
-const GAME_SCENE: String = "res://scenes/game_scene.tscn"
-const SETTINGS_SCENE: String = "res://scenes/ui/settings_menu.tscn"
+signal play_requested(source_id: StringName, source_node: Node)
+signal settings_requested(source_id: StringName, source_node: Node)
+signal quit_requested(source_id: StringName, source_node: Node)
 
-@onready var play_button: Button = $CenterContainer/VBoxContainer/PlayButton
-@onready var settings_button: Button = $CenterContainer/VBoxContainer/SettingsButton
-@onready var quit_button: Button = $CenterContainer/VBoxContainer/QuitButton
-@onready var p1_score_label: Label = $PlayerScores/Player1Score
-@onready var p2_score_label: Label = $PlayerScores/Player2Score
+@export var play_button: Button
+@export var settings_button: Button
+@export var quit_button: Button
+@export var p1_score_label: Label
+@export var p2_score_label: Label
 
 var _is_transitioning: bool = false
 
+# Initialisation du menu principal :
+# on met à jour l'affichage des scores, on connecte les boutons
+# et on prépare la navigation clavier/manette.
 func _ready() -> void:
-	# Initialisation de l'affichage des scores depuis l'Autoload GameData
 	p1_score_label.text = "- Joueur 1 : " + str(GameData.p1_wins)
 	p2_score_label.text = "- Joueur 2 : " + str(GameData.p2_wins)
 
-	# Connexion des signaux
 	play_button.pressed.connect(_on_play_pressed)
 	settings_button.pressed.connect(_on_settings_pressed)
 	quit_button.pressed.connect(_on_quit_pressed)
 
-	# Gestion du focus pour la navigation au clavier/manette
 	play_button.grab_focus()
 
-	# Animation d'entrée fluide
 	modulate.a = 0.0
 	var tween: Tween = create_tween()
 	tween.tween_property(self, "modulate:a", 1.0, 0.5)
 
+# Le menu principal ne change pas lui-même les scènes :
+# il envoie des requêtes au scene manager avec un identifiant stable
+# et le noeud source pour faciliter le debug et les évolutions futures.
 func _on_play_pressed() -> void:
-	# Transition vers l'écran de sélection de personnage
-	_change_scene_with_fade(GAME_SCENE)
-
-func _on_settings_pressed() -> void:
-	# Transition vers le menu des paramètres
-	_change_scene_with_fade(SETTINGS_SCENE)
-
-func _on_quit_pressed() -> void:
-	# Quitter le jeu proprement
-	get_tree().quit()
-
-func _change_scene_with_fade(target_scene: String) -> void:
 	if _is_transitioning:
 		return
 
 	_is_transitioning = true
+	play_requested.emit(&"main_menu", self)
 
-	# Petit effet de fondu avant de changer de scène
-	var tween: Tween = create_tween()
-	tween.tween_property(self, "modulate:a", 0.0, 0.3)
-	tween.finished.connect(func() -> void:
-		get_tree().change_scene_to_file(target_scene)
-	)
+func _on_settings_pressed() -> void:
+	if _is_transitioning:
+		return
 
+	_is_transitioning = true
+	settings_requested.emit(&"main_menu", self)
+
+func _on_quit_pressed() -> void:
+	quit_requested.emit(&"main_menu", self)
+
+# Raccourci clavier/manette :
+# on redirige l'action "ui_cancel" vers la même logique que le bouton quitter.
 func _unhandled_input(event: InputEvent) -> void:
-	# Raccourci pour quitter avec la touche Echap
 	if event.is_action_pressed("ui_cancel"):
+		get_viewport().set_input_as_handled()
 		_on_quit_pressed()

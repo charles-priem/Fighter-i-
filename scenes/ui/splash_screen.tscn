@@ -59,12 +59,22 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Title" type="Label" parent="." unique_id=1868955759]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1169104217]
 layout_mode = 1
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 73.0
-offset_bottom = 33.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Title" type="Label" parent="MarginContainer" unique_id=1868955759]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("1_m0ilf")
 text = "Fight I"
 

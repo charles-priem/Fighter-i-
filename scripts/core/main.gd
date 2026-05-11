@@ -11,74 +11,73 @@ const GAME_SCENE: PackedScene = preload("res://scenes/game_scene.tscn")
 var current_screen: Node = null
 var current_stage: Node = null
 
+# Point d'entrée du jeu :
+# on démarre par le splash screen puis tout le reste sera piloté par le scene manager.
 func _ready() -> void:
-	show_splash_screen()
+	_show_splash_screen()
 
-func clear_screen() -> void:
+# Remplace proprement l'enfant courant d'un conteneur par une nouvelle scène instanciée.
+# Cette fonction est utilisée aussi bien pour les écrans UI que pour la scène de stage.
+func _replace_child(container: Node, current_child: Node, scene_resource: PackedScene) -> Node:
+	if current_child != null:
+		current_child.queue_free()
+
+	var new_child: Node = scene_resource.instantiate()
+	container.add_child(new_child)
+	return new_child
+
+# Connecte un signal seulement s'il existe sur la scène instanciée.
+# Cela évite une erreur pendant le prototypage si une scène n'a pas encore tous ses signaux.
+func _connect_if_exists(node: Node, signal_name: StringName, callback: Callable) -> void:
+	if node.has_signal(signal_name):
+		node.connect(signal_name, callback)
+
+# Gestion centralisée de l'affichage :
+# Screens contient les menus et overlays, Stage contient la scène de jeu.
+func _show_screen(scene_resource: PackedScene) -> Node:
+	current_screen = _replace_child(screens, current_screen, scene_resource)
+	return current_screen
+
+func _show_stage(scene_resource: PackedScene) -> Node:
+	current_stage = _replace_child(stage, current_stage, scene_resource)
+	return current_stage
+
+# Affichage des différentes scènes UI.
+# Chaque scène émet des signaux et Main décide de la suite du flux.
+func _show_splash_screen() -> void:
+	var splash_screen: Node = _show_screen(SPLASH_SCREEN_SCENE)
+	_connect_if_exists(splash_screen, &"finished", _on_splash_finished)
+
+func _show_main_menu() -> void:
+	var main_menu: Node = _show_screen(MAIN_MENU_SCENE)
+	_connect_if_exists(main_menu, &"play_requested", _on_play_requested)
+	_connect_if_exists(main_menu, &"settings_requested", _on_settings_requested)
+	_connect_if_exists(main_menu, &"quit_requested", _on_quit_requested)
+
+func _show_settings_menu() -> void:
+	var settings_menu: Node = _show_screen(SETTINGS_MENU_SCENE)
+	_connect_if_exists(settings_menu, &"back_requested", _on_settings_back_requested)
+
+# Lance la scène de jeu de test et retire l'écran actif.
+func _start_game() -> void:
 	if current_screen != null:
 		current_screen.queue_free()
 		current_screen = null
 
-func clear_stage() -> void:
-	if current_stage != null:
-		current_stage.queue_free()
-		current_stage = null
+	_show_stage(GAME_SCENE)
 
-func show_screen(scene_resource: PackedScene) -> Node:
-	clear_screen()
+# Réception des signaux :
+func _on_splash_finished(source_id: StringName = &"", source_node: Node = null) -> void:
+	call_deferred("_show_main_menu")
 
-	current_screen = scene_resource.instantiate()
-	screens.add_child(current_screen)
+func _on_play_requested(source_id: StringName = &"", source_node: Node = null) -> void:
+	call_deferred("_start_game")
 
-	return current_screen
+func _on_settings_requested(source_id: StringName = &"", source_node: Node = null) -> void:
+	call_deferred("_show_settings_menu")
 
-func show_stage(scene_resource: PackedScene) -> Node:
-	clear_stage()
+func _on_settings_back_requested(source_id: StringName = &"", source_node: Node = null) -> void:
+	call_deferred("_show_main_menu")
 
-	current_stage = scene_resource.instantiate()
-	stage.add_child(current_stage)
-
-	return current_stage
-
-func show_splash_screen() -> void:
-	var splash_screen: Node = show_screen(SPLASH_SCREEN_SCENE)
-
-	if splash_screen.has_signal("finished"):
-		splash_screen.finished.connect(_on_splash_finished)
-
-func show_main_menu() -> void:
-	var main_menu: Node = show_screen(MAIN_MENU_SCENE)
-
-	if main_menu.has_signal("play_requested"):
-		main_menu.play_requested.connect(_on_play_requested)
-
-	if main_menu.has_signal("settings_requested"):
-		main_menu.settings_requested.connect(_on_settings_requested)
-
-	if main_menu.has_signal("quit_requested"):
-		main_menu.quit_requested.connect(_on_quit_requested)
-
-func show_settings_menu() -> void:
-	var settings_menu: Node = show_screen(SETTINGS_MENU_SCENE)
-
-	if settings_menu.has_signal("back_requested"):
-		settings_menu.back_requested.connect(_on_settings_back_requested)
-
-func start_game() -> void:
-	clear_screen()
-	show_stage(GAME_SCENE)
-
-func _on_splash_finished() -> void:
-	show_main_menu()
-
-func _on_play_requested() -> void:
-	start_game()
-
-func _on_settings_requested() -> void:
-	show_settings_menu()
-
-func _on_settings_back_requested() -> void:
-	show_main_menu()
-
-func _on_quit_requested() -> void:
+func _on_quit_requested(source_id: StringName = &"", source_node: Node = null) -> void:
 	get_tree().quit()

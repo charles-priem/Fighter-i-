@@ -1,9 +1,85 @@
 [gd_scene format=3 uid="uid://cqym38uftd8cb"]
 
-[node name="SettingsMenu" type="Control" unique_id=1676625064]
+[ext_resource type="Texture2D" uid="uid://df5gfpqrctdr7" path="res://assets/art/ui/menu_background.png" id="1_mhswj"]
+[ext_resource type="Script" uid="uid://d0fguwanu7yn7" path="res://scripts/ui/settings_menu.gd" id="1_x3vyp"]
+[ext_resource type="FontFile" uid="uid://d4beyjxkjfg6p" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="2_x3vyp"]
+
+[node name="SettingsMenu" type="Control" unique_id=1676625064 node_paths=PackedStringArray("master_volume_slider", "music_volume_slider", "fullscreen_check_box", "back_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_x3vyp")
+master_volume_slider = NodePath("CenterContainer/Settings/MasterVolumeSlider")
+music_volume_slider = NodePath("CenterContainer/Settings/MusicVolumeSlider")
+fullscreen_check_box = NodePath("CenterContainer/Settings/FullscreenCheckBox")
+back_button = NodePath("CenterContainer/Settings/BackButton")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=243991552]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mhswj")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1591674869]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Settings" type="VBoxContainer" parent="CenterContainer" unique_id=1372110113]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/Settings" unique_id=1428300261]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3vyp")
+theme_override_font_sizes/font_size = 24
+text = "Options"
+
+[node name="MasterVolumeLabel" type="Label" parent="CenterContainer/Settings" unique_id=1339532033]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3vyp")
+theme_override_font_sizes/font_size = 20
+text = "Volume principal"
+
+[node name="MasterVolumeSlider" type="HSlider" parent="CenterContainer/Settings" unique_id=858752180]
+layout_mode = 2
+
+[node name="MusicVolumeLabel" type="Label" parent="CenterContainer/Settings" unique_id=855617791]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3vyp")
+theme_override_font_sizes/font_size = 20
+text = "Volume musique"
+
+[node name="MusicVolumeSlider" type="HSlider" parent="CenterContainer/Settings" unique_id=1139057898]
+layout_mode = 2
+
+[node name="FullscreenCheckBox" type="CheckBox" parent="CenterContainer/Settings" unique_id=421404066]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_x3vyp")
+theme_override_font_sizes/font_size = 20
+text = "Plein ecran"
+
+[node name="BackButton" type="Button" parent="CenterContainer/Settings" unique_id=123146773]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x3vyp")
+theme_override_font_sizes/font_size = 20
+text = "Retour"
