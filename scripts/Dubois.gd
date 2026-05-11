@@ -29,6 +29,8 @@ func update_animation():
 			animated_sprite.play("jump")
 		else:
 			animated_sprite.play("fall")
+	if is_dashing:
+		animated_sprite.play("dash")
 	elif abs(velocity.x) > 20:
 		animated_sprite.play("run")
 	else:

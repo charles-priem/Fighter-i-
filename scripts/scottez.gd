@@ -1,7 +1,7 @@
 extends BasePlayer
 
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var adversaire = get_node("/root/GameScene/Benedito")
+@onready var adversaire = get_node("/root/GameScene/Dubois")
 
 var direction = Vector2.RIGHT
 
