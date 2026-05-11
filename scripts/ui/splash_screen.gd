@@ -12,7 +12,6 @@ var _is_transitioning: bool = false
 # et on lance l'animation "splash" qui doit exister dans l'AnimationPlayer.
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	animation_player.animation_finished.connect(_on_animation_player_animation_finished)
 	animation_player.play("splash")
 
 # Gestion des inputs pour le skip :

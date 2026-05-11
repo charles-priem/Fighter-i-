@@ -67,17 +67,17 @@ func _start_game() -> void:
 	_show_stage(GAME_SCENE)
 
 # Réception des signaux :
-func _on_splash_finished(source_id: StringName = &"", source_node: Node = null) -> void:
+func _on_splash_finished(_source_id: StringName = &"", _source_node: Node = null) -> void:
 	call_deferred("_show_main_menu")
 
-func _on_play_requested(source_id: StringName = &"", source_node: Node = null) -> void:
+func _on_play_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
 	call_deferred("_start_game")
 
-func _on_settings_requested(source_id: StringName = &"", source_node: Node = null) -> void:
+func _on_settings_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
 	call_deferred("_show_settings_menu")
 
-func _on_settings_back_requested(source_id: StringName = &"", source_node: Node = null) -> void:
+func _on_settings_back_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
 	call_deferred("_show_main_menu")
 
-func _on_quit_requested(source_id: StringName = &"", source_node: Node = null) -> void:
+func _on_quit_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
 	get_tree().quit()
