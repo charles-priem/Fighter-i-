@@ -1,11 +1,11 @@
 extends Control
 
-const MAIN_MENU_SCENE := "res://scenes/main_menu.tscn"
+const MAIN_MENU_SCENE: String = "res://scenes/ui/main_menu.tscn"
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 # Empêche un double changement de scène si plusieurs entrées arrivent en même temps
-var _is_transitioning := false
+var _is_transitioning: bool = false
 
 func _ready() -> void:
 	# Ignore la souris pour ne pas bloquer l'input et lance l'animation du splash

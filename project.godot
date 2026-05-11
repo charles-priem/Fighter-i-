@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Fight_I"
-run/main_scene="uid://c1qoiocly2e7s"
+run/main_scene="uid://clq71xgfi2vn8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

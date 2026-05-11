@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://2lk3t3bsx8qw"]
+
+[ext_resource type="Script" uid="uid://d14u2yp27pgop" path="res://scripts/ui/main_menu.gd" id="1_1g8jr"]
+[ext_resource type="Texture2D" uid="uid://df5gfpqrctdr7" path="res://assets/art/ui/menu_background.png" id="1_sl1te"]
+[ext_resource type="FontFile" uid="uid://d4beyjxkjfg6p" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="2_fe2o3"]
+
+[node name="MainMenu" type="Control" unique_id=750297572]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1g8jr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1627024524]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sl1te")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=615324292]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 96.0
+offset_right = 80.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1625420506]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2074593179]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 32
+text = "JOUER"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1332056742]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 32
+text = "OPTIONS"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1206453732]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 32
+text = "QUITTER"
+
+[node name="PlayerScores" type="VBoxContainer" parent="." unique_id=711200017]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 186.0
+offset_bottom = 125.0
+
+[node name="ScoresTitle" type="Label" parent="PlayerScores" unique_id=1995892938]
+layout_mode = 2
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 24
+text = "ÉÍÍÍÍÍÍÍÍÍÍÍ»
+º Victoires º
+ÈÍÍÍÍÍÍÍÍÍÍÍ¼"
+
+[node name="Player1Score" type="Label" parent="PlayerScores" unique_id=2039807159]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 20
+text = "- Joueur 1 : 0"
+
+[node name="Player2Score" type="Label" parent="PlayerScores" unique_id=1645958433]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 20
+text = "- Joueur 2 : 0"
+
+[node name="VersionLabel" type="Label" parent="." unique_id=282135230]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -33.0
+offset_right = 244.0
+offset_bottom = -10.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_fe2o3")
+text = "Version : en developpement"
+vertical_alignment = 2
