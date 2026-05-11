@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bnk81mj5ys8rk" path="res://scripts/blastzone.gd" id="2_utbpp"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
 [ext_resource type="PackedScene" uid="uid://dsx4geeimrikr" path="res://scenes/Dubois.tscn" id="6_kk2rg"]
-[ext_resource type="PackedScene" uid="uid://b7o41v2dkbjpn" path="res://scenes/Scottez.tscn" id="8_mw25s"]
+[ext_resource type="PackedScene" uid="uid://3gavtdcsrb1c" path="res://scenes/NKounou.tscn" id="8_b5spy"]
 [ext_resource type="Texture2D" uid="uid://btcdxcxed85ko" path="res://assets/sprites/bg2.jpg" id="9_utbpp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b5spy"]
@@ -216,7 +216,7 @@ horizontal_alignment = 1
 [node name="P2Stocks" type="HBoxContainer" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=1346808228]
 layout_mode = 2
 
-[node name="Scottez" parent="." unique_id=1209383739 instance=ExtResource("8_mw25s")]
-
 [node name="Dubois" parent="." unique_id=2041489519 instance=ExtResource("6_kk2rg")]
 player_number = 2
+
+[node name="NKounou" parent="." unique_id=200296536 instance=ExtResource("8_b5spy")]

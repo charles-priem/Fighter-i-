@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://3gavtdcsrb1c"]
+
+[ext_resource type="Script" uid="uid://delfvbpua7ty6" path="res://scripts/n_kounou.gd" id="1_5c6hg"]
+[ext_resource type="Texture2D" uid="uid://yt6n6uhswcrg" path="res://assets/sprites/Personnages/N Kounou/nkounou1.webp" id="3_0s02f"]
+[ext_resource type="Texture2D" uid="uid://ws2dr13u51bs" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 1.png" id="4_v0t2m"]
+[ext_resource type="Texture2D" uid="uid://cudn7ie05jylg" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 2.png" id="5_753xu"]
+[ext_resource type="Texture2D" uid="uid://bngw0q3swli4g" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 3.png" id="6_ldfiy"]
+[ext_resource type="Texture2D" uid="uid://w4tje10so224" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 4.png" id="7_q570h"]
+[ext_resource type="Texture2D" uid="uid://cj80w1s6w357f" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 5.png" id="8_83gj0"]
+[ext_resource type="Texture2D" uid="uid://epjv4ydcq45p" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 6.png" id="9_mtvxp"]
+[ext_resource type="Texture2D" uid="uid://b0kjatbuvsal4" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 7.png" id="10_nfref"]
+[ext_resource type="Texture2D" uid="uid://bif7cf4f8qs8p" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 8.png" id="11_ujqu1"]
+[ext_resource type="Texture2D" uid="uid://clb38h5envgd4" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 9.png" id="12_ftan7"]
+[ext_resource type="Texture2D" uid="uid://cpgrpd6wbs7b6" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 10.png" id="13_bqf1f"]
+[ext_resource type="Texture2D" uid="uid://7yih24qs1a84" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 11.png" id="14_qt8nx"]
+[ext_resource type="Texture2D" uid="uid://l0wnixurwdnw" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 12.png" id="15_0a2sy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"dash",
+"speed": 50.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0s02f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_v0t2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_753xu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ldfiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q570h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_83gj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mtvxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nfref")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ujqu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ftan7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bqf1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qt8nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0a2sy")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 15.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 18.0
+height = 100.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6nak3"]
+radius = 47.0
+height = 100.0
+
+[node name="Player" type="CharacterBody2D" unique_id=2041489519]
+script = ExtResource("1_5c6hg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
+position = Vector2(0, -14)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_34wqp")
+animation = &"idle"
+offset = Vector2(0, -33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
+position = Vector2(-3, -17)
+shape = SubResource("CapsuleShape2D_3vyb7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=13979002]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_6nak3")
