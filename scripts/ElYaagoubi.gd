@@ -1,6 +1,7 @@
 extends BasePlayer
 
 @onready var animated_sprite = $AnimatedSprite2D
+const FORMULE_EL_YAAGOUBI = preload("uid://dpdsdmg2rpfsk")
 
 func _ready():
 	super._ready()
@@ -11,9 +12,16 @@ func _ready():
 	weight     = 0.9
 	max_jumps  = 2
 
-func _physics_process(delta):
-	super._physics_process(delta)
+func _physics_process(_delta):
+	super._physics_process(_delta)
 	update_animation()
+
+func handle_attacks():
+	var attack_action = "p" + str(player_number) + "_attack"
+	if Input.is_action_just_pressed(attack_action) :
+		var projectile = FORMULE_EL_YAAGOUBI.instantiate()
+		get_tree().current_scene.add_child(projectile)
+		throw_projectile(projectile)
 
 func update_animation():
 	if not is_on_floor():

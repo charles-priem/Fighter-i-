@@ -41,7 +41,7 @@ const DASH_SPEED     : float = 1000.0
 const DASH_DURATION  : float = 0.15
 const FAST_FALL_MULT : float = 2.5
 const PROJECTILE_SPEED : float = 2000.0
-const DEPLACEMENT_ATTAQUE : float = 50.
+const DEPLACEMENT_ATTAQUE : float = 75
 
 # SIGNAUX
 signal stock_lost(player_num, stocks_remaining)
@@ -60,6 +60,7 @@ func _ready():
 	if player_number == 1:
 		position = Vector2(-200, -400)
 		sprite.flip_h = true
+		facing_left = false
 	else:
 		position = Vector2(200, -400)
 # BOUCLE PHYSIQUE 
@@ -123,6 +124,7 @@ func handle_movement():
 		"p" + str(player_number) + "_left",
 		"p" + str(player_number) + "_right"
 	)
+	
 	if dir != 0:
 		velocity.x = dir * move_speed
 		facing_left = dir < 0
@@ -242,7 +244,7 @@ func do_attack(hitbox_name: String, startup: float,
 
 func throw_projectile(projectile):
 	is_attacking = true
-	projectile.get_node("Sprite2D")
+	projectile.get_node("AnimatedSprite2D")
 	projectile.global_position = global_position
 
 	var direction : Vector2

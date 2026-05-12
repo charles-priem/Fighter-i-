@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://02s73tx6iorh"]
 
+[ext_resource type="Script" uid="uid://bn4v75flwdudd" path="res://scripts/ElYaagoubi.gd" id="1_60jth"]
 [ext_resource type="Texture2D" uid="uid://dr4361weqnaqh" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 1.png" id="2_koadh"]
 [ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="2_ovcwl"]
 [ext_resource type="Texture2D" uid="uid://c5aqavrt203u8" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 2.png" id="3_60jth"]
@@ -137,16 +138,28 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
-radius = 15.0
-height = 60.0
+radius = 36.0
+height = 94.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_60jth"]
+radius = 45.0
+height = 116.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
+script = ExtResource("1_60jth")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1664251423]
-position = Vector2(0, -16)
+position = Vector2(0, -23)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_owota")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
+position = Vector2(-3, -13)
 shape = SubResource("CapsuleShape2D_3vyb7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=217822082]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1784399389]
+position = Vector2(-1, -10)
+shape = SubResource("CapsuleShape2D_60jth")

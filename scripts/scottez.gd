@@ -24,7 +24,7 @@ func handle_attacks():
 		is_attacking = true
 		var new_gravity = 980 - (adversaire.damage_percent * 10)
 		adversaire.gravity = new_gravity
-		await get_tree().create_timer(0.5).timeout
+		await get_tree().create_timer(2).timeout
 		adversaire.gravity = 980
 		var directionRight = true if direction.x > 0 else false
 		adversaire.take_hit(5,5,5,directionRight)
