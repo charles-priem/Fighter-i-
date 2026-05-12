@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://3gavtdcsrb1c"]
 
 [ext_resource type="Script" uid="uid://delfvbpua7ty6" path="res://scripts/n_kounou.gd" id="1_5c6hg"]
-[ext_resource type="Texture2D" uid="uid://yt6n6uhswcrg" path="res://assets/sprites/Personnages/N Kounou/nkounou1.webp" id="3_0s02f"]
+[ext_resource type="Texture2D" uid="uid://dupliu6l8ghjt" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 3.webp" id="3_ujqu1"]
+[ext_resource type="Texture2D" uid="uid://crpq3gfsy83gj" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 4.webp" id="4_ftan7"]
 [ext_resource type="Texture2D" uid="uid://ws2dr13u51bs" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 1.png" id="4_v0t2m"]
 [ext_resource type="Texture2D" uid="uid://cudn7ie05jylg" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 2.png" id="5_753xu"]
+[ext_resource type="Texture2D" uid="uid://dmpo5bwwlm3d7" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 5.webp" id="5_bqf1f"]
 [ext_resource type="Texture2D" uid="uid://bngw0q3swli4g" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 3.png" id="6_ldfiy"]
+[ext_resource type="Texture2D" uid="uid://dkkyoi85k0ofp" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 6.webp" id="6_qt8nx"]
+[ext_resource type="Texture2D" uid="uid://eq315a5238t0" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 7.webp" id="7_0a2sy"]
 [ext_resource type="Texture2D" uid="uid://w4tje10so224" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 4.png" id="7_q570h"]
 [ext_resource type="Texture2D" uid="uid://cj80w1s6w357f" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 5.png" id="8_83gj0"]
+[ext_resource type="Texture2D" uid="uid://8bbdd6ummsov" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 8.webp" id="8_d1m1r"]
+[ext_resource type="Texture2D" uid="uid://7j6k71xqrmna" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 10.webp" id="9_3aof0"]
 [ext_resource type="Texture2D" uid="uid://epjv4ydcq45p" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 6.png" id="9_mtvxp"]
 [ext_resource type="Texture2D" uid="uid://b0kjatbuvsal4" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 7.png" id="10_nfref"]
 [ext_resource type="Texture2D" uid="uid://bif7cf4f8qs8p" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 8.png" id="11_ujqu1"]
@@ -34,11 +40,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_0s02f")
+"texture": ExtResource("3_ujqu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ftan7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bqf1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qt8nx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0a2sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d1m1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3aof0")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -92,17 +116,18 @@ radius = 18.0
 height = 100.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6nak3"]
-radius = 47.0
+radius = 24.0
 height = 100.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_5c6hg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
-position = Vector2(0, -14)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-4.5, -2.0902786)
+scale = Vector2(0.45833334, 0.47453704)
 sprite_frames = SubResource("SpriteFrames_34wqp")
 animation = &"idle"
+frame_progress = 0.53849953
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
@@ -112,5 +137,5 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 [node name="Area2D" type="Area2D" parent="." unique_id=13979002]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
-position = Vector2(0, -16)
+position = Vector2(-4, -17)
 shape = SubResource("CapsuleShape2D_6nak3")

@@ -146,7 +146,6 @@ func handle_dash_input():
 			
 			# Si aucune direction pressée, on dash vers l'avant par défaut
 			if input_dir == Vector2.ZERO:
-				print(str(player_number) + " " + str(facing_left))
 				input_dir.x = 1.0 if !facing_left else -1.0
 			
 			# Lancement du dash
