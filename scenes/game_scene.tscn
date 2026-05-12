@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bnk81mj5ys8rk" path="res://scripts/blastzone.gd" id="2_utbpp"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
 [ext_resource type="PackedScene" uid="uid://dsx4geeimrikr" path="res://scenes/Dubois.tscn" id="6_kk2rg"]
-[ext_resource type="PackedScene" uid="uid://3gavtdcsrb1c" path="res://scenes/NKounou.tscn" id="8_b5spy"]
+[ext_resource type="PackedScene" uid="uid://02s73tx6iorh" path="res://scenes/ElYaagoubi.tscn" id="8_b5spy"]
 [ext_resource type="Texture2D" uid="uid://btcdxcxed85ko" path="res://assets/sprites/bg2.jpg" id="9_utbpp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b5spy"]
@@ -82,6 +82,7 @@ texture = ExtResource("1_rurhu")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1218308093]
 position = Vector2(-257, -156)
+script = ExtResource("1_b5spy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1429665911]
 position = Vector2(24, 0)
@@ -97,6 +98,7 @@ color = Color(0.16470589, 1, 1, 1)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1398671965]
 position = Vector2(206, -156)
+script = ExtResource("1_b5spy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1411144233]
 position = Vector2(1, -1)
@@ -219,4 +221,4 @@ layout_mode = 2
 [node name="Dubois" parent="." unique_id=2041489519 instance=ExtResource("6_kk2rg")]
 player_number = 2
 
-[node name="NKounou" parent="." unique_id=200296536 instance=ExtResource("8_b5spy")]
+[node name="ElYaagoubi" parent="." unique_id=1870695179 instance=ExtResource("8_b5spy")]
