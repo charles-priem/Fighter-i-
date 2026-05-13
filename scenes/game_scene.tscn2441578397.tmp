@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dyuc7ub53c47y" path="res://assets/sprites/platform.png" id="1_rurhu"]
 [ext_resource type="Script" uid="uid://cgn1behbhvis2" path="res://scripts/camera_2d.gd" id="2_onqr8"]
 [ext_resource type="Script" uid="uid://bnk81mj5ys8rk" path="res://scripts/blastzone.gd" id="2_utbpp"]
+[ext_resource type="Script" uid="uid://bwisrlu51qqxm" path="res://scripts/move_plateform.gd" id="3_utbpp"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
 [ext_resource type="PackedScene" uid="uid://b7o41v2dkbjpn" path="res://scenes/Scottez.tscn" id="7_b5spy"]
-[ext_resource type="PackedScene" uid="uid://dsx4geeimrikr" path="res://scenes/Dubois.tscn" id="8_utbpp"]
+[ext_resource type="PackedScene" uid="uid://3gavtdcsrb1c" path="res://scenes/NKounou.tscn" id="8_b5spy"]
 [ext_resource type="Texture2D" uid="uid://btcdxcxed85ko" path="res://assets/sprites/bg2.jpg" id="9_utbpp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b5spy"]
@@ -80,33 +81,32 @@ position = Vector2(55.000015, 0)
 scale = Vector2(1.1375, 1)
 texture = ExtResource("1_rurhu")
 
-[node name="plateform1" type="RigidBody2D" parent="." unique_id=177075212]
-position = Vector2(-257, -234)
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1218308093]
+position = Vector2(-257, -156)
+script = ExtResource("1_b5spy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plateform1" unique_id=1429665911]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1429665911]
 position = Vector2(24, 0)
 shape = SubResource("RectangleShape2D_w5aja")
 one_way_collision = true
 
-[node name="ColorRect" type="ColorRect" parent="plateform1" unique_id=1833689943]
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1833689943]
 offset_left = -100.0
 offset_top = -10.0
 offset_right = 148.0
 offset_bottom = 10.0
 color = Color(0.16470589, 1, 1, 1)
 
-[node name="plateform2" type="RigidBody2D" parent="." unique_id=618485233]
-position = Vector2(700, -156)
-mass = 0.001
-gravity_scale = 0.0
-lock_rotation = true
+[node name="StaticBody2D2" type="RigidBody2D" parent="." unique_id=618485233]
+position = Vector2(206, -156)
+script = ExtResource("3_utbpp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plateform2" unique_id=1411144233]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1411144233]
 position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_onqr8")
 one_way_collision = true
 
-[node name="ColorRect" type="ColorRect" parent="plateform2" unique_id=1361922730]
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2" unique_id=1361922730]
 offset_left = -103.0
 offset_top = -12.0
 offset_right = 104.0
@@ -219,7 +219,7 @@ horizontal_alignment = 1
 [node name="P2Stocks" type="HBoxContainer" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=1346808228]
 layout_mode = 2
 
-[node name="Dubois" parent="." unique_id=2041489519 instance=ExtResource("8_utbpp")]
+[node name="Scottez" parent="." unique_id=2041489519 instance=ExtResource("7_b5spy")]
 player_number = 2
 
-[node name="Scottez" parent="." unique_id=48203679 instance=ExtResource("7_b5spy")]
+[node name="NKounou" parent="." unique_id=599262587 instance=ExtResource("8_b5spy")]
