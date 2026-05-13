@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dyuc7ub53c47y" path="res://assets/sprites/platform.png" id="1_rurhu"]
 [ext_resource type="Script" uid="uid://cgn1behbhvis2" path="res://scripts/camera_2d.gd" id="2_onqr8"]
 [ext_resource type="Script" uid="uid://bnk81mj5ys8rk" path="res://scripts/blastzone.gd" id="2_utbpp"]
-[ext_resource type="PackedScene" uid="uid://duwlcuffy55yg" path="res://scenes/plateforme1.tscn" id="3_mw25s"]
+[ext_resource type="Script" uid="uid://bwisrlu51qqxm" path="res://scripts/move_plateform.gd" id="3_utbpp"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
 [ext_resource type="PackedScene" uid="uid://b7o41v2dkbjpn" path="res://scenes/Scottez.tscn" id="7_b5spy"]
 [ext_resource type="PackedScene" uid="uid://dsx4geeimrikr" path="res://scenes/Dubois.tscn" id="8_utbpp"]
@@ -14,6 +14,12 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxttp"]
 size = Vector2(910, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5aja"]
+size = Vector2(248, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onqr8"]
+size = Vector2(207, 23)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b5spy"]
 normal = Vector2(1, 0)
@@ -75,14 +81,44 @@ position = Vector2(55.000015, 0)
 scale = Vector2(1.1375, 1)
 texture = ExtResource("1_rurhu")
 
-[node name="Plateforme1" parent="." unique_id=1368431984 instance=ExtResource("3_mw25s")]
-position = Vector2(-195, -196)
+[node name="plateform1" type="CharacterBody2D" parent="." unique_id=768799272]
+position = Vector2(-257, -234)
+script = ExtResource("3_utbpp")
+MAX_POSITION_LEFT = -300.0
+MAX_POSITION_RIGHT = 400.0
+POSITION_Y = -234.0
 
-[node name="Plateforme2" parent="." unique_id=172428346 instance=ExtResource("3_mw25s")]
-position = Vector2(185, -134)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plateform1" unique_id=1429665911]
+position = Vector2(24, 0)
+shape = SubResource("RectangleShape2D_w5aja")
+one_way_collision = true
+one_way_collision_margin = 50.0
+debug_color = Color(1, 0.6, 0.69803923, 0.41960785)
 
-[node name="AnimationPlayer" parent="Plateforme2/AnimatableBody2D" parent_id_path=PackedInt32Array(172428346, 1939912043) index="2" unique_id=19003126]
-autoplay = &"move2"
+[node name="ColorRect" type="ColorRect" parent="plateform1" unique_id=1833689943]
+offset_left = -100.0
+offset_top = -10.0
+offset_right = 148.0
+offset_bottom = 10.0
+color = Color(0.16470589, 1, 1, 1)
+
+[node name="plateform2" type="RigidBody2D" parent="." unique_id=618485233]
+position = Vector2(700, -156)
+mass = 0.001
+gravity_scale = 0.0
+lock_rotation = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plateform2" unique_id=1411144233]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_onqr8")
+one_way_collision = true
+
+[node name="ColorRect" type="ColorRect" parent="plateform2" unique_id=1361922730]
+offset_left = -103.0
+offset_top = -12.0
+offset_right = 104.0
+offset_bottom = 11.0
+color = Color(0.5058824, 1, 0.16078432, 1)
 
 [node name="BlastzoneLeft" type="Area2D" parent="." unique_id=1329137969]
 position = Vector2(-1000, -2)
@@ -194,5 +230,3 @@ layout_mode = 2
 player_number = 2
 
 [node name="Scottez" parent="." unique_id=48203679 instance=ExtResource("7_b5spy")]
-
-[editable path="Plateforme2"]
