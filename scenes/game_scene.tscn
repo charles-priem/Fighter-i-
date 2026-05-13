@@ -6,8 +6,8 @@
 [ext_resource type="Script" uid="uid://bnk81mj5ys8rk" path="res://scripts/blastzone.gd" id="2_utbpp"]
 [ext_resource type="PackedScene" uid="uid://duwlcuffy55yg" path="res://scenes/plateforme1.tscn" id="3_mw25s"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
-[ext_resource type="PackedScene" uid="uid://b7o41v2dkbjpn" path="res://scenes/Scottez.tscn" id="7_b5spy"]
 [ext_resource type="PackedScene" uid="uid://dsx4geeimrikr" path="res://scenes/Dubois.tscn" id="8_utbpp"]
+[ext_resource type="PackedScene" uid="uid://dyqad0rwgd0k1" path="res://scenes/Morelle.tscn" id="9_mw25s"]
 [ext_resource type="Texture2D" uid="uid://btcdxcxed85ko" path="res://assets/sprites/bg2.jpg" id="9_utbpp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b5spy"]
@@ -193,6 +193,6 @@ layout_mode = 2
 [node name="Dubois" parent="." unique_id=2041489519 instance=ExtResource("8_utbpp")]
 player_number = 2
 
-[node name="Scottez" parent="." unique_id=48203679 instance=ExtResource("7_b5spy")]
+[node name="Morelle" parent="." unique_id=1961245888 instance=ExtResource("9_mw25s")]
 
 [editable path="Plateforme2"]

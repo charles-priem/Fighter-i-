@@ -35,10 +35,60 @@
 [ext_resource type="Texture2D" uid="uid://cv5o44aml651a" path="res://assets/sprites/Personnages/Dubois/Dubois dash 12.png" id="14_lvwrg"]
 [ext_resource type="Texture2D" uid="uid://bjejmmjn8hjir" path="res://assets/sprites/Personnages/Dubois/Dubois saut 10.png" id="14_yo02t"]
 [ext_resource type="Texture2D" uid="uid://ds1611i2edm50" path="res://assets/sprites/Personnages/Dubois/Dubois saut 11.png" id="15_6lsdx"]
+[ext_resource type="Texture2D" uid="uid://cqaqeywnq8iui" path="res://assets/sprites/Personnages/Dubois/dubois domage 1.webp" id="15_uwcxe"]
 [ext_resource type="Texture2D" uid="uid://b6xyr3ohlfax0" path="res://assets/sprites/Personnages/Dubois/Dubois saut 12.png" id="16_7d330"]
+[ext_resource type="Texture2D" uid="uid://wykxvfe27cyj" path="res://assets/sprites/Personnages/Dubois/dubois domage 2.webp" id="16_ogofk"]
+[ext_resource type="Texture2D" uid="uid://c5t5bba7rx1br" path="res://assets/sprites/Personnages/Dubois/dubois domage 3.webp" id="17_ho0x2"]
+[ext_resource type="Texture2D" uid="uid://88jxcy6vn6yy" path="res://assets/sprites/Personnages/Dubois/dubois domage 4.webp" id="18_darxo"]
+[ext_resource type="Texture2D" uid="uid://dd6efxefp6tij" path="res://assets/sprites/Personnages/Dubois/dubois_idle1.webp" id="19_r7kob"]
+[ext_resource type="Texture2D" uid="uid://ca3pqsm3v5h0g" path="res://assets/sprites/Personnages/Dubois/dubois domage 5.webp" id="19_w3yo8"]
+[ext_resource type="Texture2D" uid="uid://c2h1chx1f78s5" path="res://assets/sprites/Personnages/Dubois/dubois_idle2.webp" id="20_l27ip"]
+[ext_resource type="Texture2D" uid="uid://djjmfu0opu5ay" path="res://assets/sprites/Personnages/Dubois/dubois domage 6.webp" id="20_topuc"]
+[ext_resource type="Texture2D" uid="uid://fqlc4g2oi6wi" path="res://assets/sprites/Personnages/Dubois/dubois_idle3.webp" id="21_iyw7a"]
+[ext_resource type="Texture2D" uid="uid://dnbkc66262yn7" path="res://assets/sprites/Personnages/Dubois/dubois domage 7.webp" id="21_vvhk6"]
+[ext_resource type="Texture2D" uid="uid://cy46t1q5gf625" path="res://assets/sprites/Personnages/Dubois/dubois_idle4.webp" id="22_lvwrg"]
+[ext_resource type="Texture2D" uid="uid://detfqlrk1i0rx" path="res://assets/sprites/Personnages/Dubois/dubois domage 8.webp" id="22_qh52j"]
+[ext_resource type="Texture2D" uid="uid://dhtbnmq1ms0y4" path="res://assets/sprites/Personnages/Dubois/dubois domage 9.webp" id="23_42v77"]
+[ext_resource type="Texture2D" uid="uid://cstxlo4wl0k3w" path="res://assets/sprites/Personnages/Dubois/dubois_idle5.webp" id="23_bp6vs"]
+[ext_resource type="Texture2D" uid="uid://t0erbkggk4cp" path="res://assets/sprites/Personnages/Dubois/dubois_idle6.webp" id="24_qaxed"]
+[ext_resource type="Texture2D" uid="uid://yt55xhy8xijc" path="res://assets/sprites/Personnages/Dubois/dubois_idle7.webp" id="25_78go8"]
+[ext_resource type="Texture2D" uid="uid://8ek0ncdk1mfs" path="res://assets/sprites/Personnages/Dubois/dubois_idle8.webp" id="26_dqypm"]
+[ext_resource type="Texture2D" uid="uid://ds0gp4ncldat4" path="res://assets/sprites/Personnages/Dubois/dubois_idle9.webp" id="27_aomar"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_uwcxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ogofk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ho0x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_darxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_w3yo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_topuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vvhk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_qh52j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_42v77")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 20.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_0rjhi")
@@ -104,7 +154,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_1sso1")
+"texture": ExtResource("19_r7kob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_l27ip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_iyw7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_lvwrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_bp6vs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_qaxed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_78go8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_dqypm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_aomar")
 }],
 "loop": true,
 "name": &"idle",
@@ -190,7 +264,8 @@ cookie_dubois = ExtResource("2_1sso1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_34wqp")
-animation = &"fall"
+animation = &"damage"
+frame_progress = 0.31559923
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
