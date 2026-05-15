@@ -25,10 +25,6 @@ func _ready() -> void:
 
 	play_button.grab_focus()
 
-	modulate.a = 0.0
-	var tween: Tween = create_tween()
-	tween.tween_property(self, "modulate:a", 1.0, 0.5)
-
 # Le menu principal ne change pas lui-même les scènes :
 # il envoie des requêtes au scene manager avec un identifiant stable
 # et le noeud source pour faciliter le debug et les évolutions futures.
