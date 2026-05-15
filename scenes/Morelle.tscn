@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dyqad0rwgd0k1"]
 
-[ext_resource type="Script" uid="uid://d3g6uol51pi4d" path="res://scripts/Dubois.gd" id="1_l382c"]
-[ext_resource type="PackedScene" uid="uid://csrgihefs44o6" path="res://scenes/cookie_dubois.tscn" id="2_g8a8h"]
+[ext_resource type="Script" uid="uid://bwpa88sl76otn" path="res://scripts/morelle.gd" id="1_3bueh"]
 [ext_resource type="Texture2D" uid="uid://tqs3xpc3npsq" path="res://assets/sprites/Personnages/Morelle/morelle_idle1.webp" id="3_3q4qr"]
 [ext_resource type="Texture2D" uid="uid://cqaqmxbx7o1gd" path="res://assets/sprites/Personnages/Morelle/morelle_idle2.webp" id="4_2j382"]
 [ext_resource type="Texture2D" uid="uid://wjinaotltq0r" path="res://assets/sprites/Personnages/Morelle/morelle_idle3.webp" id="5_hidrn"]
@@ -94,8 +93,7 @@ radius = 42.0
 height = 124.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
-script = ExtResource("1_l382c")
-cookie_dubois = ExtResource("2_g8a8h")
+script = ExtResource("1_3bueh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
