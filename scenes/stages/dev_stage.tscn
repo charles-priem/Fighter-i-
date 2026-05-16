@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://b6cjd3dxelqol"]
 
+[ext_resource type="Script" uid="uid://brtd404y3d7wq" path="res://scripts/stages/dev_stage.gd" id="1_1df8u"]
 [ext_resource type="Script" uid="uid://bd7ypfuxertcc" path="res://scripts/platform.gd" id="1_b5spy"]
 [ext_resource type="Texture2D" uid="uid://b40ga4h2dwwsf" path="res://assets/sprites/plateforme lunaire 1.png" id="2_mw25s"]
-[ext_resource type="Script" uid="uid://cgn1behbhvis2" path="res://scripts/camera_2d.gd" id="2_onqr8"]
-[ext_resource type="Script" uid="uid://bnk81mj5ys8rk" path="res://scripts/blastzone.gd" id="2_utbpp"]
 [ext_resource type="PackedScene" uid="uid://duwlcuffy55yg" path="res://scenes/plateforme1.tscn" id="3_mw25s"]
-[ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="3_ycayy"]
 [ext_resource type="Texture2D" uid="uid://bar5lvx5m7tko" path="res://assets/sprites/plateforme marsienne 1.png" id="4_mw25s"]
 [ext_resource type="Texture2D" uid="uid://wx50k7w8o731" path="res://assets/sprites/map lunaire.png" id="6_utbpp"]
 [ext_resource type="PackedScene" uid="uid://dsx4geeimrikr" path="res://scenes/Dubois.tscn" id="8_utbpp"]
 [ext_resource type="PackedScene" uid="uid://dyqad0rwgd0k1" path="res://scenes/Morelle.tscn" id="9_mw25s"]
+[ext_resource type="Script" uid="uid://bnk81mj5ys8rk" path="res://scripts/blastzone.gd" id="2_1df8u"]
+[ext_resource type="Script" uid="uid://cgn1behbhvis2" path="res://scripts/camera_2d.gd" id="3_bbkak"]
+[ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="7_7rhe6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b5spy"]
 
@@ -60,7 +61,8 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="GameScene" type="Node2D" unique_id=1171841260]
+[node name="DevStage" type="Node2D" unique_id=2052335995]
+script = ExtResource("1_1df8u")
 
 [node name="MoonPlatform1" type="StaticBody2D" parent="." unique_id=152687302]
 collision_mask = 0
@@ -113,7 +115,7 @@ autoplay = &"move2"
 
 [node name="BlastzoneLeft" type="Area2D" parent="." unique_id=1329137969]
 position = Vector2(-1000, -2)
-script = ExtResource("2_utbpp")
+script = ExtResource("2_1df8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlastzoneLeft" unique_id=2103033705]
 position = Vector2(-662, 1)
@@ -121,7 +123,7 @@ shape = SubResource("WorldBoundaryShape2D_b5spy")
 
 [node name="BlastzoneRight" type="Area2D" parent="." unique_id=1065344018]
 position = Vector2(1000, -2.1)
-script = ExtResource("2_utbpp")
+script = ExtResource("2_1df8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlastzoneRight" unique_id=445339068]
 position = Vector2(1534, 0)
@@ -129,7 +131,7 @@ shape = SubResource("WorldBoundaryShape2D_utbpp")
 
 [node name="BlastzoneTop" type="Area2D" parent="." unique_id=58953580]
 position = Vector2(1, -1000)
-script = ExtResource("2_utbpp")
+script = ExtResource("2_1df8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlastzoneTop" unique_id=317195787]
 position = Vector2(0, -576)
@@ -137,7 +139,7 @@ shape = SubResource("WorldBoundaryShape2D_mw25s")
 
 [node name="BlastzoneBottom" type="Area2D" parent="." unique_id=1798537245]
 position = Vector2(1, 1000)
-script = ExtResource("2_utbpp")
+script = ExtResource("2_1df8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlastzoneBottom" unique_id=2101419461]
 position = Vector2(0, 271)
@@ -146,7 +148,7 @@ shape = SubResource("WorldBoundaryShape2D_tcjrq")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=938563523]
 position = Vector2(-4, -161)
 position_smoothing_enabled = true
-script = ExtResource("2_onqr8")
+script = ExtResource("3_bbkak")
 
 [node name="background" type="Sprite2D" parent="." unique_id=1750403046]
 z_index = -1
@@ -165,7 +167,7 @@ offset_left = -5.0
 offset_right = -5.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("3_ycayy")
+script = ExtResource("7_7rhe6")
 
 [node name="P1Panel" type="PanelContainer" parent="HUD/HUDControl" unique_id=977925547]
 custom_minimum_size = Vector2(200, 100)

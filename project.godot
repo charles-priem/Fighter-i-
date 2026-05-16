@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Fight_I"
-run/main_scene="uid://t6um3ws1g767"
+run/main_scene="uid://clq71xgfi2vn8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,7 +21,7 @@ GameData="*uid://7o7bhx5gmsem"
 
 [display]
 
-window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [input]
 
@@ -92,4 +92,5 @@ p2_smash={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
