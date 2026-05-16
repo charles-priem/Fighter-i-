@@ -7,8 +7,8 @@ extends Camera2D
 @export var follow_speed: float = 4.0 # Vitesse de suivi des joueurs
 
 # Limites de la caméra (pour ne pas sortir de l'arène)
-@export var limit_left_val: float = -700.0
-@export var limit_right_val: float = 1400.0
+@export var limit_left_val: float = -200.0
+@export var limit_right_val: float = 1000.0
 @export var limit_top_val: float = -500.0
 @export var limit_bottom_val: float = 700.0
 

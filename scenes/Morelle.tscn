@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://dyqad0rwgd0k1"]
+
+[ext_resource type="Script" uid="uid://bwpa88sl76otn" path="res://scripts/morelle.gd" id="1_3bueh"]
+[ext_resource type="Texture2D" uid="uid://tqs3xpc3npsq" path="res://assets/sprites/Personnages/Morelle/morelle_idle1.webp" id="3_3q4qr"]
+[ext_resource type="Texture2D" uid="uid://cqaqmxbx7o1gd" path="res://assets/sprites/Personnages/Morelle/morelle_idle2.webp" id="4_2j382"]
+[ext_resource type="Texture2D" uid="uid://wjinaotltq0r" path="res://assets/sprites/Personnages/Morelle/morelle_idle3.webp" id="5_hidrn"]
+[ext_resource type="Texture2D" uid="uid://cfbcnr57r1ran" path="res://assets/sprites/Personnages/Morelle/morelle_idle4.webp" id="6_hq3j6"]
+[ext_resource type="Texture2D" uid="uid://fhgpraaudrmp" path="res://assets/sprites/Personnages/Morelle/morelle_idle5.webp" id="7_y3jd2"]
+[ext_resource type="Texture2D" uid="uid://cwwngwb0rfsc" path="res://assets/sprites/Personnages/Morelle/morelle_idle6.webp" id="8_4ak8d"]
+[ext_resource type="Texture2D" uid="uid://bs6amx4627lfw" path="res://assets/sprites/Personnages/Morelle/morelle_idle7.webp" id="9_l5yko"]
+[ext_resource type="Texture2D" uid="uid://ci4ohayjl144u" path="res://assets/sprites/Personnages/Morelle/morelle_idle8.webp" id="10_exp5i"]
+[ext_resource type="Texture2D" uid="uid://d3gs24s2jbjaa" path="res://assets/sprites/Personnages/Morelle/morelle_idle9.webp" id="11_s7cua"]
+[ext_resource type="Texture2D" uid="uid://bsvdrfr5t2uar" path="res://assets/sprites/Personnages/Morelle/morelle_idle10.webp" id="12_5dpmv"]
+[ext_resource type="Texture2D" uid="uid://cv3nk55dil064" path="res://assets/sprites/Personnages/Morelle/morelle_idle11.webp" id="13_yw5rx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"damage",
+"speed": 20.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"dash",
+"speed": 50.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"jump",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3q4qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2j382")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hidrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hq3j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_y3jd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4ak8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_l5yko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_exp5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_s7cua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5dpmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yw5rx")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 25.0
+height = 108.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6nak3"]
+radius = 42.0
+height = 124.0
+
+[node name="Player" type="CharacterBody2D" unique_id=2041489519]
+script = ExtResource("1_3bueh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_34wqp")
+animation = &"run"
+offset = Vector2(0, -33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_3vyb7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=13979002]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_6nak3")

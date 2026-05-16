@@ -20,7 +20,9 @@ var damage_percent   : float = 0.0
 var stocks           : int   = 3
 var is_attacking     : bool  = false
 var invincible_timer : float = 0.0
-var facing_left     : bool  = true
+var facing_left      : bool  = true
+var taking_damage    : bool = false
+
 
 
 # Dash
@@ -176,6 +178,7 @@ func take_hit(dmg: float, kb_x: float, kb_y: float,
 		return
 	is_dashing = false;
 	damage_percent += dmg
+	taking_damage = true
 	var mult = (1.0 + damage_percent / 100.0) / weight
 	var vx = kb_x * mult
 	var vy = kb_y * mult

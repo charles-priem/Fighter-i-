@@ -1,10 +1,9 @@
-[gd_scene format=3 uid="uid://duwlcuffy55yg"]
+[gd_scene format=3 uid="uid://bpxrvb0ixwo1v"]
 
-[ext_resource type="Texture2D" uid="uid://bpd3q032gixcl" path="res://assets/sprites/plateforme2.png" id="1_wiyqh"]
-[ext_resource type="Script" uid="uid://bcwo2bu5coun0" path="res://scripts/taille_collision_shape_2d_platform.gd" id="2_c30i6"]
+[ext_resource type="Texture2D" uid="uid://rs0ugctt76l6" path="res://assets/sprites/plateforme1.png" id="1_axnur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wiyqh"]
-size = Vector2(23, 32)
+size = Vector2(160, 21)
 
 [sub_resource type="Animation" id="Animation_wiyqh"]
 length = 0.001
@@ -67,12 +66,11 @@ _data = {
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=1939912043]
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=352615744]
-scale = Vector2(2.169, 1)
-texture = ExtResource("1_wiyqh")
+scale = Vector2(5, 0.648)
+texture = ExtResource("1_axnur")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=929413730]
 shape = SubResource("RectangleShape2D_wiyqh")
-script = ExtResource("2_c30i6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D" unique_id=19003126]
 libraries/ = SubResource("AnimationLibrary_4ws0n")
