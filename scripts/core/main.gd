@@ -43,6 +43,7 @@ func _show_screen(scene_resource: PackedScene) -> Node:
 func _show_stage(scene_resource: PackedScene) -> Node:
 	current_stage = _replace_child(stage, current_stage, scene_resource)
 	_connect_if_exists(current_stage, &"exit_requested", _on_stage_exit_requested)
+	_connect_if_exists(current_stage, &"match_finished", _on_match_finished)
 	return current_stage
 
 # Affichage des différentes scènes UI.
@@ -103,6 +104,9 @@ func _on_characters_selected(_source_id: StringName = &"", _source_node: Node = 
 
 func _on_character_select_back_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
 	call_deferred("_show_main_menu")
+
+func _on_match_finished(_winner_player: int, _source_id: StringName = &"", _source_node: Node = null) -> void:
+	call_deferred("_return_to_main_menu_from_game")
 
 func _on_settings_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
 	call_deferred("_show_settings_menu")

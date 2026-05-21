@@ -1,26 +1,21 @@
 extends Node2D
 
 signal exit_requested(source_id: StringName, source_node: Node)
+signal match_finished(winner_player: int, source_id: StringName, source_node: Node)
 
 @export var p1_spawn: Marker2D
 @export var p2_spawn: Marker2D
 @export var hud: Control
 
 func _ready() -> void:
-	if p1_spawn == null or p2_spawn == null:
-		push_error("Les points de spawn P1/P2 ne sont pas assignés dans dev_stage.gd")
-		return
-
 	var p1_scene: PackedScene = load(GameData.p1_scene)
 	var p2_scene: PackedScene = load(GameData.p2_scene)
 
 	var p1: Node2D = p1_scene.instantiate()
 	var p2: Node2D = p2_scene.instantiate()
 	
-	if p1.has_method("set_hud"):
-		p1.set_hud(hud)
-	if p2.has_method("set_hud"):
-		p2.set_hud(hud)
+	p1.set_hud(hud)
+	p2.set_hud(hud)
 
 	p1.player_number = 1
 	p2.player_number = 2
@@ -33,6 +28,20 @@ func _ready() -> void:
 
 	p1.spawn_point = p1.global_position
 	p2.spawn_point = p2.global_position
+
+	p1.player_eliminated.connect(_on_player_eliminated)
+	p2.player_eliminated.connect(_on_player_eliminated)
+
+func _on_player_eliminated(player_num: int) -> void:
+	var winner: int = 2 if player_num == 1 else 1
+
+	GameData.last_winner = winner
+	if winner == 1:
+		GameData.p1_wins += 1
+	else:
+		GameData.p2_wins += 1
+
+	match_finished.emit(winner, &"dev_stage", self)
 
 # Retour demandé vers le menu principal quand le joueur appuie sur Echap.
 func _unhandled_input(event: InputEvent) -> void:

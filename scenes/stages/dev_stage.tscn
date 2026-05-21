@@ -236,10 +236,10 @@ player_number = 2
 visible = false
 
 [node name="P1 Spawn" type="Marker2D" parent="." unique_id=122754158]
-position = Vector2(142, -117)
+position = Vector2(-51, -93)
 
 [node name="P2 Spawn" type="Marker2D" parent="." unique_id=1154575394]
-position = Vector2(911, -250)
+position = Vector2(718, -233)
 
 [editable path="Plateforme1"]
 [editable path="Plateforme2"]
