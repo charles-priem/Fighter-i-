@@ -1,7 +1,7 @@
 extends BasePlayer
 
 @onready var animated_sprite = $AnimatedSprite2D
-@onready var adversaire = get_node("/root/GameScene/Dubois")
+@onready var adversaire: CharacterBody2D = $"../Morelle"
 
 var direction = Vector2.RIGHT
 
@@ -22,12 +22,12 @@ func handle_attacks():
 	var attack_action = "p" + str(player_number) + "_attack"
 	if Input.is_action_just_pressed(attack_action) :
 		is_attacking = true
-		var new_gravity = 980 - (adversaire.damage_percent * 10)
+		var new_gravity = 980 - (adversaire.damage_percent * 13)
 		adversaire.gravity = new_gravity
 		await get_tree().create_timer(2).timeout
 		adversaire.gravity = 980
 		var directionRight = true if direction.x > 0 else false
-		adversaire.take_hit(5,5,5,directionRight)
+		adversaire.take_hit(10,5,5,directionRight, false)
 		is_attacking = false
 		
 

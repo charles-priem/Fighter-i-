@@ -173,26 +173,27 @@ func handle_attacks():
 
 # RECEVOIR UN COUP 
 func take_hit(dmg: float, kb_x: float, kb_y: float,
-			  attacker_right: bool):
+			  attacker_right: bool, recoil_effect: bool):
 	if invincible_timer > 0:
 		return
 	is_dashing = false;
 	damage_percent += dmg
 	taking_damage = true
 	var mult = (1.0 + damage_percent / 100.0) / weight
-	var vx = kb_x * mult
-	var vy = kb_y * mult
-	if not attacker_right:
-		vx = -vx
-	velocity = Vector2(vx, vy)
+	#var vx = kb_x * mult
+	#var vy = kb_y * mult
+	#if not attacker_right:
+		#vx = -vx
+	#velocity = Vector2(vx, vy)
 	
 	#calcul de la nouvelle position en fontion des dégats infligés
-	var new_position
-	if attacker_right:
-		new_position = position.x - DEPLACEMENT_ATTAQUE * mult
-	else:
-		new_position = position.x + DEPLACEMENT_ATTAQUE * mult
-	position.x = new_position
+	if recoil_effect:
+		var new_position
+		if attacker_right:
+			new_position = position.x - DEPLACEMENT_ATTAQUE * mult
+		else:
+			new_position = position.x + DEPLACEMENT_ATTAQUE * mult
+		position.x = new_position
 	
 	invincible_timer = 0.5
 	update_hud()
@@ -247,7 +248,7 @@ func do_attack(hitbox_name: String, startup: float,
 
 func throw_projectile(projectile):
 	is_attacking = true
-	projectile.get_node("AnimatedSprite2D")
+	projectile.get_node("projectile")
 	projectile.global_position = global_position
 
 	var direction : Vector2

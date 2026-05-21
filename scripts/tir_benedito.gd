@@ -14,5 +14,5 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.get_groups()[0] == "players" and body.name != "Benedito":
 		var directionRight = true if direction.x > 0 else false
-		body.take_hit(5,50,50,directionRight)
+		body.take_hit(5,50,50,directionRight, true)
 		queue_free()

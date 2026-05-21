@@ -4,10 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="1_wjeal"]
 [ext_resource type="Texture2D" uid="uid://142w2upnvo7b" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 1.png" id="2_a0cdt"]
 [ext_resource type="PackedScene" uid="uid://cgxc3f0d46iga" path="res://scenes/tir_benedito.tscn" id="2_k63vh"]
-[ext_resource type="Texture2D" uid="uid://b4la8mfeng5xr" path="res://assets/Fire Wizard/Run.png" id="3_p712h"]
 [ext_resource type="Texture2D" uid="uid://vli6rm5wmmri" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 2.png" id="3_s4kpk"]
 [ext_resource type="Texture2D" uid="uid://bb4j03hbe0r0m" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 3.png" id="4_fmvww"]
 [ext_resource type="Texture2D" uid="uid://ctcssxk4e5pp5" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 4.png" id="5_k63vh"]
+[ext_resource type="Texture2D" uid="uid://d0wkin0rcu4d8" path="res://assets/sprites/Personnages/Benedito/Benedito_jump1.png" id="8_7628g"]
+[ext_resource type="Texture2D" uid="uid://7hrrtg1pkt55" path="res://assets/sprites/Personnages/Benedito/Benedito_walk1.png" id="8_cdfxp"]
+[ext_resource type="Texture2D" uid="uid://bmyop560j513i" path="res://assets/sprites/Personnages/Benedito/Benedito_jump2.png" id="9_a161r"]
+[ext_resource type="Texture2D" uid="uid://l2uejrrgfl8f" path="res://assets/sprites/Personnages/Benedito/Benedito_walk2.png" id="9_qpi2c"]
+[ext_resource type="Texture2D" uid="uid://b4akjut5g4e24" path="res://assets/sprites/Personnages/Benedito/Benedito_walk3.png" id="10_a1y3y"]
+[ext_resource type="Texture2D" uid="uid://cehtv2nafurw" path="res://assets/sprites/Personnages/Benedito/Benedito_jump3.png" id="10_nqa2p"]
+[ext_resource type="Texture2D" uid="uid://doiyaml13l2p5" path="res://assets/sprites/Personnages/Benedito/Benedito_jump4.png" id="11_3tyuy"]
+[ext_resource type="Texture2D" uid="uid://bqx2rcq5khnxw" path="res://assets/sprites/Personnages/Benedito/Benedito_walk4.png" id="11_varru"]
+[ext_resource type="Texture2D" uid="uid://cxcck8s0gq37x" path="res://assets/sprites/Personnages/Benedito/Benedito_walk5.png" id="12_e0322"]
+[ext_resource type="Texture2D" uid="uid://c3te53ec2bv2v" path="res://assets/sprites/Personnages/Benedito/Benedito_jump5.png" id="12_w5hqy"]
+[ext_resource type="Texture2D" uid="uid://1iefvmc1n5nk" path="res://assets/sprites/Personnages/Benedito/Benedito_walk6.png" id="13_7628g"]
+[ext_resource type="Texture2D" uid="uid://c3gdebh3qgrjf" path="res://assets/sprites/Personnages/Benedito/Benedito_walk7.png" id="14_a161r"]
+[ext_resource type="Texture2D" uid="uid://b772gao7mygw" path="res://assets/sprites/Personnages/Benedito/Benedito_walk8.png" id="15_nqa2p"]
+[ext_resource type="Texture2D" uid="uid://cnnmfdqsd02bb" path="res://assets/sprites/Personnages/Benedito/Benedito_walk9.png" id="16_3tyuy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wv1as"]
 atlas = ExtResource("1_wjeal")
@@ -19,42 +32,6 @@ region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_koadh"]
 atlas = ExtResource("1_wjeal")
-region = Rect2(896, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ovcwl"]
-atlas = ExtResource("1_wjeal")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0s23m"]
-atlas = ExtResource("3_p712h")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jjf2d"]
-atlas = ExtResource("3_p712h")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dudpi"]
-atlas = ExtResource("3_p712h")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eteif"]
-atlas = ExtResource("3_p712h")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gcbni"]
-atlas = ExtResource("3_p712h")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sxucn"]
-atlas = ExtResource("3_p712h")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_alhiy"]
-atlas = ExtResource("3_p712h")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l57pu"]
-atlas = ExtResource("3_p712h")
 region = Rect2(896, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owota"]
@@ -97,7 +74,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ovcwl")
+"texture": ExtResource("8_7628g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a161r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nqa2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3tyuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w5hqy")
 }],
 "loop": true,
 "name": &"jump",
@@ -110,28 +99,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0s23m")
+"texture": ExtResource("8_cdfxp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jjf2d")
+"texture": ExtResource("9_qpi2c")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dudpi")
+"texture": ExtResource("10_a1y3y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eteif")
+"texture": ExtResource("11_varru")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gcbni")
+"texture": ExtResource("12_e0322")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sxucn")
+"texture": ExtResource("13_7628g")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_alhiy")
+"texture": ExtResource("14_a161r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l57pu")
+"texture": ExtResource("15_nqa2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3tyuy")
 }],
 "loop": true,
 "name": &"run",
@@ -154,7 +146,7 @@ tir = ExtResource("2_k63vh")
 position = Vector2(3, -21)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_owota")
-animation = &"idle"
+animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
 position = Vector2(9, -16)

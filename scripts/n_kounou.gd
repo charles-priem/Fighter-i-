@@ -16,15 +16,20 @@ func _physics_process(delta):
 	super._physics_process(delta)
 	update_animation()
 	
-#func handle_attacks():
-	#var attack_action = "p" + str(player_number) + "_attack"
-	#if Input.is_action_just_pressed(attack_action) :
-		#var projectile = cookie_dubois.instantiate()
-		#get_tree().current_scene.add_child(projectile)
-		#throw_projectile(projectile)
+func handle_attacks():
+	var attack_action = "p" + str(player_number) + "_attack"
+	if Input.is_action_just_pressed(attack_action) :
+		is_attacking = true
+		await get_tree().create_timer(0.5).timeout
+		var projectile = cookie_dubois.instantiate()
+		get_tree().current_scene.add_child(projectile)
+		throw_projectile(projectile)
 
 func update_animation():
-	if not is_on_floor():
+	if is_attacking:
+		animated_sprite.play("attack")
+		await get_tree().create_timer(0.5).timeout
+	elif not is_on_floor():
 		if velocity.y < 0:
 			animated_sprite.play("jump")
 		else:
@@ -33,5 +38,9 @@ func update_animation():
 		animated_sprite.play("dash")
 	elif abs(velocity.x) > 20:
 		animated_sprite.play("run")
+	elif taking_damage:
+		animated_sprite.play("damage")
+		await get_tree().create_timer(0.5).timeout
+		taking_damage = false
 	else:
 		animated_sprite.play("idle")

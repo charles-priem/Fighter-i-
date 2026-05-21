@@ -6,7 +6,17 @@
 [ext_resource type="Texture2D" uid="uid://cneyfp25vcbb5" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 2.png" id="3_ummwe"]
 [ext_resource type="Texture2D" uid="uid://bnpaob5x3n6fo" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 3.png" id="4_a81fl"]
 [ext_resource type="Texture2D" uid="uid://bkn4e2bkc0srl" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 4.png" id="5_u7o0s"]
+[ext_resource type="Texture2D" uid="uid://ca8birrout6ys" path="res://assets/sprites/Personnages/Scottez/Scottez_jump1.png" id="7_07na0"]
 [ext_resource type="Script" uid="uid://brbhpsahw26qh" path="res://scripts/scottez.gd" id="7_ummwe"]
+[ext_resource type="Texture2D" uid="uid://cv16ukvc6d7po" path="res://assets/sprites/Personnages/Scottez/Scottez_jump2.png" id="8_0tedq"]
+[ext_resource type="Texture2D" uid="uid://dfg056nfar1tm" path="res://assets/sprites/Personnages/Scottez/Scottez_jump3.png" id="9_1ye05"]
+[ext_resource type="Texture2D" uid="uid://bfr5mwsgo55h1" path="res://assets/sprites/Personnages/Scottez/Scottez_jump4.png" id="10_qh1r7"]
+[ext_resource type="Texture2D" uid="uid://c0gjv840tr6g3" path="res://assets/sprites/Personnages/Scottez/Scottez_jump5.png" id="11_xbs8a"]
+[ext_resource type="Texture2D" uid="uid://8huq1dplne2i" path="res://assets/sprites/Personnages/Scottez/Scottez_jump6.png" id="12_1lwuo"]
+[ext_resource type="Texture2D" uid="uid://bh1xm6sfae0n3" path="res://assets/sprites/Personnages/Scottez/Scottez_jump7.png" id="13_q2a3t"]
+[ext_resource type="Texture2D" uid="uid://blyvrjqa18uyb" path="res://assets/sprites/Personnages/Scottez/Scottez_jump8.png" id="14_qy2nn"]
+[ext_resource type="Texture2D" uid="uid://ddge1b8chuupd" path="res://assets/sprites/Personnages/Scottez/Scottez_jump9.png" id="15_rjp58"]
+[ext_resource type="Texture2D" uid="uid://cu87rap1kf4gh" path="res://assets/sprites/Personnages/Scottez/Scottez_jump10.png" id="16_egaqu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wv1as"]
 atlas = ExtResource("1_aroyw")
@@ -19,10 +29,6 @@ region = Rect2(768, 0, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_koadh"]
 atlas = ExtResource("1_aroyw")
 region = Rect2(896, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ovcwl"]
-atlas = ExtResource("1_aroyw")
-region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0s23m"]
 atlas = ExtResource("3_pbl40")
@@ -96,7 +102,34 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ovcwl")
+"texture": ExtResource("7_07na0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0tedq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1ye05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qh1r7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xbs8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1lwuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_q2a3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qy2nn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rjp58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_egaqu")
 }],
 "loop": true,
 "name": &"jump",
@@ -141,6 +174,10 @@ animations = [{
 radius = 31.0
 height = 106.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ummwe"]
+radius = 42.0
+height = 124.0
+
 [node name="Scottez" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("7_ummwe")
 
@@ -148,8 +185,14 @@ script = ExtResource("7_ummwe")
 position = Vector2(0, -25)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_owota")
-animation = &"idle"
+animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
 position = Vector2(3, -22)
 shape = SubResource("CapsuleShape2D_3vyb7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=208764088]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=73570391]
+position = Vector2(3, -19)
+shape = SubResource("CapsuleShape2D_ummwe")
