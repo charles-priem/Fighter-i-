@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cscharslot123"]
 
-[ext_resource type="Script" path="res://scripts/ui/character_slot.gd" id="1_cslot"]
+[ext_resource type="Script" uid="uid://dqi02kr2vj65k" path="res://scripts/ui/character_slot.gd" id="1_cslot"]
 [ext_resource type="FontFile" uid="uid://d4beyjxkjfg6p" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="2_font"]
 
-[node name="CharacterSlot" type="Button" node_paths=PackedStringArray("preview_texture", "name_label")]
+[node name="CharacterSlot" type="Button" unique_id=1583238030 node_paths=PackedStringArray("preview_texture", "name_label")]
 custom_minimum_size = Vector2(150, 150)
 offset_right = 150.0
 offset_bottom = 150.0
@@ -13,7 +13,7 @@ script = ExtResource("1_cslot")
 preview_texture = NodePath("MarginContainer/Control/PreviewTexture")
 name_label = NodePath("MarginContainer/Control/NameLabel")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=153336970]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,11 +25,11 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="Control" type="Control" parent="MarginContainer"]
+[node name="Control" type="Control" parent="MarginContainer" unique_id=1834544120]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="PreviewTexture" type="TextureRect" parent="MarginContainer/Control"]
+[node name="PreviewTexture" type="TextureRect" parent="MarginContainer/Control" unique_id=1562076443]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,7 +39,7 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="NameLabel" type="Label" parent="MarginContainer/Control"]
+[node name="NameLabel" type="Label" parent="MarginContainer/Control" unique_id=290995705]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0

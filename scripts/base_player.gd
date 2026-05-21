@@ -10,20 +10,20 @@ class_name BasePlayer
 @export var max_jumps       : int    = 2
 @export var max_stocks      : int    = 3
 @export var player_number   : int    = 1
-@export var dash_speed      : float = 800.0
-@export var dash_duration   : float = 0.2
+@export var dash_speed      : float  = 800.0
+@export var dash_duration   : float  = 0.2
 
 # VARIABLES INTERNES 
 var gravity          = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jumps_remaining  : int   = 2
 var damage_percent   : float = 0.0
-var stocks           : int   = 3
+var stocks           : int   = 0
 var is_attacking     : bool  = false
 var invincible_timer : float = 0.0
 var facing_left      : bool  = true
-var taking_damage    : bool = false
-
-
+var taking_damage    : bool  = false
+var spawn_point      : Vector2
+var hud_control      : Node = null
 
 # Dash
 var is_dashing       : bool  = false
@@ -57,18 +57,24 @@ func _ready():
 	add_to_group("players")
 	velocity = Vector2.ZERO
 	sprite.sprite_frames = sprite.sprite_frames.duplicate()
-	#ledge_detector.body_entered.connect(_on_ledge_detected)
-	#ledge_detector.body_exited.connect(_on_ledge_exited)
+
+	max_stocks = GameData.stock_count
+	stocks = max_stocks
+
 	if player_number == 1:
-		position = Vector2(-200, -400)
 		sprite.flip_h = true
 		facing_left = false
 	else:
-		position = Vector2(200, -400)
+		sprite.flip_h = false
+		facing_left = true
+
+	update_hud()
+
 # BOUCLE PHYSIQUE 
 func _physics_process(delta):
 	# Gestion des timers
-	if invincible_timer > 0: invincible_timer -= delta
+	if invincible_timer > 0:
+		invincible_timer -= delta
 	
 	# 1. LOGIQUE DE LEDGE
 	if is_grabbing_ledge:
@@ -102,6 +108,7 @@ func _physics_process(delta):
 		handle_attacks()
 
 	move_and_slide()
+
 # CLIGNOTEMENT 
 func _process(_delta):
 	if invincible_timer > 0:
@@ -167,7 +174,7 @@ func handle_fast_fall():
 		if velocity.y > 0:
 			velocity.y *= FAST_FALL_MULT
 
-#  ATTAQUES : 
+# ATTAQUES : 
 func handle_attacks():
 	pass
 
@@ -176,7 +183,7 @@ func take_hit(dmg: float, kb_x: float, kb_y: float,
 			  attacker_right: bool):
 	if invincible_timer > 0:
 		return
-	is_dashing = false;
+	is_dashing = false
 	damage_percent += dmg
 	taking_damage = true
 	var mult = (1.0 + damage_percent / 100.0) / weight
@@ -202,7 +209,7 @@ func die():
 	stocks -= 1
 	emit_signal("stock_lost", player_number, stocks)
 
-	var hud = get_tree().root.get_node_or_null("GameScene/HUD/HUDControl")
+	var hud = get_hud()
 	if hud:
 		hud.update_stocks(player_number, stocks)
 
@@ -216,23 +223,30 @@ func die():
 
 # RESPAWN 
 func respawn():
-	damage_percent   = 0.0
-	velocity         = Vector2.ZERO
+	damage_percent = 0.0
+	velocity = Vector2.ZERO
 	invincible_timer = 2.0
-	if player_number == 1:
-		position = Vector2(-200, -400)
-	else:
-		position = Vector2(200, -400)
+	global_position = spawn_point
 	sprite.modulate = Color(1, 1, 1, 0)
 	var tween = get_tree().create_tween()
 	tween.tween_property(sprite, "modulate", Color(1, 1, 1, 1), 0.5)
 	update_hud()
 
+func get_hud():
+	if hud_control != null:
+		return hud_control
+	return get_tree().current_scene.get_node_or_null("HUD/HUDControl")
+
+func set_hud(hud: Node) -> void:
+	hud_control = hud
+
 # HUD 
 func update_hud():
-	var hud = get_tree().root.get_node_or_null("GameScene/HUD/HUDControl")
+	var hud = get_hud()
+	
 	if hud:
 		hud.update_percent(player_number, damage_percent)
+		hud.update_stocks(player_number, stocks)
 
 # UTILITAIRE ATTAQUE
 func do_attack(hitbox_name: String, startup: float,
@@ -260,7 +274,7 @@ func throw_projectile(projectile):
 
 	is_attacking = false
 	
-	# LEDGE GRAB 
+# LEDGE GRAB 
 func _on_ledge_detected(_body):
 	# Déclencher seulement si dans les airs et en train de tomber
 	if not is_on_floor() and velocity.y > 0 and not is_grabbing_ledge:
@@ -307,5 +321,5 @@ func climb_up():
 
 func release_ledge():
 	is_grabbing_ledge = false
-# Lâcher avec une petite vitesse vers le bas
+	# Lâcher avec une petite vitesse vers le bas
 	velocity.y = 100.0
