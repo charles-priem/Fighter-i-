@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dxvl7p3lxn335"]
 
+[ext_resource type="Script" uid="uid://c8g0j2pwpmm6i" path="res://scripts/Fardoux.gd" id="1_2e1u5"]
 [ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="1_y5pk8"]
 [ext_resource type="Texture2D" uid="uid://pi2yc8v5o2d5" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 2.png" id="3_2e1u5"]
 [ext_resource type="Texture2D" uid="uid://fuddbj15b7bb" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 3.png" id="4_qv561"]
 [ext_resource type="Texture2D" uid="uid://b07le7d207m78" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png" id="5_2e1u5"]
-[ext_resource type="Texture2D" uid="uid://ey5u2gswhp7b" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 4.png" id="5_d8j15"]
 [ext_resource type="Texture2D" uid="uid://cyybmxjv3k632" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 1.png" id="6_2e1u5"]
 [ext_resource type="Texture2D" uid="uid://bo52m08p8rohx" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 2.png" id="7_qv561"]
 [ext_resource type="Texture2D" uid="uid://ddfxkrfrpwog3" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 3.png" id="8_d8j15"]
@@ -60,7 +60,7 @@ animations = [{
 "texture": ExtResource("4_qv561")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_d8j15")
+"texture": ExtResource("9_44e5w")
 }],
 "loop": true,
 "name": &"idle",
@@ -103,6 +103,7 @@ radius = 15.0
 height = 60.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
+script = ExtResource("1_2e1u5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 position = Vector2(0, -25)
