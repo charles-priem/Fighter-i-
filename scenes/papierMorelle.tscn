@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cajud4qn4feh4"]
 
 [ext_resource type="Script" uid="uid://6xrxn0gvmfke" path="res://scripts/papier_morelle.gd" id="1_svtcl"]
-[ext_resource type="Texture2D" uid="uid://csxrg458p0r7d" path="res://assets/sprites/Personnages/Morelle/morelle_papier.png" id="2_svtcl"]
+[ext_resource type="Texture2D" uid="uid://duxoxef6vegvj" path="res://assets/sprites/Personnages/Morelle/morelle_papier.png" id="2_svtcl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kl1xj"]
 size = Vector2(43, 52)
