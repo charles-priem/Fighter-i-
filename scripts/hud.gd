@@ -14,9 +14,9 @@ const COLOR_DANGER = Color(1.0, 0.5, 0.1) # Orange (100-149%)
 const COLOR_CRIT   = Color(1.0, 0.15, 0.15) # Rouge (150%+)
 
 func _ready():
-	# On initialise l'affichage des vies au départ (3 par défaut)
-	update_stocks(1, 3)
-	update_stocks(2, 3)
+	# On initialise l'affichage des vies au départ selon la configuration globale
+	update_stocks(1, GameData.stock_count)
+	update_stocks(2, GameData.stock_count)
 	
 	# Affichage de base au lancement
 	update_percent(1, 0.0)
@@ -56,7 +56,7 @@ func update_stocks(player_num: int, stocks_remaining: int):
 	for i in range(stocks_remaining):
 		var icon = TextureRect.new()
 		# Remplace par le chemin de ton icône de vie (ex: tête du prof)
-		icon.texture = load("res://icon.svg") 
+		icon.texture = load("res://icon.svg")
 		icon.custom_minimum_size = Vector2(20, 20)
 		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED

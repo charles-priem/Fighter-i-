@@ -7,6 +7,7 @@ const CHARACTER_SCENES = [
 	"res://scenes/ElYaagoubi.tscn",
 	"res://scenes/Dubois.tscn",
 	"res://scenes/Benedito.tscn",
+	"res://scenes/Fardoux.tscn",
 	"res://scenes/Benyoussef.tscn",
 	"res://scenes/Blandre.tscn",
 	"res://scenes/Deleplanque.tscn",
@@ -15,15 +16,22 @@ const CHARACTER_SCENES = [
 ]
 
 const CHARACTER_NAMES = [
-	"ElYaagoubi", "Dubois", "Benedito",
-	"Benyoussef", "Blandre", "Deleplanque",
-	"McGavigan", "Prof 8"
+	"ElYaagoubi",
+	"Dubois",
+	"Benedito",
+	"Fardoux",
+	"Benyoussef",
+	"Blandre",
+	"Deleplanque",
+	"McGavigan",
+	"Prof 8"
 ]
 
 const CHARACTER_DESC = [
 	"Rapide et imprévisible",
 	"Puissant et solide",
 	"Aérien et agile",
+	"",
 	"Contrôleur de zone",
 	"Attaques longue portée",
 	"Vitesse maximale",
@@ -35,6 +43,7 @@ const CHARACTER_COLORS = [
 	Color(0.9, 0.3, 0.1),
 	Color(0.2, 0.8, 0.3),
 	Color(0.1, 0.5, 0.9),
+	Color(0.8, 0.8, 0.8),
 	Color(0.9, 0.8, 0.1),
 	Color(0.7, 0.2, 0.9),
 	Color(0.1, 0.9, 0.8),

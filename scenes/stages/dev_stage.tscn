@@ -61,8 +61,11 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="DevStage" type="Node2D" unique_id=2052335995]
+[node name="DevStage" type="Node2D" unique_id=2052335995 node_paths=PackedStringArray("p1_spawn", "p2_spawn", "hud")]
 script = ExtResource("1_1df8u")
+p1_spawn = NodePath("P1 Spawn")
+p2_spawn = NodePath("P2 Spawn")
+hud = NodePath("HUD/HUDControl")
 
 [node name="MoonPlatform1" type="StaticBody2D" parent="." unique_id=152687302]
 collision_mask = 0
@@ -228,10 +231,11 @@ horizontal_alignment = 1
 [node name="P2Stocks" type="HBoxContainer" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=1346808228]
 layout_mode = 2
 
-[node name="Morelle" parent="." unique_id=353629597 instance=ExtResource("11_qnvh6")]
-player_number = 2
+[node name="P1 Spawn" type="Marker2D" parent="." unique_id=122754158]
+position = Vector2(-51, -93)
 
-[node name="Scottez" parent="." unique_id=2041489519 instance=ExtResource("10_bbkak")]
+[node name="P2 Spawn" type="Marker2D" parent="." unique_id=1154575394]
+position = Vector2(718, -233)
 
 [editable path="Plateforme1"]
 [editable path="Plateforme2"]
