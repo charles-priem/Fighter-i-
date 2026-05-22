@@ -261,16 +261,23 @@ func do_attack(hitbox_name: String, startup: float,
 
 func throw_projectile(projectile):
 	is_attacking = true
-	projectile.get_node("AnimatedSprite2D")
 	projectile.global_position = global_position
 
-	var direction : Vector2
-	direction = Vector2.LEFT if !facing_left else Vector2.RIGHT
+	var shot_direction: Vector2
+	shot_direction = Vector2.LEFT if !facing_left else Vector2.RIGHT
+	shot_direction = shot_direction.normalized()
 
-	direction = direction.normalized()
+	if "direction" in projectile:
+		projectile.direction = shot_direction
 
-	projectile.direction = direction
-	projectile.speed = PROJECTILE_SPEED
+	if "speed" in projectile:
+		projectile.speed = PROJECTILE_SPEED
+
+	if "owner_player" in projectile:
+		projectile.owner_player = self
+
+	if "owner_player_number" in projectile:
+		projectile.owner_player_number = player_number
 
 	is_attacking = false
 	
