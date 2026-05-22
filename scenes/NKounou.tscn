@@ -1,28 +1,58 @@
 [gd_scene format=3 uid="uid://3gavtdcsrb1c"]
 
 [ext_resource type="Script" uid="uid://delfvbpua7ty6" path="res://scripts/n_kounou.gd" id="1_5c6hg"]
+[ext_resource type="Texture2D" uid="uid://dp0rsgth7uwtf" path="res://assets/sprites/Personnages/N Kounou/nkounou_attack1.png" id="2_ldfiy"]
+[ext_resource type="PackedScene" uid="uid://csrgihefs44o6" path="res://scenes/cookie_dubois.tscn" id="2_q570h"]
+[ext_resource type="Texture2D" uid="uid://csffdqi2hy6gl" path="res://assets/sprites/Personnages/N Kounou/nkounou_attack2.png" id="3_q570h"]
 [ext_resource type="Texture2D" uid="uid://dupliu6l8ghjt" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 3.webp" id="3_ujqu1"]
+[ext_resource type="Texture2D" uid="uid://crbpql8sfg7ce" path="res://assets/sprites/Personnages/N Kounou/nkounou_attack3.png" id="4_83gj0"]
 [ext_resource type="Texture2D" uid="uid://crpq3gfsy83gj" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 4.webp" id="4_ftan7"]
-[ext_resource type="Texture2D" uid="uid://ws2dr13u51bs" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 1.png" id="4_v0t2m"]
-[ext_resource type="Texture2D" uid="uid://cudn7ie05jylg" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 2.png" id="5_753xu"]
 [ext_resource type="Texture2D" uid="uid://dmpo5bwwlm3d7" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 5.webp" id="5_bqf1f"]
-[ext_resource type="Texture2D" uid="uid://bngw0q3swli4g" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 3.png" id="6_ldfiy"]
+[ext_resource type="Texture2D" uid="uid://cndqkout7ehi5" path="res://assets/sprites/Personnages/N Kounou/nkounou_attack4.png" id="5_mtvxp"]
+[ext_resource type="Texture2D" uid="uid://cs7dbasm2j3wv" path="res://assets/sprites/Personnages/N Kounou/nkounou_attack5.png" id="6_nfref"]
 [ext_resource type="Texture2D" uid="uid://dkkyoi85k0ofp" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 6.webp" id="6_qt8nx"]
 [ext_resource type="Texture2D" uid="uid://eq315a5238t0" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 7.webp" id="7_0a2sy"]
-[ext_resource type="Texture2D" uid="uid://w4tje10so224" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 4.png" id="7_q570h"]
-[ext_resource type="Texture2D" uid="uid://cj80w1s6w357f" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 5.png" id="8_83gj0"]
+[ext_resource type="Texture2D" uid="uid://6elytrimxdvd" path="res://assets/sprites/Personnages/N Kounou/nkounou_attack6.png" id="7_ujqu1"]
 [ext_resource type="Texture2D" uid="uid://8bbdd6ummsov" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 8.webp" id="8_d1m1r"]
+[ext_resource type="Texture2D" uid="uid://bxefuimiiu81u" path="res://assets/sprites/Personnages/N Kounou/nkounou_attack7.png" id="8_ftan7"]
 [ext_resource type="Texture2D" uid="uid://7j6k71xqrmna" path="res://assets/sprites/Personnages/N Kounou/nkounou_idle 10.webp" id="9_3aof0"]
-[ext_resource type="Texture2D" uid="uid://epjv4ydcq45p" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 6.png" id="9_mtvxp"]
-[ext_resource type="Texture2D" uid="uid://b0kjatbuvsal4" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 7.png" id="10_nfref"]
-[ext_resource type="Texture2D" uid="uid://bif7cf4f8qs8p" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 8.png" id="11_ujqu1"]
-[ext_resource type="Texture2D" uid="uid://clb38h5envgd4" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 9.png" id="12_ftan7"]
-[ext_resource type="Texture2D" uid="uid://cpgrpd6wbs7b6" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 10.png" id="13_bqf1f"]
-[ext_resource type="Texture2D" uid="uid://7yih24qs1a84" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 11.png" id="14_qt8nx"]
-[ext_resource type="Texture2D" uid="uid://l0wnixurwdnw" path="res://assets/sprites/Personnages/N Kounou/nkounou jump 12.png" id="15_0a2sy"]
+[ext_resource type="Texture2D" uid="uid://dro80ygw5wb76" path="res://assets/sprites/Personnages/N Kounou/nkounou_attack8.png" id="9_bqf1f"]
+[ext_resource type="Texture2D" uid="uid://dakv86doxirwu" path="res://assets/sprites/Personnages/N Kounou/nkounou_attack9.png" id="10_qt8nx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ldfiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q570h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_83gj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mtvxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nfref")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ujqu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ftan7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bqf1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qt8nx")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 12.0
+}, {
 "frames": [],
 "loop": true,
 "name": &"dash",
@@ -66,40 +96,40 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_v0t2m")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_753xu")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_ldfiy")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_q570h")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_83gj0")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_mtvxp")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_nfref")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_ujqu1")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_ftan7")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_bqf1f")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_qt8nx")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_0a2sy")
+"texture": null
 }],
 "loop": true,
 "name": &"jump",
@@ -121,13 +151,13 @@ height = 100.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_5c6hg")
+cookie_dubois = ExtResource("2_q570h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 position = Vector2(-4.5, -2.0902786)
 scale = Vector2(0.45833334, 0.47453704)
 sprite_frames = SubResource("SpriteFrames_34wqp")
-animation = &"idle"
-frame_progress = 0.53849953
+animation = &"attack"
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]

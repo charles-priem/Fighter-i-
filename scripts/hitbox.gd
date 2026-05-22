@@ -19,4 +19,4 @@ func _on_body_entered(body):
 		# Savoir dans quelle direction regarde l'attaquant
 		var facing_right = not parent.get_node("Sprite2D").flip_h
 		# Infliger les dégâts
-		body.take_hit(data[0], data[1], data[2], facing_right)
+		body.take_hit(data[0], data[1], data[2], facing_right, true)

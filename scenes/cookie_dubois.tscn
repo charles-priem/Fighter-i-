@@ -111,7 +111,7 @@ radius = 22.090721
 [node name="CookieDubois" type="Area2D" unique_id=1794757852]
 script = ExtResource("1_f1itv")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1535279274]
+[node name="projectile" type="AnimatedSprite2D" parent="." unique_id=1535279274]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_moqs6")
 
