@@ -8,11 +8,9 @@ const CHARACTER_SCENES = [
 	"res://scenes/Dubois.tscn",
 	"res://scenes/Benedito.tscn",
 	"res://scenes/Fardoux.tscn",
-	"res://scenes/Benyoussef.tscn",
-	"res://scenes/Blandre.tscn",
-	"res://scenes/Deleplanque.tscn",
-	"res://scenes/McGavigan.tscn",
-	"res://scenes/Benedito.tscn"
+	"res://scenes/Morelle.tscn",
+	"res://scenes/NKounou.tscn",
+	"res://scenes/Scottez.tscn"
 ]
 
 const CHARACTER_NAMES = [
@@ -20,23 +18,19 @@ const CHARACTER_NAMES = [
 	"Dubois",
 	"Benedito",
 	"Fardoux",
-	"Benyoussef",
-	"Blandre",
-	"Deleplanque",
-	"McGavigan",
-	"Prof 8"
+	"Morelle",
+	"NKounou",
+	"Scottez"
 ]
 
 const CHARACTER_DESC = [
 	"Rapide et imprévisible",
 	"Puissant et solide",
 	"Aérien et agile",
-	"",
-	"Contrôleur de zone",
-	"Attaques longue portée",
-	"Vitesse maximale",
-	"Illusions et clones",
-	"Défenseur implacable"
+	"Force brute",
+	"Maître du papier",
+	"Frappe sèche",
+	"Contrôleur de zone"
 ]
 
 const CHARACTER_COLORS = [
@@ -46,9 +40,7 @@ const CHARACTER_COLORS = [
 	Color(0.8, 0.8, 0.8),
 	Color(0.9, 0.8, 0.1),
 	Color(0.7, 0.2, 0.9),
-	Color(0.1, 0.9, 0.8),
-	Color(0.9, 0.3, 0.1),
-	Color(0.4, 0.4, 0.4)
+	Color(0.1, 0.9, 0.8)
 ]
 
 # --- CHOIX DES JOUEURS ---
@@ -75,6 +67,7 @@ var p2_wins: int = 0
 
 var game_mode: String = "vs"
 var stock_count: int = 3
+var match_time: int = 180 # Time in seconds, 0 means infinite
 
 # --- FONCTIONS UTILITAIRES (NOMS MODIFIÉS POUR ÉVITER LES CONFLITS) ---
 # [cite: 164, 172, 174, 179]

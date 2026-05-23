@@ -24,6 +24,7 @@ var facing_left      : bool  = true
 var taking_damage    : bool  = false
 var spawn_point      : Vector2
 var hud_control      : Node = null
+var _is_dying        : bool  = false
 
 # Dash
 var is_dashing       : bool  = false
@@ -38,11 +39,9 @@ const LEDGE_HOLD_TIME : float = 1.0  # secondes max accrochage
 
 #@onready var ledge_detector = $LedgeDetector
 
-# CONSTANTES 
-const DASH_SPEED     : float = 1000.0
-const DASH_DURATION  : float = 0.15
-const FAST_FALL_MULT : float = 2.5
-const PROJECTILE_SPEED : float = 2000.0
+# CONSTANTES
+const FAST_FALL_MULT      : float = 2.5
+const PROJECTILE_SPEED    : float = 2000.0
 const DEPLACEMENT_ATTAQUE : float = 75
 
 # SIGNAUX
@@ -203,10 +202,17 @@ func take_hit(dmg: float, _kb_x: float, _kb_y: float,
 		position.x = new_position
 	
 	invincible_timer = 0.5
+	var cam = get_tree().current_scene.get_node_or_null("Camera2D")
+	if cam and cam.has_method("shake"):
+		cam.shake()
 	update_hud()
 
 # MORT
 func die():
+	if _is_dying:
+		return
+	_is_dying = true
+
 	stocks -= 1
 	emit_signal("stock_lost", player_number, stocks)
 
@@ -220,6 +226,7 @@ func die():
 		queue_free()
 	else:
 		await get_tree().create_timer(0.8).timeout
+		_is_dying = false
 		respawn()
 
 # RESPAWN 

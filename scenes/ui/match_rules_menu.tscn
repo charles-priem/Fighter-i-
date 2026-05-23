@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://matchrulesmenu123"]
+
+[ext_resource type="Script" path="res://scripts/ui/match_rules_menu.gd" id="1_rscript"]
+[ext_resource type="Texture2D" uid="uid://dlyq1kqla026p" path="res://assets/art/ui/menu_background.png" id="2_bg"]
+[ext_resource type="FontFile" uid="uid://d4beyjxkjfg6p" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="3_font"]
+
+[node name="MatchRulesMenu" type="Control" node_paths=PackedStringArray("stocks_label", "time_label", "stocks_minus_btn", "stocks_plus_btn", "time_minus_btn", "time_plus_btn", "next_button", "back_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rscript")
+stocks_label = NodePath("MarginContainer/CenterContainer/Menu/Settings/StocksContainer/Value")
+time_label = NodePath("MarginContainer/CenterContainer/Menu/Settings/TimeContainer/Value")
+stocks_minus_btn = NodePath("MarginContainer/CenterContainer/Menu/Settings/StocksContainer/Minus")
+stocks_plus_btn = NodePath("MarginContainer/CenterContainer/Menu/Settings/StocksContainer/Plus")
+time_minus_btn = NodePath("MarginContainer/CenterContainer/Menu/Settings/TimeContainer/Minus")
+time_plus_btn = NodePath("MarginContainer/CenterContainer/Menu/Settings/TimeContainer/Plus")
+next_button = NodePath("MarginContainer/CenterContainer/Menu/Buttons/NextButton")
+back_button = NodePath("MarginContainer/CenterContainer/Menu/Buttons/BackButton")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 5
+stretch_mode = 6
+modulate = Color(0.5, 0.5, 0.5, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="CenterContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Menu" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Title" type="Label" parent="MarginContainer/CenterContainer/Menu"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 48
+text = "Règles du Match"
+horizontal_alignment = 1
+
+[node name="Settings" type="VBoxContainer" parent="MarginContainer/CenterContainer/Menu"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="StocksContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer/Menu/Settings"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer/Menu/Settings/StocksContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 32
+text = "Vies :"
+
+[node name="Minus" type="Button" parent="MarginContainer/CenterContainer/Menu/Settings/StocksContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 32
+text = "<"
+
+[node name="Value" type="Label" parent="MarginContainer/CenterContainer/Menu/Settings/StocksContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 32
+text = "3"
+horizontal_alignment = 1
+
+[node name="Plus" type="Button" parent="MarginContainer/CenterContainer/Menu/Settings/StocksContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 32
+text = ">"
+
+[node name="TimeContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer/Menu/Settings"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer/Menu/Settings/TimeContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 32
+text = "Temps :"
+
+[node name="Minus" type="Button" parent="MarginContainer/CenterContainer/Menu/Settings/TimeContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 32
+text = "<"
+
+[node name="Value" type="Label" parent="MarginContainer/CenterContainer/Menu/Settings/TimeContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 32
+text = "3 Min"
+horizontal_alignment = 1
+
+[node name="Plus" type="Button" parent="MarginContainer/CenterContainer/Menu/Settings/TimeContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 32
+text = ">"
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/CenterContainer/Menu"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="BackButton" type="Button" parent="MarginContainer/CenterContainer/Menu/Buttons"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 32
+text = "RETOUR"
+
+[node name="NextButton" type="Button" parent="MarginContainer/CenterContainer/Menu/Buttons"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 32
+text = "SUIVANT"

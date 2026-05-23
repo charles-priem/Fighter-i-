@@ -1,6 +1,9 @@
 extends Control
+class_name SettingsMenu
 
 signal back_requested(source_id: StringName, source_node: Node)
+
+const SETTINGS_PATH = "user://settings.cfg"
 
 @export var master_volume_slider: HSlider
 @export var music_volume_slider: HSlider
@@ -10,9 +13,6 @@ signal back_requested(source_id: StringName, source_node: Node)
 var _master_bus_index: int = -1
 var _music_bus_index: int = -1
 
-# Initialisation du menu de paramètres :
-# on récupère les bus audio, on synchronise l'état des contrôles avec les réglages actuels,
-# puis on connecte les signaux de l'interface.
 func _ready() -> void:
 	_master_bus_index = AudioServer.get_bus_index("Master")
 	_music_bus_index = AudioServer.get_bus_index("Music")
@@ -34,36 +34,66 @@ func _ready() -> void:
 
 	back_button.grab_focus()
 
-# Gestion de l'audio :
-# les sliders sont supposés avoir une plage de 0.0 à 1.0.
-# On convertit la valeur linéaire en décibels avant de l'envoyer à l'AudioServer.
+func _save_settings() -> void:
+	var config = ConfigFile.new()
+	config.set_value("audio", "master_volume", master_volume_slider.value)
+	config.set_value("audio", "music_volume", music_volume_slider.value)
+	config.set_value("display", "fullscreen", fullscreen_check_box.button_pressed)
+	config.save(SETTINGS_PATH)
+
+static func apply_saved_settings() -> void:
+	var config = ConfigFile.new()
+	if config.load("user://settings.cfg") != OK:
+		return
+
+	var master_bus := AudioServer.get_bus_index("Master")
+	var music_bus := AudioServer.get_bus_index("Music")
+
+	if master_bus != -1:
+		var vol: float = config.get_value("audio", "master_volume", 1.0)
+		if vol <= 0.0:
+			AudioServer.set_bus_mute(master_bus, true)
+		else:
+			AudioServer.set_bus_mute(master_bus, false)
+			AudioServer.set_bus_volume_db(master_bus, linear_to_db(vol))
+
+	if music_bus != -1:
+		var vol: float = config.get_value("audio", "music_volume", 1.0)
+		if vol <= 0.0:
+			AudioServer.set_bus_mute(music_bus, true)
+		else:
+			AudioServer.set_bus_mute(music_bus, false)
+			AudioServer.set_bus_volume_db(music_bus, linear_to_db(vol))
+
+	if config.get_value("display", "fullscreen", false):
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+
 func _on_master_volume_changed(value: float) -> void:
 	if _master_bus_index == -1:
 		return
-
 	if value <= 0.0:
 		AudioServer.set_bus_mute(_master_bus_index, true)
 	else:
 		AudioServer.set_bus_mute(_master_bus_index, false)
 		AudioServer.set_bus_volume_db(_master_bus_index, linear_to_db(value))
+	_save_settings()
 
 func _on_music_volume_changed(value: float) -> void:
 	if _music_bus_index == -1:
 		return
-
 	if value <= 0.0:
 		AudioServer.set_bus_mute(_music_bus_index, true)
 	else:
 		AudioServer.set_bus_mute(_music_bus_index, false)
 		AudioServer.set_bus_volume_db(_music_bus_index, linear_to_db(value))
+	_save_settings()
 
-# Gestion de l'affichage :
-# on applique simplement le mode fenêtre ou plein écran selon l'état de la case.
 func _on_fullscreen_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	_save_settings()
 
 func _on_back_pressed() -> void:
 	back_requested.emit(&"settings_menu", self)

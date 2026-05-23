@@ -5,6 +5,7 @@ const MAIN_MENU_SCENE: PackedScene = preload("res://scenes/ui/main_menu.tscn")
 const SETTINGS_MENU_SCENE: PackedScene = preload("res://scenes/ui/settings_menu.tscn")
 const STAGE_SELECT_MENU_SCENE: PackedScene = preload("res://scenes/ui/stage_select_menu.tscn")
 const CHARACTER_SELECT_MENU_SCENE: PackedScene = preload("res://scenes/ui/character_select_menu.tscn")
+const MATCH_RULES_MENU_SCENE: PackedScene = preload("res://scenes/ui/match_rules_menu.tscn")
 const VICTORY_SCREEN_SCENE: PackedScene = preload("res://scenes/ui/victory_screen.tscn")
 
 @onready var stage: Node = $Stage
@@ -35,6 +36,7 @@ func _transition_to(callable: Callable) -> void:
 # Point d'entrée du jeu :
 # on démarre par le splash screen puis tout le reste sera piloté par le scene manager.
 func _ready() -> void:
+	SettingsMenu.apply_saved_settings()
 	_show_splash_screen()
 
 # Remplace proprement l'enfant courant d'un conteneur par une nouvelle scène instanciée.
@@ -86,6 +88,11 @@ func _show_stage_select_menu() -> void:
 	_connect_if_exists(stage_select_menu, &"stage_selected", _on_stage_selected)
 	_connect_if_exists(stage_select_menu, &"back_requested", _on_stage_select_back_requested)
 
+func _show_match_rules_menu() -> void:
+	var match_rules_menu: Node = _show_screen(MATCH_RULES_MENU_SCENE)
+	_connect_if_exists(match_rules_menu, &"next_requested", _on_match_rules_next_requested)
+	_connect_if_exists(match_rules_menu, &"back_requested", _on_match_rules_back_requested)
+
 func _show_character_select_menu() -> void:
 	var character_select_menu: Node = _show_screen(CHARACTER_SELECT_MENU_SCENE)
 	_connect_if_exists(character_select_menu, &"characters_selected", _on_characters_selected)
@@ -122,13 +129,19 @@ func _on_splash_finished(_source_id: StringName = &"", _source_node: Node = null
 	_transition_to(func(): _show_main_menu())
 
 func _on_play_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
+	_transition_to(func(): _show_match_rules_menu())
+
+func _on_match_rules_next_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
 	_transition_to(func(): _show_character_select_menu())
+
+func _on_match_rules_back_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
+	_transition_to(func(): _show_main_menu())
 
 func _on_characters_selected(_source_id: StringName = &"", _source_node: Node = null) -> void:
 	_transition_to(func(): _show_stage_select_menu())
 
 func _on_character_select_back_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
-	_transition_to(func(): _show_main_menu())
+	_transition_to(func(): _show_match_rules_menu())
 
 func _on_match_finished(_winner_player: int, _source_id: StringName = &"", _source_node: Node = null) -> void:
 	_transition_to(func(): 
