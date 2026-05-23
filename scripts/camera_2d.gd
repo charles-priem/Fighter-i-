@@ -24,6 +24,7 @@ func _ready():
 	position_smoothing_speed = follow_speed
 
 func _process(delta):
+	_apply_shake(delta)
 	var players = get_tree().get_nodes_in_group("players")
 	if players.is_empty():
 		return

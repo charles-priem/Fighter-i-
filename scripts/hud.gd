@@ -50,6 +50,12 @@ func update_percent(player_num: int, percent: float):
 func update_time(time_left: int):
 	if not time_label:
 		return
+		
+	if time_left <= 0:
+		time_label.text = "Infini"
+		time_label.remove_theme_color_override("font_color")
+		return
+		
 	@warning_ignore("integer_division")
 	var minutes = time_left / 60
 	var seconds = time_left % 60

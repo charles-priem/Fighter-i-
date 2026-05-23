@@ -18,8 +18,9 @@ func _physics_process(delta):
 
 func handle_attacks():
 	var attack_action = "p" + str(player_number) + "_attack"
-	if Input.is_action_just_pressed(attack_action) :
-		await get_tree().create_timer(5).timeout
+	if Input.is_action_just_pressed(attack_action):
+		is_attacking = true
+		await get_tree().create_timer(0.4).timeout
 		var projectile = papier_morelle.instantiate()
 		get_tree().current_scene.add_child(projectile)
 		throw_projectile(projectile)
@@ -33,12 +34,14 @@ func update_animation():
 	elif is_dashing:
 		animated_sprite.play("dash")
 	elif is_attacking:
-		animated_sprite.play("attack")
+		if animated_sprite.animation != &"attack":
+			animated_sprite.play("attack")
+	elif taking_damage:
+		if animated_sprite.animation != &"damage":
+			animated_sprite.play("damage")
+		if invincible_timer <= 0.0:
+			taking_damage = false
 	elif abs(velocity.x) > 20:
 		animated_sprite.play("run")
-	elif taking_damage:
-		animated_sprite.play("damage")
-		await get_tree().create_timer(0.5).timeout
-		taking_damage = false
 	else:
 		animated_sprite.play("idle")
