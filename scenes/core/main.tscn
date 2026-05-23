@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://clq71xgfi2vn8"]
 
 [ext_resource type="Script" uid="uid://caxrod4y2bpmb" path="res://scripts/core/main.gd" id="1_fgbdc"]
+[ext_resource type="AudioStream" path="res://assets/song1.mp3" id="2_audio"]
 
 [node name="Main" type="Node" unique_id=1652334905 node_paths=PackedStringArray("transition_rect")]
 script = ExtResource("1_fgbdc")
@@ -21,3 +22,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="." unique_id=777777777]
+stream = ExtResource("2_audio")
+autoplay = true
+bus = &"Master"
