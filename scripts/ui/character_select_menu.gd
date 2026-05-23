@@ -39,6 +39,21 @@ var characters: Array[Dictionary] = [
 		"display_name": "Fardoux",
 		"scene": preload("res://scenes/Fardoux.tscn"),
 		"preview": preload("res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png")
+	},
+	{
+		"display_name": "Morelle",
+		"scene": preload("res://scenes/Morelle.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Morelle/morelle_idle1.webp")
+	},
+	{
+		"display_name": "N Kounou",
+		"scene": preload("res://scenes/NKounou.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/N Kounou/nkounou_idle 2.webp")
+	},
+	{
+		"display_name": "Scottez",
+		"scene": preload("res://scenes/Scottez.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Scottez/Scottez fixe 1.png")
 	}
 ]
 
@@ -112,7 +127,7 @@ func _update_slots_visuals() -> void:
 		else:
 			slot.set_selected(0)
 
-func _on_character_pressed(slot: Node, character_scene: PackedScene) -> void:
+func _on_character_pressed(slot: Node, _character_scene: PackedScene) -> void:
 	if _current_selecting_player == 1:
 		_p1_selected_slot = slot
 		# Trouver l'index dans GameData si possible, ou juste passer la scène au GameData plus tard

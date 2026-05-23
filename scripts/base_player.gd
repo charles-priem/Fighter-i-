@@ -179,7 +179,7 @@ func handle_attacks():
 	pass
 
 # RECEVOIR UN COUP 
-func take_hit(dmg: float, kb_x: float, kb_y: float,
+func take_hit(dmg: float, _kb_x: float, _kb_y: float,
 			  attacker_right: bool, recoil_effect: bool):
 	if invincible_timer > 0:
 		return
