@@ -5,13 +5,32 @@ const MAIN_MENU_SCENE: PackedScene = preload("res://scenes/ui/main_menu.tscn")
 const SETTINGS_MENU_SCENE: PackedScene = preload("res://scenes/ui/settings_menu.tscn")
 const STAGE_SELECT_MENU_SCENE: PackedScene = preload("res://scenes/ui/stage_select_menu.tscn")
 const CHARACTER_SELECT_MENU_SCENE: PackedScene = preload("res://scenes/ui/character_select_menu.tscn")
+const VICTORY_SCREEN_SCENE: PackedScene = preload("res://scenes/ui/victory_screen.tscn")
 
 @onready var stage: Node = $Stage
 @onready var screens: CanvasLayer = $Screens
+@export var transition_rect: ColorRect
 
 var current_screen: Node = null
 var current_stage: Node = null
 var selected_stage_scene: PackedScene = null
+
+func _transition_to(callable: Callable) -> void:
+	if transition_rect == null:
+		callable.call()
+		return
+		
+	transition_rect.mouse_filter = Control.MOUSE_FILTER_STOP
+	var tween_out = get_tree().create_tween()
+	tween_out.tween_property(transition_rect, "color:a", 1.0, 0.3)
+	await tween_out.finished
+	
+	callable.call()
+	
+	var tween_in = get_tree().create_tween()
+	tween_in.tween_property(transition_rect, "color:a", 0.0, 0.3)
+	await tween_in.finished
+	transition_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 # Point d'entrée du jeu :
 # on démarre par le splash screen puis tout le reste sera piloté par le scene manager.
@@ -72,6 +91,12 @@ func _show_character_select_menu() -> void:
 	_connect_if_exists(character_select_menu, &"characters_selected", _on_characters_selected)
 	_connect_if_exists(character_select_menu, &"back_requested", _on_character_select_back_requested)
 
+func _show_victory_screen() -> void:
+	var victory_screen: Node = _show_screen(VICTORY_SCREEN_SCENE)
+	_connect_if_exists(victory_screen, &"rematch_requested", _on_victory_rematch_requested)
+	_connect_if_exists(victory_screen, &"character_select_requested", _on_victory_character_select_requested)
+	_connect_if_exists(victory_screen, &"main_menu_requested", _on_victory_main_menu_requested)
+
 # Lance la scène de stage choisie et retire l'écran actif.
 func _start_game() -> void:
 	if selected_stage_scene == null:
@@ -94,35 +119,49 @@ func _return_to_main_menu_from_game() -> void:
 
 # Réception des signaux :
 func _on_splash_finished(_source_id: StringName = &"", _source_node: Node = null) -> void:
-	call_deferred("_show_main_menu")
+	_transition_to(func(): _show_main_menu())
 
 func _on_play_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
-	call_deferred("_show_character_select_menu")
+	_transition_to(func(): _show_character_select_menu())
 
 func _on_characters_selected(_source_id: StringName = &"", _source_node: Node = null) -> void:
-	call_deferred("_show_stage_select_menu")
+	_transition_to(func(): _show_stage_select_menu())
 
 func _on_character_select_back_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
-	call_deferred("_show_main_menu")
+	_transition_to(func(): _show_main_menu())
 
 func _on_match_finished(_winner_player: int, _source_id: StringName = &"", _source_node: Node = null) -> void:
-	call_deferred("_return_to_main_menu_from_game")
+	_transition_to(func(): 
+		if current_stage != null:
+			current_stage.queue_free()
+			current_stage = null
+		_show_victory_screen()
+	)
+
+func _on_victory_rematch_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
+	_transition_to(func(): _start_game())
+
+func _on_victory_character_select_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
+	_transition_to(func(): _show_character_select_menu())
+
+func _on_victory_main_menu_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
+	_transition_to(func(): _show_main_menu())
 
 func _on_settings_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
-	call_deferred("_show_settings_menu")
+	_transition_to(func(): _show_settings_menu())
 
 func _on_settings_back_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
-	call_deferred("_show_main_menu")
+	_transition_to(func(): _show_main_menu())
 
 func _on_stage_select_back_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
-	call_deferred("_show_main_menu")
+	_transition_to(func(): _show_main_menu())
 
 func _on_stage_selected(stage_scene: PackedScene, _source_id: StringName = &"", _source_node: Node = null) -> void:
 	selected_stage_scene = stage_scene
-	call_deferred("_start_game")
+	_transition_to(func(): _start_game())
 
 func _on_stage_exit_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
-	call_deferred("_return_to_main_menu_from_game")
+	_transition_to(func(): _return_to_main_menu_from_game())
 
 func _on_quit_requested(_source_id: StringName = &"", _source_node: Node = null) -> void:
-	get_tree().quit()
+	_transition_to(func(): get_tree().quit())

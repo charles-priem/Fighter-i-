@@ -7,6 +7,8 @@ extends Control
 @onready var p1_stocks = $P1Panel/VBoxContainer/P1Stocks
 @onready var p2_stocks = $P2Panel/VBoxContainer/P2Stocks
 
+@onready var time_label = $TimePanel/TimeLabel
+
 # --- COULEURS DE DEGATS ---
 const COLOR_SAFE   = Color(1.0, 1.0, 1.0) # Blanc (0-49%)
 const COLOR_WARN   = Color(1.0, 0.9, 0.2) # Jaune (50-99%)
@@ -43,6 +45,20 @@ func update_percent(player_num: int, percent: float):
 	var tween = get_tree().create_tween()
 	tween.tween_property(label, "scale", Vector2(1.3, 1.3), 0.1)
 	tween.tween_property(label, "scale", Vector2(1.0, 1.0), 0.2)
+	
+# --- MISE A JOUR DU TEMPS ---
+func update_time(time_left: int):
+	if not time_label:
+		return
+	@warning_ignore("integer_division")
+	var minutes = time_left / 60
+	var seconds = time_left % 60
+	time_label.text = "%02d:%02d" % [minutes, seconds]
+	
+	if time_left <= 10:
+		time_label.add_theme_color_override("font_color", COLOR_CRIT)
+	else:
+		time_label.remove_theme_color_override("font_color")
 	
 # --- MISE A JOUR DES VIES ---
 func update_stocks(player_num: int, stocks_remaining: int):

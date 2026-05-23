@@ -7,12 +7,20 @@ signal match_finished(winner_player: int, source_id: StringName, source_node: No
 @export var p2_spawn: Marker2D
 @export var hud: Control
 
+var match_time_left: int = 180 # 3 minutes
+var _timer: Timer
+var _p1: Node2D
+var _p2: Node2D
+
 func _ready() -> void:
 	var p1_scene: PackedScene = load(GameData.p1_scene)
 	var p2_scene: PackedScene = load(GameData.p2_scene)
 
 	var p1: Node2D = p1_scene.instantiate()
 	var p2: Node2D = p2_scene.instantiate()
+	
+	_p1 = p1
+	_p2 = p2
 	
 	p1.set_hud(hud)
 	p2.set_hud(hud)
@@ -31,6 +39,47 @@ func _ready() -> void:
 
 	p1.player_eliminated.connect(_on_player_eliminated)
 	p2.player_eliminated.connect(_on_player_eliminated)
+	
+	# Setup match timer
+	_timer = Timer.new()
+	_timer.wait_time = 1.0
+	_timer.autostart = true
+	_timer.timeout.connect(_on_timer_tick)
+	add_child(_timer)
+	
+	if hud and hud.has_method("update_time"):
+		hud.update_time(match_time_left)
+
+func _on_timer_tick() -> void:
+	match_time_left -= 1
+	if hud and hud.has_method("update_time"):
+		hud.update_time(match_time_left)
+		
+	if match_time_left <= 0:
+		_timer.stop()
+		
+		var winner: int = 0
+		if _p1 and _p2:
+			if _p1.stocks > _p2.stocks:
+				winner = 1
+			elif _p2.stocks > _p1.stocks:
+				winner = 2
+			else:
+				# Egalité de vies, on regarde les pourcentages de dégâts
+				if _p1.damage_percent < _p2.damage_percent:
+					winner = 1
+				elif _p2.damage_percent < _p1.damage_percent:
+					winner = 2
+				else:
+					winner = 0 # Vraie égalité
+					
+		GameData.last_winner = winner
+		if winner == 1:
+			GameData.p1_wins += 1
+		elif winner == 2:
+			GameData.p2_wins += 1
+			
+		match_finished.emit(winner, &"dev_stage", self)
 
 func _on_player_eliminated(player_num: int) -> void:
 	var winner: int = 2 if player_num == 1 else 1
