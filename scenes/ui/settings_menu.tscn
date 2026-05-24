@@ -5,8 +5,10 @@
 [ext_resource type="FontFile" uid="uid://d4beyjxkjfg6p" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="2_x3vyp"]
 [ext_resource type="Texture2D" uid="uid://5i6o0fjfm7yi" path="res://assets/art/ui/icons/audio_icon.png" id="4_yu862"]
 [ext_resource type="Texture2D" uid="uid://cx5m4v6qrv11c" path="res://assets/art/ui/icons/music_icon.png" id="5_ywggk"]
+[ext_resource type="Texture2D" uid="uid://cbj1gl51fogdk" path="res://assets/art/ui/icons/sfx_logo.png" id="6_ngbvi"]
+[ext_resource type="Texture2D" uid="uid://bs83mcyfbfh6t" path="res://assets/art/ui/icons/ui_logo.png" id="7_mishw"]
 
-[node name="SettingsMenu" type="Control" unique_id=1676625064 node_paths=PackedStringArray("master_volume_slider", "music_volume_slider", "fullscreen_check_box", "back_button")]
+[node name="SettingsMenu" type="Control" unique_id=1676625064 node_paths=PackedStringArray("master_volume_slider", "music_volume_slider", "sfx_volume_slider", "ui_volume_slider", "fullscreen_check_box", "back_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,6 +18,8 @@ grow_vertical = 2
 script = ExtResource("1_x3vyp")
 master_volume_slider = NodePath("CenterContainer/Settings/AudioOption/MasterVolumeSlider")
 music_volume_slider = NodePath("CenterContainer/Settings/MusicOption/MusicVolumeSlider")
+sfx_volume_slider = NodePath("CenterContainer/Settings/SFXOption/SFXVolumeSlider")
+ui_volume_slider = NodePath("CenterContainer/Settings/UIOption/UIVolumeSlider")
 fullscreen_check_box = NodePath("CenterContainer/Settings/FullscreenOption/FullscreenCheckBox")
 back_button = NodePath("CenterContainer/Settings/BackButton")
 
@@ -95,6 +99,40 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="MusicVolumeSlider" type="HSlider" parent="CenterContainer/Settings/MusicOption" unique_id=1139057898]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_constants/center_grabber = 0
+
+[node name="SFXOption" type="HBoxContainer" parent="CenterContainer/Settings" unique_id=62519394]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="SFXIcon" type="TextureRect" parent="CenterContainer/Settings/SFXOption" unique_id=717354004]
+layout_mode = 2
+texture = ExtResource("6_ngbvi")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="SFXVolumeSlider" type="HSlider" parent="CenterContainer/Settings/SFXOption" unique_id=1482953568]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_constants/center_grabber = 0
+
+[node name="UIOption" type="HBoxContainer" parent="CenterContainer/Settings" unique_id=1294747893]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="UIIcon" type="TextureRect" parent="CenterContainer/Settings/UIOption" unique_id=1731739564]
+layout_mode = 2
+texture = ExtResource("7_mishw")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="UIVolumeSlider" type="HSlider" parent="CenterContainer/Settings/UIOption" unique_id=2130074237]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
