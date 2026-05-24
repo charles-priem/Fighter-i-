@@ -36,7 +36,8 @@ func _transition_to(callable: Callable) -> void:
 # Point d'entrée du jeu :
 # on démarre par le splash screen puis tout le reste sera piloté par le scene manager.
 func _ready() -> void:
-	SettingsMenu.apply_saved_settings()
+	SettingsData.load_settings()
+	SettingsData.apply_settings()
 	_show_splash_screen()
 
 # Remplace proprement l'enfant courant d'un conteneur par une nouvelle scène instanciée.
