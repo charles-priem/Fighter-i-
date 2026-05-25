@@ -29,7 +29,13 @@ func update_animation():
 			animated_sprite.play("jump")
 		else:
 			animated_sprite.play("fall")
+	elif is_dashing:
+		animated_sprite.play("dash")
 	elif abs(velocity.x) > 20:
 		animated_sprite.play("run")
+	elif taking_damage:
+		animated_sprite.play("damage")
+		await get_tree().create_timer(0.5).timeout
+		taking_damage = false
 	else:
 		animated_sprite.play("idle")

@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	position += (-1) * direction * speed * delta
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.get_groups()[0] == "players" and body.name != "Nkounou":
+	if body.get_groups()[0] == "players" and body.name != "Dubois":
 		var directionRight = true if direction.x > 0 else false
 		body.take_hit(5,5,5,directionRight, true)
 		queue_free()
