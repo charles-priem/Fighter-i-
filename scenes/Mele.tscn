@@ -1,0 +1,286 @@
+[gd_scene format=3 uid="uid://dn6bw15bjed5w"]
+
+[ext_resource type="Script" uid="uid://ctkmoiajd2gxy" path="res://scripts/Mele.gd" id="1_xwrdi"]
+[ext_resource type="Texture2D" uid="uid://de5lq28pleqh4" path="res://assets/sprites/Personnages/Mele/Mele_attack1.png" id="2_xwrdi"]
+[ext_resource type="Texture2D" uid="uid://clff7gtifdvcm" path="res://assets/sprites/Personnages/Mele/Mele_attack2.png" id="3_0amd0"]
+[ext_resource type="Texture2D" uid="uid://hlaxr3jprfa5" path="res://assets/sprites/Personnages/Mele/Mele_attack3.png" id="4_h7qlp"]
+[ext_resource type="Texture2D" uid="uid://bgpsmp2m31tsd" path="res://assets/sprites/Personnages/Mele/Mele_attack4.png" id="5_5pa6o"]
+[ext_resource type="Texture2D" uid="uid://bf4ogrmnalsq5" path="res://assets/sprites/Personnages/Mele/Mele_attack5.png" id="6_ybj8a"]
+[ext_resource type="Texture2D" uid="uid://jgxvukoqf3ll" path="res://assets/sprites/Personnages/Mele/Mele_attack6.png" id="7_b8wmt"]
+[ext_resource type="Texture2D" uid="uid://qi3myvc2jmow" path="res://assets/sprites/Personnages/Mele/Mele_attack7.png" id="8_x6mwx"]
+[ext_resource type="Texture2D" uid="uid://b70ikstnybkth" path="res://assets/sprites/Personnages/Mele/Mele_attack8.png" id="9_u0ute"]
+[ext_resource type="Texture2D" uid="uid://bfrkt67uhem1w" path="res://assets/sprites/Personnages/Mele/Mele_attack9.png" id="10_n82br"]
+[ext_resource type="Texture2D" uid="uid://c8x53kudssvgn" path="res://assets/sprites/Personnages/Mele/Mele_climb1.png" id="11_y3cuo"]
+[ext_resource type="Texture2D" uid="uid://b2l7vqwcsit8y" path="res://assets/sprites/Personnages/Mele/Mele_climb2.png" id="12_u2w3d"]
+[ext_resource type="Texture2D" uid="uid://5a166lf6qbth" path="res://assets/sprites/Personnages/Mele/Mele_climb3.png" id="13_u57sd"]
+[ext_resource type="Texture2D" uid="uid://doqhhaqegluvp" path="res://assets/sprites/Personnages/Mele/Mele_climb4.png" id="14_55jmb"]
+[ext_resource type="Texture2D" uid="uid://cudka6172kqw2" path="res://assets/sprites/Personnages/Mele/Mele_climb5.png" id="15_rmtfx"]
+[ext_resource type="Texture2D" uid="uid://bv2yf28uuwmay" path="res://assets/sprites/Personnages/Mele/Mele_climb6.png" id="16_mbhey"]
+[ext_resource type="Texture2D" uid="uid://cucrttrxy52tt" path="res://assets/sprites/Personnages/Mele/Mele_climb8.png" id="17_nmcjh"]
+[ext_resource type="Texture2D" uid="uid://c87ies1xc8v3g" path="res://assets/sprites/Personnages/Mele/Mele_climb9.png" id="18_hvwnj"]
+[ext_resource type="Texture2D" uid="uid://d4g506qwfdbli" path="res://assets/sprites/Personnages/Mele/Mele_taking_damage1.png" id="19_uxgky"]
+[ext_resource type="Texture2D" uid="uid://dyxvrxgdtaith" path="res://assets/sprites/Personnages/Mele/Mele_taking_damage2.png" id="20_xv148"]
+[ext_resource type="Texture2D" uid="uid://cf1jhymuyec6y" path="res://assets/sprites/Personnages/Mele/Mele_taking_damage3.png" id="21_k3kt4"]
+[ext_resource type="Texture2D" uid="uid://cifvt2sglmqc0" path="res://assets/sprites/Personnages/Mele/Mele_taking_damage4.png" id="22_ppjhe"]
+[ext_resource type="Texture2D" uid="uid://dwq0jtgbbl37x" path="res://assets/sprites/Personnages/Mele/Mele_taking_damage5.png" id="23_opgmg"]
+[ext_resource type="Texture2D" uid="uid://cc7xi7tpyhldt" path="res://assets/sprites/Personnages/Mele/Mele_taking_damage6.png" id="24_bvy3f"]
+[ext_resource type="Texture2D" uid="uid://cg32qxpr74nri" path="res://assets/sprites/Personnages/Mele/Mele_taking_damage7.png" id="25_oje5v"]
+[ext_resource type="Texture2D" uid="uid://dndhabngjc7fk" path="res://assets/sprites/Personnages/Mele/Mele_dash1.png" id="26_disia"]
+[ext_resource type="Texture2D" uid="uid://bqejl5iyeu5ws" path="res://assets/sprites/Personnages/Mele/Mele_dash2.png" id="27_pd1st"]
+[ext_resource type="Texture2D" uid="uid://lpl85ky73fln" path="res://assets/sprites/Personnages/Mele/Mele_dash3.png" id="28_eqkw8"]
+[ext_resource type="Texture2D" uid="uid://c0p4dnvkd3m1s" path="res://assets/sprites/Personnages/Mele/Mele_dash4.png" id="29_yef47"]
+[ext_resource type="Texture2D" uid="uid://cxjh2h1q8h1lk" path="res://assets/sprites/Personnages/Mele/Mele_dash5.png" id="30_x7mgk"]
+[ext_resource type="Texture2D" uid="uid://c3waaj06q6se0" path="res://assets/sprites/Personnages/Mele/Mele_dash6.png" id="31_12yhy"]
+[ext_resource type="Texture2D" uid="uid://cguvexfw4srmh" path="res://assets/sprites/Personnages/Mele/Mele_dash7.png" id="32_53vm2"]
+[ext_resource type="Texture2D" uid="uid://d37wkd8oposuv" path="res://assets/sprites/Personnages/Mele/Mele_dash8.png" id="33_7y3cv"]
+[ext_resource type="Texture2D" uid="uid://canyvjsuinoak" path="res://assets/sprites/Personnages/Mele/Mele_jumping6.png" id="34_cybr2"]
+[ext_resource type="Texture2D" uid="uid://b81wndx7ymobl" path="res://assets/sprites/Personnages/Mele/Mele_jumping7.png" id="35_23meq"]
+[ext_resource type="Texture2D" uid="uid://b1r5xdv7m00e0" path="res://assets/sprites/Personnages/Mele/Mele_idle1.png" id="36_1qtxx"]
+[ext_resource type="Texture2D" uid="uid://hm5v2rio2kel" path="res://assets/sprites/Personnages/Mele/Mele_idle2.png" id="37_hw15p"]
+[ext_resource type="Texture2D" uid="uid://bm6kn0udnt2fn" path="res://assets/sprites/Personnages/Mele/Mele_idle3.png" id="38_ydp2w"]
+[ext_resource type="Texture2D" uid="uid://tlvdear70yju" path="res://assets/sprites/Personnages/Mele/Mele_idle4.png" id="39_27fsk"]
+[ext_resource type="Texture2D" uid="uid://bfibg08h5fs8r" path="res://assets/sprites/Personnages/Mele/Mele_idle5.png" id="40_am8dk"]
+[ext_resource type="Texture2D" uid="uid://c2t77wqo6gl1o" path="res://assets/sprites/Personnages/Mele/Mele_idle6.png" id="41_owkg3"]
+[ext_resource type="Texture2D" uid="uid://csc5rd5v2uy6j" path="res://assets/sprites/Personnages/Mele/Mele_idle7.png" id="42_rlpsw"]
+[ext_resource type="Texture2D" uid="uid://briigg2msb0i5" path="res://assets/sprites/Personnages/Mele/Mele_jumping1.png" id="43_gh1dd"]
+[ext_resource type="Texture2D" uid="uid://cyucir2cpiyfn" path="res://assets/sprites/Personnages/Mele/Mele_jumping2.png" id="44_ha5tu"]
+[ext_resource type="Texture2D" uid="uid://dwove5p55pc47" path="res://assets/sprites/Personnages/Mele/Mele_jumping3.png" id="45_04brv"]
+[ext_resource type="Texture2D" uid="uid://c3rl76ska40dt" path="res://assets/sprites/Personnages/Mele/Mele_jumping4.png" id="46_wbgsu"]
+[ext_resource type="Texture2D" uid="uid://csv2ehe2o7f52" path="res://assets/sprites/Personnages/Mele/Mele_jumping5.png" id="47_4g3jl"]
+[ext_resource type="Texture2D" uid="uid://bwhwa2wi1c4vr" path="res://assets/sprites/Personnages/Mele/Mele_walk1.png" id="48_wuvl3"]
+[ext_resource type="Texture2D" uid="uid://dokv355bebaiy" path="res://assets/sprites/Personnages/Mele/Mele_walk2.png" id="49_v60no"]
+[ext_resource type="Texture2D" uid="uid://cecqgcglska1k" path="res://assets/sprites/Personnages/Mele/Mele_walk3.png" id="50_d8o87"]
+[ext_resource type="Texture2D" uid="uid://bh71gnybi7imh" path="res://assets/sprites/Personnages/Mele/Mele_walk4.png" id="51_ri8gd"]
+[ext_resource type="Texture2D" uid="uid://okql3dm4ppnk" path="res://assets/sprites/Personnages/Mele/Mele_walk5.png" id="52_svwq4"]
+[ext_resource type="Texture2D" uid="uid://drq2vhbiufo6y" path="res://assets/sprites/Personnages/Mele/Mele_walk6.png" id="53_xe00j"]
+[ext_resource type="Texture2D" uid="uid://bxqwd7peeg04m" path="res://assets/sprites/Personnages/Mele/Mele_walk7.png" id="54_6b0pp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xwrdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0amd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h7qlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5pa6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ybj8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b8wmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_x6mwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u0ute")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n82br")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_y3cuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_u2w3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u57sd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_55jmb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rmtfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mbhey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nmcjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hvwnj")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_uxgky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xv148")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_k3kt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ppjhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_opgmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_bvy3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_oje5v")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_disia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_pd1st")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_eqkw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_yef47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_x7mgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_12yhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_53vm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_7y3cv")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 50.0
+}, {
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("34_cybr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_23meq")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_1qtxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_hw15p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ydp2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_27fsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_am8dk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_owkg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_rlpsw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_gh1dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ha5tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_04brv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_wbgsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_4g3jl")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_wuvl3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_v60no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_d8o87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ri8gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_svwq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_xe00j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_6b0pp")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 29.0
+height = 108.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6nak3"]
+radius = 36.0
+height = 122.0
+
+[node name="Mele" type="CharacterBody2D" unique_id=2041489519]
+script = ExtResource("1_xwrdi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_34wqp")
+animation = &"fall"
+frame_progress = 0.55186
+offset = Vector2(0, -33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
+position = Vector2(-4, -17)
+shape = SubResource("CapsuleShape2D_3vyb7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=13979002]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
+position = Vector2(-4, -17)
+shape = SubResource("CapsuleShape2D_6nak3")

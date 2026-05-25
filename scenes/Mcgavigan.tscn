@@ -1,0 +1,301 @@
+[gd_scene format=3 uid="uid://oj40ukavviyh"]
+
+[ext_resource type="Script" uid="uid://brd00s1lh5itu" path="res://scripts/McGavigan.gd" id="1_1v6ts"]
+[ext_resource type="Texture2D" uid="uid://v3gepe4r7rsx" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan idle 1.png" id="3_f5fag"]
+[ext_resource type="Texture2D" uid="uid://xuq4k8t3va8d" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 1.png" id="3_wum50"]
+[ext_resource type="Texture2D" uid="uid://gkju1lsb4i7p" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 2.png" id="4_5n16s"]
+[ext_resource type="Texture2D" uid="uid://cn1bs5x5h4vkg" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan idle 2.png" id="4_epps7"]
+[ext_resource type="Texture2D" uid="uid://d1r1kuk4b56hq" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan idle 3.png" id="5_cbk3h"]
+[ext_resource type="Texture2D" uid="uid://dieukr6kndy1t" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 3.png" id="5_vt504"]
+[ext_resource type="Texture2D" uid="uid://dsdms0t2i5c4g" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan idle 4.png" id="6_4vvfs"]
+[ext_resource type="Texture2D" uid="uid://ysn2s818l43m" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 4.png" id="6_7b0x8"]
+[ext_resource type="Texture2D" uid="uid://bipbgrcp4tq5b" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 5.png" id="7_gxfln"]
+[ext_resource type="Texture2D" uid="uid://dmauixhs34fjo" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan idle 5.png" id="7_rvg04"]
+[ext_resource type="Texture2D" uid="uid://d3k5sjpbifbnc" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 6.png" id="8_a37m4"]
+[ext_resource type="Texture2D" uid="uid://cgxpk70ele12d" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan idle 6.png" id="8_fcfb6"]
+[ext_resource type="Texture2D" uid="uid://cl1euj7pcs0ew" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 7.png" id="9_3ek1h"]
+[ext_resource type="Texture2D" uid="uid://14riro4hlsns" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan idle 7.png" id="9_teawo"]
+[ext_resource type="Texture2D" uid="uid://b6ru5jy4uc5a0" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 8.png" id="10_ow44v"]
+[ext_resource type="Texture2D" uid="uid://cy51vymlmg32d" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 9.png" id="11_37e8w"]
+[ext_resource type="Texture2D" uid="uid://cw1b68l6a7roi" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 10.png" id="12_uac6t"]
+[ext_resource type="Texture2D" uid="uid://b0jj0k2socqm3" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 11.png" id="13_21ak1"]
+[ext_resource type="Texture2D" uid="uid://3a013yum83wo" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan climb 1.png" id="14_r6o7n"]
+[ext_resource type="Texture2D" uid="uid://citbg0u8r4qlc" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan climb 2.png" id="15_g4hlm"]
+[ext_resource type="Texture2D" uid="uid://d14wldoqftija" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan climb 3.png" id="16_qvbqa"]
+[ext_resource type="Texture2D" uid="uid://qtde2a6ax52p" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan climb 4.png" id="17_vgfjf"]
+[ext_resource type="Texture2D" uid="uid://cwiomep0xufgy" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan climb 5.png" id="18_4ie52"]
+[ext_resource type="Texture2D" uid="uid://c54bjdxtyavq7" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan climb 6.png" id="19_gmfy4"]
+[ext_resource type="Texture2D" uid="uid://dsd43q26g0rku" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan climb 7.png" id="20_do7ym"]
+[ext_resource type="Texture2D" uid="uid://cp16smanse6ya" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan damage 1.png" id="21_yp13f"]
+[ext_resource type="Texture2D" uid="uid://bp651nguenhea" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan damage 2.png" id="22_mohbl"]
+[ext_resource type="Texture2D" uid="uid://bu0xs4wa613yp" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan damage 3.png" id="23_reut5"]
+[ext_resource type="Texture2D" uid="uid://bsu83kaj4s8op" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan damage 4.png" id="24_11dtk"]
+[ext_resource type="Texture2D" uid="uid://chqtyq42huouf" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan damage 5.png" id="25_runr0"]
+[ext_resource type="Texture2D" uid="uid://0yph6c3q5kt4" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan damage 6.png" id="26_vcsn5"]
+[ext_resource type="Texture2D" uid="uid://cef7bxrtxx6t2" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan damage 7.png" id="27_4ae2u"]
+[ext_resource type="Texture2D" uid="uid://5mn4k0wbds8p" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan damage 8.png" id="28_6w0mc"]
+[ext_resource type="Texture2D" uid="uid://d1mljxykkgxdc" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan damage 9.png" id="29_t0gru"]
+[ext_resource type="Texture2D" uid="uid://b3c2epoiybn2n" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan dash 1.png" id="30_8rpah"]
+[ext_resource type="Texture2D" uid="uid://cnyvc1mavyrux" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan dash 2.png" id="31_mv73d"]
+[ext_resource type="Texture2D" uid="uid://cgmy8rfyb16qh" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan dash 3.png" id="32_lbut0"]
+[ext_resource type="Texture2D" uid="uid://d4b43hs0yvtkt" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan dash 4.png" id="33_j8odc"]
+[ext_resource type="Texture2D" uid="uid://cfhyvnt8xluk3" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan dash 5.png" id="34_a3nc7"]
+[ext_resource type="Texture2D" uid="uid://433hqstvif8c" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan dash 6.png" id="35_jc87j"]
+[ext_resource type="Texture2D" uid="uid://f7l3cx1um341" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan jump 6.png" id="36_u4vae"]
+[ext_resource type="Texture2D" uid="uid://bhqr0qd5fxv05" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan jump 7.png" id="37_uiik8"]
+[ext_resource type="Texture2D" uid="uid://34d5f0oxg5r6" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan jump 8.png" id="38_jvh7t"]
+[ext_resource type="Texture2D" uid="uid://bbw0x2mq4loae" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan jump 1.png" id="46_17y1j"]
+[ext_resource type="Texture2D" uid="uid://bnmvcscv3ud6p" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan jump 2.png" id="47_kkflj"]
+[ext_resource type="Texture2D" uid="uid://c1tfutgr5dra4" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan jump 3.png" id="48_b7y2e"]
+[ext_resource type="Texture2D" uid="uid://dr0co1wro1se6" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan jump 4.png" id="49_v6nsa"]
+[ext_resource type="Texture2D" uid="uid://dcxly6aeiimnn" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan jump 5.png" id="50_aqdgg"]
+[ext_resource type="Texture2D" uid="uid://bsr4873gnhqpb" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan walk 1.png" id="51_j8nm1"]
+[ext_resource type="Texture2D" uid="uid://l3j8pvnowb18" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan walk 2.png" id="52_4genn"]
+[ext_resource type="Texture2D" uid="uid://pqffu02g63tw" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan walk 3.png" id="53_igbkl"]
+[ext_resource type="Texture2D" uid="uid://263ebjcmu8ku" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan walk 4.png" id="54_0o7ow"]
+[ext_resource type="Texture2D" uid="uid://0ouhpeoisl5k" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan walk 5.png" id="55_m4co5"]
+[ext_resource type="Texture2D" uid="uid://bdxmhrsxhtlqs" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan walk 6.png" id="56_6nn44"]
+[ext_resource type="Texture2D" uid="uid://fmd4g6q33u8p" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan walk 7.png" id="57_wegrj"]
+[ext_resource type="Texture2D" uid="uid://btah8br60wh0w" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan walk 8.png" id="58_0kk0u"]
+[ext_resource type="Texture2D" uid="uid://crytylywx6u8p" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan walk 9.png" id="59_5cpps"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wum50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5n16s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vt504")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7b0x8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gxfln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_a37m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3ek1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ow44v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_37e8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uac6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_21ak1")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_r6o7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_g4hlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qvbqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_vgfjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_4ie52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gmfy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_do7ym")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_yp13f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mohbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_reut5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_11dtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_runr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_vcsn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_4ae2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_6w0mc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_t0gru")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_8rpah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_mv73d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_lbut0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_j8odc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_a3nc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_jc87j")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 50.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_u4vae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_uiik8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_jvh7t")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f5fag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_epps7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cbk3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4vvfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rvg04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fcfb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_teawo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_17y1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_kkflj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_b7y2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_v6nsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_aqdgg")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_j8nm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_4genn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_igbkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_0o7ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_m4co5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_6nn44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_wegrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_0kk0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_5cpps")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 29.0
+height = 108.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6nak3"]
+radius = 36.0
+height = 122.0
+
+[node name="Mcgavigan" type="CharacterBody2D" unique_id=2041489519]
+script = ExtResource("1_1v6ts")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_34wqp")
+animation = &"jump"
+offset = Vector2(0, -33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
+position = Vector2(-4, -17)
+shape = SubResource("CapsuleShape2D_3vyb7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=13979002]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
+position = Vector2(-4, -17)
+shape = SubResource("CapsuleShape2D_6nak3")

@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 	position += (-1) * direction * speed * delta
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+
 	if body == owner_player:
 		return
 

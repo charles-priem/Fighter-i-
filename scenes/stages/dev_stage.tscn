@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bar5lvx5m7tko" path="res://assets/sprites/plateforme marsienne 1.png" id="4_mw25s"]
 [ext_resource type="Texture2D" uid="uid://wx50k7w8o731" path="res://assets/sprites/map lunaire.png" id="6_utbpp"]
 [ext_resource type="Script" uid="uid://bur1i54bpfqt0" path="res://scripts/hud.gd" id="7_7rhe6"]
-[ext_resource type="PackedScene" uid="uid://b7o41v2dkbjpn" path="res://scenes/Scottez.tscn" id="10_bbkak"]
-[ext_resource type="PackedScene" uid="uid://dyqad0rwgd0k1" path="res://scenes/Morelle.tscn" id="11_qnvh6"]
+[ext_resource type="PackedScene" uid="uid://dkhew6r6jws05" path="res://scenes/Blandre.tscn" id="11_bbkak"]
+[ext_resource type="PackedScene" uid="uid://dsx4geeimrikr" path="res://scenes/Dubois.tscn" id="11_qnvh6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_b5spy"]
 

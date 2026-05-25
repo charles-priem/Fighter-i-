@@ -1,41 +1,108 @@
 [gd_scene format=3 uid="uid://ctylc4atkguf3"]
 
 [ext_resource type="Script" uid="uid://df0x01wofo0yv" path="res://scripts/Benedito.gd" id="1_fmvww"]
-[ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="1_wjeal"]
-[ext_resource type="PackedScene" uid="uid://cgxc3f0d46iga" path="res://scenes/tir_benedito.tscn" id="2_k63vh"]
+
 [ext_resource type="Texture2D" uid="uid://142w2upnvo7b" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 1.png" id="2_a0cdt"]
+[ext_resource type="PackedScene" uid="uid://cgxc3f0d46iga" path="res://scenes/tir_benedito.tscn" id="2_k63vh"]
+[ext_resource type="Texture2D" uid="uid://shcu8fxhsoag" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage1.png" id="3_od34w"]
+
 [ext_resource type="Texture2D" uid="uid://vli6rm5wmmri" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 2.png" id="3_s4kpk"]
 [ext_resource type="Texture2D" uid="uid://bb4j03hbe0r0m" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 3.png" id="4_fmvww"]
+[ext_resource type="Texture2D" uid="uid://bpxdg05cba00p" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage2.png" id="4_sgmgm"]
 [ext_resource type="Texture2D" uid="uid://ctcssxk4e5pp5" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 4.png" id="5_k63vh"]
-[ext_resource type="Texture2D" uid="uid://djfj3gx242rge" path="res://assets/sprites/Personnages/Benedito/Benedito_walk1.png" id="8_cdfxp"]
-[ext_resource type="Texture2D" uid="uid://b5pa56bn5iwoe" path="res://assets/sprites/Personnages/Benedito/Benedito_walk2.png" id="9_qpi2c"]
-[ext_resource type="Texture2D" uid="uid://botup0yx571el" path="res://assets/sprites/Personnages/Benedito/Benedito_walk3.png" id="10_a1y3y"]
-[ext_resource type="Texture2D" uid="uid://im8p8qm46uw5" path="res://assets/sprites/Personnages/Benedito/Benedito_walk4.png" id="11_varru"]
-[ext_resource type="Texture2D" uid="uid://c3pxgs7dske1h" path="res://assets/sprites/Personnages/Benedito/Benedito_walk5.png" id="12_e0322"]
-[ext_resource type="Texture2D" uid="uid://cgd1fh73uddec" path="res://assets/sprites/Personnages/Benedito/Benedito_walk6.png" id="13_7628g"]
-[ext_resource type="Texture2D" uid="uid://crr640e4cf063" path="res://assets/sprites/Personnages/Benedito/Benedito_walk7.png" id="14_a161r"]
-[ext_resource type="Texture2D" uid="uid://b8y77d2bdsiqu" path="res://assets/sprites/Personnages/Benedito/Benedito_walk8.png" id="15_nqa2p"]
-[ext_resource type="Texture2D" uid="uid://cbad0184wq8u6" path="res://assets/sprites/Personnages/Benedito/Benedito_walk9.png" id="16_3tyuy"]
-[ext_resource type="Texture2D" uid="uid://c83nemp8esq1p" path="res://assets/sprites/Personnages/Benedito/Benedito_jump1.png" id="8_7628g"]
-[ext_resource type="Texture2D" uid="uid://do20e6yina77b" path="res://assets/sprites/Personnages/Benedito/Benedito_jump2.png" id="9_a161r"]
-[ext_resource type="Texture2D" uid="uid://cdal2ob0jy2vt" path="res://assets/sprites/Personnages/Benedito/Benedito_jump3.png" id="10_nqa2p"]
-[ext_resource type="Texture2D" uid="uid://c1h8thl7t2elt" path="res://assets/sprites/Personnages/Benedito/Benedito_jump4.png" id="11_3tyuy"]
-[ext_resource type="Texture2D" uid="uid://ev4hslqlt4sj" path="res://assets/sprites/Personnages/Benedito/Benedito_jump5.png" id="12_w5hqy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wv1as"]
-atlas = ExtResource("1_wjeal")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t722n"]
-atlas = ExtResource("1_wjeal")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_koadh"]
-atlas = ExtResource("1_wjeal")
-region = Rect2(896, 0, 128, 128)
+[ext_resource type="Texture2D" uid="uid://doityrv8fwmmd" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage3.png" id="5_punq1"]
+[ext_resource type="Texture2D" uid="uid://i7o8f2sj2vch" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage4.png" id="6_xfrsf"]
+[ext_resource type="Texture2D" uid="uid://du3e13hc3yfak" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage5.png" id="7_3ngh5"]
+[ext_resource type="Texture2D" uid="uid://7hrrtg1pkt55" path="res://assets/sprites/Personnages/Benedito/Benedito_walk1.png" id="8_cdfxp"]
+[ext_resource type="Texture2D" uid="uid://c0bdoxjuok3do" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage6.png" id="8_osb3s"]
+[ext_resource type="Texture2D" uid="uid://cpmnetqtf5ce7" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage7.png" id="9_6l5bh"]
+[ext_resource type="Texture2D" uid="uid://l2uejrrgfl8f" path="res://assets/sprites/Personnages/Benedito/Benedito_walk2.png" id="9_qpi2c"]
+[ext_resource type="Texture2D" uid="uid://b4akjut5g4e24" path="res://assets/sprites/Personnages/Benedito/Benedito_walk3.png" id="10_a1y3y"]
+[ext_resource type="Texture2D" uid="uid://d0vy483tdr0sp" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage8.png" id="10_gprmt"]
+[ext_resource type="Texture2D" uid="uid://dfxl8wngphwhk" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage9.png" id="11_snfkf"]
+[ext_resource type="Texture2D" uid="uid://bqx2rcq5khnxw" path="res://assets/sprites/Personnages/Benedito/Benedito_walk4.png" id="11_varru"]
+[ext_resource type="Texture2D" uid="uid://cnjsdwqjqn4hk" path="res://assets/sprites/Personnages/Benedito/Benedito_dashing1.png" id="12_6l5bh"]
+[ext_resource type="Texture2D" uid="uid://b16t8vhhrvi3s" path="res://assets/sprites/Personnages/Benedito/benedito_jump7.png" id="12_dbpvu"]
+[ext_resource type="Texture2D" uid="uid://cxcck8s0gq37x" path="res://assets/sprites/Personnages/Benedito/Benedito_walk5.png" id="12_e0322"]
+[ext_resource type="Texture2D" uid="uid://1iefvmc1n5nk" path="res://assets/sprites/Personnages/Benedito/Benedito_walk6.png" id="13_7628g"]
+[ext_resource type="Texture2D" uid="uid://c8b2x6vw7la6j" path="res://assets/sprites/Personnages/Benedito/Benedito_dashing2.png" id="13_gprmt"]
+[ext_resource type="Texture2D" uid="uid://cbhgm5vxssofc" path="res://assets/sprites/Personnages/Benedito/benedito_jump8.png" id="13_i7vfh"]
+[ext_resource type="Texture2D" uid="uid://bknikn5to5opp" path="res://assets/sprites/Personnages/Benedito/benedito_jump9.png" id="14_3b4ik"]
+[ext_resource type="Texture2D" uid="uid://c3gdebh3qgrjf" path="res://assets/sprites/Personnages/Benedito/Benedito_walk7.png" id="14_a161r"]
+[ext_resource type="Texture2D" uid="uid://cxon0x8efiit4" path="res://assets/sprites/Personnages/Benedito/Benedito_dashing3.png" id="14_snfkf"]
+[ext_resource type="Texture2D" uid="uid://k5yudh5mjllv" path="res://assets/sprites/Personnages/Benedito/Benedito_dashing4.png" id="15_dbpvu"]
+[ext_resource type="Texture2D" uid="uid://b772gao7mygw" path="res://assets/sprites/Personnages/Benedito/Benedito_walk8.png" id="15_nqa2p"]
+[ext_resource type="Texture2D" uid="uid://cnnmfdqsd02bb" path="res://assets/sprites/Personnages/Benedito/Benedito_walk9.png" id="16_3tyuy"]
+[ext_resource type="Texture2D" uid="uid://36v4s4kt6d4u" path="res://assets/sprites/Personnages/Benedito/Benedito_dashing5.png" id="16_i7vfh"]
+[ext_resource type="Texture2D" uid="uid://l1hy2lg3ncp3" path="res://assets/sprites/Personnages/Benedito/Benedito_dashing6.png" id="17_3b4ik"]
+[ext_resource type="Texture2D" uid="uid://cvol32fl8tjsw" path="res://assets/sprites/Personnages/Benedito/Benedito_dashing7.png" id="18_l44pc"]
+[ext_resource type="Texture2D" uid="uid://blk3146q04kgs" path="res://assets/sprites/Personnages/Benedito/benedito_jump2.png" id="20_lpfev"]
+[ext_resource type="Texture2D" uid="uid://k7bjo3a3tf3d" path="res://assets/sprites/Personnages/Benedito/benedito_jump3.png" id="21_3w8v5"]
+[ext_resource type="Texture2D" uid="uid://buvki3cmmqigt" path="res://assets/sprites/Personnages/Benedito/benedito_jump4.png" id="22_lm64g"]
+[ext_resource type="Texture2D" uid="uid://0vs5gf5qgxqo" path="res://assets/sprites/Personnages/Benedito/benedito_jump5.png" id="23_ev7nt"]
+[ext_resource type="Texture2D" uid="uid://bopq1jmu8subh" path="res://assets/sprites/Personnages/Benedito/benedito_jump6.png" id="24_b06wc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owota"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_od34w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sgmgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_punq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xfrsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3ngh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_osb3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6l5bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gprmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_snfkf")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_6l5bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gprmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_snfkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dbpvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_i7vfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3b4ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_l44pc")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 5.0
+}, {
 "frames": [],
 "loop": true,
 "name": &"default",
@@ -43,13 +110,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wv1as")
+"texture": ExtResource("12_dbpvu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t722n")
+"texture": ExtResource("13_i7vfh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_koadh")
+"texture": ExtResource("14_3b4ik")
 }],
 "loop": true,
 "name": &"fall",
@@ -74,23 +141,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_7628g")
+"texture": ExtResource("20_lpfev")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_a161r")
+"texture": ExtResource("21_3w8v5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_nqa2p")
+"texture": ExtResource("22_lm64g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_3tyuy")
+"texture": ExtResource("23_ev7nt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_w5hqy")
+"texture": ExtResource("24_b06wc")
 }],
 "loop": true,
 "name": &"jump",
-"speed": 8.0
+"speed": 5.0
 }, {
 "frames": [],
 "loop": true,
@@ -132,28 +199,28 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
 radius = 17.0
-height = 102.0
+height = 92.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fmvww"]
-radius = 47.0
-height = 100.0
+radius = 28.0
+height = 110.0
 
-[node name="Player" type="CharacterBody2D" unique_id=2041489519]
+[node name="Benedito" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_fmvww")
 tir = ExtResource("2_k63vh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1664251423]
-position = Vector2(3, -21)
+position = Vector2(3, -15)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_owota")
 animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
-position = Vector2(9, -16)
+position = Vector2(9, -7)
 shape = SubResource("CapsuleShape2D_3vyb7")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=115396730]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1036214767]
-position = Vector2(7, -15)
+position = Vector2(7, -7)
 shape = SubResource("CapsuleShape2D_fmvww")
