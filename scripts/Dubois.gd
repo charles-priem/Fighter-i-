@@ -36,8 +36,9 @@ func update_animation():
 	elif abs(velocity.x) > 20:
 		animated_sprite.play("run")
 	elif taking_damage:
-		animated_sprite.play("damage")
-		await get_tree().create_timer(0.5).timeout
-		taking_damage = false
+		if animated_sprite.animation != &"damage":
+			animated_sprite.play("damage")
+		if invincible_timer <= 0.0:
+			taking_damage = false
 	else:
 		animated_sprite.play("idle")

@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://ctylc4atkguf3"]
 
 [ext_resource type="Script" uid="uid://df0x01wofo0yv" path="res://scripts/Benedito.gd" id="1_fmvww"]
+
 [ext_resource type="Texture2D" uid="uid://142w2upnvo7b" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 1.png" id="2_a0cdt"]
 [ext_resource type="PackedScene" uid="uid://cgxc3f0d46iga" path="res://scenes/tir_benedito.tscn" id="2_k63vh"]
 [ext_resource type="Texture2D" uid="uid://shcu8fxhsoag" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage1.png" id="3_od34w"]
+
 [ext_resource type="Texture2D" uid="uid://vli6rm5wmmri" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 2.png" id="3_s4kpk"]
 [ext_resource type="Texture2D" uid="uid://bb4j03hbe0r0m" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 3.png" id="4_fmvww"]
 [ext_resource type="Texture2D" uid="uid://bpxdg05cba00p" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage2.png" id="4_sgmgm"]
 [ext_resource type="Texture2D" uid="uid://ctcssxk4e5pp5" path="res://assets/sprites/Personnages/Benedito/Benedito fixe 4.png" id="5_k63vh"]
+
 [ext_resource type="Texture2D" uid="uid://doityrv8fwmmd" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage3.png" id="5_punq1"]
 [ext_resource type="Texture2D" uid="uid://i7o8f2sj2vch" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage4.png" id="6_xfrsf"]
 [ext_resource type="Texture2D" uid="uid://du3e13hc3yfak" path="res://assets/sprites/Personnages/Benedito/benedito_taking_damage5.png" id="7_3ngh5"]
