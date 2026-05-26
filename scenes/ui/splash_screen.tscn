@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://vo0234kstoi3" path="res://scripts/ui/splash_screen.gd" id="1_eina6"]
 [ext_resource type="FontFile" uid="uid://d4beyjxkjfg6p" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="1_m0ilf"]
-[ext_resource type="Texture2D" uid="uid://dww6feudslqu3" path="res://assets/art/ui/fight_i_logo.png" id="2_eina6"]
+[ext_resource type="Texture2D" uid="uid://nxbsce6fcje6" path="res://assets/art/ui/fight_i_logo.png" id="2_eina6"]
 
 [sub_resource type="Animation" id="Animation_eina6"]
 length = 0.001
