@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c8g0j2pwpmm6i" path="res://scripts/Fardoux.gd" id="1_2e1u5"]
 [ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="1_y5pk8"]
-[ext_resource type="Texture2D" uid="uid://c2wbpteschm1s" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png" id="5_2e1u5"]
-[ext_resource type="Texture2D" uid="uid://c4wmtlnctpedl" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 2.png" id="3_2e1u5"]
-[ext_resource type="Texture2D" uid="uid://b4u8dd3cqnj16" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 3.png" id="4_qv561"]
+[ext_resource type="Texture2D" uid="uid://b07le7d207m78" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png" id="5_2e1u5"]
+[ext_resource type="Texture2D" uid="uid://pi2yc8v5o2d5" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 2.png" id="3_2e1u5"]
+[ext_resource type="Texture2D" uid="uid://fuddbj15b7bb" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 3.png" id="4_qv561"]
 [ext_resource type="Texture2D" uid="uid://cyybmxjv3k632" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 1.png" id="6_2e1u5"]
 [ext_resource type="Texture2D" uid="uid://bo52m08p8rohx" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 2.png" id="7_qv561"]
 [ext_resource type="Texture2D" uid="uid://ddfxkrfrpwog3" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 3.png" id="8_d8j15"]
