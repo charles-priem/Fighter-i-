@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d07kwdu5blv06"
+path="res://.godot/imported/GoodMan_McGavigan.wav-58c61c91812127d1b8f63dcd66562d03.sample"
+
+[deps]
+
+source_file="res://assets/audio/voicelines/Mc Gavigan/GoodMan_McGavigan.wav"
+dest_files=["res://.godot/imported/GoodMan_McGavigan.wav-58c61c91812127d1b8f63dcd66562d03.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
