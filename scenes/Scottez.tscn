@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://b7o41v2dkbjpn"]
 
-[ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="1_aroyw"]
-[ext_resource type="Texture2D" uid="uid://c41ysq7t2ywv6" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 1.png" id="2_2awy7"]
-[ext_resource type="Texture2D" uid="uid://b4la8mfeng5xr" path="res://assets/Fire Wizard/Run.png" id="3_pbl40"]
-[ext_resource type="Texture2D" uid="uid://cneyfp25vcbb5" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 2.png" id="3_ummwe"]
-[ext_resource type="Texture2D" uid="uid://bnpaob5x3n6fo" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 3.png" id="4_a81fl"]
-[ext_resource type="Texture2D" uid="uid://bkn4e2bkc0srl" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 4.png" id="5_u7o0s"]
+[ext_resource type="Texture2D" uid="uid://dwnnydws2beqt" path="res://assets/Fire Wizard/Jump.png" id="1_aroyw"]
+[ext_resource type="AudioStream" uid="uid://c8cujeng2o6cy" path="res://assets/audio/voicelines/Scottez/inchallah_scottez3.wav" id="2_0tedq"]
+[ext_resource type="Texture2D" uid="uid://bvtr7un7e4rf8" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 1.png" id="2_2awy7"]
+[ext_resource type="Texture2D" uid="uid://bo5ctw52yigm8" path="res://assets/Fire Wizard/Run.png" id="3_pbl40"]
+[ext_resource type="Texture2D" uid="uid://ctv7jdw8mxv1m" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 2.png" id="3_ummwe"]
+[ext_resource type="Texture2D" uid="uid://bylid8es51pf8" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 3.png" id="4_a81fl"]
+[ext_resource type="Texture2D" uid="uid://ddd0x8fnh36di" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 4.png" id="5_u7o0s"]
 [ext_resource type="Texture2D" uid="uid://dom8g1ylibuub" path="res://assets/sprites/Personnages/Scottez/Scottez_jump1.png" id="7_07na0"]
 [ext_resource type="Script" uid="uid://brbhpsahw26qh" path="res://scripts/scottez.gd" id="7_ummwe"]
 [ext_resource type="Texture2D" uid="uid://2um40dqmrm42" path="res://assets/sprites/Personnages/Scottez/Scottez_jump2.png" id="8_0tedq"]
@@ -180,6 +181,7 @@ height = 124.0
 
 [node name="Scottez" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("7_ummwe")
+voice_select = ExtResource("2_0tedq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1664251423]
 position = Vector2(0, -25)
