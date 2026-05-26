@@ -37,7 +37,7 @@ func _update_ui() -> void:
 		if t == 0:
 			time_label.text = "Infini"
 		else:
-			time_label.text = str(t / 60) + " Min"
+			time_label.text = str(int(t / 60.0)) + " Min"
 
 func _on_stocks_minus() -> void:
 	if GameData.stock_count > 1:

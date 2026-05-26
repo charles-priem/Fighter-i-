@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://matchrulesmenu123"]
 
 [ext_resource type="Script" path="res://scripts/ui/match_rules_menu.gd" id="1_rscript"]
-[ext_resource type="Texture2D" uid="uid://dlyq1kqla026p" path="res://assets/art/ui/menu_background.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://df5gfpqrctdr7" path="res://assets/art/ui/menu_background.png" id="2_bg"]
 [ext_resource type="FontFile" uid="uid://d4beyjxkjfg6p" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="3_font"]
 
 [node name="MatchRulesMenu" type="Control" node_paths=PackedStringArray("stocks_label", "time_label", "stocks_minus_btn", "stocks_plus_btn", "time_minus_btn", "time_plus_btn", "next_button", "back_button")]
