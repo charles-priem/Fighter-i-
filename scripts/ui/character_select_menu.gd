@@ -13,6 +13,8 @@ const CHARACTER_SLOT_SCENE: PackedScene = preload("res://scenes/ui/character_slo
 @export var p2_status_label: Label
 @export var total_slots: int = 21
 
+@onready var voice_player : AudioStreamPlayer = $VoicePlayer
+
 var _is_transitioning: bool = false
 var _current_selecting_player: int = 1
 
@@ -128,6 +130,15 @@ func _update_slots_visuals() -> void:
 			slot.set_selected(0)
 
 func _on_character_pressed(slot: Node, _character_scene: PackedScene) -> void:
+	# Jouer la voiceline de sélection
+	if _character_scene:
+		var temp_char = _character_scene.instantiate()
+		if "voice_select" in temp_char and temp_char.voice_select:
+			if voice_player:
+				voice_player.stream = temp_char.voice_select
+				voice_player.play()
+		temp_char.queue_free()
+
 	if _current_selecting_player == 1:
 		_p1_selected_slot = slot
 		# Trouver l'index dans GameData si possible, ou juste passer la scène au GameData plus tard

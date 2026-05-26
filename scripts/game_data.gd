@@ -11,6 +11,7 @@ const CHARACTER_SCENES = [
 	"res://scenes/Morelle.tscn",
 	"res://scenes/NKounou.tscn",
 	"res://scenes/Scottez.tscn"
+	
 ]
 
 const CHARACTER_NAMES = [

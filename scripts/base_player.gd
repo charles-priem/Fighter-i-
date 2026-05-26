@@ -50,10 +50,25 @@ signal player_eliminated(player_num)
 
 # REFERENCES
 @onready var sprite = $AnimatedSprite2D
+var voice_player : AudioStreamPlayer2D
+
+# VOICELINES
+@export_group("Voicelines")
+@export var voice_select  : AudioStream
+@export var voice_jump    : AudioStream
+@export var voice_hurt    : AudioStream
+@export var voice_special : AudioStream
+@export var voice_die     : AudioStream
 
 # READY 
 func _ready():
 	add_to_group("players")
+	
+	# Gestion du VoicePlayer
+	voice_player = AudioStreamPlayer2D.new()
+	voice_player.name = "VoicePlayer"
+	add_child(voice_player)
+
 	velocity = Vector2.ZERO
 	sprite.sprite_frames = sprite.sprite_frames.duplicate()
 
@@ -105,6 +120,7 @@ func _physics_process(delta):
 
 	if not is_attacking:
 		handle_attacks()
+		handle_special_attack()
 
 	move_and_slide()
 
@@ -122,6 +138,7 @@ func handle_jump():
 	if Input.is_action_just_pressed(action) and jumps_remaining > 0:
 		velocity.y = -jump_force
 		jumps_remaining -= 1
+		play_voice(voice_jump)
 
 # MOUVEMENT 
 func handle_movement():
@@ -177,6 +194,12 @@ func handle_fast_fall():
 func handle_attacks():
 	pass
 
+func handle_special_attack():
+	var special_action = "p" + str(player_number) + "_smash"
+	if Input.is_action_just_pressed(special_action):
+		play_voice(voice_special)
+		# Cette fonction sera étendue dans les scripts des personnages
+
 # RECEVOIR UN COUP 
 func take_hit(dmg: float, _kb_x: float, _kb_y: float,
 			  attacker_right: bool, recoil_effect: bool):
@@ -185,6 +208,7 @@ func take_hit(dmg: float, _kb_x: float, _kb_y: float,
 	is_dashing = false
 	damage_percent += dmg
 	taking_damage = true
+	play_voice(voice_hurt)
 	var mult = (1.0 + damage_percent / 100.0) / weight
 	#var vx = kb_x * mult
 	#var vy = kb_y * mult
@@ -212,6 +236,7 @@ func die():
 	if _is_dying:
 		return
 	_is_dying = true
+	play_voice(voice_die)
 
 	stocks -= 1
 	emit_signal("stock_lost", player_number, stocks)
@@ -338,3 +363,8 @@ func release_ledge():
 	is_grabbing_ledge = false
 	# Lâcher avec une petite vitesse vers le bas
 	velocity.y = 100.0
+
+func play_voice(stream: AudioStream):
+	if stream and voice_player:
+		voice_player.stream = stream
+		voice_player.play()
