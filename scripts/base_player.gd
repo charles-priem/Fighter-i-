@@ -67,6 +67,7 @@ func _ready():
 	# Gestion du VoicePlayer
 	voice_player = AudioStreamPlayer2D.new()
 	voice_player.name = "VoicePlayer"
+	voice_player.bus = "SFX"
 	add_child(voice_player)
 
 	velocity = Vector2.ZERO
