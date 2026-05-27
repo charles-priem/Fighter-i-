@@ -35,7 +35,7 @@ var characters: Array[Dictionary] = [
 	{
 		"display_name": "El Yaagoubi",
 		"scene": preload("res://scenes/ElYaagoubi.tscn"),
-		"preview": preload("res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 1.png")
+		"preview": preload("res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle1.png")
 	},
 	{
 		"display_name": "Fardoux",
@@ -81,6 +81,11 @@ var characters: Array[Dictionary] = [
 		"display_name": "Justine",
 		"scene": preload("res://scenes/Justine.tscn"),
 		"preview": preload("res://assets/sprites/Personnages/Justine/Justine_idle1.png")
+	},
+	{
+		"display_name": "Lise-Marie",
+		"scene": preload("res://scenes/LiseMarie.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Lise-Marie/lmv_idle1.png")
 	}
 ]
 
