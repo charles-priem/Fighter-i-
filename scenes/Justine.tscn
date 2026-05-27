@@ -1,0 +1,227 @@
+[gd_scene load_steps=50 format=3]
+
+[ext_resource type="Script" path="res://scripts/Justine.gd" id="1_justine_script"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_idle1.png" id="2_idle1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_idle2.png" id="3_idle2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_idle3.png" id="4_idle3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_idle4.png" id="5_idle4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_idle5.png" id="6_idle5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_idle6.png" id="7_idle6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_idle7.png" id="8_idle7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_walking1.png" id="9_walk1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_walking2.png" id="10_walk2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_walking3.png" id="11_walk3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_walking4.png" id="12_walk4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_walking5.png" id="13_walk5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_walking6.png" id="14_walk6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_walking7.png" id="15_walk7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_walking8.png" id="16_walk8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_walking9.png" id="17_walk9"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_juimping1.png" id="18_jump1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_juimping2.png" id="19_jump2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_juimping3.png" id="20_jump3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_juimping4.png" id="21_jump4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_juimping5.png" id="22_jump5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_juimping6.png" id="23_fall1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_juimping7.png" id="24_fall2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_juimping8.png" id="25_fall3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_juimping9.png" id="26_fall4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_taking_damage1.png" id="27_dmg1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_taking_damage2.png" id="28_dmg2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_taking_damage3.png" id="29_dmg3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_taking_damage4.png" id="30_dmg4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_taking_damage5.png" id="31_dmg5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_taking_damage6.png" id="32_dmg6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_taking_damage7.png" id="33_dmg7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_taking_damage8.png" id="34_dmg8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_taking_damage9.png" id="35_dmg9"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_dash1.png" id="36_dash1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_dash2.png" id="37_dash2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_dash3.png" id="38_dash3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_dash4.png" id="39_dash4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_dash5.png" id="40_dash5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_dash6.png" id="41_dash6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_dash7.png" id="42_dash7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_justine"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_dmg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_dmg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_dmg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_dmg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dmg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_dmg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_dmg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_dmg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_dmg9")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_dash1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_dash2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dash3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_dash4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_dash5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_dash6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_dash7")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_fall1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_fall2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fall3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_fall4")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_idle1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_idle2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_idle3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_idle4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_idle5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_idle6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_idle7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_jump1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jump2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jump3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jump4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jump5")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_walk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_walk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_walk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_walk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_walk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_walk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_walk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_walk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_walk9")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_justine"]
+radius = 25.0
+height = 100.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_area_justine"]
+radius = 30.0
+height = 110.0
+
+[node name="Justine" type="CharacterBody2D"]
+script = ExtResource("1_justine_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_justine")
+animation = &"idle"
+offset = Vector2(0, -33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -15)
+shape = SubResource("CapsuleShape2D_justine")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -15)
+shape = SubResource("CapsuleShape2D_area_justine")
