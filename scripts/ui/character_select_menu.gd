@@ -56,6 +56,31 @@ var characters: Array[Dictionary] = [
 		"display_name": "Scottez",
 		"scene": preload("res://scenes/Scottez.tscn"),
 		"preview": preload("res://assets/sprites/Personnages/Scottez/Scottez fixe 1.png")
+	},
+	{
+		"display_name": "Blandre",
+		"scene": preload("res://scenes/Blandre.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Blandre/blandre_idle1.png")
+	},
+	{
+		"display_name": "McGavigan",
+		"scene": preload("res://scenes/Mcgavigan.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Mcgavigan/Mcgavigan idle 1.png")
+	},
+	{
+		"display_name": "Mele",
+		"scene": preload("res://scenes/Mele.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Mele/Mele_idle1.png")
+	},
+	{
+		"display_name": "Deleplanque",
+		"scene": preload("res://scenes/Deleplanque.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Deleplanque/Samuel_iddle1.png")
+	},
+	{
+		"display_name": "Justine",
+		"scene": preload("res://scenes/Justine.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Justine/Justine_idle1.png")
 	}
 ]
 
