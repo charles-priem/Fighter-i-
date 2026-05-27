@@ -78,7 +78,7 @@ func update_stocks(player_num: int, stocks_remaining: int):
 	for i in range(stocks_remaining):
 		var icon = TextureRect.new()
 		# Remplace par le chemin de ton icône de vie (ex: tête du prof)
-		icon.texture = load("res://icon.svg")
+		icon.texture = load("res://assets/art/ui/icons/pixel-heart.png")
 		icon.custom_minimum_size = Vector2(20, 20)
 		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
