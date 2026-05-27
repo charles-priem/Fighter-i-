@@ -1,9 +1,12 @@
-[gd_scene load_steps=53 format=3 uid="uid://dxvl7p3lxn335"]
+[gd_scene format=3 uid="uid://dxvl7p3lxn335"]
 
 [ext_resource type="Script" uid="uid://c8g0j2pwpmm6i" path="res://scripts/Fardoux.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://b07le7d207m78" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png" id="2_idle1"]
+[ext_resource type="AudioStream" uid="uid://c8xtsnsm0836c" path="res://assets/audio/voicelines/Fardoux/force_fardoux.wav" id="3_fptdb"]
 [ext_resource type="Texture2D" uid="uid://pi2yc8v5o2d5" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 2.png" id="3_idle2"]
+[ext_resource type="AudioStream" uid="uid://cw2ffjslm6kfb" path="res://assets/audio/voicelines/Fardoux/ingé_fardoux.wav" id="4_i7uon"]
 [ext_resource type="Texture2D" uid="uid://fuddbj15b7bb" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 3.png" id="4_idle3"]
+[ext_resource type="AudioStream" uid="uid://bnms0vgae1o3q" path="res://assets/audio/voicelines/Fardoux/pisser_code_fardoux.wav" id="5_chyov"]
 [ext_resource type="Texture2D" uid="uid://byyh5ni8gxnp7" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 4.png" id="5_idle4"]
 [ext_resource type="Texture2D" uid="uid://cyybmxjv3k632" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 1.png" id="6_run1"]
 [ext_resource type="Texture2D" uid="uid://bo52m08p8rohx" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 2.png" id="7_run2"]
@@ -249,6 +252,10 @@ height = 108.0
 [node name="Fardoux" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_script")
 attack_effect = ExtResource("50_proj")
+voice_select = ExtResource("3_fptdb")
+voice_hurt = ExtResource("4_i7uon")
+voice_special = ExtResource("5_chyov")
+voice_die = ExtResource("5_chyov")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 position = Vector2(0, -22)
