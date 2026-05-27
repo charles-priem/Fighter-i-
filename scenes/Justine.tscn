@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3]
+[gd_scene load_steps=62 format=3]
 
 [ext_resource type="Script" path="res://scripts/Justine.gd" id="1_justine_script"]
 [ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_idle1.png" id="2_idle1"]
@@ -42,9 +42,55 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_dash5.png" id="40_dash5"]
 [ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_dash6.png" id="41_dash6"]
 [ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_dash7.png" id="42_dash7"]
+[ext_resource type="PackedScene" path="res://scenes/justine_projectile.tscn" id="43_projectile"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_attack1.png" id="44_attack1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_attack2.png" id="45_attack2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_attack3.png" id="46_attack3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_attack4.png" id="47_attack4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_attack5.png" id="48_attack5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_attack6.png" id="49_attack6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_attack7.png" id="50_attack7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_attack8.png" id="51_attack8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_attack9.png" id="52_attack9"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Personnages/Justine/Justine_attack10.png" id="53_attack10"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_justine"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_attack1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_attack2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_attack3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_attack4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_attack5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_attack6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_attack7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_attack8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_attack9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_attack10")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 15.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("27_dmg1")
@@ -209,8 +255,10 @@ height = 110.0
 
 [node name="Justine" type="CharacterBody2D"]
 script = ExtResource("1_justine_script")
+chat_projectile = ExtResource("43_projectile")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+autoplay = "idle"
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_justine")
 animation = &"idle"
