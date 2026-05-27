@@ -1,12 +1,9 @@
-[gd_scene format=3 uid="uid://b7o41v2dkbjpn"]
+[gd_scene load_steps=43 format=3 uid="uid://b7o41v2dkbjpn"]
 
 [ext_resource type="Script" uid="uid://brbhpsahw26qh" path="res://scripts/scottez.gd" id="1_scottez_script"]
 [ext_resource type="AudioStream" uid="uid://c8cujeng2o6cy" path="res://assets/audio/voicelines/Scottez/inchallah_scottez3.wav" id="2_scottez_audio"]
-[ext_resource type="AudioStream" uid="uid://dx2b7ke87pasv" path="res://assets/audio/voicelines/Scottez/regle_main_droite_scottez1.wav" id="3_6am5d"]
 [ext_resource type="Texture2D" uid="uid://c41ysq7t2ywv6" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 1.png" id="3_idle1"]
-[ext_resource type="AudioStream" uid="uid://d10ji1s8ql67o" path="res://assets/audio/voicelines/Scottez/dimension_slash_scottez2.wav" id="3_u30ql"]
 [ext_resource type="Texture2D" uid="uid://cneyfp25vcbb5" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 2.png" id="4_idle2"]
-[ext_resource type="AudioStream" uid="uid://wmudqy36avfi" path="res://assets/audio/voicelines/Scottez/regle_main_droite_scottez2.wav" id="5_fqnxh"]
 [ext_resource type="Texture2D" uid="uid://bnpaob5x3n6fo" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 3.png" id="5_idle3"]
 [ext_resource type="Texture2D" uid="uid://bkn4e2bkc0srl" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 4.png" id="6_idle4"]
 [ext_resource type="Texture2D" uid="uid://bh7ft0ovhrndu" path="res://assets/sprites/Personnages/Scottez/Scottez_walk1.png" id="7_walk1"]
@@ -199,11 +196,6 @@ animations = [{
 "name": &"jump",
 "speed": 15.0
 }, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("35_punch1")
@@ -280,15 +272,12 @@ radius = 25.0
 [node name="Scottez" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_scottez_script")
 voice_select = ExtResource("2_scottez_audio")
-voice_hurt = ExtResource("3_6am5d")
-voice_special = ExtResource("3_u30ql")
-voice_die = ExtResource("5_fqnxh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1664251423]
 position = Vector2(0, -25)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_owota")
-animation = &"new_animation"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
