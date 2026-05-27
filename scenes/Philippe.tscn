@@ -1,0 +1,313 @@
+[gd_scene format=3 uid="uid://b36r0byqnd6jo"]
+
+[ext_resource type="Script" uid="uid://cd453bcs8ldb4" path="res://scripts/Phillipe.gd" id="1_5548l"]
+[ext_resource type="Texture2D" uid="uid://dq555owojc7bw" path="res://assets/sprites/Personnages/Philippe/Justine_climb1.png" id="2_43mkw"]
+[ext_resource type="Texture2D" uid="uid://d0s1jrt2ywc3r" path="res://assets/sprites/Personnages/Philippe/Justine_attack1.png" id="2_5548l"]
+[ext_resource type="Texture2D" uid="uid://42u8ycup1ycg" path="res://assets/sprites/Personnages/Philippe/Justine_climb2.png" id="3_3vjvb"]
+[ext_resource type="Texture2D" uid="uid://igr2cymgbnca" path="res://assets/sprites/Personnages/Philippe/Justine_attack2.png" id="3_oghdr"]
+[ext_resource type="Texture2D" uid="uid://c3fp1pf1hidfs" path="res://assets/sprites/Personnages/Philippe/Justine_attack3.png" id="4_25vei"]
+[ext_resource type="Texture2D" uid="uid://cx75ggnwdwsxa" path="res://assets/sprites/Personnages/Philippe/Justine_climb3.png" id="4_53d7y"]
+[ext_resource type="Texture2D" uid="uid://beekmx4fho328" path="res://assets/sprites/Personnages/Philippe/Justine_climb4.png" id="5_8lo27"]
+[ext_resource type="Texture2D" uid="uid://bvb823a77adt4" path="res://assets/sprites/Personnages/Philippe/Justine_attack4.png" id="5_jc2ig"]
+[ext_resource type="Texture2D" uid="uid://01d7vg2xaggc" path="res://assets/sprites/Personnages/Philippe/Justine_attack5.png" id="6_dahsh"]
+[ext_resource type="Texture2D" uid="uid://caxk4tctfbyue" path="res://assets/sprites/Personnages/Philippe/Justine_climb5.png" id="6_q8g5u"]
+[ext_resource type="Texture2D" uid="uid://dlup4eprsq1xt" path="res://assets/sprites/Personnages/Philippe/Justine_attack6.png" id="7_co6mf"]
+[ext_resource type="Texture2D" uid="uid://xhsd2asda27y" path="res://assets/sprites/Personnages/Philippe/Justine_climb6.png" id="7_iwhbo"]
+[ext_resource type="Texture2D" uid="uid://d12qoa0g058ep" path="res://assets/sprites/Personnages/Philippe/Justine_attack7.png" id="8_0r6k6"]
+[ext_resource type="Texture2D" uid="uid://bxjplf5qa62d3" path="res://assets/sprites/Personnages/Philippe/Justine_climb7.png" id="8_lo55h"]
+[ext_resource type="Texture2D" uid="uid://op1j8ypea6ih" path="res://assets/sprites/Personnages/Philippe/Justine_attack8.png" id="9_hn0aa"]
+[ext_resource type="Texture2D" uid="uid://b22xd37xdhxb" path="res://assets/sprites/Personnages/Philippe/Justine_climb8.png" id="9_tyoau"]
+[ext_resource type="Texture2D" uid="uid://bwjm5rjjwr7yt" path="res://assets/sprites/Personnages/Philippe/Justine_attack9.png" id="10_4hk6l"]
+[ext_resource type="Texture2D" uid="uid://1rf14xrhs4kj" path="res://assets/sprites/Personnages/Philippe/Justine_climb9.png" id="10_comq3"]
+[ext_resource type="Texture2D" uid="uid://cbss5ucpl2rer" path="res://assets/sprites/Personnages/Philippe/Justine_taking_damage1.png" id="11_b5isn"]
+[ext_resource type="Texture2D" uid="uid://bcsinjaaosarw" path="res://assets/sprites/Personnages/Philippe/Justine_attack10.png" id="11_tu01a"]
+[ext_resource type="Texture2D" uid="uid://dy2s0g5apowdw" path="res://assets/sprites/Personnages/Philippe/Justine_taking_damage2.png" id="12_5548l"]
+[ext_resource type="Texture2D" uid="uid://dnh8x3xps44vt" path="res://assets/sprites/Personnages/Philippe/Justine_taking_damage3.png" id="13_oghdr"]
+[ext_resource type="Texture2D" uid="uid://b1p6pi36wnsox" path="res://assets/sprites/Personnages/Philippe/Justine_taking_damage4.png" id="14_25vei"]
+[ext_resource type="Texture2D" uid="uid://c3i54tgtwjemy" path="res://assets/sprites/Personnages/Philippe/Justine_taking_damage5.png" id="15_jc2ig"]
+[ext_resource type="Texture2D" uid="uid://b0feyf2fumxyd" path="res://assets/sprites/Personnages/Philippe/Justine_taking_damage6.png" id="16_dahsh"]
+[ext_resource type="Texture2D" uid="uid://dnaq067lrwg30" path="res://assets/sprites/Personnages/Philippe/Justine_taking_damage7.png" id="17_co6mf"]
+[ext_resource type="Texture2D" uid="uid://cqckky2sm1nef" path="res://assets/sprites/Personnages/Philippe/Justine_taking_damage8.png" id="18_0r6k6"]
+[ext_resource type="Texture2D" uid="uid://do434twfpb42d" path="res://assets/sprites/Personnages/Philippe/Justine_taking_damage9.png" id="19_hn0aa"]
+[ext_resource type="Texture2D" uid="uid://nrx0mm2o67rv" path="res://assets/sprites/Personnages/Philippe/Justine_dash1.png" id="20_4hk6l"]
+[ext_resource type="Texture2D" uid="uid://c7ptcf2mjeguy" path="res://assets/sprites/Personnages/Philippe/Justine_dash2.png" id="21_tu01a"]
+[ext_resource type="Texture2D" uid="uid://c66vjbf6t2rgm" path="res://assets/sprites/Personnages/Philippe/Justine_dash3.png" id="22_wxb8v"]
+[ext_resource type="Texture2D" uid="uid://1lmuvj4ejdcg" path="res://assets/sprites/Personnages/Philippe/Justine_dash4.png" id="23_i1s7k"]
+[ext_resource type="Texture2D" uid="uid://qgxijw2nlyo6" path="res://assets/sprites/Personnages/Philippe/Justine_dash5.png" id="24_ial42"]
+[ext_resource type="Texture2D" uid="uid://xyqav4iswls8" path="res://assets/sprites/Personnages/Philippe/Justine_dash6.png" id="25_fxpmy"]
+[ext_resource type="Texture2D" uid="uid://dwlleysjnoxhd" path="res://assets/sprites/Personnages/Philippe/Justine_dash7.png" id="26_pnr5k"]
+[ext_resource type="Texture2D" uid="uid://525j4usvbino" path="res://assets/sprites/Personnages/Philippe/Justine_juimping7.png" id="27_1dbpf"]
+[ext_resource type="Texture2D" uid="uid://dc2r8ij1q0rlo" path="res://assets/sprites/Personnages/Philippe/Justine_juimping8.png" id="28_fn6e5"]
+[ext_resource type="Texture2D" uid="uid://bd2udfa5efk8f" path="res://assets/sprites/Personnages/Philippe/Justine_juimping9.png" id="29_j8rce"]
+[ext_resource type="Texture2D" uid="uid://c3uwfbvkprapw" path="res://assets/sprites/Personnages/Philippe/Justine_idle1.png" id="30_occ3m"]
+[ext_resource type="Texture2D" uid="uid://bib0gw7mwcc83" path="res://assets/sprites/Personnages/Philippe/Justine_idle2.png" id="31_8g4ke"]
+[ext_resource type="Texture2D" uid="uid://s4h0cxgan60n" path="res://assets/sprites/Personnages/Philippe/Justine_idle3.png" id="32_vwuf4"]
+[ext_resource type="Texture2D" uid="uid://bfamyhnumxoih" path="res://assets/sprites/Personnages/Philippe/Justine_idle4.png" id="33_vlbrg"]
+[ext_resource type="Texture2D" uid="uid://n82upndmt6xu" path="res://assets/sprites/Personnages/Philippe/Justine_idle5.png" id="34_deajn"]
+[ext_resource type="Texture2D" uid="uid://xnl6wxdtno83" path="res://assets/sprites/Personnages/Philippe/Justine_idle6.png" id="35_rxplu"]
+[ext_resource type="Texture2D" uid="uid://bhbpw0tlxfjp2" path="res://assets/sprites/Personnages/Philippe/Justine_idle7.png" id="36_mpugh"]
+[ext_resource type="Texture2D" uid="uid://5c8yx8s6r5if" path="res://assets/sprites/Personnages/Philippe/Justine_juimping1.png" id="37_neueo"]
+[ext_resource type="Texture2D" uid="uid://ckloo0kg0exab" path="res://assets/sprites/Personnages/Philippe/Justine_juimping2.png" id="38_h0p6r"]
+[ext_resource type="Texture2D" uid="uid://cqaxpf2kmjdrt" path="res://assets/sprites/Personnages/Philippe/Justine_juimping3.png" id="39_hn1od"]
+[ext_resource type="Texture2D" uid="uid://c81aog3opau7k" path="res://assets/sprites/Personnages/Philippe/Justine_juimping4.png" id="40_veo0i"]
+[ext_resource type="Texture2D" uid="uid://bjmrmmrdh60b2" path="res://assets/sprites/Personnages/Philippe/Justine_juimping5.png" id="41_46ul3"]
+[ext_resource type="Texture2D" uid="uid://ci60637bt2iwv" path="res://assets/sprites/Personnages/Philippe/Justine_juimping6.png" id="42_10pfe"]
+[ext_resource type="Texture2D" uid="uid://b6wuauq3th53" path="res://assets/sprites/Personnages/Philippe/Justine_walking1.png" id="43_fjdgj"]
+[ext_resource type="Texture2D" uid="uid://dseomxopltd44" path="res://assets/sprites/Personnages/Philippe/Justine_walking2.png" id="44_r6qru"]
+[ext_resource type="Texture2D" uid="uid://ctdqnx0wcynct" path="res://assets/sprites/Personnages/Philippe/Justine_walking3.png" id="45_qulr6"]
+[ext_resource type="Texture2D" uid="uid://clcprarlghwdy" path="res://assets/sprites/Personnages/Philippe/Justine_walking4.png" id="46_747p3"]
+[ext_resource type="Texture2D" uid="uid://d2modw8bptaby" path="res://assets/sprites/Personnages/Philippe/Justine_walking5.png" id="47_sr186"]
+[ext_resource type="Texture2D" uid="uid://3fnj03nburtg" path="res://assets/sprites/Personnages/Philippe/Justine_walking6.png" id="48_pn7j8"]
+[ext_resource type="Texture2D" uid="uid://bwp6vf7jk022p" path="res://assets/sprites/Personnages/Philippe/Justine_walking7.png" id="49_7a0x8"]
+[ext_resource type="Texture2D" uid="uid://ck0hm0hs5lke7" path="res://assets/sprites/Personnages/Philippe/Justine_walking8.png" id="50_4hqim"]
+[ext_resource type="Texture2D" uid="uid://c21oyh7em4ir4" path="res://assets/sprites/Personnages/Philippe/Justine_walking9.png" id="51_1rhu1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5548l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oghdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_25vei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jc2ig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dahsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_co6mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0r6k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hn0aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4hk6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tu01a")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_43mkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3vjvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_53d7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8lo27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q8g5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iwhbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lo55h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tyoau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_comq3")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_b5isn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5548l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_oghdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_25vei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jc2ig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dahsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_co6mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0r6k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hn0aa")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_4hk6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_tu01a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_wxb8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_i1s7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ial42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fxpmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_pnr5k")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 50.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_1dbpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_fn6e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_j8rce")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_occ3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8g4ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_vwuf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_vlbrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_deajn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_rxplu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_mpugh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_neueo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_h0p6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_hn1od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_veo0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_46ul3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_10pfe")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_fjdgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_r6qru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_qulr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_747p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_sr186")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_pn7j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_7a0x8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_4hqim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_1rhu1")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 22.0
+height = 108.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6nak3"]
+radius = 27.0
+height = 116.0
+
+[node name="Philippe" type="CharacterBody2D" unique_id=2041489519]
+script = ExtResource("1_5548l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_34wqp")
+animation = &"attack"
+offset = Vector2(0, -33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
+position = Vector2(5, -17)
+shape = SubResource("CapsuleShape2D_3vyb7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=13979002]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
+position = Vector2(5, -17)
+shape = SubResource("CapsuleShape2D_6nak3")

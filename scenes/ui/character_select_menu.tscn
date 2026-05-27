@@ -83,11 +83,12 @@ text = "J2 : En attente..."
 horizontal_alignment = 1
 
 [node name="CharacterList" type="GridContainer" parent="MarginContainer/CenterContainer/MarginContainer/Menu" unique_id=1499618602]
+custom_minimum_size = Vector2(0, 700)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
-columns = 7
+columns = 5
 
 [node name="Spacer" type="Control" parent="MarginContainer/CenterContainer/MarginContainer/Menu" unique_id=1189919544]
 layout_mode = 2

@@ -214,12 +214,12 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
-radius = 18.0
-height = 92.0
+radius = 25.0
+height = 108.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6nak3"]
-radius = 30.0
-height = 100.0
+radius = 33.0
+height = 118.0
 
 [node name="Blandre" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_i7yaf")
@@ -231,15 +231,15 @@ voice_die = ExtResource("4_hxwgh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_34wqp")
-animation = &"run"
+animation = &"fall"
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
-position = Vector2(-3, -14)
+position = Vector2(3, -17)
 shape = SubResource("CapsuleShape2D_3vyb7")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=13979002]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
-position = Vector2(-4, -15)
+position = Vector2(2, -17)
 shape = SubResource("CapsuleShape2D_6nak3")

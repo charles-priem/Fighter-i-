@@ -61,6 +61,7 @@ text = "Selection de carte"
 horizontal_alignment = 1
 
 [node name="StageList" type="GridContainer" parent="MarginContainer/CenterContainer/MarginContainer/Menu" unique_id=1137322331]
+custom_minimum_size = Vector2(0, 700)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/h_separation = 10

@@ -3,35 +3,35 @@ extends Node
 # --- CONFIGURATION DES PERSONNAGES ---
 
 const CHARACTER_SCENES = [
-	"res://scenes/ElYaagoubi.tscn",
 	"res://scenes/Dubois.tscn",
-	"res://scenes/Benedito.tscn",
-	"res://scenes/Fardoux.tscn",
-	"res://scenes/Morelle.tscn",
-	"res://scenes/NKounou.tscn",
-	"res://scenes/Scottez.tscn",
-	"res://scenes/Blandre.tscn",
 	"res://scenes/Mcgavigan.tscn",
 	"res://scenes/Mele.tscn",
+	"res://scenes/Blandre.tscn",
+	"res://scenes/Benedito.tscn",
 	"res://scenes/Deleplanque.tscn",
-	"res://scenes/Justine.tscn",
-	"res://scenes/LiseMarie.tscn"
+	"res://scenes/Scottez.tscn",
+	"res://scenes/Philippe.tscn",
+	"res://scenes/ElYaagoubi.tscn",
+	"res://scenes/Morelle.tscn",
+	"res://scenes/Veillon.tscn",
+	"res://scenes/NKonou.tscn",
+	"res://scenes/Fardoux.tscn"
 ]
 
 const CHARACTER_NAMES = [
-	"ElYaagoubi",
 	"Dubois",
-	"Benedito",
-	"Fardoux",
-	"Morelle",
-	"NKounou",
-	"Scottez",
-	"Blandre",
-	"McGavigan",
+	"Mcgavigan",
 	"Mele",
+	"Blandre",
+	"Benedito",
 	"Deleplanque",
-	"Justine",
-	"Lise-Marie"
+	"Scottez",
+	"Philippe",
+	"El Yaagoubi",
+	"Morelle",
+	"Veillon",
+	"N'Konou",
+	"Fardoux"
 ]
 
 const CHARACTER_DESC = [

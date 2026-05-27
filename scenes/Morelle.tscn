@@ -1,81 +1,90 @@
 [gd_scene format=3 uid="uid://dyqad0rwgd0k1"]
 
-[ext_resource type="Script" uid="uid://bwpa88sl76otn" path="res://scripts/morelle.gd" id="1_3bueh"]
+[ext_resource type="Script" uid="uid://bwpa88sl76otn" path="res://scripts/Morelle.gd" id="1_3bueh"]
 [ext_resource type="PackedScene" uid="uid://cajud4qn4feh4" path="res://scenes/papierMorelle.tscn" id="2_s7cua"]
-[ext_resource type="Texture2D" uid="uid://cslbgovvo5g5v" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier1.png" id="3_at1"]
-[ext_resource type="Texture2D" uid="uid://ctm6htdl67jjf" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier2.png" id="4_at2"]
-[ext_resource type="Texture2D" uid="uid://dxv62103f02x6" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier3.png" id="5_at3"]
-[ext_resource type="Texture2D" uid="uid://c7pkyo04a878u" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier4.png" id="6_at4"]
-[ext_resource type="Texture2D" uid="uid://cekr4b0n5hymh" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier5.png" id="7_at5"]
-[ext_resource type="Texture2D" uid="uid://dijk44b6lalgx" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier6.png" id="8_at6"]
-[ext_resource type="Texture2D" uid="uid://bg7jxnxf0x8s8" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier7.png" id="9_at7"]
-[ext_resource type="Texture2D" uid="uid://duaq36w4ids83" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier8.png" id="10_at8"]
-[ext_resource type="Texture2D" uid="uid://tqs3xpc3npsq" path="res://assets/sprites/Personnages/Morelle/morelle_idle1.webp" id="11_id1"]
-[ext_resource type="Texture2D" uid="uid://cqaqmxbx7o1gd" path="res://assets/sprites/Personnages/Morelle/morelle_idle2.webp" id="12_id2"]
-[ext_resource type="Texture2D" uid="uid://wjinaotltq0r" path="res://assets/sprites/Personnages/Morelle/morelle_idle3.webp" id="13_id3"]
-[ext_resource type="Texture2D" uid="uid://cfbcnr57r1ran" path="res://assets/sprites/Personnages/Morelle/morelle_idle4.webp" id="14_id4"]
-[ext_resource type="Texture2D" uid="uid://fhgpraaudrmp" path="res://assets/sprites/Personnages/Morelle/morelle_idle5.webp" id="15_id5"]
-[ext_resource type="Texture2D" uid="uid://cwwngwb0rfsc" path="res://assets/sprites/Personnages/Morelle/morelle_idle6.webp" id="16_id6"]
-[ext_resource type="Texture2D" uid="uid://bs6amx4627lfw" path="res://assets/sprites/Personnages/Morelle/morelle_idle7.webp" id="17_id7"]
-[ext_resource type="Texture2D" uid="uid://ci4ohayjl144u" path="res://assets/sprites/Personnages/Morelle/morelle_idle8.webp" id="18_id8"]
-[ext_resource type="Texture2D" uid="uid://d3gs24s2jbjaa" path="res://assets/sprites/Personnages/Morelle/morelle_idle9.webp" id="19_id9"]
-[ext_resource type="Texture2D" uid="uid://bsvdrfr5t2uar" path="res://assets/sprites/Personnages/Morelle/morelle_idle10.webp" id="20_id10"]
-[ext_resource type="Texture2D" uid="uid://cv3nk55dil064" path="res://assets/sprites/Personnages/Morelle/morelle_idle11.webp" id="21_id11"]
-[ext_resource type="Texture2D" uid="uid://dbyx0far240ae" path="res://assets/sprites/Personnages/Morelle/morelle_dash1.png" id="22_ds1"]
-[ext_resource type="Texture2D" uid="uid://b7tfqrjts35ja" path="res://assets/sprites/Personnages/Morelle/morelle_dash2.png" id="23_ds2"]
-[ext_resource type="Texture2D" uid="uid://c5t7p6uqpet8g" path="res://assets/sprites/Personnages/Morelle/morelle_dash3.png" id="24_ds3"]
-[ext_resource type="Texture2D" uid="uid://cb67dvclxptie" path="res://assets/sprites/Personnages/Morelle/morelle_dash4.png" id="25_ds4"]
-[ext_resource type="Texture2D" uid="uid://d0pqk51sc727l" path="res://assets/sprites/Personnages/Morelle/morelle_dash5.png" id="26_ds5"]
-[ext_resource type="Texture2D" uid="uid://52ovao5forbb" path="res://assets/sprites/Personnages/Morelle/morelle_dash6.png" id="27_ds6"]
-[ext_resource type="Texture2D" uid="uid://cxcn0fw6ja4gu" path="res://assets/sprites/Personnages/Morelle/morelle_dash7.png" id="28_ds7"]
-[ext_resource type="Texture2D" uid="uid://cb8xwxjxvjx0f" path="res://assets/sprites/Personnages/Morelle/morelle_dash8.png" id="29_ds8"]
-[ext_resource type="Texture2D" uid="uid://d363fvb158jwg" path="res://assets/sprites/Personnages/Morelle/morelle_dash9.png" id="30_ds9"]
-[ext_resource type="Texture2D" uid="uid://bsjv0yk51jbj0" path="res://assets/sprites/Personnages/Morelle/Morelle_jump1-removebg-preview.png" id="31_ju1"]
-[ext_resource type="Texture2D" uid="uid://bd4qqsjs64d4" path="res://assets/sprites/Personnages/Morelle/Morelle_jump2-removebg-preview.png" id="32_ju2"]
-[ext_resource type="Texture2D" uid="uid://c2odqtjivs7gj" path="res://assets/sprites/Personnages/Morelle/Morelle_jump3-removebg-preview.png" id="33_ju3"]
-[ext_resource type="Texture2D" uid="uid://2bxiort50rlr" path="res://assets/sprites/Personnages/Morelle/Morelle_jump4-removebg-preview.png" id="34_ju4"]
-[ext_resource type="Texture2D" uid="uid://1y3mj5xmq77h" path="res://assets/sprites/Personnages/Morelle/Morelle_jump5-removebg-preview.png" id="35_ju5"]
-[ext_resource type="Texture2D" uid="uid://b25g2n4kptumu" path="res://assets/sprites/Personnages/Morelle/Morelle_jump6-removebg-preview.png" id="36_ju6"]
-[ext_resource type="Texture2D" uid="uid://b3camh87qewu7" path="res://assets/sprites/Personnages/Morelle/Morelle_jump7-removebg-preview.png" id="37_ju7"]
-[ext_resource type="Texture2D" uid="uid://dv46vnh0g3610" path="res://assets/sprites/Personnages/Morelle/Morelle_jump8-removebg-preview.png" id="38_ju8"]
-[ext_resource type="Texture2D" uid="uid://x71sasgfmpsh" path="res://assets/sprites/Personnages/Morelle/Morelle_jump9-removebg-preview.png" id="39_ju9"]
-[ext_resource type="Texture2D" uid="uid://bdm2bimnab7q3" path="res://assets/sprites/Personnages/Morelle/Morelle_jump10-removebg-preview.png" id="40_ju10"]
-[ext_resource type="Texture2D" uid="uid://doj8hgxhsb4y2" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage1.png" id="41_dm1"]
-[ext_resource type="Texture2D" uid="uid://dicrkt3jhmipp" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage2.png" id="42_dm2"]
-[ext_resource type="Texture2D" uid="uid://b1j5hh2fhidsf" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage3.png" id="43_dm3"]
-[ext_resource type="Texture2D" uid="uid://bdijeq7o5fbcg" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage4.png" id="44_dm4"]
-[ext_resource type="Texture2D" uid="uid://cx7k6ln84qwma" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage5.png" id="45_dm5"]
-[ext_resource type="Texture2D" uid="uid://cfna0t0xcps5p" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage6.png" id="46_dm6"]
-[ext_resource type="Texture2D" uid="uid://b4lk1hh7glxd0" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage7.png" id="47_dm7"]
-[ext_resource type="Texture2D" uid="uid://pvoevtwv0l7e" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage8.png" id="48_dm8"]
-[ext_resource type="Texture2D" uid="uid://dbabhhtmx3ihu" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage9.png" id="49_dm9"]
+[ext_resource type="Texture2D" uid="uid://tqs3xpc3npsq" path="res://assets/sprites/Personnages/Morelle/morelle_idle1.webp" id="3_3q4qr"]
+[ext_resource type="Texture2D" uid="uid://cqaqmxbx7o1gd" path="res://assets/sprites/Personnages/Morelle/morelle_idle2.webp" id="4_2j382"]
+[ext_resource type="Texture2D" uid="uid://wjinaotltq0r" path="res://assets/sprites/Personnages/Morelle/morelle_idle3.webp" id="5_hidrn"]
+[ext_resource type="Texture2D" uid="uid://cfbcnr57r1ran" path="res://assets/sprites/Personnages/Morelle/morelle_idle4.webp" id="6_hq3j6"]
+[ext_resource type="Texture2D" uid="uid://fhgpraaudrmp" path="res://assets/sprites/Personnages/Morelle/morelle_idle5.webp" id="7_y3jd2"]
+[ext_resource type="Texture2D" uid="uid://cwwngwb0rfsc" path="res://assets/sprites/Personnages/Morelle/morelle_idle6.webp" id="8_4ak8d"]
+[ext_resource type="Texture2D" uid="uid://bs6amx4627lfw" path="res://assets/sprites/Personnages/Morelle/morelle_idle7.webp" id="9_l5yko"]
+[ext_resource type="Texture2D" uid="uid://ci4ohayjl144u" path="res://assets/sprites/Personnages/Morelle/morelle_idle8.webp" id="10_exp5i"]
+[ext_resource type="Texture2D" uid="uid://d3gs24s2jbjaa" path="res://assets/sprites/Personnages/Morelle/morelle_idle9.webp" id="11_s7cua"]
+[ext_resource type="Texture2D" uid="uid://bsvdrfr5t2uar" path="res://assets/sprites/Personnages/Morelle/morelle_idle10.webp" id="12_5dpmv"]
+[ext_resource type="Texture2D" uid="uid://cv3nk55dil064" path="res://assets/sprites/Personnages/Morelle/morelle_idle11.webp" id="13_yw5rx"]
+[ext_resource type="Texture2D" uid="uid://cslbgovvo5g5v" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier1.png" id="2_exp5i"]
+[ext_resource type="Texture2D" uid="uid://ctm6htdl67jjf" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier2.png" id="3_s7cua"]
+[ext_resource type="Texture2D" uid="uid://dxv62103f02x6" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier3.png" id="4_5dpmv"]
+[ext_resource type="Texture2D" uid="uid://c7pkyo04a878u" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier4.png" id="5_yw5rx"]
+[ext_resource type="Texture2D" uid="uid://cekr4b0n5hymh" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier5.png" id="6_c2d2p"]
+[ext_resource type="Texture2D" uid="uid://dijk44b6lalgx" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier6.png" id="7_tasfu"]
+[ext_resource type="Texture2D" uid="uid://bg7jxnxf0x8s8" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier7.png" id="8_st7ie"]
+[ext_resource type="Texture2D" uid="uid://duaq36w4ids83" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier8.png" id="9_mo7pi"]
+[ext_resource type="Texture2D" uid="uid://7x5f7c8s3yra" path="res://assets/sprites/Personnages/Morelle/morelle_climb1.png" id="11_1113t"]
+[ext_resource type="Texture2D" uid="uid://cmrk667mexmsl" path="res://assets/sprites/Personnages/Morelle/morelle_climb2.png" id="12_wddot"]
+[ext_resource type="Texture2D" uid="uid://qd1uw2g12p6y" path="res://assets/sprites/Personnages/Morelle/morelle_climb3.png" id="13_c2ek2"]
+[ext_resource type="Texture2D" uid="uid://cprt6tqqkqsyb" path="res://assets/sprites/Personnages/Morelle/morelle_climb4.png" id="14_qoefq"]
+[ext_resource type="Texture2D" uid="uid://b0evwaxtxbyjd" path="res://assets/sprites/Personnages/Morelle/morelle_climb5.png" id="15_f7j3j"]
+[ext_resource type="Texture2D" uid="uid://cnbwih0oevsae" path="res://assets/sprites/Personnages/Morelle/morelle_climb6.png" id="16_l382c"]
+[ext_resource type="Texture2D" uid="uid://vt65m2a4ycdc" path="res://assets/sprites/Personnages/Morelle/morelle_climb7.png" id="17_g8a8h"]
+[ext_resource type="Texture2D" uid="uid://mwu21kynetfc" path="res://assets/sprites/Personnages/Morelle/morelle_climb8.png" id="18_omfhw"]
+[ext_resource type="Texture2D" uid="uid://cf2dx1ngniaxk" path="res://assets/sprites/Personnages/Morelle/morelle_climb9.png" id="19_mvfna"]
+[ext_resource type="Texture2D" uid="uid://dbyx0far240ae" path="res://assets/sprites/Personnages/Morelle/morelle_dash1.png" id="20_m7x2s"]
+[ext_resource type="Texture2D" uid="uid://b7tfqrjts35ja" path="res://assets/sprites/Personnages/Morelle/morelle_dash2.png" id="21_d3eov"]
+[ext_resource type="Texture2D" uid="uid://c5t7p6uqpet8g" path="res://assets/sprites/Personnages/Morelle/morelle_dash3.png" id="22_rq2ym"]
+[ext_resource type="Texture2D" uid="uid://cb67dvclxptie" path="res://assets/sprites/Personnages/Morelle/morelle_dash4.png" id="23_0id45"]
+[ext_resource type="Texture2D" uid="uid://d0pqk51sc727l" path="res://assets/sprites/Personnages/Morelle/morelle_dash5.png" id="24_jmejj"]
+[ext_resource type="Texture2D" uid="uid://52ovao5forbb" path="res://assets/sprites/Personnages/Morelle/morelle_dash6.png" id="25_oq1wo"]
+[ext_resource type="Texture2D" uid="uid://cxcn0fw6ja4gu" path="res://assets/sprites/Personnages/Morelle/morelle_dash7.png" id="26_ojb3k"]
+[ext_resource type="Texture2D" uid="uid://cb8xwxjxvjx0f" path="res://assets/sprites/Personnages/Morelle/morelle_dash8.png" id="27_bp7es"]
+[ext_resource type="Texture2D" uid="uid://d363fvb158jwg" path="res://assets/sprites/Personnages/Morelle/morelle_dash9.png" id="28_6ycdl"]
+[ext_resource type="Texture2D" uid="uid://doj8hgxhsb4y2" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage1.png" id="20_d3eov"]
+[ext_resource type="Texture2D" uid="uid://dicrkt3jhmipp" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage2.png" id="21_rq2ym"]
+[ext_resource type="Texture2D" uid="uid://b1j5hh2fhidsf" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage3.png" id="22_0id45"]
+[ext_resource type="Texture2D" uid="uid://bdijeq7o5fbcg" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage4.png" id="23_jmejj"]
+[ext_resource type="Texture2D" uid="uid://cx7k6ln84qwma" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage5.png" id="24_oq1wo"]
+[ext_resource type="Texture2D" uid="uid://cfna0t0xcps5p" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage6.png" id="25_ojb3k"]
+[ext_resource type="Texture2D" uid="uid://b4lk1hh7glxd0" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage7.png" id="26_bp7es"]
+[ext_resource type="Texture2D" uid="uid://pvoevtwv0l7e" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage8.png" id="27_6ycdl"]
+[ext_resource type="Texture2D" uid="uid://dbabhhtmx3ihu" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage9.png" id="28_f5d3w"]
+[ext_resource type="Texture2D" uid="uid://db8mt2s1ardhs" path="res://assets/sprites/Personnages/Morelle/Morelle_jump1.png" id="34_csbkf"]
+[ext_resource type="Texture2D" uid="uid://c8yuf4tsswwf6" path="res://assets/sprites/Personnages/Morelle/Morelle_jump2.png" id="35_7ud3u"]
+[ext_resource type="Texture2D" uid="uid://bnbusctmohute" path="res://assets/sprites/Personnages/Morelle/Morelle_jump3.png" id="36_dsife"]
+[ext_resource type="Texture2D" uid="uid://drhqgcxbwf1u2" path="res://assets/sprites/Personnages/Morelle/Morelle_jump4.png" id="37_876r0"]
+[ext_resource type="Texture2D" uid="uid://bqjj4tq70dhad" path="res://assets/sprites/Personnages/Morelle/Morelle_jump5.png" id="38_18x45"]
+[ext_resource type="Texture2D" uid="uid://davsr5dbx6g3a" path="res://assets/sprites/Personnages/Morelle/Morelle_jump6.png" id="29_f5d3w"]
+[ext_resource type="Texture2D" uid="uid://4eyb6daxlqub" path="res://assets/sprites/Personnages/Morelle/Morelle_jump7.png" id="30_fglpe"]
+[ext_resource type="Texture2D" uid="uid://bu71pbcsefar1" path="res://assets/sprites/Personnages/Morelle/Morelle_jump8.png" id="31_rvsej"]
+[ext_resource type="Texture2D" uid="uid://c4aqvrrakl65n" path="res://assets/sprites/Personnages/Morelle/Morelle_jump9.png" id="32_q655b"]
+[ext_resource type="Texture2D" uid="uid://dhr2s7eq6i7y5" path="res://assets/sprites/Personnages/Morelle/Morelle_jump10.png" id="33_jplp3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_at1")
+"texture": ExtResource("2_exp5i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_at2")
+"texture": ExtResource("3_s7cua")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_at3")
+"texture": ExtResource("4_5dpmv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_at4")
+"texture": ExtResource("5_yw5rx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_at5")
+"texture": ExtResource("6_c2d2p")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_at6")
+"texture": ExtResource("7_tasfu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_at7")
+"texture": ExtResource("8_st7ie")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_at8")
+"texture": ExtResource("9_mo7pi")
 }],
 "loop": true,
 "name": &"attack",
@@ -83,31 +92,63 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("41_dm1")
+"texture": ExtResource("11_1113t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_dm2")
+"texture": ExtResource("12_wddot")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_dm3")
+"texture": ExtResource("13_c2ek2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_dm4")
+"texture": ExtResource("14_qoefq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_dm5")
+"texture": ExtResource("15_f7j3j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("46_dm6")
+"texture": ExtResource("16_l382c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_dm7")
+"texture": ExtResource("17_g8a8h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("48_dm8")
+"texture": ExtResource("18_omfhw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_dm9")
+"texture": ExtResource("19_mvfna")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_d3eov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rq2ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0id45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_jmejj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_oq1wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ojb3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_bp7es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_6ycdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_f5d3w")
 }],
 "loop": true,
 "name": &"damage",
@@ -115,31 +156,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("22_ds1")
+"texture": ExtResource("20_m7x2s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_ds2")
+"texture": ExtResource("21_d3eov")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_ds3")
+"texture": ExtResource("22_rq2ym")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_ds4")
+"texture": ExtResource("23_0id45")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_ds5")
+"texture": ExtResource("24_jmejj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_ds6")
+"texture": ExtResource("25_oq1wo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_ds7")
+"texture": ExtResource("26_ojb3k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_ds8")
+"texture": ExtResource("27_bp7es")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_ds9")
+"texture": ExtResource("28_6ycdl")
 }],
 "loop": true,
 "name": &"dash",
@@ -147,19 +188,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("36_ju6")
+"texture": ExtResource("29_f5d3w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_ju7")
+"texture": ExtResource("30_fglpe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_ju8")
+"texture": ExtResource("31_rvsej")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_ju9")
+"texture": ExtResource("32_q655b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_ju10")
+"texture": ExtResource("33_jplp3")
 }],
 "loop": true,
 "name": &"fall",
@@ -167,37 +208,37 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_id1")
+"texture": ExtResource("3_3q4qr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_id2")
+"texture": ExtResource("4_2j382")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_id3")
+"texture": ExtResource("5_hidrn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_id4")
+"texture": ExtResource("6_hq3j6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_id5")
+"texture": ExtResource("7_y3jd2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_id6")
+"texture": ExtResource("8_4ak8d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_id7")
+"texture": ExtResource("9_l5yko")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_id8")
+"texture": ExtResource("10_exp5i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_id9")
+"texture": ExtResource("11_s7cua")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_id10")
+"texture": ExtResource("12_5dpmv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_id11")
+"texture": ExtResource("13_yw5rx")
 }],
 "loop": true,
 "name": &"idle",
@@ -205,19 +246,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("31_ju1")
+"texture": ExtResource("34_csbkf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_ju2")
+"texture": ExtResource("35_7ud3u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_ju3")
+"texture": ExtResource("36_dsife")
 }, {
 "duration": 1.0,
-"texture": ExtResource("34_ju4")
+"texture": ExtResource("37_876r0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35_ju5")
+"texture": ExtResource("38_18x45")
 }],
 "loop": true,
 "name": &"jump",
@@ -225,31 +266,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("22_ds1")
+"texture": ExtResource("3_3q4qr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_ds2")
+"texture": ExtResource("4_2j382")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_ds3")
+"texture": ExtResource("5_hidrn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_ds4")
+"texture": ExtResource("6_hq3j6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_ds5")
+"texture": ExtResource("7_y3jd2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_ds6")
+"texture": ExtResource("8_4ak8d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_ds7")
+"texture": ExtResource("9_l5yko")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_ds8")
+"texture": ExtResource("10_exp5i")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_ds9")
+"texture": ExtResource("11_s7cua")
 }],
 "loop": true,
 "name": &"run",
@@ -264,14 +305,14 @@ height = 108.0
 radius = 42.0
 height = 124.0
 
-[node name="Player" type="CharacterBody2D" unique_id=2041489519]
+[node name="Morelle" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_3bueh")
 papier_morelle = ExtResource("2_s7cua")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_34wqp")
-animation = &"idle"
+animation = &"run"
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]

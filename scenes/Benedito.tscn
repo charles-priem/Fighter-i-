@@ -43,9 +43,50 @@
 [ext_resource type="Texture2D" uid="uid://c1h8thl7t2elt" path="res://assets/sprites/Personnages/Benedito/Benedito_jump4.png" id="22_lm64g"]
 [ext_resource type="Texture2D" uid="uid://ev4hslqlt4sj" path="res://assets/sprites/Personnages/Benedito/Benedito_jump5.png" id="23_ev7nt"]
 [ext_resource type="Texture2D" uid="uid://dtbh1a8ihn2k7" path="res://assets/sprites/Personnages/Benedito/benedito_jump6.png" id="24_b06wc"]
+[ext_resource type="Texture2D" uid="uid://3h2uxtma0ei5" path="res://assets/sprites/Personnages/Benedito/Benedito_climb1.png" id="3_lm64g"]
+[ext_resource type="Texture2D" uid="uid://vpfoi1jbkhf3" path="res://assets/sprites/Personnages/Benedito/Benedito_climb2.png" id="4_ev7nt"]
+[ext_resource type="Texture2D" uid="uid://bq3krqx14bf3w" path="res://assets/sprites/Personnages/Benedito/Benedito_climb3.png" id="5_b06wc"]
+[ext_resource type="Texture2D" uid="uid://du2fyyhxudo1j" path="res://assets/sprites/Personnages/Benedito/Benedito_climb4.png" id="6_1ibk6"]
+[ext_resource type="Texture2D" uid="uid://d3hcp847kryy0" path="res://assets/sprites/Personnages/Benedito/Benedito_climb5.png" id="7_run0c"]
+[ext_resource type="Texture2D" uid="uid://i1e5fqy2yejt" path="res://assets/sprites/Personnages/Benedito/Benedito_climb6.png" id="8_l50ve"]
+[ext_resource type="Texture2D" uid="uid://bnm50qcdbqq3l" path="res://assets/sprites/Personnages/Benedito/Benedito_climb7.png" id="9_rwa0q"]
+[ext_resource type="Texture2D" uid="uid://yfyo1jd24olm" path="res://assets/sprites/Personnages/Benedito/Benedito_climb8.png" id="10_tw322"]
+[ext_resource type="Texture2D" uid="uid://c6bmjpt2brbsp" path="res://assets/sprites/Personnages/Benedito/Benedito_climb9.png" id="11_bbaps"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owota"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lm64g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ev7nt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b06wc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1ibk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_run0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l50ve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rwa0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tw322")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bbaps")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_od34w")
@@ -102,11 +143,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"dash",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"default",
 "speed": 5.0
 }, {
 "frames": [{
@@ -218,7 +254,7 @@ voice_die = ExtResource("6_lpfev")
 position = Vector2(3, -15)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_owota")
-animation = &"jump"
+animation = &"climb"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
 position = Vector2(9, -7)

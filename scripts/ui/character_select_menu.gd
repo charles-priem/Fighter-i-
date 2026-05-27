@@ -11,7 +11,7 @@ const CHARACTER_SLOT_SCENE: PackedScene = preload("res://scenes/ui/character_slo
 @export var back_button: Button
 @export var p1_status_label: Label
 @export var p2_status_label: Label
-@export var total_slots: int = 21
+@export var total_slots: int = 15
 
 @onready var voice_player : AudioStreamPlayer = $VoicePlayer
 
@@ -23,47 +23,12 @@ var _p2_selected_slot: Node = null
 
 var characters: Array[Dictionary] = [
 	{
-		"display_name": "Benedito",
-		"scene": preload("res://scenes/Benedito.tscn"),
-		"preview": preload("res://assets/sprites/Personnages/Benedito/Benedito fixe 1.png")
-	},
-	{
 		"display_name": "Dubois",
 		"scene": preload("res://scenes/Dubois.tscn"),
 		"preview": preload("res://assets/sprites/Personnages/Dubois/dubois marche 1.png")
 	},
 	{
-		"display_name": "El Yaagoubi",
-		"scene": preload("res://scenes/ElYaagoubi.tscn"),
-		"preview": preload("res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle1.png")
-	},
-	{
-		"display_name": "Fardoux",
-		"scene": preload("res://scenes/Fardoux.tscn"),
-		"preview": preload("res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png")
-	},
-	{
-		"display_name": "Morelle",
-		"scene": preload("res://scenes/Morelle.tscn"),
-		"preview": preload("res://assets/sprites/Personnages/Morelle/morelle_idle1.webp")
-	},
-	{
-		"display_name": "N Kounou",
-		"scene": preload("res://scenes/NKounou.tscn"),
-		"preview": preload("res://assets/sprites/Personnages/N Kounou/nkounou_idle 2.webp")
-	},
-	{
-		"display_name": "Scottez",
-		"scene": preload("res://scenes/Scottez.tscn"),
-		"preview": preload("res://assets/sprites/Personnages/Scottez/Scottez fixe 1.png")
-	},
-	{
-		"display_name": "Blandre",
-		"scene": preload("res://scenes/Blandre.tscn"),
-		"preview": preload("res://assets/sprites/Personnages/Blandre/blandre_idle1.png")
-	},
-	{
-		"display_name": "McGavigan",
+		"display_name": "Mcgavigan",
 		"scene": preload("res://scenes/Mcgavigan.tscn"),
 		"preview": preload("res://assets/sprites/Personnages/Mcgavigan/Mcgavigan idle 1.png")
 	},
@@ -73,19 +38,54 @@ var characters: Array[Dictionary] = [
 		"preview": preload("res://assets/sprites/Personnages/Mele/Mele_idle1.png")
 	},
 	{
+		"display_name": "Blandre",
+		"scene": preload("res://scenes/Blandre.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Blandre/blandre_idle1.png")
+	},
+	{
+		"display_name": "Benedito",
+		"scene": preload("res://scenes/Benedito.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Benedito/Benedito fixe 1.png")
+	},
+	{
 		"display_name": "Deleplanque",
 		"scene": preload("res://scenes/Deleplanque.tscn"),
-		"preview": preload("res://assets/sprites/Personnages/Deleplanque/Samuel_iddle1.png")
+		"preview": preload("res://assets/sprites/Personnages/Deleplanque/Samuel_idle1.png")
+	},
+	{
+		"display_name": "Scottez",
+		"scene": preload("res://scenes/Scottez.tscn"	),
+		"preview": preload("res://assets/sprites/Personnages/Scottez/Scottez fixe 1.png")
 	},
 	{
 		"display_name": "Philippe",
-		"scene": preload("res://scenes/Justine.tscn"),
-		"preview": preload("res://assets/sprites/Personnages/Justine/Justine_idle1.png")
+		"scene": preload("res://scenes/Philippe.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Philippe/Justine_idle1.png")
 	},
 	{
-		"display_name": "Lise-Marie",
-		"scene": preload("res://scenes/LiseMarie.tscn"),
-		"preview": preload("res://assets/sprites/Personnages/Lise-Marie/lmv_idle1.png")
+		"display_name": "El Yaagoubi",
+		"scene": preload("res://scenes/ElYaagoubi.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle1.png")
+	},
+	{
+		"display_name": "Morelle",
+		"scene": preload("res://scenes/Morelle.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Morelle/morelle_idle1.webp")
+	},
+	{
+		"display_name": "Veillon",
+		"scene": preload("res://scenes/Veillon.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Veillon/lmv_idle1.png")
+	},
+	{
+		"display_name": "N Kounou",
+		"scene": preload("res://scenes/NKonou.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/N Kounou/nkounou_idle 2.webp")
+	},
+	{
+		"display_name": "Fardoux",
+		"scene": preload("res://scenes/Fardoux.tscn"),
+		"preview": preload("res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png")
 	}
 ]
 
