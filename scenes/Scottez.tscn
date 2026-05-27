@@ -1,101 +1,175 @@
-[gd_scene format=3 uid="uid://b7o41v2dkbjpn"]
+[gd_scene load_steps=43 format=3 uid="uid://b7o41v2dkbjpn"]
 
-[ext_resource type="Script" uid="uid://brbhpsahw26qh" path="res://scripts/scottez.gd" id="7_ummwe"]
-[ext_resource type="AudioStream" uid="uid://c8cujeng2o6cy" path="res://assets/audio/voicelines/Scottez/inchallah_scottez3.wav" id="2_0tedq"]
-[ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="1_aroyw"]
-[ext_resource type="Texture2D" uid="uid://b4la8mfeng5xr" path="res://assets/Fire Wizard/Run.png" id="3_pbl40"]
-[ext_resource type="Texture2D" uid="uid://c41ysq7t2ywv6" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 1.png" id="2_2awy7"]
-[ext_resource type="Texture2D" uid="uid://cneyfp25vcbb5" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 2.png" id="3_ummwe"]
-[ext_resource type="Texture2D" uid="uid://bnpaob5x3n6fo" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 3.png" id="4_a81fl"]
-[ext_resource type="Texture2D" uid="uid://bkn4e2bkc0srl" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 4.png" id="5_u7o0s"]
-[ext_resource type="Texture2D" uid="uid://dom8g1ylibuub" path="res://assets/sprites/Personnages/Scottez/Scottez_jump1.png" id="7_07na0"]
-[ext_resource type="Texture2D" uid="uid://2um40dqmrm42" path="res://assets/sprites/Personnages/Scottez/Scottez_jump2.png" id="8_0tedq"]
-[ext_resource type="Texture2D" uid="uid://d10c4xe8trc2w" path="res://assets/sprites/Personnages/Scottez/Scottez_jump3.png" id="9_1ye05"]
-[ext_resource type="Texture2D" uid="uid://cw5unw7j5t06t" path="res://assets/sprites/Personnages/Scottez/Scottez_jump4.png" id="10_qh1r7"]
-[ext_resource type="Texture2D" uid="uid://dgg1yig1rdoeg" path="res://assets/sprites/Personnages/Scottez/Scottez_jump5.png" id="11_xbs8a"]
-[ext_resource type="Texture2D" uid="uid://ii5ty1cepbv7" path="res://assets/sprites/Personnages/Scottez/Scottez_jump6.png" id="12_1lwuo"]
-[ext_resource type="Texture2D" uid="uid://c7lvsubj2v5ra" path="res://assets/sprites/Personnages/Scottez/Scottez_jump7.png" id="13_q2a3t"]
-[ext_resource type="Texture2D" uid="uid://cigy5ldghp06s" path="res://assets/sprites/Personnages/Scottez/Scottez_jump8.png" id="14_qy2nn"]
-[ext_resource type="Texture2D" uid="uid://6rdukpxpprdy" path="res://assets/sprites/Personnages/Scottez/Scottez_jump9.png" id="15_rjp58"]
-[ext_resource type="Texture2D" uid="uid://bmxmvsqxs7epb" path="res://assets/sprites/Personnages/Scottez/Scottez_jump10.png" id="16_egaqu"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wv1as"]
-atlas = ExtResource("1_aroyw")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t722n"]
-atlas = ExtResource("1_aroyw")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_koadh"]
-atlas = ExtResource("1_aroyw")
-region = Rect2(896, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0s23m"]
-atlas = ExtResource("3_pbl40")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jjf2d"]
-atlas = ExtResource("3_pbl40")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dudpi"]
-atlas = ExtResource("3_pbl40")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eteif"]
-atlas = ExtResource("3_pbl40")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gcbni"]
-atlas = ExtResource("3_pbl40")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sxucn"]
-atlas = ExtResource("3_pbl40")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_alhiy"]
-atlas = ExtResource("3_pbl40")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l57pu"]
-atlas = ExtResource("3_pbl40")
-region = Rect2(896, 0, 128, 128)
+[ext_resource type="Script" uid="uid://brbhpsahw26qh" path="res://scripts/scottez.gd" id="1_scottez_script"]
+[ext_resource type="AudioStream" uid="uid://c8cujeng2o6cy" path="res://assets/audio/voicelines/Scottez/inchallah_scottez3.wav" id="2_scottez_audio"]
+[ext_resource type="Texture2D" uid="uid://c41ysq7t2ywv6" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 1.png" id="3_idle1"]
+[ext_resource type="Texture2D" uid="uid://cneyfp25vcbb5" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 2.png" id="4_idle2"]
+[ext_resource type="Texture2D" uid="uid://bnpaob5x3n6fo" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 3.png" id="5_idle3"]
+[ext_resource type="Texture2D" uid="uid://bkn4e2bkc0srl" path="res://assets/sprites/Personnages/Scottez/Scottez fixe 4.png" id="6_idle4"]
+[ext_resource type="Texture2D" uid="uid://bh7ft0ovhrndu" path="res://assets/sprites/Personnages/Scottez/Scottez_walk1.png" id="7_walk1"]
+[ext_resource type="Texture2D" uid="uid://c1jqdxtcq6kyc" path="res://assets/sprites/Personnages/Scottez/Scottez_walk2.png" id="8_walk2"]
+[ext_resource type="Texture2D" uid="uid://3ommm4e2opxa" path="res://assets/sprites/Personnages/Scottez/Scottez_walk3.png" id="9_walk3"]
+[ext_resource type="Texture2D" uid="uid://dc0pl2lhmhhtk" path="res://assets/sprites/Personnages/Scottez/Scottez_walk4.png" id="10_walk4"]
+[ext_resource type="Texture2D" uid="uid://85atwtt6njve" path="res://assets/sprites/Personnages/Scottez/Scottez_walk5.png" id="11_walk5"]
+[ext_resource type="Texture2D" uid="uid://dme847lky0r05" path="res://assets/sprites/Personnages/Scottez/Scottez_walk6.png" id="12_walk6"]
+[ext_resource type="Texture2D" uid="uid://bp5roi37byuee" path="res://assets/sprites/Personnages/Scottez/Scottez_walk7.png" id="13_walk7"]
+[ext_resource type="Texture2D" uid="uid://flsa5ti8emds" path="res://assets/sprites/Personnages/Scottez/Scottez_walk8.png" id="14_walk8"]
+[ext_resource type="Texture2D" uid="uid://dsak5cyw2f2h5" path="res://assets/sprites/Personnages/Scottez/Scottez_walk9.png" id="15_walk9"]
+[ext_resource type="Texture2D" uid="uid://qg8colalk46t" path="res://assets/sprites/Personnages/Scottez/Scottez_dash1.png" id="16_dash1"]
+[ext_resource type="Texture2D" uid="uid://mg0uo65ybl5q" path="res://assets/sprites/Personnages/Scottez/Scottez_dash2.png" id="17_dash2"]
+[ext_resource type="Texture2D" uid="uid://cmagmfltvxtrx" path="res://assets/sprites/Personnages/Scottez/Scottez_dash3.png" id="18_dash3"]
+[ext_resource type="Texture2D" uid="uid://c4muviws4gkiw" path="res://assets/sprites/Personnages/Scottez/Scottez_dash4.png" id="19_dash4"]
+[ext_resource type="Texture2D" uid="uid://d2rfyeb7awhmq" path="res://assets/sprites/Personnages/Scottez/Scottez_dash5.png" id="20_dash5"]
+[ext_resource type="Texture2D" uid="uid://cqobd0rry3gfp" path="res://assets/sprites/Personnages/Scottez/Scottez_dash6.png" id="21_dash6"]
+[ext_resource type="Texture2D" uid="uid://y2wlywcecdqu" path="res://assets/sprites/Personnages/Scottez/Scottez_dash7.png" id="22_dash7"]
+[ext_resource type="Texture2D" uid="uid://c4ram56iiqt33" path="res://assets/sprites/Personnages/Scottez/Scottez_dash8.png" id="23_dash8"]
+[ext_resource type="Texture2D" uid="uid://b543lwmu5vwra" path="res://assets/sprites/Personnages/Scottez/Scottez_dash9.png" id="24_dash9"]
+[ext_resource type="Texture2D" uid="uid://dom8g1ylibuub" path="res://assets/sprites/Personnages/Scottez/Scottez_jump1.png" id="25_jump1"]
+[ext_resource type="Texture2D" uid="uid://2um40dqmrm42" path="res://assets/sprites/Personnages/Scottez/Scottez_jump2.png" id="26_jump2"]
+[ext_resource type="Texture2D" uid="uid://d10c4xe8trc2w" path="res://assets/sprites/Personnages/Scottez/Scottez_jump3.png" id="27_jump3"]
+[ext_resource type="Texture2D" uid="uid://cw5unw7j5t06t" path="res://assets/sprites/Personnages/Scottez/Scottez_jump4.png" id="28_jump4"]
+[ext_resource type="Texture2D" uid="uid://dgg1yig1rdoeg" path="res://assets/sprites/Personnages/Scottez/Scottez_jump5.png" id="29_jump5"]
+[ext_resource type="Texture2D" uid="uid://ii5ty1cepbv7" path="res://assets/sprites/Personnages/Scottez/Scottez_jump6.png" id="30_jump6"]
+[ext_resource type="Texture2D" uid="uid://c7lvsubj2v5ra" path="res://assets/sprites/Personnages/Scottez/Scottez_jump7.png" id="31_jump7"]
+[ext_resource type="Texture2D" uid="uid://cigy5ldghp06s" path="res://assets/sprites/Personnages/Scottez/Scottez_jump8.png" id="32_jump8"]
+[ext_resource type="Texture2D" uid="uid://6rdukpxpprdy" path="res://assets/sprites/Personnages/Scottez/Scottez_jump9.png" id="33_jump9"]
+[ext_resource type="Texture2D" uid="uid://bmxmvsqxs7epb" path="res://assets/sprites/Personnages/Scottez/Scottez_jump10.png" id="34_jump10"]
+[ext_resource type="Texture2D" uid="uid://blm1hdmjimomu" path="res://assets/sprites/Personnages/Scottez/Scottez_punch1.png" id="35_punch1"]
+[ext_resource type="Texture2D" uid="uid://dn6mtswn4wlgv" path="res://assets/sprites/Personnages/Scottez/Scottez_punch2.png" id="36_punch2"]
+[ext_resource type="Texture2D" uid="uid://csfx8jkwacgad" path="res://assets/sprites/Personnages/Scottez/Scottez_punch3.png" id="37_punch3"]
+[ext_resource type="Texture2D" uid="uid://c82rwmc1nlurh" path="res://assets/sprites/Personnages/Scottez/Scottez_punch4.png" id="38_punch4"]
+[ext_resource type="Texture2D" uid="uid://dbixbsgyxqp6p" path="res://assets/sprites/Personnages/Scottez/Scottez_punch5.png" id="39_punch5"]
+[ext_resource type="Texture2D" uid="uid://cbkck6ac7kkj7" path="res://assets/sprites/Personnages/Scottez/Scottez_punch6.png" id="40_punch6"]
+[ext_resource type="Texture2D" uid="uid://bbxcy1lqvftpq" path="res://assets/sprites/Personnages/Scottez/Scottez_punch7.png" id="41_punch7"]
+[ext_resource type="Texture2D" uid="uid://cf1nmay2okdim" path="res://assets/sprites/Personnages/Scottez/Scottez_punch8.png" id="42_punch8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owota"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_punch1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_punch2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_punch3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_punch4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_punch5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_punch6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_punch7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_punch8")
+}],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"attack",
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wv1as")
+"texture": ExtResource("16_dash1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t722n")
+"texture": ExtResource("17_dash2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_koadh")
+"texture": ExtResource("18_dash3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_dash4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dash5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_dash6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dash7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dash8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_dash9")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_dash1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_dash2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dash3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_dash4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dash5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_dash6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dash7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dash8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_dash9")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_jump6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_jump7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_jump8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_jump9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_jump10")
 }],
 "loop": true,
 "name": &"fall",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_2awy7")
+"texture": ExtResource("3_idle1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_ummwe")
+"texture": ExtResource("4_idle2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_a81fl")
+"texture": ExtResource("5_idle3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_u7o0s")
+"texture": ExtResource("6_idle4")
 }],
 "loop": true,
 "name": &"idle",
@@ -103,68 +177,51 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_07na0")
+"texture": ExtResource("25_jump1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_0tedq")
+"texture": ExtResource("26_jump2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_1ye05")
+"texture": ExtResource("27_jump3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_qh1r7")
+"texture": ExtResource("28_jump4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_xbs8a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_1lwuo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_q2a3t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_qy2nn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_rjp58")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_egaqu")
+"texture": ExtResource("29_jump5")
 }],
 "loop": true,
 "name": &"jump",
-"speed": 8.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"ledge_gap",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0s23m")
+"texture": ExtResource("7_walk1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jjf2d")
+"texture": ExtResource("8_walk2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dudpi")
+"texture": ExtResource("9_walk3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eteif")
+"texture": ExtResource("10_walk4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gcbni")
+"texture": ExtResource("11_walk5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sxucn")
+"texture": ExtResource("12_walk6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_alhiy")
+"texture": ExtResource("13_walk7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l57pu")
+"texture": ExtResource("14_walk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_walk9")
 }],
 "loop": true,
 "name": &"run",
@@ -180,14 +237,15 @@ radius = 42.0
 height = 124.0
 
 [node name="Scottez" type="CharacterBody2D" unique_id=2041489519]
-script = ExtResource("7_ummwe")
-voice_select = ExtResource("2_0tedq")
+script = ExtResource("1_scottez_script")
+voice_select = ExtResource("2_scottez_audio")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1664251423]
 position = Vector2(0, -25)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_owota")
-animation = &"jump"
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
 position = Vector2(3, -22)

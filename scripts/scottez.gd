@@ -37,11 +37,21 @@ func handle_attacks():
 		
 
 func update_animation():
-	if not is_on_floor():
+	if is_attacking:
+		if animated_sprite.animation != &"attack":
+			animated_sprite.play("attack")
+	elif not is_on_floor():
 		if velocity.y < 0:
 			animated_sprite.play("jump")
 		else:
 			animated_sprite.play("fall")
+	elif is_dashing:
+		animated_sprite.play("dash")
+	elif taking_damage:
+		if animated_sprite.animation != &"damage":
+			animated_sprite.play("damage")
+		if invincible_timer <= 0.0:
+			taking_damage = false
 	elif abs(velocity.x) > 20:
 		animated_sprite.play("run")
 	else:
