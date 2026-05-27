@@ -32,12 +32,12 @@ func handle_attacks():
 
 func update_animation():
 	if is_attacking:
+		if animated_sprite.animation == &"melee":
+			return
 		if animated_sprite.animation != &"attack":
 			animated_sprite.play("attack")
-			# Assuming attack animation ends and sets is_attacking to false via signal or timer
-			# For now, let's just let it play. 
-			# In a real setup, you'd connect the animation_finished signal.
-	elif not is_on_floor():
+		return
+	if not is_on_floor():
 		if velocity.y < 0:
 			animated_sprite.play("jump")
 		else:

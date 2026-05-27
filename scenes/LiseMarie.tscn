@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://1g8tc3joqt66"]
+[gd_scene load_steps=57 format=3 uid="uid://1g8tc3joqt66"]
 
 [ext_resource type="Script" uid="uid://vxbe4g6c1o2w" path="res://scripts/LiseMarie.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/lise_marie_projectile.tscn" id="2"]
@@ -51,8 +51,9 @@
 [ext_resource type="Texture2D" uid="uid://de0lsss57k15c" path="res://assets/sprites/Personnages/Lise-Marie/lmv_taking_damage7.png" id="49"]
 [ext_resource type="Texture2D" uid="uid://25bnpg7niiqh" path="res://assets/sprites/Personnages/Lise-Marie/lmv_taking_damage8.png" id="50"]
 [ext_resource type="Texture2D" uid="uid://6iyg1r6pxbp" path="res://assets/sprites/Personnages/Lise-Marie/lmv_taking_damage9.png" id="51"]
+[ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="52"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_lmv"]
+[sub_resource type="SpriteFrames" id="1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -206,6 +207,38 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42")
+}],
+"loop": false,
+"name": &"melee",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("8")
 }, {
 "duration": 1.0,
@@ -237,13 +270,16 @@ animations = [{
 "speed": 18.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lmv"]
+[sub_resource type="CapsuleShape2D" id="2"]
 radius = 20.0
 height = 100.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lmv_area"]
+[sub_resource type="CapsuleShape2D" id="3"]
 radius = 25.0
 height = 100.0
+
+[sub_resource type="CircleShape2D" id="4"]
+radius = 30.0
 
 [node name="LiseMarie" type="CharacterBody2D" unique_id=113358347]
 script = ExtResource("1")
@@ -251,17 +287,27 @@ cap_projectile = ExtResource("2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2076307240]
 scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_lmv")
+sprite_frames = SubResource("1")
 animation = &"idle"
 autoplay = "idle"
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1538074007]
 position = Vector2(3, -16)
-shape = SubResource("CapsuleShape2D_lmv")
+shape = SubResource("2")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1015860149]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=824263540]
 position = Vector2(5, -15)
-shape = SubResource("CapsuleShape2D_lmv_area")
+shape = SubResource("3")
+
+[node name="MeleeArea" type="Area2D" parent="."]
+position = Vector2(40, -20)
+monitoring = false
+monitorable = false
+script = ExtResource("52")
+attack_type = "melee"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
+shape = SubResource("4")

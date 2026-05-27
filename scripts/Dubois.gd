@@ -19,11 +19,26 @@ func _physics_process(delta):
 func handle_attacks():
 	var attack_action = "p" + str(player_number) + "_attack"
 	if Input.is_action_just_pressed(attack_action) :
+		is_attacking = true
+		await get_tree().create_timer(0.4).timeout
 		var projectile = cookie_dubois.instantiate()
 		get_tree().current_scene.add_child(projectile)
 		throw_projectile(projectile)
+		await get_tree().create_timer(0.2).timeout
+		is_attacking = false
 
 func update_animation():
+	if is_attacking:
+		if animated_sprite.animation == &"melee":
+			animated_sprite.flip_h = facing_left
+			return
+		if animated_sprite.animation != &"attack":
+			animated_sprite.play("attack")
+			animated_sprite.flip_h = not facing_left
+		return
+		
+	animated_sprite.flip_h = not facing_left
+	
 	if not is_on_floor():
 		if velocity.y < 0:
 			animated_sprite.play("jump")

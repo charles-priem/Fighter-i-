@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://3gavtdcsrb1c"]
+[gd_scene load_steps=64 format=3 uid="uid://3gavtdcsrb1c"]
 
 [ext_resource type="Script" uid="uid://delfvbpua7ty6" path="res://scripts/n_kounou.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://csrgihefs44o6" path="res://scenes/cookie_dubois.tscn" id="2"]
@@ -57,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://0p6lvm2vt8pe" path="res://assets/sprites/Personnages/N Kounou/nkounou_walking7.png" id="55"]
 [ext_resource type="Texture2D" uid="uid://bxbncq6jjlxbw" path="res://assets/sprites/Personnages/N Kounou/nkounou_walking8.png" id="56"]
 [ext_resource type="Texture2D" uid="uid://dhy5igklrm8lg" path="res://assets/sprites/Personnages/N Kounou/nkounou_walking9.png" id="57"]
+[ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="58"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
 animations = [{
@@ -230,6 +231,38 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20")
+}],
+"loop": false,
+"name": &"melee",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("49")
 }, {
 "duration": 1.0,
@@ -269,6 +302,9 @@ height = 100.0
 radius = 24.0
 height = 100.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7m8n1"]
+radius = 30.0
+
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1")
 cookie_dubois = ExtResource("2")
@@ -289,3 +325,13 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
 position = Vector2(-4, -17)
 shape = SubResource("CapsuleShape2D_6nak3")
+
+[node name="MeleeArea" type="Area2D" parent="."]
+position = Vector2(40, -20)
+monitoring = false
+monitorable = false
+script = ExtResource("58")
+attack_type = "melee"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
+shape = SubResource("CircleShape2D_7m8n1")
