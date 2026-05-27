@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://b7o41v2dkbjpn"]
+[gd_scene format=3 uid="uid://b7o41v2dkbjpn"]
 
 [ext_resource type="Script" uid="uid://brbhpsahw26qh" path="res://scripts/scottez.gd" id="1_scottez_script"]
 [ext_resource type="AudioStream" uid="uid://c8cujeng2o6cy" path="res://assets/audio/voicelines/Scottez/inchallah_scottez3.wav" id="2_scottez_audio"]
@@ -195,6 +195,11 @@ animations = [{
 "name": &"jump",
 "speed": 15.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("7_walk1")
@@ -244,7 +249,7 @@ voice_select = ExtResource("2_scottez_audio")
 position = Vector2(0, -25)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_owota")
-animation = &"idle"
+animation = &"new_animation"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
