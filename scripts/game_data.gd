@@ -14,7 +14,8 @@ const CHARACTER_SCENES = [
 	"res://scenes/Mcgavigan.tscn",
 	"res://scenes/Mele.tscn",
 	"res://scenes/Deleplanque.tscn",
-	"res://scenes/Justine.tscn"
+	"res://scenes/Justine.tscn",
+	"res://scenes/LiseMarie.tscn"
 ]
 
 const CHARACTER_NAMES = [
@@ -29,7 +30,8 @@ const CHARACTER_NAMES = [
 	"McGavigan",
 	"Mele",
 	"Deleplanque",
-	"Justine"
+	"Justine",
+	"Lise-Marie"
 ]
 
 const CHARACTER_DESC = [
@@ -44,7 +46,8 @@ const CHARACTER_DESC = [
 	"Maître des réseaux",
 	"Architecte logiciel",
 	"Spécialiste IHM",
-	"L'étoile montante"
+	"L'étoile montante",
+	"Agile et stylée"
 ]
 
 const CHARACTER_COLORS = [
@@ -59,7 +62,8 @@ const CHARACTER_COLORS = [
 	Color(0.4, 0.7, 0.2),
 	Color(0.6, 0.2, 0.8),
 	Color(0.3, 0.6, 0.9),
-	Color(0.9, 0.2, 0.6)
+	Color(0.9, 0.2, 0.6),
+	Color(0.8, 0.4, 0.6)
 ]
 
 # --- CHOIX DES JOUEURS ---
