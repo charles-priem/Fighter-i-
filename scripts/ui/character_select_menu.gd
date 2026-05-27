@@ -78,7 +78,7 @@ var characters: Array[Dictionary] = [
 		"preview": preload("res://assets/sprites/Personnages/Deleplanque/Samuel_iddle1.png")
 	},
 	{
-		"display_name": "Justine",
+		"display_name": "Philippe",
 		"scene": preload("res://scenes/Justine.tscn"),
 		"preview": preload("res://assets/sprites/Personnages/Justine/Justine_idle1.png")
 	},
