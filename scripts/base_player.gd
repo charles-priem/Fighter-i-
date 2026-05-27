@@ -43,6 +43,7 @@ const LEDGE_HOLD_TIME : float = 1.0  # secondes max accrochage
 const FAST_FALL_MULT      : float = 2.5
 const PROJECTILE_SPEED    : float = 2000.0
 const DEPLACEMENT_ATTAQUE : float = 75
+const VOICE_LINE_CHANCE   : float = 0.10
 
 # SIGNAUX
 signal stock_lost(player_num, stocks_remaining)
@@ -59,8 +60,6 @@ var voice_player : AudioStreamPlayer2D
 @export var voice_hurt    : AudioStream
 @export var voice_special : AudioStream
 @export var voice_die     : AudioStream
-
-const VOICE_LINE_CHANCE: float = 0.2
 
 # READY 
 func _ready():
