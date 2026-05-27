@@ -21,6 +21,11 @@ var _current_selecting_player: int = 1
 var _p1_selected_slot: Node = null
 var _p2_selected_slot: Node = null
 
+# Navigation joystick
+var _focused_slot_index: int = 0
+var _all_slots: Array[Node] = []
+var _grid_columns: int = 7
+
 var characters: Array[Dictionary] = [
 	{
 		"display_name": "Benedito",
@@ -100,19 +105,23 @@ func _ready() -> void:
 		
 	_update_ui()
 
+	# Focus le premier slot valide pour la navigation joystick
+	_focused_slot_index = 0
+	_update_focused_slot()
+
 func _update_ui() -> void:
 	if p1_status_label:
 		if _p1_selected_slot:
 			p1_status_label.text = "J1 : " + _p1_selected_slot.name_label.text
 		else:
 			p1_status_label.text = "J1 : En attente..."
-			
+		
 	if p2_status_label:
 		if _p2_selected_slot:
 			p2_status_label.text = "J2 : " + _p2_selected_slot.name_label.text
 		else:
 			p2_status_label.text = "J2 : En attente..."
-			
+		
 	if next_button:
 		next_button.disabled = _p1_selected_slot == null or _p2_selected_slot == null
 
@@ -122,6 +131,8 @@ func _build_character_grid() -> void:
 		
 	for child: Node in character_grid.get_children():
 		child.queue_free()
+
+	_all_slots.clear()
 
 	for i in range(characters.size()):
 		var char_data: Dictionary = characters[i]
@@ -138,6 +149,8 @@ func _build_character_grid() -> void:
 		if slot.has_signal("character_pressed"):
 			slot.connect("character_pressed", _on_character_pressed)
 
+		_all_slots.append(slot)
+
 	var empty_count: int = max(total_slots - characters.size(), 0)
 	for i: int in range(empty_count):
 		var empty_slot: Node = CHARACTER_SLOT_SCENE.instantiate()
@@ -145,19 +158,24 @@ func _build_character_grid() -> void:
 		if empty_slot.has_method("setup"):
 			empty_slot.setup()
 
-func _update_slots_visuals() -> void:
-	for slot in character_grid.get_children():
-		if not slot.has_method("set_selected"):
-			continue
-			
+func _update_focused_slot() -> void:
+	# Retire le highlight de focus de tous les slots
+	for i in range(_all_slots.size()):
+		var slot = _all_slots[i]
 		if slot == _p1_selected_slot and slot == _p2_selected_slot:
 			slot.set_selected(3)
 		elif slot == _p1_selected_slot:
 			slot.set_selected(1)
 		elif slot == _p2_selected_slot:
 			slot.set_selected(2)
+		elif i == _focused_slot_index:
+			# Outline/teinte de focus : légèrement jaune
+			slot.modulate = Color(1.0, 1.0, 0.5, 1.0)
 		else:
 			slot.set_selected(0)
+
+func _update_slots_visuals() -> void:
+	_update_focused_slot()
 
 func _on_character_pressed(slot: Node, _character_scene: PackedScene) -> void:
 	# Jouer la voiceline de sélection
@@ -171,11 +189,9 @@ func _on_character_pressed(slot: Node, _character_scene: PackedScene) -> void:
 
 	if _current_selecting_player == 1:
 		_p1_selected_slot = slot
-		# Trouver l'index dans GameData si possible, ou juste passer la scène au GameData plus tard
 		_current_selecting_player = 2
 	elif _current_selecting_player == 2:
 		_p2_selected_slot = slot
-		# Optionnellement permettre de recommencer
 		_current_selecting_player = 1
 		
 	_update_slots_visuals()
@@ -186,11 +202,9 @@ func _on_next_pressed() -> void:
 		return
 	_is_transitioning = true
 	
-	# Mise à jour globale dans GameData
 	var p1_path = _p1_selected_slot._character_scene.resource_path
 	var p2_path = _p2_selected_slot._character_scene.resource_path
 	
-	# On cherche l'index correspondant dans GameData
 	var p1_idx = GameData.CHARACTER_SCENES.find(p1_path)
 	if p1_idx != -1:
 		GameData.p1_character_index = p1_idx
@@ -207,7 +221,39 @@ func _on_back_pressed() -> void:
 	_is_transitioning = true
 	back_requested.emit(&"character_select_menu", self)
 
+# ─── Navigation joystick / clavier ───────────────────────────────────────────
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		get_viewport().set_input_as_handled()
 		_on_back_pressed()
+		return
+
+	# Mouvement dans la grille
+	var moved := false
+	if event.is_action_pressed("ui_right"):
+		_focused_slot_index = min(_focused_slot_index + 1, _all_slots.size() - 1)
+		moved = true
+	elif event.is_action_pressed("ui_left"):
+		_focused_slot_index = max(_focused_slot_index - 1, 0)
+		moved = true
+	elif event.is_action_pressed("ui_down"):
+		_focused_slot_index = min(_focused_slot_index + _grid_columns, _all_slots.size() - 1)
+		moved = true
+	elif event.is_action_pressed("ui_up"):
+		_focused_slot_index = max(_focused_slot_index - _grid_columns, 0)
+		moved = true
+
+	if moved:
+		get_viewport().set_input_as_handled()
+		_update_focused_slot()
+		return
+
+	# Bouton de confirmation (ui_accept = Enter / bouton A / Croix)
+	if event.is_action_pressed("ui_accept"):
+		get_viewport().set_input_as_handled()
+		if _focused_slot_index < _all_slots.size():
+			var slot = _all_slots[_focused_slot_index]
+			if not slot.disabled:
+				_on_character_pressed(slot, slot._character_scene)
+		return
