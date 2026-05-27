@@ -39,7 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://b0pake15sk7tl" path="res://assets/sprites/Personnages/Blandre/blandre_dash6.png" id="26_dm1mc"]
 [ext_resource type="Texture2D" uid="uid://dsi8sm4oo4xr7" path="res://assets/sprites/Personnages/Blandre/blandre_jump4.png" id="27_drwws"]
 [ext_resource type="Texture2D" uid="uid://bwef25jl46gy4" path="res://assets/sprites/Personnages/Blandre/blandre_jump5.png" id="28_3uih5"]
-[ext_resource type="Texture2D" uid="uid://l0gy1xkuuu0r" path="res://assets/sprites/Personnages/Blandre/blandre_jump.png" id="36_ppei2"]
 [ext_resource type="Texture2D" uid="uid://cchnhumq3dglg" path="res://assets/sprites/Personnages/Blandre/blandre_jump2.png" id="37_2f81v"]
 [ext_resource type="Texture2D" uid="uid://cyuju2yg4jl1s" path="res://assets/sprites/Personnages/Blandre/blandre_jump3.png" id="38_mmwyj"]
 [ext_resource type="Texture2D" uid="uid://bhq5j1rjm7ij0" path="res://assets/sprites/Personnages/Blandre/blandre_walk1.png" id="39_e0dty"]
@@ -146,6 +145,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("38_mmwyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_2f81v")
+}, {
+"duration": 1.0,
 "texture": ExtResource("27_drwws")
 }, {
 "duration": 1.0,
@@ -183,7 +188,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("36_ppei2")
+"texture": ExtResource("28_3uih5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_drwws")
 }, {
 "duration": 1.0,
 "texture": ExtResource("37_2f81v")
@@ -191,9 +199,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("38_mmwyj")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
-"speed": 15.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -231,7 +239,7 @@ voice_die = ExtResource("4_hxwgh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_34wqp")
-animation = &"fall"
+animation = &"jump"
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
