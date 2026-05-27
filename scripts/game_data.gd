@@ -4,23 +4,35 @@ extends Node
 # [cite: 60, 80, 89, 113]
 
 const CHARACTER_SCENES = [
-	"res://scenes/ElYaagoubi.tscn",
 	"res://scenes/Dubois.tscn",
+	"res://scenes/Mcgavigan.tscn",
+	"res://scenes/Mele.tscn",
+	"res://scenes/Blandre.tscn",
 	"res://scenes/Benedito.tscn",
-	"res://scenes/Fardoux.tscn",
+	"res://scenes/Deleplanque.tscn",
+	"res://scenes/Scottez.tscn",
+	"res://scenes/Philippe.tscn",
+	"res://scenes/ElYaagoubi.tscn",
 	"res://scenes/Morelle.tscn",
-	"res://scenes/NKounou.tscn",
-	"res://scenes/Scottez.tscn"
+	"res://scenes/Veillon.tscn",
+	"res://scenes/NKonou.tscn",
+	"res://scenes/Fardoux.tscn"
 ]
 
 const CHARACTER_NAMES = [
-	"ElYaagoubi",
 	"Dubois",
+	"Mcgavigan",
+	"Mele",
+	"Blandre",
 	"Benedito",
-	"Fardoux",
+	"Deleplanque",
+	"Scottez",
+	"Philippe",
+	"El Yaagoubi",
 	"Morelle",
-	"NKounou",
-	"Scottez"
+	"Veillon",
+	"N'Konou",
+	"Fardoux"
 ]
 
 const CHARACTER_DESC = [

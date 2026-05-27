@@ -29,8 +29,12 @@ func update_animation():
 			animated_sprite.play("jump")
 		else:
 			animated_sprite.play("fall")
+	elif is_grabbing_ledge:
+		animated_sprite.play("climb")
 	elif is_dashing:
 		animated_sprite.play("dash")
+	elif is_attacking:
+		animated_sprite.play("attack")
 	elif abs(velocity.x) > 20:
 		animated_sprite.play("run")
 	elif taking_damage:

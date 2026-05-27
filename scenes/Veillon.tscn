@@ -1,0 +1,289 @@
+[gd_scene format=3 uid="uid://b3iltmy06626a"]
+
+[ext_resource type="Script" uid="uid://cr1itth30ryt0" path="res://scripts/veillon.gd" id="1_os2wr"]
+[ext_resource type="Texture2D" uid="uid://cipu1rb5lnhja" path="res://assets/sprites/Personnages/Veillon/lmv_attack1.png" id="3_enoso"]
+[ext_resource type="Texture2D" uid="uid://go5bhsvicus6" path="res://assets/sprites/Personnages/Veillon/lmv_attack2.png" id="4_bw4w7"]
+[ext_resource type="Texture2D" uid="uid://dxi81ggpkgggx" path="res://assets/sprites/Personnages/Veillon/lmv_attack3.png" id="5_ewv81"]
+[ext_resource type="Texture2D" uid="uid://deq3cd1nt7ft7" path="res://assets/sprites/Personnages/Veillon/lmv_attack4.png" id="6_jtfs4"]
+[ext_resource type="Texture2D" uid="uid://d2tl3gbuuy0sx" path="res://assets/sprites/Personnages/Veillon/lmv_attack5.png" id="7_c5h23"]
+[ext_resource type="Texture2D" uid="uid://diek1oqrd8hci" path="res://assets/sprites/Personnages/Veillon/lmv_attack6.png" id="8_pgnp6"]
+[ext_resource type="Texture2D" uid="uid://c8rsamphyay4s" path="res://assets/sprites/Personnages/Veillon/lmv_attack7.png" id="9_485rr"]
+[ext_resource type="Texture2D" uid="uid://d4iosw41011ce" path="res://assets/sprites/Personnages/Veillon/lmv_attack8.png" id="10_fm37x"]
+[ext_resource type="Texture2D" uid="uid://scckewxc2cvh" path="res://assets/sprites/Personnages/Veillon/lmv_attack9.png" id="11_kdm41"]
+[ext_resource type="Texture2D" uid="uid://bfhthpgrj4wht" path="res://assets/sprites/Personnages/Veillon/lmv_grab1.png" id="12_oujjc"]
+[ext_resource type="Texture2D" uid="uid://d4nqjatwkkwjb" path="res://assets/sprites/Personnages/Veillon/lmv_grab2.png" id="13_denor"]
+[ext_resource type="Texture2D" uid="uid://ddnvh6y7gwm1k" path="res://assets/sprites/Personnages/Veillon/lmv_grab3.png" id="14_hm8j6"]
+[ext_resource type="Texture2D" uid="uid://bpjhjrjhj4d6l" path="res://assets/sprites/Personnages/Veillon/lmv_grab4.png" id="15_5b5qm"]
+[ext_resource type="Texture2D" uid="uid://b2mtngw4rchnd" path="res://assets/sprites/Personnages/Veillon/lmv_grab5.png" id="16_ugc4x"]
+[ext_resource type="Texture2D" uid="uid://c5usbssbd1o12" path="res://assets/sprites/Personnages/Veillon/lmv_taking_damage1.png" id="17_ogtp8"]
+[ext_resource type="Texture2D" uid="uid://bg67mmwdos52e" path="res://assets/sprites/Personnages/Veillon/lmv_taking_damage2.png" id="18_skqib"]
+[ext_resource type="Texture2D" uid="uid://m4brnheq5kyb" path="res://assets/sprites/Personnages/Veillon/lmv_taking_damage3.png" id="19_x4bg2"]
+[ext_resource type="Texture2D" uid="uid://dc2j4dgivepau" path="res://assets/sprites/Personnages/Veillon/lmv_taking_damage4.png" id="20_qgu7r"]
+[ext_resource type="Texture2D" uid="uid://b0vbvutcdwdvb" path="res://assets/sprites/Personnages/Veillon/lmv_taking_damage5.png" id="21_g56tf"]
+[ext_resource type="Texture2D" uid="uid://cc2nro4s21e1n" path="res://assets/sprites/Personnages/Veillon/lmv_taking_damage6.png" id="22_ypos0"]
+[ext_resource type="Texture2D" uid="uid://uih7st30e8id" path="res://assets/sprites/Personnages/Veillon/lmv_taking_damage7.png" id="23_oapi4"]
+[ext_resource type="Texture2D" uid="uid://c6vu377a0d78a" path="res://assets/sprites/Personnages/Veillon/lmv_taking_damage8.png" id="24_evx75"]
+[ext_resource type="Texture2D" uid="uid://ddxgcpewub4rv" path="res://assets/sprites/Personnages/Veillon/lmv_taking_damage9.png" id="25_0enk4"]
+[ext_resource type="Texture2D" uid="uid://bafraoai2d41s" path="res://assets/sprites/Personnages/Veillon/lmv_dash1.png" id="26_vxqoy"]
+[ext_resource type="Texture2D" uid="uid://vnbuchvbxuyw" path="res://assets/sprites/Personnages/Veillon/lmv_dash2.png" id="27_5v2n8"]
+[ext_resource type="Texture2D" uid="uid://cxu4b6xdyd1op" path="res://assets/sprites/Personnages/Veillon/lmv_dash3.png" id="28_hcoqo"]
+[ext_resource type="Texture2D" uid="uid://ct77uhbqjltyy" path="res://assets/sprites/Personnages/Veillon/lmv_dash4.png" id="29_cdvsb"]
+[ext_resource type="Texture2D" uid="uid://c6jypx22b0tnt" path="res://assets/sprites/Personnages/Veillon/lmv_dash5.png" id="30_qisel"]
+[ext_resource type="Texture2D" uid="uid://br8taroyqelx2" path="res://assets/sprites/Personnages/Veillon/lmv_dash6.png" id="31_7y7ky"]
+[ext_resource type="Texture2D" uid="uid://b7ibnb36x6678" path="res://assets/sprites/Personnages/Veillon/lmv_dash7.png" id="32_5ffhl"]
+[ext_resource type="Texture2D" uid="uid://bn3mc2i4affsr" path="res://assets/sprites/Personnages/Veillon/lmv_dash8.png" id="33_dpt6g"]
+[ext_resource type="Texture2D" uid="uid://c73u7eu2yw4d3" path="res://assets/sprites/Personnages/Veillon/lmv_jump6.png" id="34_ln4qb"]
+[ext_resource type="Texture2D" uid="uid://ccvy1e75kxr7m" path="res://assets/sprites/Personnages/Veillon/lmv_jump7.png" id="35_8u3hi"]
+[ext_resource type="Texture2D" uid="uid://c4n4njoghxsjf" path="res://assets/sprites/Personnages/Veillon/lmv_jump8.png" id="36_11noc"]
+[ext_resource type="Texture2D" uid="uid://bw85jsif4fppk" path="res://assets/sprites/Personnages/Veillon/lmv_jump9.png" id="37_hv757"]
+[ext_resource type="Texture2D" uid="uid://biinu24dj1wij" path="res://assets/sprites/Personnages/Veillon/lmv_idle1.png" id="38_o5syb"]
+[ext_resource type="Texture2D" uid="uid://by8urxqx02evk" path="res://assets/sprites/Personnages/Veillon/lmv_idle2.png" id="39_110up"]
+[ext_resource type="Texture2D" uid="uid://ro8d7d72elgc" path="res://assets/sprites/Personnages/Veillon/lmv_idle3.png" id="40_6vvaw"]
+[ext_resource type="Texture2D" uid="uid://d12mfb81furc3" path="res://assets/sprites/Personnages/Veillon/lmv_idle4.png" id="41_dvtqa"]
+[ext_resource type="Texture2D" uid="uid://c04xt2p5sia7w" path="res://assets/sprites/Personnages/Veillon/lmv_idle5.png" id="42_wtinf"]
+[ext_resource type="Texture2D" uid="uid://d2rtyknsgcdgc" path="res://assets/sprites/Personnages/Veillon/lmv_jump1.png" id="43_r5em6"]
+[ext_resource type="Texture2D" uid="uid://cswbqmbd2rgrl" path="res://assets/sprites/Personnages/Veillon/lmv_jump2.png" id="44_238fr"]
+[ext_resource type="Texture2D" uid="uid://b8wf4mrya354u" path="res://assets/sprites/Personnages/Veillon/lmv_jump3.png" id="45_puedo"]
+[ext_resource type="Texture2D" uid="uid://6gcoopjmw7mm" path="res://assets/sprites/Personnages/Veillon/lmv_jump4.png" id="46_0mqr7"]
+[ext_resource type="Texture2D" uid="uid://tfs1nylwecme" path="res://assets/sprites/Personnages/Veillon/lmv_jump5.png" id="47_klahi"]
+[ext_resource type="Texture2D" uid="uid://bvuo4sigxemeh" path="res://assets/sprites/Personnages/Veillon/lmv_walk1.png" id="48_knqsf"]
+[ext_resource type="Texture2D" uid="uid://bxi7md62a1qwm" path="res://assets/sprites/Personnages/Veillon/lmv_walk2.png" id="49_chc2y"]
+[ext_resource type="Texture2D" uid="uid://v0tlj8lsba3w" path="res://assets/sprites/Personnages/Veillon/lmv_walk3.png" id="50_rkvns"]
+[ext_resource type="Texture2D" uid="uid://bvnr2n1fjcd5b" path="res://assets/sprites/Personnages/Veillon/lmv_walk4.png" id="51_su7nw"]
+[ext_resource type="Texture2D" uid="uid://d4daxr5hplu0v" path="res://assets/sprites/Personnages/Veillon/lmv_walk5.png" id="52_bpb1p"]
+[ext_resource type="Texture2D" uid="uid://bvsrk66pjkdc5" path="res://assets/sprites/Personnages/Veillon/lmv_walk6.png" id="53_incqh"]
+[ext_resource type="Texture2D" uid="uid://bmkymdqwj6ym5" path="res://assets/sprites/Personnages/Veillon/lmv_walk7.png" id="54_3bfww"]
+[ext_resource type="Texture2D" uid="uid://80e8i6wxs8uw" path="res://assets/sprites/Personnages/Veillon/lmv_walk8.png" id="55_jm4ig"]
+[ext_resource type="Texture2D" uid="uid://bv32m5advvfvv" path="res://assets/sprites/Personnages/Veillon/lmv_walk9.png" id="56_tbwqh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_enoso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bw4w7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ewv81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jtfs4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c5h23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pgnp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_485rr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fm37x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kdm41")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_oujjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_denor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hm8j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5b5qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ugc4x")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_ogtp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_skqib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_x4bg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qgu7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_g56tf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ypos0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_oapi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_evx75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0enk4")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_vxqoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_5v2n8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_hcoqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_cdvsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_qisel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_7y7ky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_5ffhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_dpt6g")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 50.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_ln4qb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_8u3hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_11noc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_hv757")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_o5syb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_110up")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_6vvaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_dvtqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_wtinf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_r5em6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_238fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_puedo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_0mqr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_klahi")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_knqsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_chc2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_rkvns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_su7nw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_bpb1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_incqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_3bfww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_jm4ig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_tbwqh")
+}],
+"loop": true,
+"name": &"run",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+radius = 25.0
+height = 108.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6nak3"]
+radius = 34.0
+height = 116.0
+
+[node name="Veillon" type="CharacterBody2D" unique_id=2041489519]
+script = ExtResource("1_os2wr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_34wqp")
+animation = &"damage"
+offset = Vector2(0, -33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
+position = Vector2(5, -16)
+shape = SubResource("CapsuleShape2D_3vyb7")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=13979002]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
+position = Vector2(5, -16)
+shape = SubResource("CapsuleShape2D_6nak3")

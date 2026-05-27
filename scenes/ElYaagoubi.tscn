@@ -1,77 +1,168 @@
 [gd_scene format=3 uid="uid://02s73tx6iorh"]
 
 [ext_resource type="Script" uid="uid://bn4v75flwdudd" path="res://scripts/ElYaagoubi.gd" id="1_60jth"]
-[ext_resource type="Texture2D" uid="uid://dr4361weqnaqh" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 1.png" id="2_koadh"]
-[ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="2_ovcwl"]
-[ext_resource type="Texture2D" uid="uid://c5aqavrt203u8" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 2.png" id="3_60jth"]
-[ext_resource type="Texture2D" uid="uid://b4la8mfeng5xr" path="res://assets/Fire Wizard/Run.png" id="3_koadh"]
-[ext_resource type="Texture2D" uid="uid://c6ikullty0igd" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 3.png" id="4_hqxsd"]
-[ext_resource type="Texture2D" uid="uid://u5pw3t2osw5y" path="res://assets/sprites/Personnages/El Yaagoubi/El Yaagoubi fixe 4.png" id="5_tmmpp"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wv1as"]
-atlas = ExtResource("2_ovcwl")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t722n"]
-atlas = ExtResource("2_ovcwl")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_koadh"]
-atlas = ExtResource("2_ovcwl")
-region = Rect2(896, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ovcwl"]
-atlas = ExtResource("2_ovcwl")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0s23m"]
-atlas = ExtResource("3_koadh")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jjf2d"]
-atlas = ExtResource("3_koadh")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dudpi"]
-atlas = ExtResource("3_koadh")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eteif"]
-atlas = ExtResource("3_koadh")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gcbni"]
-atlas = ExtResource("3_koadh")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sxucn"]
-atlas = ExtResource("3_koadh")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_alhiy"]
-atlas = ExtResource("3_koadh")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l57pu"]
-atlas = ExtResource("3_koadh")
-region = Rect2(896, 0, 128, 128)
+[ext_resource type="Texture2D" uid="uid://bxto6rtxbakwd" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab1.png" id="2_4ltly"]
+[ext_resource type="Texture2D" uid="uid://dadbooc5mds2u" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab2.png" id="3_eh35n"]
+[ext_resource type="Texture2D" uid="uid://baw50o864ebrc" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab3.png" id="4_7xhw8"]
+[ext_resource type="Texture2D" uid="uid://wctgvllxys4u" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab4.png" id="5_qeroy"]
+[ext_resource type="Texture2D" uid="uid://cj285adbo60ic" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab5.png" id="6_5l7yq"]
+[ext_resource type="Texture2D" uid="uid://b0oe7pemoji7t" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab6.png" id="7_lwudh"]
+[ext_resource type="Texture2D" uid="uid://b1eh1lnohu06x" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab7.png" id="8_8q7o2"]
+[ext_resource type="Texture2D" uid="uid://dyql6gooqsoot" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab8.png" id="9_20j6u"]
+[ext_resource type="Texture2D" uid="uid://sd8tnn6hd85k" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab9.png" id="10_kbap4"]
+[ext_resource type="Texture2D" uid="uid://b8osludu2u8rj" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage1.png" id="11_x57la"]
+[ext_resource type="Texture2D" uid="uid://qq61u3kxkeya" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage2.png" id="12_s2242"]
+[ext_resource type="Texture2D" uid="uid://1q2uj2uvt71u" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage3.png" id="13_rabpe"]
+[ext_resource type="Texture2D" uid="uid://cci38r3tg71h1" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage4.png" id="14_6ayft"]
+[ext_resource type="Texture2D" uid="uid://cf2ydh1ca4nm" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage5.png" id="15_2m28h"]
+[ext_resource type="Texture2D" uid="uid://t7e71ry3ri3i" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage6.png" id="16_8tlds"]
+[ext_resource type="Texture2D" uid="uid://p06di1aheiif" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage7.png" id="17_7ls03"]
+[ext_resource type="Texture2D" uid="uid://6x7hrp2j1b5j" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage8.png" id="18_nrhar"]
+[ext_resource type="Texture2D" uid="uid://svknbpuarr65" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage9.png" id="19_rp6xw"]
+[ext_resource type="Texture2D" uid="uid://b6qkbx6x2ijt6" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_dash1.png" id="20_svoxi"]
+[ext_resource type="Texture2D" uid="uid://cxh1flkwkgn25" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_dash2.png" id="21_3uxsb"]
+[ext_resource type="Texture2D" uid="uid://bdpx811w6ubgl" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_dash3.png" id="22_yx5p8"]
+[ext_resource type="Texture2D" uid="uid://bkesrliciaop4" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_dash4.png" id="23_t6hl8"]
+[ext_resource type="Texture2D" uid="uid://byogmg7gwx6bd" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_dash5.png" id="24_jb8cu"]
+[ext_resource type="Texture2D" uid="uid://d0ieq6dxm5qbt" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_dash6.png" id="25_smnh5"]
+[ext_resource type="Texture2D" uid="uid://yit2jfaovjgk" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_dash7.png" id="26_kh2no"]
+[ext_resource type="Texture2D" uid="uid://doy0bofhxg005" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_dash8.png" id="27_klq1m"]
+[ext_resource type="Texture2D" uid="uid://dv48uocal885n" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_dash9.png" id="28_jt60e"]
+[ext_resource type="Texture2D" uid="uid://bkpwpy6580u4b" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump7.png" id="29_v003r"]
+[ext_resource type="Texture2D" uid="uid://dxjqaicwarrry" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump8.png" id="30_4xap3"]
+[ext_resource type="Texture2D" uid="uid://erdnfcg38cvw" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump9.png" id="31_qv0lx"]
+[ext_resource type="Texture2D" uid="uid://cylmo6gnque8x" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle1.png" id="32_x57la"]
+[ext_resource type="Texture2D" uid="uid://cilyhd1ss0rmp" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump1.png" id="32_y1b0i"]
+[ext_resource type="Texture2D" uid="uid://ddpbc27tm70ak" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump2.png" id="33_djqs0"]
+[ext_resource type="Texture2D" uid="uid://w13wsf5hwjvj" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle2.png" id="33_s2242"]
+[ext_resource type="Texture2D" uid="uid://cbbwnmj1joovp" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle3.png" id="34_rabpe"]
+[ext_resource type="Texture2D" uid="uid://ci4olyki12ywy" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump3.png" id="34_smx81"]
+[ext_resource type="Texture2D" uid="uid://c5rsw7xj6khr4" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump4.png" id="35_3drg0"]
+[ext_resource type="Texture2D" uid="uid://o6nm4qcjbjq3" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle4.png" id="35_6ayft"]
+[ext_resource type="Texture2D" uid="uid://bkjp5lyf2i0o6" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle5.png" id="36_2m28h"]
+[ext_resource type="Texture2D" uid="uid://siuh8pas4lip" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump5.png" id="36_6lnj3"]
+[ext_resource type="Texture2D" uid="uid://cthbu84y6miog" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump6.png" id="37_3h1pp"]
+[ext_resource type="Texture2D" uid="uid://mjldvjxyucvq" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle6.png" id="37_8tlds"]
+[ext_resource type="Texture2D" uid="uid://chh3q55dw6cm3" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle7.png" id="38_7ls03"]
+[ext_resource type="Texture2D" uid="uid://ceg1gyc7w00i4" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_walk1.png" id="38_mp2fc"]
+[ext_resource type="Texture2D" uid="uid://7ghl3od5fia" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle8.png" id="39_nrhar"]
+[ext_resource type="Texture2D" uid="uid://bukf85p4yrqg6" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_walk2.png" id="39_spx6r"]
+[ext_resource type="Texture2D" uid="uid://nm6c0rvmrnhd" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_walk3.png" id="40_cb8yi"]
+[ext_resource type="Texture2D" uid="uid://drrg2wc6dg8gj" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_idle9.png" id="40_rp6xw"]
+[ext_resource type="Texture2D" uid="uid://101cjv7o8oy4" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_walk4.png" id="41_iq8u6"]
+[ext_resource type="Texture2D" uid="uid://b8tjq7251k6fi" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_walk5.png" id="42_l8p1a"]
+[ext_resource type="Texture2D" uid="uid://cxaxas2efe1py" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_walk6.png" id="43_507sc"]
+[ext_resource type="Texture2D" uid="uid://8jlm60jnwbmn" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_walk7.png" id="44_77vaf"]
+[ext_resource type="Texture2D" uid="uid://bpb8kqdpxc1pr" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_walk8.png" id="45_p7ig8"]
+[ext_resource type="Texture2D" uid="uid://did01uc21nyqt" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_walk9.png" id="46_pb8ik"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owota"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4ltly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eh35n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7xhw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qeroy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5l7yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lwudh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8q7o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_20j6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kbap4")
+}],
 "loop": true,
-"name": &"default",
+"name": &"climb",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wv1as")
+"texture": ExtResource("11_x57la")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t722n")
+"texture": ExtResource("12_s2242")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_koadh")
+"texture": ExtResource("13_rabpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6ayft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2m28h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8tlds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7ls03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nrhar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rp6xw")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_svoxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_3uxsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_yx5p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_t6hl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jb8cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_smnh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_kh2no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_klq1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_jt60e")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_v003r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_4xap3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_qv0lx")
 }],
 "loop": true,
 "name": &"fall",
@@ -79,16 +170,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_koadh")
+"texture": ExtResource("32_x57la")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_60jth")
+"texture": ExtResource("33_s2242")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_hqxsd")
+"texture": ExtResource("34_rabpe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_tmmpp")
+"texture": ExtResource("35_6ayft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2m28h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_8tlds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_7ls03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_nrhar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_rp6xw")
 }],
 "loop": true,
 "name": &"idle",
@@ -96,41 +202,54 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ovcwl")
+"texture": ExtResource("32_y1b0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_djqs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_smx81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_3drg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_6lnj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_3h1pp")
 }],
 "loop": true,
 "name": &"jump",
 "speed": 8.0
 }, {
-"frames": [],
-"loop": true,
-"name": &"ledge_gap",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0s23m")
+"texture": ExtResource("38_mp2fc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jjf2d")
+"texture": ExtResource("39_spx6r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dudpi")
+"texture": ExtResource("40_cb8yi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eteif")
+"texture": ExtResource("41_iq8u6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gcbni")
+"texture": ExtResource("42_l8p1a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sxucn")
+"texture": ExtResource("43_507sc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_alhiy")
+"texture": ExtResource("44_77vaf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l57pu")
+"texture": ExtResource("45_p7ig8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_pb8ik")
 }],
 "loop": true,
 "name": &"run",
@@ -138,14 +257,14 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
-radius = 36.0
-height = 94.0
+radius = 14.0
+height = 108.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_60jth"]
-radius = 45.0
+radius = 20.0
 height = 116.0
 
-[node name="Player" type="CharacterBody2D" unique_id=2041489519]
+[node name="El Yaagoubi" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_60jth")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1664251423]
@@ -155,11 +274,11 @@ sprite_frames = SubResource("SpriteFrames_owota")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
-position = Vector2(-3, -13)
+position = Vector2(-2, -23)
 shape = SubResource("CapsuleShape2D_3vyb7")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=217822082]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1784399389]
-position = Vector2(-1, -10)
+position = Vector2(-2, -23)
 shape = SubResource("CapsuleShape2D_60jth")

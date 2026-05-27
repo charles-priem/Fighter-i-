@@ -1,56 +1,205 @@
 [gd_scene format=3 uid="uid://dxvl7p3lxn335"]
 
 [ext_resource type="Script" uid="uid://c8g0j2pwpmm6i" path="res://scripts/Fardoux.gd" id="1_2e1u5"]
-[ext_resource type="Texture2D" uid="uid://dndtv7gpkf4mo" path="res://assets/Fire Wizard/Jump.png" id="1_y5pk8"]
-[ext_resource type="Texture2D" uid="uid://c2wbpteschm1s" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png" id="5_2e1u5"]
-[ext_resource type="Texture2D" uid="uid://c4wmtlnctpedl" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 2.png" id="3_2e1u5"]
-[ext_resource type="Texture2D" uid="uid://b4u8dd3cqnj16" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 3.png" id="4_qv561"]
-[ext_resource type="Texture2D" uid="uid://cyybmxjv3k632" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 1.png" id="6_2e1u5"]
-[ext_resource type="Texture2D" uid="uid://bo52m08p8rohx" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 2.png" id="7_qv561"]
-[ext_resource type="Texture2D" uid="uid://ddfxkrfrpwog3" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 3.png" id="8_d8j15"]
-[ext_resource type="Texture2D" uid="uid://ey5u2gswhp7b" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 4.png" id="9_44e5w"]
-[ext_resource type="Texture2D" uid="uid://denglg7mfn0j8" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 5.png" id="10_df7v0"]
-[ext_resource type="Texture2D" uid="uid://csbmty375fef2" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 6.png" id="11_25fku"]
-[ext_resource type="Texture2D" uid="uid://b5cg7d3sq3kks" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump1.png" id="6_l2dns"]
-[ext_resource type="Texture2D" uid="uid://bg0mapswyicfj" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump2.png" id="7_4d7wl"]
-[ext_resource type="Texture2D" uid="uid://dp0kd6lhdyor" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump3.png" id="8_hfc0x"]
-[ext_resource type="Texture2D" uid="uid://bedoefyop7w5p" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump4.png" id="9_kbynv"]
-[ext_resource type="Texture2D" uid="uid://c320xw212wll6" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump5.png" id="10_m463v"]
-[ext_resource type="Texture2D" uid="uid://bcwtegwaf1jr2" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump6.png" id="11_gynm3"]
-[ext_resource type="Texture2D" uid="uid://sre7506f85fa" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump7.png" id="12_qhbd8"]
-[ext_resource type="Texture2D" uid="uid://clw57byl0sevr" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump8.png" id="13_2yyv0"]
-[ext_resource type="Texture2D" uid="uid://l6bsfu7limhf" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump9.png" id="14_063mn"]
-[ext_resource type="Texture2D" uid="uid://tj30lxx6g7ak" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump10.png" id="15_y3ttc"]
-[ext_resource type="Texture2D" uid="uid://bi82rll32joup" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump11.png" id="16_gh5vi"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y56nc"]
-atlas = ExtResource("1_y5pk8")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4dvv4"]
-atlas = ExtResource("1_y5pk8")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jm8k8"]
-atlas = ExtResource("1_y5pk8")
-region = Rect2(896, 0, 128, 128)
+[ext_resource type="Texture2D" uid="uid://bq10w5cumhxuh" path="res://assets/sprites/Personnages/Fardoux/fardoux_attack1.png" id="2_1ugi0"]
+[ext_resource type="Texture2D" uid="uid://cpya6oca0h4tx" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb1.png" id="2_5qai5"]
+[ext_resource type="Texture2D" uid="uid://cak8u51sduxdx" path="res://assets/sprites/Personnages/Fardoux/fardoux_dash1.png" id="2_y3ttc"]
+[ext_resource type="Texture2D" uid="uid://coulpnhaqo1kj" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 2.png" id="3_2e1u5"]
+[ext_resource type="Texture2D" uid="uid://c4vdci8yavmh3" path="res://assets/sprites/Personnages/Fardoux/fardoux_dash2.png" id="3_gh5vi"]
+[ext_resource type="Texture2D" uid="uid://btlvb33l6345k" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb2.png" id="3_t1bgi"]
+[ext_resource type="Texture2D" uid="uid://bbjgv6lfdk211" path="res://assets/sprites/Personnages/Fardoux/fardoux_attack2.png" id="3_vqkkj"]
+[ext_resource type="Texture2D" uid="uid://dep6u1tcxrf77" path="res://assets/sprites/Personnages/Fardoux/fardoux_dash3.png" id="4_pwq2r"]
+[ext_resource type="Texture2D" uid="uid://crgiv6puiuynb" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 3.png" id="4_qv561"]
+[ext_resource type="Texture2D" uid="uid://cpc7qe3ytviux" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb3.png" id="4_ss6xv"]
+[ext_resource type="Texture2D" uid="uid://c8vugwtv7jpo6" path="res://assets/sprites/Personnages/Fardoux/fardoux_attack3.png" id="4_sttuy"]
+[ext_resource type="Texture2D" uid="uid://ccl5qsjv4r7ie" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png" id="5_2e1u5"]
+[ext_resource type="Texture2D" uid="uid://de3dv28dym0ku" path="res://assets/sprites/Personnages/Fardoux/fardoux_attack4.png" id="5_cpnh0"]
+[ext_resource type="Texture2D" uid="uid://d3r6oensktwkj" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb4.png" id="5_oo6eu"]
+[ext_resource type="Texture2D" uid="uid://bevmwrqu581xw" path="res://assets/sprites/Personnages/Fardoux/fardoux_dash4.png" id="5_uxw3v"]
+[ext_resource type="Texture2D" uid="uid://c0ned1uu3infu" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 1.png" id="6_2e1u5"]
+[ext_resource type="Texture2D" uid="uid://dxt76h681d76" path="res://assets/sprites/Personnages/Fardoux/fardoux_dash5.png" id="6_47bbh"]
+[ext_resource type="Texture2D" uid="uid://cde112ta8apdm" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb5.png" id="6_i1txi"]
+[ext_resource type="Texture2D" uid="uid://b0nohpjqj4gs6" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump1.png" id="6_l2dns"]
+[ext_resource type="Texture2D" uid="uid://bmbksbo2wm5nt" path="res://assets/sprites/Personnages/Fardoux/fardoux_attack5.png" id="6_utta2"]
+[ext_resource type="Texture2D" uid="uid://7mdjthgkms2x" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump2.png" id="7_4d7wl"]
+[ext_resource type="Texture2D" uid="uid://b267kw2uborhl" path="res://assets/sprites/Personnages/Fardoux/fardoux_attack6.png" id="7_cwcb7"]
+[ext_resource type="Texture2D" uid="uid://ptscldt7rid8" path="res://assets/sprites/Personnages/Fardoux/fardoux_dash6.png" id="7_hfcyx"]
+[ext_resource type="Texture2D" uid="uid://mh6yyhhthxbk" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 2.png" id="7_qv561"]
+[ext_resource type="Texture2D" uid="uid://b3uj6isrtf8us" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb6.png" id="7_wf0s8"]
+[ext_resource type="Texture2D" uid="uid://c1djodrqcocjg" path="res://assets/sprites/Personnages/Fardoux/fardoux_attack7.png" id="8_2yxfu"]
+[ext_resource type="Texture2D" uid="uid://b4pkx6nwipj4r" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 3.png" id="8_d8j15"]
+[ext_resource type="Texture2D" uid="uid://pwljm2im5hlo" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb7.png" id="8_ed3jf"]
+[ext_resource type="Texture2D" uid="uid://dd10v8niwi76o" path="res://assets/sprites/Personnages/Fardoux/fardoux_dash7.png" id="8_gbk3b"]
+[ext_resource type="Texture2D" uid="uid://bireus6vllvmn" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump3.png" id="8_hfc0x"]
+[ext_resource type="Texture2D" uid="uid://uouj431ypy4f" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 4.png" id="9_44e5w"]
+[ext_resource type="Texture2D" uid="uid://b1dpxv1qibwkw" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb8.png" id="9_80qi4"]
+[ext_resource type="Texture2D" uid="uid://caudsxhkhlt86" path="res://assets/sprites/Personnages/Fardoux/fardoux_dash8.png" id="9_k6dkg"]
+[ext_resource type="Texture2D" uid="uid://cfx42g3lqd3h8" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump4.png" id="9_kbynv"]
+[ext_resource type="Texture2D" uid="uid://c0y4si7b7vk4u" path="res://assets/sprites/Personnages/Fardoux/fardoux_attack8.png" id="9_ttur3"]
+[ext_resource type="Texture2D" uid="uid://dd4cvq8tgwc5u" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb9.png" id="10_0avbk"]
+[ext_resource type="Texture2D" uid="uid://0aphstnl4jd5" path="res://assets/sprites/Personnages/Fardoux/fardoux_attack9.png" id="10_2p67c"]
+[ext_resource type="Texture2D" uid="uid://onlpvnx5347d" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 5.png" id="10_df7v0"]
+[ext_resource type="Texture2D" uid="uid://b5bkb1xd5wsuu" path="res://assets/sprites/Personnages/Fardoux/fardoux_dash9.png" id="10_hevf2"]
+[ext_resource type="Texture2D" uid="uid://dron3kfx8xjde" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump5.png" id="10_m463v"]
+[ext_resource type="Texture2D" uid="uid://byahmg6mwk05a" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 6.png" id="11_25fku"]
+[ext_resource type="Texture2D" uid="uid://l476luop84eq" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump6.png" id="11_gynm3"]
+[ext_resource type="Texture2D" uid="uid://caqaq6g82o4gm" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage1.png" id="11_qsp60"]
+[ext_resource type="Texture2D" uid="uid://bhnf5w8sorge" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump7.png" id="12_qhbd8"]
+[ext_resource type="Texture2D" uid="uid://b0m0wud3hy1ps" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage2.png" id="12_xit3v"]
+[ext_resource type="Texture2D" uid="uid://sb1jl2ud86n5" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump8.png" id="13_2yyv0"]
+[ext_resource type="Texture2D" uid="uid://cqyt81yk3m0vs" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage3.png" id="13_hvsds"]
+[ext_resource type="Texture2D" uid="uid://beln5wys26th5" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump9.png" id="14_063mn"]
+[ext_resource type="Texture2D" uid="uid://dgc65rd83yjfg" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage4.png" id="14_kscny"]
+[ext_resource type="Texture2D" uid="uid://kji3mm1iwmgp" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage5.png" id="15_pwdnk"]
+[ext_resource type="Texture2D" uid="uid://bt0hdepgam3l1" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump10.png" id="15_y3ttc"]
+[ext_resource type="Texture2D" uid="uid://b6jd74qamcyhf" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage6.png" id="16_fptdb"]
+[ext_resource type="Texture2D" uid="uid://c8o4g7l5ywvc2" path="res://assets/sprites/Personnages/Fardoux/fardoux_jump11.png" id="16_gh5vi"]
+[ext_resource type="Texture2D" uid="uid://b1eh4xgc665p3" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage7.png" id="17_i7uon"]
+[ext_resource type="Texture2D" uid="uid://bjjqy3ryo1mfe" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage8.png" id="18_chyov"]
+[ext_resource type="Texture2D" uid="uid://bypdxvi3fhrhu" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage9.png" id="19_ci6w4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1ugi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vqkkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sttuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cpnh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_utta2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cwcb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2yxfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ttur3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2p67c")
+}],
 "loop": true,
-"name": &"default",
+"name": &"attack",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y56nc")
+"texture": ExtResource("2_5qai5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4dvv4")
+"texture": ExtResource("3_t1bgi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jm8k8")
+"texture": ExtResource("4_ss6xv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oo6eu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i1txi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wf0s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ed3jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_80qi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0avbk")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_qsp60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xit3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hvsds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kscny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pwdnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fptdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_i7uon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_chyov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ci6w4")
+}],
+"loop": true,
+"name": &"damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y3ttc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gh5vi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pwq2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uxw3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_47bbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hfcyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gbk3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_k6dkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hevf2")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_2yyv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_063mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_y3ttc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gh5vi")
 }],
 "loop": true,
 "name": &"fall",
@@ -94,18 +243,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_qhbd8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_2yyv0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_063mn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_y3ttc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_gh5vi")
 }],
 "loop": true,
 "name": &"jump",
@@ -136,12 +273,12 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
-radius = 39.0
+radius = 27.0
 height = 96.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pwq2r"]
-radius = 47.0
-height = 108.0
+radius = 32.0
+height = 102.0
 
 [node name="Fardoux" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_2e1u5")
@@ -150,7 +287,7 @@ script = ExtResource("1_2e1u5")
 position = Vector2(0, -22)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_34wqp")
-animation = &"idle"
+animation = &"attack"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
@@ -160,5 +297,5 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 [node name="Area2D" type="Area2D" parent="." unique_id=764464035]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=647748900]
-position = Vector2(6, -13)
+position = Vector2(6, -16)
 shape = SubResource("CapsuleShape2D_pwq2r")

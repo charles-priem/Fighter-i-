@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bts7j021lc2cd"]
 
 [ext_resource type="Script" uid="uid://dathwqemt7u0s" path="res://scripts/ui/stage_select_menu.gd" id="1_mxueo"]
-[ext_resource type="Texture2D" uid="uid://df5gfpqrctdr7" path="res://assets/art/ui/menu_background.png" id="2_3tdmd"]
-[ext_resource type="FontFile" uid="uid://d4beyjxkjfg6p" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="2_acfnj"]
+[ext_resource type="Texture2D" uid="uid://dlyq1kqla026p" path="res://assets/art/ui/menu_background.png" id="2_3tdmd"]
+[ext_resource type="FontFile" uid="uid://bg4catg5t5gc" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="2_acfnj"]
 
 [node name="StageSelectMenu" type="Control" unique_id=1827105511 node_paths=PackedStringArray("stage_grid", "back_button")]
 layout_mode = 3
@@ -54,6 +54,7 @@ text = "Selection de carte"
 horizontal_alignment = 1
 
 [node name="StageList" type="GridContainer" parent="MarginContainer/CenterContainer/Menu" unique_id=1137322331]
+custom_minimum_size = Vector2(0, 700)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/h_separation = 10

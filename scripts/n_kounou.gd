@@ -1,7 +1,6 @@
 extends BasePlayer
 
 @onready var animated_sprite = $AnimatedSprite2D
-@export var cookie_dubois: PackedScene
 
 func _ready():
 	super._ready()
@@ -15,33 +14,24 @@ func _ready():
 func _physics_process(delta):
 	super._physics_process(delta)
 	update_animation()
-	
-func handle_attacks():
-	var attack_action = "p" + str(player_number) + "_attack"
-	if Input.is_action_just_pressed(attack_action) :
-		is_attacking = true
-		await get_tree().create_timer(0.5).timeout
-		var projectile = cookie_dubois.instantiate()
-		get_tree().current_scene.add_child(projectile)
-		throw_projectile(projectile)
 
 func update_animation():
-	if is_attacking:
-		if animated_sprite.animation != &"attack":
-			animated_sprite.play("attack")
-	elif not is_on_floor():
+	if not is_on_floor():
 		if velocity.y < 0:
 			animated_sprite.play("jump")
 		else:
 			animated_sprite.play("fall")
+	elif is_grabbing_ledge:
+		animated_sprite.play("climb")
 	elif is_dashing:
 		animated_sprite.play("dash")
-	elif taking_damage:
-		if animated_sprite.animation != &"damage":
-			animated_sprite.play("damage")
-		if invincible_timer <= 0.0:
-			taking_damage = false
+	elif is_attacking:
+		animated_sprite.play("attack")
 	elif abs(velocity.x) > 20:
 		animated_sprite.play("run")
+	elif taking_damage:
+		animated_sprite.play("damage")
+		await get_tree().create_timer(0.5).timeout
+		taking_damage = false
 	else:
 		animated_sprite.play("idle")
