@@ -60,6 +60,8 @@ var voice_player : AudioStreamPlayer2D
 @export var voice_special : AudioStream
 @export var voice_die     : AudioStream
 
+const VOICE_LINE_CHANCE: float = 0.2
+
 # READY 
 func _ready():
 	add_to_group("players")
@@ -237,7 +239,7 @@ func die():
 	if _is_dying:
 		return
 	_is_dying = true
-	play_voice(voice_die)
+	play_voice_forced(voice_die)
 
 	stocks -= 1
 	emit_signal("stock_lost", player_number, stocks)
@@ -365,7 +367,28 @@ func release_ledge():
 	# Lâcher avec une petite vitesse vers le bas
 	velocity.y = 100.0
 
-func play_voice(stream: AudioStream):
-	if stream and voice_player:
-		voice_player.stream = stream
-		voice_player.play()
+func play_voice(stream: AudioStream) -> void:
+	play_voice_with_chance(stream, VOICE_LINE_CHANCE)
+
+func play_voice_with_chance(stream: AudioStream, chance: float) -> void:
+	if stream == null or voice_player == null:
+		return
+
+	if randf() > chance:
+		return
+
+	if voice_player.playing:
+		return
+
+	voice_player.stream = stream
+	voice_player.play()
+
+func play_voice_forced(stream: AudioStream) -> void:
+	if stream == null or voice_player == null:
+		return
+
+	if voice_player.playing:
+		voice_player.stop()
+
+	voice_player.stream = stream
+	voice_player.play()
