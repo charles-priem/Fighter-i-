@@ -14,6 +14,9 @@ class_name BasePlayer
 @export var dash_duration   : float  = 0.2
 
 # VARIABLES INTERNES 
+var ATTACK_DATA = {
+	"melee": [10.0, 50.0, 50.0]
+}
 var gravity          = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jumps_remaining  : int   = 2
 var damage_percent   : float = 0.0
@@ -122,6 +125,7 @@ func _physics_process(delta):
 
 	if not is_attacking:
 		handle_attacks()
+		handle_melee_attack()
 		handle_special_attack()
 
 	move_and_slide()
@@ -156,6 +160,10 @@ func handle_movement():
 		velocity.x = dir * move_speed
 		facing_left = dir < 0
 		sprite.flip_h = not facing_left
+		
+		if has_node("MeleeArea"):
+			var melee_node = get_node("MeleeArea")
+			melee_node.position.x = abs(melee_node.position.x) * (-1 if facing_left else 1)
 	else:
 		velocity.x = move_toward(velocity.x, 0, move_speed)
 
@@ -202,6 +210,23 @@ func handle_special_attack():
 		play_voice(voice_special)
 		# Cette fonction sera étendue dans les scripts des personnages
 
+func handle_melee_attack():
+	var melee_action = "p" + str(player_number) + "_melee"
+	if Input.is_action_just_pressed(melee_action):
+		do_melee_attack()
+
+func do_melee_attack():
+	if sprite.sprite_frames.has_animation("melee"):
+		sprite.play("melee")
+	
+	if has_node("MeleeArea"):
+		do_attack("MeleeArea", 0.1, 0.2, 0.2)
+	else:
+		# Fallback if no specific melee area defined yet
+		is_attacking = true
+		await get_tree().create_timer(0.5).timeout
+		is_attacking = false
+
 # RECEVOIR UN COUP 
 func take_hit(dmg: float, _kb_x: float, _kb_y: float,
 			  attacker_right: bool, recoil_effect: bool):
@@ -222,9 +247,9 @@ func take_hit(dmg: float, _kb_x: float, _kb_y: float,
 	if recoil_effect:
 		var new_position
 		if attacker_right:
-			new_position = position.x - DEPLACEMENT_ATTAQUE * mult
-		else:
 			new_position = position.x + DEPLACEMENT_ATTAQUE * mult
+		else:
+			new_position = position.x - DEPLACEMENT_ATTAQUE * mult
 		position.x = new_position
 	
 	invincible_timer = 0.5

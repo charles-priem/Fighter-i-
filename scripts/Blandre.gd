@@ -16,6 +16,12 @@ func _physics_process(delta):
 	update_animation()
 
 func update_animation():
+	if is_attacking:
+		if animated_sprite.animation == &"melee":
+			return
+		if animated_sprite.animation != &"attack":
+			animated_sprite.play("attack")
+		return
 	if not is_on_floor():
 		if velocity.y < 0:
 			animated_sprite.play("jump")
@@ -25,8 +31,6 @@ func update_animation():
 		animated_sprite.play("climb")
 	elif is_dashing:
 		animated_sprite.play("dash")
-	elif is_attacking:
-		animated_sprite.play("attack")
 	elif abs(velocity.x) > 20:
 		animated_sprite.play("run")
 	elif taking_damage:

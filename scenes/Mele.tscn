@@ -68,31 +68,31 @@ stereo = true
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_xwrdi")
+"texture": ExtResource("2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_0amd0")
+"texture": ExtResource("3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_h7qlp")
+"texture": ExtResource("4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_5pa6o")
+"texture": ExtResource("5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_ybj8a")
+"texture": ExtResource("6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_b8wmt")
+"texture": ExtResource("7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_x6mwx")
+"texture": ExtResource("8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_u0ute")
+"texture": ExtResource("9")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_n82br")
+"texture": ExtResource("10")
 }],
 "loop": true,
 "name": &"attack",
@@ -100,28 +100,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_y3cuo")
+"texture": ExtResource("11")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_u2w3d")
+"texture": ExtResource("12")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_u57sd")
+"texture": ExtResource("13")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_55jmb")
+"texture": ExtResource("14")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_rmtfx")
+"texture": ExtResource("15")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_mbhey")
+"texture": ExtResource("16")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_nmcjh")
+"texture": ExtResource("17")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_hvwnj")
+"texture": ExtResource("18")
 }],
 "loop": true,
 "name": &"climb",
@@ -129,25 +129,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("19_uxgky")
+"texture": ExtResource("19")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_xv148")
+"texture": ExtResource("20")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_k3kt4")
+"texture": ExtResource("21")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_ppjhe")
+"texture": ExtResource("22")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_opgmg")
+"texture": ExtResource("23")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_bvy3f")
+"texture": ExtResource("24")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_oje5v")
+"texture": ExtResource("25")
 }],
 "loop": true,
 "name": &"damage",
@@ -155,28 +155,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("26_disia")
+"texture": ExtResource("26")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_pd1st")
+"texture": ExtResource("27")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_eqkw8")
+"texture": ExtResource("28")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_yef47")
+"texture": ExtResource("29")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_x7mgk")
+"texture": ExtResource("30")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_12yhy")
+"texture": ExtResource("31")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_53vm2")
+"texture": ExtResource("32")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_7y3cv")
+"texture": ExtResource("33")
 }],
 "loop": true,
 "name": &"dash",
@@ -184,10 +184,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.5,
-"texture": ExtResource("34_cybr2")
+"texture": ExtResource("34")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35_23meq")
+"texture": ExtResource("35")
 }],
 "loop": true,
 "name": &"fall",
@@ -195,25 +195,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("36_1qtxx")
+"texture": ExtResource("36")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_hw15p")
+"texture": ExtResource("37")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_ydp2w")
+"texture": ExtResource("38")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_27fsk")
+"texture": ExtResource("39")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_am8dk")
+"texture": ExtResource("40")
 }, {
 "duration": 1.0,
-"texture": ExtResource("41_owkg3")
+"texture": ExtResource("41")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_rlpsw")
+"texture": ExtResource("42")
 }],
 "loop": true,
 "name": &"idle",
@@ -221,19 +221,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("43_gh1dd")
+"texture": ExtResource("43")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_ha5tu")
+"texture": ExtResource("44")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_04brv")
+"texture": ExtResource("45")
 }, {
 "duration": 1.0,
-"texture": ExtResource("46_wbgsu")
+"texture": ExtResource("46")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_4g3jl")
+"texture": ExtResource("47")
 }],
 "loop": true,
 "name": &"jump",
@@ -241,38 +241,73 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("48_wuvl3")
+"texture": ExtResource("2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_v60no")
+"texture": ExtResource("3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("50_d8o87")
+"texture": ExtResource("4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("51_ri8gd")
+"texture": ExtResource("5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("52_svwq4")
+"texture": ExtResource("6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("53_xe00j")
+"texture": ExtResource("7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("54_6b0pp")
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}],
+"loop": false,
+"name": &"melee",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54")
 }],
 "loop": true,
 "name": &"run",
 "speed": 20.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+[sub_resource type="CapsuleShape2D" id="2"]
 radius = 29.0
 height = 108.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6nak3"]
+[sub_resource type="CapsuleShape2D" id="3"]
 radius = 36.0
 height = 122.0
+
+[sub_resource type="CircleShape2D" id="4"]
+radius = 30.0
 
 [node name="Mele" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_xwrdi")
@@ -283,17 +318,27 @@ voice_die = SubResource("AudioStreamWAV_x6mwx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_34wqp")
+sprite_frames = SubResource("1")
 animation = &"fall"
 frame_progress = 0.55186
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
 position = Vector2(-4, -17)
-shape = SubResource("CapsuleShape2D_3vyb7")
+shape = SubResource("2")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=13979002]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
 position = Vector2(-4, -17)
-shape = SubResource("CapsuleShape2D_6nak3")
+shape = SubResource("3")
+
+[node name="MeleeArea" type="Area2D" parent="."]
+position = Vector2(40, -20)
+monitoring = false
+monitorable = false
+script = ExtResource("55")
+attack_type = "melee"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
+shape = SubResource("4")

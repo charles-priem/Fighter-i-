@@ -30,8 +30,12 @@ func handle_attacks():
 
 func update_animation():
 	if is_attacking:
-		animated_sprite.play("attack")
-	elif not is_on_floor():
+		if animated_sprite.animation == &"melee":
+			return
+		if animated_sprite.animation != &"attack":
+			animated_sprite.play("attack")
+		return
+	if not is_on_floor():
 		if velocity.y < 0:
 			animated_sprite.play("jump")
 		else:

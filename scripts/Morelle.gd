@@ -24,8 +24,16 @@ func handle_attacks():
 		var projectile = papier_morelle.instantiate()
 		get_tree().current_scene.add_child(projectile)
 		throw_projectile(projectile)
+		await get_tree().create_timer(0.1).timeout
+		is_attacking = false
 
 func update_animation():
+	if is_attacking:
+		if animated_sprite.animation == &"melee":
+			return
+		if animated_sprite.animation != &"attack":
+			animated_sprite.play("attack")
+		return
 	if not is_on_floor():
 		if velocity.y < 0:
 			animated_sprite.play("jump")

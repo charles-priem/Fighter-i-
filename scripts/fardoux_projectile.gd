@@ -21,7 +21,7 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 
 	if body.is_in_group("players"):
-		var directionRight = direction.x > 0
+		var directionRight = direction.x < 0
 		body.take_hit(8.0, 60.0, 40.0, directionRight, true)
 		queue_free()
 	elif body.is_in_group("platform"):

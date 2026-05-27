@@ -37,15 +37,21 @@
 [ext_resource type="Texture2D" uid="uid://bkpwpy6580u4b" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump7.png" id="35_jump7"]
 [ext_resource type="Texture2D" uid="uid://dxjqaicwarrry" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump8.png" id="36_jump8"]
 [ext_resource type="Texture2D" uid="uid://erdnfcg38cvw" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_jump9.png" id="37_jump9"]
+[ext_resource type="Texture2D" uid="uid://1y26hwti1nup" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_attaque0.png" id="38_8q7o2"]
 [ext_resource type="Texture2D" uid="uid://b8osludu2u8rj" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage1.png" id="38_damage1"]
+[ext_resource type="Texture2D" uid="uid://c5k2bebt5icip" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_attaque1.png" id="39_20j6u"]
 [ext_resource type="Texture2D" uid="uid://qq61u3kxkeya" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage2.png" id="39_damage2"]
 [ext_resource type="Texture2D" uid="uid://1q2uj2uvt71u" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage3.png" id="40_damage3"]
+[ext_resource type="Texture2D" uid="uid://de3ku2qupfee3" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_attaque3.png" id="40_kbap4"]
 [ext_resource type="Texture2D" uid="uid://cci38r3tg71h1" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage4.png" id="41_damage4"]
+[ext_resource type="Texture2D" uid="uid://chkv1u2p64sp8" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_attaque4.png" id="41_x57la"]
 [ext_resource type="Texture2D" uid="uid://cf2ydh1ca4nm" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage5.png" id="42_damage5"]
+[ext_resource type="Texture2D" uid="uid://d0rchafmw6riu" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi__attaque2.png" id="42_s2242"]
 [ext_resource type="Texture2D" uid="uid://t7e71ry3ri3i" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage6.png" id="43_damage6"]
 [ext_resource type="Texture2D" uid="uid://p06di1aheiif" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage7.png" id="44_damage7"]
 [ext_resource type="Texture2D" uid="uid://6x7hrp2j1b5j" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage8.png" id="45_damage8"]
 [ext_resource type="Texture2D" uid="uid://svknbpuarr65" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage9.png" id="46_damage9"]
+[ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="56_hitbox"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owota"]
 animations = [{
@@ -194,6 +200,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("38_8q7o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_20j6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_kbap4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_x57la")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_s2242")
+}],
+"loop": false,
+"name": &"melee",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("11_walk1")
 }, {
 "duration": 1.0,
@@ -233,6 +259,9 @@ height = 94.0
 radius = 45.0
 height = 116.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_melee"]
+radius = 30.0
+
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_60jth")
 
@@ -240,7 +269,9 @@ script = ExtResource("1_60jth")
 position = Vector2(0, -23)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_owota")
-animation = &"idle"
+animation = &"melee"
+frame = 4
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
 position = Vector2(-3, -13)
@@ -251,3 +282,14 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1784399389]
 position = Vector2(-1, -10)
 shape = SubResource("CapsuleShape2D_60jth")
+
+[node name="MeleeArea" type="Area2D" parent="." unique_id=1138154590]
+unique_name_in_owner = true
+position = Vector2(40, -20)
+monitoring = false
+monitorable = false
+script = ExtResource("56_hitbox")
+attack_type = "melee"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea" unique_id=1766699950]
+shape = SubResource("CircleShape2D_melee")

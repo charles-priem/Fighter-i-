@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://oj40ukavviyh"]
+[gd_scene load_steps=65 format=3 uid="uid://oj40ukavviyh"]
 
 [ext_resource type="Script" uid="uid://brd00s1lh5itu" path="res://scripts/McGavigan.gd" id="1_1v6ts"]
 [ext_resource type="AudioStream" uid="uid://c88ctn2pblqs0" path="res://assets/audio/voicelines/McGavigan/2points_McGavigan.wav" id="2_7b0x8"]
@@ -63,41 +63,41 @@
 [ext_resource type="Texture2D" uid="uid://cfdelfmx0brji" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan walk 8.png" id="58_0kk0u"]
 [ext_resource type="Texture2D" uid="uid://cde0l3ijpq4g0" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan walk 9.png" id="59_5cpps"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
+[sub_resource type="SpriteFrames" id="1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_wum50")
+"texture": ExtResource("2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_5n16s")
+"texture": ExtResource("3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_vt504")
+"texture": ExtResource("4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_7b0x8")
+"texture": ExtResource("5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_gxfln")
+"texture": ExtResource("6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_a37m4")
+"texture": ExtResource("7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_3ek1h")
+"texture": ExtResource("8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_ow44v")
+"texture": ExtResource("9")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_37e8w")
+"texture": ExtResource("10")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_uac6t")
+"texture": ExtResource("11")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_21ak1")
+"texture": ExtResource("12")
 }],
 "loop": true,
 "name": &"attack",
@@ -105,25 +105,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_r6o7n")
+"texture": ExtResource("20")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_g4hlm")
+"texture": ExtResource("21")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_qvbqa")
+"texture": ExtResource("22")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_vgfjf")
+"texture": ExtResource("23")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_4ie52")
+"texture": ExtResource("24")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_gmfy4")
+"texture": ExtResource("25")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_do7ym")
+"texture": ExtResource("26")
 }],
 "loop": true,
 "name": &"climb",
@@ -131,31 +131,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("21_yp13f")
+"texture": ExtResource("27")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_mohbl")
+"texture": ExtResource("28")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_reut5")
+"texture": ExtResource("29")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_11dtk")
+"texture": ExtResource("30")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_runr0")
+"texture": ExtResource("31")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_vcsn5")
+"texture": ExtResource("32")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_4ae2u")
+"texture": ExtResource("33")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_6w0mc")
+"texture": ExtResource("34")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_t0gru")
+"texture": ExtResource("35")
 }],
 "loop": true,
 "name": &"damage",
@@ -163,22 +163,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("30_8rpah")
+"texture": ExtResource("36")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_mv73d")
+"texture": ExtResource("37")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_lbut0")
+"texture": ExtResource("38")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_j8odc")
+"texture": ExtResource("39")
 }, {
 "duration": 1.0,
-"texture": ExtResource("34_a3nc7")
+"texture": ExtResource("40")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35_jc87j")
+"texture": ExtResource("41")
 }],
 "loop": true,
 "name": &"dash",
@@ -186,13 +186,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("36_u4vae")
+"texture": ExtResource("47")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_uiik8")
+"texture": ExtResource("48")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_jvh7t")
+"texture": ExtResource("49")
 }],
 "loop": true,
 "name": &"fall",
@@ -200,25 +200,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_f5fag")
+"texture": ExtResource("13")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_epps7")
+"texture": ExtResource("14")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_cbk3h")
+"texture": ExtResource("15")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_4vvfs")
+"texture": ExtResource("16")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_rvg04")
+"texture": ExtResource("17")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_fcfb6")
+"texture": ExtResource("18")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_teawo")
+"texture": ExtResource("19")
 }],
 "loop": true,
 "name": &"idle",
@@ -226,19 +226,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("46_17y1j")
+"texture": ExtResource("42")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_kkflj")
+"texture": ExtResource("43")
 }, {
 "duration": 1.0,
-"texture": ExtResource("48_b7y2e")
+"texture": ExtResource("44")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_v6nsa")
+"texture": ExtResource("45")
 }, {
 "duration": 1.0,
-"texture": ExtResource("50_aqdgg")
+"texture": ExtResource("46")
 }],
 "loop": true,
 "name": &"jump",
@@ -246,44 +246,82 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("51_j8nm1")
+"texture": ExtResource("2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("52_4genn")
+"texture": ExtResource("3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("53_igbkl")
+"texture": ExtResource("4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("54_0o7ow")
+"texture": ExtResource("5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("55_m4co5")
+"texture": ExtResource("6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("56_6nn44")
+"texture": ExtResource("7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("57_wegrj")
+"texture": ExtResource("8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("58_0kk0u")
+"texture": ExtResource("9")
 }, {
 "duration": 1.0,
-"texture": ExtResource("59_5cpps")
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11")
+}],
+"loop": false,
+"name": &"melee",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58")
 }],
 "loop": true,
 "name": &"run",
 "speed": 20.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+[sub_resource type="CapsuleShape2D" id="2"]
 radius = 29.0
 height = 108.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6nak3"]
+[sub_resource type="CapsuleShape2D" id="3"]
 radius = 36.0
 height = 122.0
+
+[sub_resource type="CircleShape2D" id="4"]
+radius = 30.0
 
 [node name="Mcgavigan" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_1v6ts")
@@ -294,16 +332,26 @@ voice_die = ExtResource("5_3ek1h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_34wqp")
+sprite_frames = SubResource("1")
 animation = &"jump"
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
 position = Vector2(-4, -17)
-shape = SubResource("CapsuleShape2D_3vyb7")
+shape = SubResource("2")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=13979002]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
 position = Vector2(-4, -17)
-shape = SubResource("CapsuleShape2D_6nak3")
+shape = SubResource("3")
+
+[node name="MeleeArea" type="Area2D" parent="."]
+position = Vector2(40, -20)
+monitoring = false
+monitorable = false
+script = ExtResource("59")
+attack_type = "melee"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
+shape = SubResource("4")

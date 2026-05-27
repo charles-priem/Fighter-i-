@@ -167,6 +167,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("12_6l5bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gprmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_snfkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dbpvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_i7vfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3b4ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_l44pc")
+}],
+"loop": false,
+"name": &"melee",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("8_cdfxp")
 }, {
 "duration": 1.0,
@@ -206,6 +232,9 @@ height = 92.0
 radius = 28.0
 height = 110.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_7m8n1"]
+radius = 30.0
+
 [node name="Benedito" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_fmvww")
 tir = ExtResource("2_k63vh")
@@ -229,3 +258,13 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1036214767]
 position = Vector2(7, -7)
 shape = SubResource("CapsuleShape2D_fmvww")
+
+[node name="MeleeArea" type="Area2D" parent="."]
+position = Vector2(40, -20)
+monitoring = false
+monitorable = false
+script = ExtResource("25")
+attack_type = "melee"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
+shape = SubResource("CircleShape2D_7m8n1")

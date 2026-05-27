@@ -68,9 +68,56 @@
 [ext_resource type="Texture2D" uid="uid://yt55xhy8xijc" path="res://assets/sprites/Personnages/Dubois/dubois_idle7.webp" id="25_78go8"]
 [ext_resource type="Texture2D" uid="uid://8ek0ncdk1mfs" path="res://assets/sprites/Personnages/Dubois/dubois_idle8.webp" id="26_dqypm"]
 [ext_resource type="Texture2D" uid="uid://ds0gp4ncldat4" path="res://assets/sprites/Personnages/Dubois/dubois_idle9.webp" id="27_aomar"]
+[ext_resource type="Texture2D" uid="uid://dsc7n6di50miw" path="res://assets/sprites/Personnages/Dubois/Dubois punch1.png" id="28_p1"]
+[ext_resource type="Texture2D" uid="uid://2887v3s4enkw" path="res://assets/sprites/Personnages/Dubois/Dubois punch2.png" id="29_p2"]
+[ext_resource type="Texture2D" uid="uid://u0tiujj1l17w" path="res://assets/sprites/Personnages/Dubois/Dubois punch3.png" id="30_p3"]
+[ext_resource type="Texture2D" uid="uid://b7dwjmi7dyx7g" path="res://assets/sprites/Personnages/Dubois/Dubois punch4.png" id="31_p4"]
+[ext_resource type="Texture2D" uid="uid://doruieqgqvj7c" path="res://assets/sprites/Personnages/Dubois/Dubois punch5.png" id="32_p5"]
+[ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="33_hitbox"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0rjhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dmu4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hwoqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_61ha2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pm1lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mxekw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vm7sc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3rh0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_r7kob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_l27ip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_iyw7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_lvwrg")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 15.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_6blte")
@@ -101,7 +148,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"climb",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -256,6 +303,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("28_p1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_p2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_p5")
+}],
+"loop": false,
+"name": &"melee",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("5_se02q")
 }, {
 "duration": 1.0,
@@ -298,6 +365,9 @@ height = 108.0
 radius = 30.0
 height = 114.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_melee"]
+radius = 25.0
+
 [node name="Dubois" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_6nak3")
 cookie_dubois = ExtResource("2_1sso1")
@@ -310,7 +380,7 @@ voice_die = ExtResource("6_xtebu")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_34wqp")
-animation = &"run"
+animation = &"attack"
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
@@ -322,3 +392,11 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=429060738]
 position = Vector2(-5, -17)
 shape = SubResource("CapsuleShape2D_6nak3")
+
+[node name="MeleeArea" type="Area2D" parent="." unique_id=1824678839]
+position = Vector2(30, -20)
+script = ExtResource("33_hitbox")
+attack_type = "melee"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea" unique_id=1165229354]
+shape = SubResource("CircleShape2D_melee")

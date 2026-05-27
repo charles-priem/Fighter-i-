@@ -44,6 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://dbixbsgyxqp6p" path="res://assets/sprites/Personnages/Scottez/Scottez_punch5.png" id="39_punch5"]
 [ext_resource type="Texture2D" uid="uid://cbkck6ac7kkj7" path="res://assets/sprites/Personnages/Scottez/Scottez_punch6.png" id="40_punch6"]
 [ext_resource type="Texture2D" uid="uid://bbxcy1lqvftpq" path="res://assets/sprites/Personnages/Scottez/Scottez_punch7.png" id="41_punch7"]
+[ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="43_hitbox"]
 [ext_resource type="Texture2D" uid="uid://cf1nmay2okdim" path="res://assets/sprites/Personnages/Scottez/Scottez_punch8.png" id="42_punch8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owota"]
@@ -205,6 +206,35 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("35_punch1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_punch2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_punch3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_punch4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_punch5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_punch6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_punch7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_punch8")
+}],
+"loop": false,
+"name": &"melee",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("7_walk1")
 }, {
 "duration": 1.0,
@@ -244,6 +274,9 @@ height = 106.0
 radius = 42.0
 height = 124.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_melee"]
+radius = 25.0
+
 [node name="Scottez" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_scottez_script")
 voice_select = ExtResource("2_scottez_audio")
@@ -267,3 +300,11 @@ shape = SubResource("CapsuleShape2D_3vyb7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=73570391]
 position = Vector2(3, -19)
 shape = SubResource("CapsuleShape2D_ummwe")
+
+[node name="MeleeArea" type="Area2D" parent="."]
+position = Vector2(30, -20)
+script = ExtResource("43_hitbox")
+attack_type = "melee"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
+shape = SubResource("CircleShape2D_melee")
