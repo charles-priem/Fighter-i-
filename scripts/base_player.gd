@@ -23,10 +23,11 @@ var damage_percent   : float = 0.0
 var stocks           : int   = 0
 var is_attacking     : bool  = false
 var invincible_timer : float = 0.0
+var stun_timer       : float = 0.0 # <-- NOUVEAU TIMER POUR L'ETOURDISSEMENT
 var facing_left      : bool  = true
 var taking_damage    : bool  = false
 var spawn_point      : Vector2
-var hud_control      : Node = null
+var hud_control      : Node  = null
 var _is_dying        : bool  = false
 
 # Dash
@@ -39,8 +40,6 @@ var dash_dir         : Vector2 = Vector2.ZERO
 var is_grabbing_ledge : bool  = false
 var ledge_timer       : float = 0.0
 const LEDGE_HOLD_TIME : float = 1.0  # secondes max accrochage
-
-#@onready var ledge_detector = $LedgeDetector
 
 # CONSTANTES
 const FAST_FALL_MULT      : float = 2.5
@@ -91,9 +90,22 @@ func _ready():
 
 # BOUCLE PHYSIQUE 
 func _physics_process(delta):
-	# Gestion des timers
+	# Gestion de l'invincibilité
 	if invincible_timer > 0:
 		invincible_timer -= delta
+		
+	# GESTION DE L'ÉTOURDISSEMENT (Hitstun)
+	if stun_timer > 0:
+		stun_timer -= delta
+		# Pendant l'étourdissement, on applique la gravité et une légère friction
+		if not is_on_floor():
+			velocity.y += gravity * delta
+			velocity.x = move_toward(velocity.x, 0, 5.0) # Glisse un peu dans l'air
+		else:
+			velocity.x = move_toward(velocity.x, 0, 20.0) # Freine au sol
+			
+		move_and_slide()
+		return # On bloque toutes les autres actions (mouvement, saut, attaque)
 	
 	# 1. LOGIQUE DE LEDGE
 	if is_grabbing_ledge:
@@ -156,8 +168,16 @@ func handle_movement():
 		"p" + str(player_number) + "_right"
 	)
 	
+	# Le joueur a le contrôle (le stun_timer est terminé)
 	if dir != 0:
-		velocity.x = dir * move_speed
+		# S'il est en l'air et qu'il va DÉJÀ très vite à cause de l'éjection
+		if not is_on_floor() and abs(velocity.x) > move_speed:
+			# On lui permet d'influencer doucement sa direction (Air Control / DI)
+			velocity.x = move_toward(velocity.x, dir * move_speed, 25.0)
+		else:
+			# Déplacement standard et réactif
+			velocity.x = dir * move_speed
+			
 		facing_left = dir < 0
 		sprite.flip_h = not facing_left
 		
@@ -165,7 +185,13 @@ func handle_movement():
 			var melee_node = get_node("MeleeArea")
 			melee_node.position.x = abs(melee_node.position.x) * (-1 if facing_left else 1)
 	else:
-		velocity.x = move_toward(velocity.x, 0, move_speed)
+		# S'il lâche la manette
+		if not is_on_floor():
+			# S'il est en vol, on le laisse glisser avec une petite friction
+			velocity.x = move_toward(velocity.x, 0, 15.0)
+		else:
+			# S'il est au sol, il s'arrête de manière réactive
+			velocity.x = move_toward(velocity.x, 0, move_speed)
 
 # DASH_input 
 func handle_dash_input():
@@ -235,22 +261,23 @@ func take_hit(dmg: float, _kb_x: float, _kb_y: float,
 	is_dashing = false
 	damage_percent += dmg
 	taking_damage = true
+	stun_timer = 1.0 # <-- DÉCLENCHEMENT DU COOLDOWN DE 2 SECONDES
 	play_voice(voice_hurt)
-	var mult = (1.0 + damage_percent / 100.0) / weight
-	#var vx = kb_x * mult
-	#var vy = kb_y * mult
-	#if not attacker_right:
-		#vx = -vx
-	#velocity = Vector2(vx, vy)
 	
-	#calcul de la nouvelle position en fontion des dégats infligés
+	# Nouvelle formule plus agressive
+	var mult = (1.0 + (damage_percent / 40.0)) / weight
+	
 	if recoil_effect:
-		var new_position
-		if attacker_right:
-			new_position = position.x + DEPLACEMENT_ATTAQUE * mult
-		else:
-			new_position = position.x - DEPLACEMENT_ATTAQUE * mult
-		position.x = new_position
+		# On utilise les arguments de base _kb_x et _kb_y de ton attaque
+		var vx = _kb_x * mult * 10.0 # Multiplié par 10 pour l'échelle de vélocité de Godot
+		var vy = -_kb_y * mult * 10.0 # Négatif car l'axe Y monte vers le haut
+		
+		# On inverse la vélocité X si l'attaquant regarde vers la gauche
+		if not attacker_right:
+			vx = -vx
+			
+		# On applique l'éjection !
+		velocity = Vector2(vx, vy)
 	
 	invincible_timer = 0.5
 	var cam = get_tree().current_scene.get_node_or_null("Camera2D")
@@ -286,6 +313,7 @@ func respawn():
 	damage_percent = 0.0
 	velocity = Vector2.ZERO
 	invincible_timer = 2.0
+	stun_timer = 0.0 # On s'assure d'enlever le stun s'il meurt pendant qu'il vole
 	global_position = spawn_point
 	sprite.modulate = Color(1, 1, 1, 0)
 	var tween = get_tree().create_tween()
