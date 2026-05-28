@@ -22,13 +22,16 @@ func update_animation():
 		if animated_sprite.animation != &"attack":
 			animated_sprite.play("attack")
 		return
+	
+	if is_grabbing_ledge:
+		animated_sprite.play("climb")
+		return
+
 	if not is_on_floor():
 		if velocity.y < 0:
 			animated_sprite.play("jump")
 		else:
 			animated_sprite.play("fall")
-	elif is_grabbing_ledge:
-		animated_sprite.play("climb")
 	elif is_dashing:
 		animated_sprite.play("dash")
 	elif abs(velocity.x) > 20:

@@ -43,6 +43,15 @@
 [ext_resource type="Texture2D" uid="uid://bbxcy1lqvftpq" path="res://assets/sprites/Personnages/Scottez/Scottez_punch7.png" id="41_punch7"]
 [ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="43_hitbox"]
 [ext_resource type="Texture2D" uid="uid://cf1nmay2okdim" path="res://assets/sprites/Personnages/Scottez/Scottez_punch8.png" id="42_punch8"]
+[ext_resource type="Texture2D" uid="uid://bqm6hqnh6gort" path="res://assets/sprites/Personnages/Scottez/Scottez_climbing1.png" id="44_climb1"]
+[ext_resource type="Texture2D" uid="uid://cnxqshl24xyr6" path="res://assets/sprites/Personnages/Scottez/Scottez_climbing2.png" id="45_climb2"]
+[ext_resource type="Texture2D" uid="uid://bbgyj1ur6yiux" path="res://assets/sprites/Personnages/Scottez/Scottez_climbing3.png" id="46_climb3"]
+[ext_resource type="Texture2D" uid="uid://ck1dy8vul6hvh" path="res://assets/sprites/Personnages/Scottez/Scottez_climbing4.png" id="47_climb4"]
+[ext_resource type="Texture2D" uid="uid://dps4tk1ua8jnq" path="res://assets/sprites/Personnages/Scottez/Scottez_climbing5.png" id="48_climb5"]
+[ext_resource type="Texture2D" uid="uid://q0ycavs2pks2" path="res://assets/sprites/Personnages/Scottez/Scottez_climbing6.png" id="49_climb6"]
+[ext_resource type="Texture2D" uid="uid://di87nqm5qo5hg" path="res://assets/sprites/Personnages/Scottez/Scottez_climbing7.png" id="50_climb7"]
+[ext_resource type="Texture2D" uid="uid://cph54slt12ylu" path="res://assets/sprites/Personnages/Scottez/Scottez_climbing8.png" id="51_climb8"]
+[ext_resource type="Texture2D" uid="uid://ecgxnx5kxb76" path="res://assets/sprites/Personnages/Scottez/Scottez_climbing9.png" id="52_climb9"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owota"]
 animations = [{
@@ -74,6 +83,38 @@ animations = [{
 "loop": true,
 "name": &"attack",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_climb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_climb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_climb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_climb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_climb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_climb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_climb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_climb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_climb9")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -269,6 +310,9 @@ height = 124.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_melee"]
 radius = 25.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
+size = Vector2(20, 20)
+
 [node name="Scottez" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_scottez_script")
 voice_select = ExtResource("2_scottez_audio")
@@ -297,3 +341,9 @@ attack_type = "melee"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
 shape = SubResource("CircleShape2D_melee")
+
+[node name="LedgeDetector" type="Area2D" parent="." unique_id=2041489520]
+position = Vector2(20, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=2041489521]
+shape = SubResource("RectangleShape2D_ledge")
