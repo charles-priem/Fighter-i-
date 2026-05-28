@@ -1,11 +1,15 @@
-[gd_scene load_steps=57 format=3 uid="uid://1g8tc3joqt66"]
+[gd_scene format=3 uid="uid://1g8tc3joqt66"]
 
 [ext_resource type="Script" uid="uid://vxbe4g6c1o2w" path="res://scripts/LiseMarie.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/lise_marie_projectile.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://bx1wd8s6unhgp" path="res://assets/sprites/Personnages/Lise-Marie/lmv_idle1.png" id="3"]
+[ext_resource type="AudioStream" uid="uid://47fwr52reeor" path="res://assets/audio/voicelines/Veillon/c++_choisi_veillon.wav" id="3_ine2a"]
 [ext_resource type="Texture2D" uid="uid://dwcb7mvqq6c7n" path="res://assets/sprites/Personnages/Lise-Marie/lmv_idle2.png" id="4"]
+[ext_resource type="AudioStream" uid="uid://bs4atl130vkf5" path="res://assets/audio/voicelines/Veillon/délai_veillon.wav" id="4_g5i7h"]
 [ext_resource type="Texture2D" uid="uid://ctf0qtgovnxjv" path="res://assets/sprites/Personnages/Lise-Marie/lmv_idle3.png" id="5"]
+[ext_resource type="AudioStream" uid="uid://ca0ohnqxetmq2" path="res://assets/audio/voicelines/Veillon/tempête_neige_veillon.wav" id="5_y1o52"]
 [ext_resource type="Texture2D" uid="uid://bvr5hb8trdr4s" path="res://assets/sprites/Personnages/Lise-Marie/lmv_idle4.png" id="6"]
+[ext_resource type="AudioStream" uid="uid://dr4aqbeebd2ff" path="res://assets/audio/voicelines/Veillon/jeu_de_la_vie_veillon.wav" id="6_b6054"]
 [ext_resource type="Texture2D" uid="uid://c34mp764ogbpi" path="res://assets/sprites/Personnages/Lise-Marie/lmv_idle5.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://qdpfi66ibnj" path="res://assets/sprites/Personnages/Lise-Marie/lmv_walk1.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://bb58obbdttjpw" path="res://assets/sprites/Personnages/Lise-Marie/lmv_walk2.png" id="9"]
@@ -291,11 +295,14 @@ height = 100.0
 radius = 30.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
-size = Vector2(20, 20)
 
 [node name="LiseMarie" type="CharacterBody2D" unique_id=113358347]
 script = ExtResource("1")
 cap_projectile = ExtResource("2")
+voice_select = ExtResource("3_ine2a")
+voice_hurt = ExtResource("4_g5i7h")
+voice_special = ExtResource("5_y1o52")
+voice_die = ExtResource("6_b6054")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2076307240]
 scale = Vector2(0.5, 0.5)
@@ -314,14 +321,14 @@ shape = SubResource("2")
 position = Vector2(5, -15)
 shape = SubResource("3")
 
-[node name="MeleeArea" type="Area2D" parent="."]
+[node name="MeleeArea" type="Area2D" parent="." unique_id=1082620345]
 position = Vector2(40, -20)
 monitoring = false
 monitorable = false
 script = ExtResource("52")
 attack_type = "melee"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea" unique_id=2108952388]
 shape = SubResource("4")
 
 [node name="LedgeDetector" type="Area2D" parent="." unique_id=113358348]

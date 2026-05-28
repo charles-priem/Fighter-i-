@@ -1,10 +1,14 @@
-[gd_scene load_steps=65 format=3 uid="uid://oj40ukavviyh"]
+[gd_scene format=3 uid="uid://oj40ukavviyh"]
 
 [ext_resource type="Script" uid="uid://brd00s1lh5itu" path="res://scripts/McGavigan.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b74k2r00anxh2" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 1.png" id="2"]
+[ext_resource type="AudioStream" uid="uid://c88ctn2pblqs0" path="res://assets/audio/voicelines/McGavigan/2points_McGavigan.wav" id="2_gxfln"]
 [ext_resource type="Texture2D" uid="uid://bfy6vxjmexwqp" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 2.png" id="3"]
+[ext_resource type="AudioStream" uid="uid://ck57xqphqdu3c" path="res://assets/audio/voicelines/McGavigan/hurt_McGavigan.wav" id="3_a37m4"]
 [ext_resource type="Texture2D" uid="uid://bl5uyw5x06gis" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 3.png" id="4"]
+[ext_resource type="AudioStream" uid="uid://fbulgc46lyw4" path="res://assets/audio/voicelines/McGavigan/Surprise_Test_McGavigan.wav" id="4_3ek1h"]
 [ext_resource type="Texture2D" uid="uid://jivsk2u0e00w" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 4.png" id="5"]
+[ext_resource type="AudioStream" uid="uid://fo6xrulgvn24" path="res://assets/audio/voicelines/McGavigan/Special_Sit_McGavigan.wav" id="5_ow44v"]
 [ext_resource type="Texture2D" uid="uid://csrgiamt43yqi" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 5.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://c2dtjlftqh8kq" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 6.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://dohbwqsvfms15" path="res://assets/sprites/Personnages/Mcgavigan/Mcgavigan attack 7.png" id="8"]
@@ -321,10 +325,13 @@ height = 122.0
 radius = 30.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
-size = Vector2(20, 20)
 
 [node name="Mcgavigan" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1")
+voice_select = ExtResource("2_gxfln")
+voice_hurt = ExtResource("3_a37m4")
+voice_special = ExtResource("4_3ek1h")
+voice_die = ExtResource("5_ow44v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
@@ -342,14 +349,14 @@ shape = SubResource("2")
 position = Vector2(-4, -17)
 shape = SubResource("3")
 
-[node name="MeleeArea" type="Area2D" parent="."]
+[node name="MeleeArea" type="Area2D" parent="." unique_id=1071931461]
 position = Vector2(40, -20)
 monitoring = false
 monitorable = false
 script = ExtResource("59")
 attack_type = "melee"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea" unique_id=1591648114]
 shape = SubResource("4")
 
 [node name="LedgeDetector" type="Area2D" parent="." unique_id=2041489520]

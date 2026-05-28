@@ -1,10 +1,13 @@
-[gd_scene load_steps=56 format=3 uid="uid://dxvl7p3lxn335"]
+[gd_scene format=3 uid="uid://dxvl7p3lxn335"]
 
 [ext_resource type="Script" uid="uid://c8g0j2pwpmm6i" path="res://scripts/Fardoux.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b07le7d207m78" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 1.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://pi2yc8v5o2d5" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 2.png" id="3"]
+[ext_resource type="AudioStream" uid="uid://c8xtsnsm0836c" path="res://assets/audio/voicelines/Fardoux/force_fardoux.wav" id="3_2yxfu"]
 [ext_resource type="Texture2D" uid="uid://fuddbj15b7bb" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 3.png" id="4"]
+[ext_resource type="AudioStream" uid="uid://cw2ffjslm6kfb" path="res://assets/audio/voicelines/Fardoux/ingé_fardoux.wav" id="4_ttur3"]
 [ext_resource type="Texture2D" uid="uid://byyh5ni8gxnp7" path="res://assets/sprites/Personnages/Fardoux/fardoux fixe 4.png" id="5"]
+[ext_resource type="AudioStream" uid="uid://bnms0vgae1o3q" path="res://assets/audio/voicelines/Fardoux/pisser_code_fardoux.wav" id="5_2p67c"]
 [ext_resource type="Texture2D" uid="uid://cyybmxjv3k632" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 1.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://bo52m08p8rohx" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 2.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://ddfxkrfrpwog3" path="res://assets/sprites/Personnages/Fardoux/Fardoux marche 3.png" id="8"]
@@ -49,7 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://b1eh4xgc665p3" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage7.png" id="47"]
 [ext_resource type="Texture2D" uid="uid://bjjqy3ryo1mfe" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage8.png" id="48"]
 [ext_resource type="Texture2D" uid="uid://bypdxvi3fhrhu" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage9.png" id="49"]
-[ext_resource type="PackedScene" uid="uid://f06vowb3k5t1" path="res://scenes/fardoux_projectile.tscn" id="50"]
+[ext_resource type="PackedScene" path="res://scenes/fardoux_projectile.tscn" id="50"]
 [ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="51"]
 [ext_resource type="Texture2D" uid="uid://cpya6oca0h4tx" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb1.png" id="52_climb1"]
 [ext_resource type="Texture2D" uid="uid://btlvb33l6345k" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb2.png" id="53_climb2"]
@@ -324,11 +327,14 @@ height = 108.0
 radius = 30.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
-size = Vector2(20, 20)
 
 [node name="Fardoux" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1")
 attack_effect = ExtResource("50")
+voice_select = ExtResource("3_2yxfu")
+voice_hurt = ExtResource("4_ttur3")
+voice_special = ExtResource("5_2p67c")
+voice_die = ExtResource("5_2p67c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 position = Vector2(0, -22)
@@ -347,14 +353,14 @@ shape = SubResource("2")
 position = Vector2(6, -13)
 shape = SubResource("3")
 
-[node name="MeleeArea" type="Area2D" parent="."]
+[node name="MeleeArea" type="Area2D" parent="." unique_id=63982113]
 position = Vector2(40, -20)
 monitoring = false
 monitorable = false
 script = ExtResource("51")
 attack_type = "melee"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea" unique_id=378310632]
 shape = SubResource("4")
 
 [node name="LedgeDetector" type="Area2D" parent="." unique_id=2041489520]

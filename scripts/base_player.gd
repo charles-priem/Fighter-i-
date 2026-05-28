@@ -30,7 +30,7 @@ var spawn_point      : Vector2
 var hud_control      : Node  = null
 var _is_dying        : bool  = false
 var special_gauge    : int   = 0
-const MAX_SPECIAL_GAUGE : int = 5
+const MAX_SPECIAL_GAUGE : int = 10
 
 # Dash
 var is_dashing       : bool  = false

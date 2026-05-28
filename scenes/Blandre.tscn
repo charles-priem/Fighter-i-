@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://djcqcuvuton3y" path="res://scripts/Blandre.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://cy4timxg6rb3c" path="res://assets/sprites/Personnages/Blandre/blandre_attack1.png" id="2"]
+[ext_resource type="AudioStream" uid="uid://dhppj6bc0ilio" path="res://assets/audio/voicelines/Blandre/Courant_tension_blandre.wav" id="2_hxwgh"]
 [ext_resource type="Texture2D" uid="uid://bq40eky0jpgcq" path="res://assets/sprites/Personnages/Blandre/blandre_attack2.png" id="3"]
+[ext_resource type="AudioStream" uid="uid://bdm7p0eduew10" path="res://assets/audio/voicelines/Blandre/court_circuit_blandre.wav" id="3_qn56t"]
 [ext_resource type="Texture2D" uid="uid://cqocijluermjr" path="res://assets/sprites/Personnages/Blandre/blandre_attack3.png" id="4"]
+[ext_resource type="AudioStream" uid="uid://ukjucv5qenkp" path="res://assets/audio/voicelines/Blandre/AOP_blandre.wav" id="4_dqoub"]
 [ext_resource type="Texture2D" uid="uid://nm3qrgmm5rfb" path="res://assets/sprites/Personnages/Blandre/blandre_attack4.png" id="5"]
+[ext_resource type="AudioStream" uid="uid://dmq000nx7h86q" path="res://assets/audio/voicelines/Blandre/nul_masse_blandre.wav" id="5_a8fr8"]
 [ext_resource type="Texture2D" uid="uid://c4vr23lp52qye" path="res://assets/sprites/Personnages/Blandre/blandre_attack5.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://vgtaqwny5dyv" path="res://assets/sprites/Personnages/Blandre/blandre_attack6.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://c6sc68pbl5l3w" path="res://assets/sprites/Personnages/Blandre/blandre_attack7.png" id="8"]
@@ -254,10 +258,13 @@ height = 100.0
 radius = 30.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
-size = Vector2(20, 20)
 
 [node name="Blandre" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1")
+voice_select = ExtResource("2_hxwgh")
+voice_hurt = ExtResource("3_qn56t")
+voice_special = ExtResource("4_dqoub")
+voice_die = ExtResource("5_a8fr8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
