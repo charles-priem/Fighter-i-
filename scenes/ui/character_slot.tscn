@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cscharslot123"]
 
 [ext_resource type="Script" uid="uid://dqi02kr2vj65k" path="res://scripts/ui/character_slot.gd" id="1_cslot"]
-[ext_resource type="FontFile" uid="uid://d4beyjxkjfg6p" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="2_font"]
+[ext_resource type="FontFile" uid="uid://bg4catg5t5gc" path="res://assets/fonts/perfect_dos_vga_437.ttf" id="2_font"]
 
 [node name="CharacterSlot" type="Button" unique_id=1583238030 node_paths=PackedStringArray("preview_texture", "name_label")]
 custom_minimum_size = Vector2(150, 150)

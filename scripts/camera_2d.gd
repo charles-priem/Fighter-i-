@@ -10,7 +10,7 @@ extends Camera2D
 @export var limit_left_val: float = -200.0
 @export var limit_right_val: float = 1000.0
 @export var limit_top_val: float = -1500.0
-@export var limit_bottom_val: float = 700.0
+@export var limit_bottom_val: float = 1000.0
 
 func _ready():
 	# Appliquer les limites
