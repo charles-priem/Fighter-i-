@@ -51,6 +51,15 @@
 [ext_resource type="Texture2D" uid="uid://bypdxvi3fhrhu" path="res://assets/sprites/Personnages/Fardoux/fardoux_taking_damage9.png" id="49"]
 [ext_resource type="PackedScene" uid="uid://f06vowb3k5t1" path="res://scenes/fardoux_projectile.tscn" id="50"]
 [ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="51"]
+[ext_resource type="Texture2D" uid="uid://cpya6oca0h4tx" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb1.png" id="52_climb1"]
+[ext_resource type="Texture2D" uid="uid://btlvb33l6345k" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb2.png" id="53_climb2"]
+[ext_resource type="Texture2D" uid="uid://cpc7qe3ytviux" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb3.png" id="54_climb3"]
+[ext_resource type="Texture2D" uid="uid://d3r6oensktwkj" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb4.png" id="55_climb4"]
+[ext_resource type="Texture2D" uid="uid://cde112ta8apdm" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb5.png" id="56_climb5"]
+[ext_resource type="Texture2D" uid="uid://b3uj6isrtf8us" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb6.png" id="57_climb6"]
+[ext_resource type="Texture2D" uid="uid://pwljm2im5hlo" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb7.png" id="58_climb7"]
+[ext_resource type="Texture2D" uid="uid://b1dpxv1qibwkw" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb8.png" id="59_climb8"]
+[ext_resource type="Texture2D" uid="uid://dd4cvq8tgwc5u" path="res://assets/sprites/Personnages/Fardoux/fardoux_climb9.png" id="60_climb9"]
 
 [sub_resource type="SpriteFrames" id="1"]
 animations = [{
@@ -85,6 +94,38 @@ animations = [{
 "loop": true,
 "name": &"attack",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("52_climb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_climb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_climb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_climb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_climb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_climb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_climb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_climb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_climb9")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -282,6 +323,9 @@ height = 108.0
 [sub_resource type="CircleShape2D" id="4"]
 radius = 30.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
+size = Vector2(20, 20)
+
 [node name="Fardoux" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1")
 attack_effect = ExtResource("50")
@@ -312,3 +356,9 @@ attack_type = "melee"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
 shape = SubResource("4")
+
+[node name="LedgeDetector" type="Area2D" parent="." unique_id=2041489520]
+position = Vector2(20, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=2041489521]
+shape = SubResource("RectangleShape2D_ledge")

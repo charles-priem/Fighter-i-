@@ -99,6 +99,32 @@ animations = [{
 "texture": ExtResource("18_l44pc")
 }],
 "loop": true,
+"name": &"climb",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_6l5bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_gprmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_snfkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dbpvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_i7vfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3b4ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_l44pc")
+}],
+"loop": true,
 "name": &"dash",
 "speed": 5.0
 }, {
@@ -233,6 +259,9 @@ height = 110.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_7m8n1"]
 radius = 30.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
+size = Vector2(20, 20)
+
 [node name="Benedito" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_fmvww")
 tir = ExtResource("2_k63vh")
@@ -262,3 +291,9 @@ attack_type = "melee"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
 shape = SubResource("CircleShape2D_7m8n1")
+
+[node name="LedgeDetector" type="Area2D" parent="." unique_id=2041489520]
+position = Vector2(20, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=2041489521]
+shape = SubResource("RectangleShape2D_ledge")

@@ -52,6 +52,15 @@
 [ext_resource type="Texture2D" uid="uid://6x7hrp2j1b5j" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage8.png" id="45_damage8"]
 [ext_resource type="Texture2D" uid="uid://svknbpuarr65" path="res://assets/sprites/Personnages/El Yaagoubi/el_yagoubi_taking_damage9.png" id="46_damage9"]
 [ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="56_hitbox"]
+[ext_resource type="Texture2D" uid="uid://bxto6rtxbakwd" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab1.png" id="57_climb1"]
+[ext_resource type="Texture2D" uid="uid://dadbooc5mds2u" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab2.png" id="58_climb2"]
+[ext_resource type="Texture2D" uid="uid://baw50o864ebrc" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab3.png" id="59_climb3"]
+[ext_resource type="Texture2D" uid="uid://wctgvllxys4u" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab4.png" id="60_climb4"]
+[ext_resource type="Texture2D" uid="uid://cj285adbo60ic" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab5.png" id="61_climb5"]
+[ext_resource type="Texture2D" uid="uid://b0oe7pemoji7t" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab6.png" id="62_climb6"]
+[ext_resource type="Texture2D" uid="uid://b1eh1lnohu06x" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab7.png" id="63_climb7"]
+[ext_resource type="Texture2D" uid="uid://dyql6gooqsoot" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab8.png" id="64_climb8"]
+[ext_resource type="Texture2D" uid="uid://sd8tnn6hd85k" path="res://assets/sprites/Personnages/El Yaagoubi/el_yaagoubi_grab9.png" id="65_climb9"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owota"]
 animations = [{
@@ -85,6 +94,38 @@ animations = [{
 }],
 "loop": true,
 "name": &"damage",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_climb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_climb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_climb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_climb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_climb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_climb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_climb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_climb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_climb9")
+}],
+"loop": true,
+"name": &"climb",
 "speed": 12.0
 }, {
 "frames": [{
@@ -262,6 +303,9 @@ height = 116.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_melee"]
 radius = 30.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
+size = Vector2(20, 20)
+
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_60jth")
 
@@ -293,3 +337,9 @@ attack_type = "melee"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea" unique_id=1766699950]
 shape = SubResource("CircleShape2D_melee")
+
+[node name="LedgeDetector" type="Area2D" parent="." unique_id=2041489520]
+position = Vector2(20, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=2041489521]
+shape = SubResource("RectangleShape2D_ledge")
