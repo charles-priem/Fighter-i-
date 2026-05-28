@@ -58,6 +58,15 @@
 [ext_resource type="Texture2D" uid="uid://bxbncq6jjlxbw" path="res://assets/sprites/Personnages/N Kounou/nkounou_walking8.png" id="56"]
 [ext_resource type="Texture2D" uid="uid://dhy5igklrm8lg" path="res://assets/sprites/Personnages/N Kounou/nkounou_walking9.png" id="57"]
 [ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="58"]
+[ext_resource type="Texture2D" uid="uid://ubtvihqr6h3x" path="res://assets/sprites/Personnages/N Kounou/nkounou_climb1.png" id="59"]
+[ext_resource type="Texture2D" uid="uid://ctvsmcrrwbdeb" path="res://assets/sprites/Personnages/N Kounou/nkounou_climb2.png" id="60"]
+[ext_resource type="Texture2D" uid="uid://dfpiukxj0grpn" path="res://assets/sprites/Personnages/N Kounou/nkounou_climb3.png" id="61"]
+[ext_resource type="Texture2D" uid="uid://2xmvwail0kdd" path="res://assets/sprites/Personnages/N Kounou/nkounou_climb4.png" id="62"]
+[ext_resource type="Texture2D" uid="uid://b5y8qlvamg0a2" path="res://assets/sprites/Personnages/N Kounou/nkounou_climb5.png" id="63"]
+[ext_resource type="Texture2D" uid="uid://blbjer75up7i0" path="res://assets/sprites/Personnages/N Kounou/nkounou_climb6.png" id="64"]
+[ext_resource type="Texture2D" uid="uid://ckkd6rb6f2q7g" path="res://assets/sprites/Personnages/N Kounou/nkounou_climb7.png" id="65"]
+[ext_resource type="Texture2D" uid="uid://cwogob1e68epv" path="res://assets/sprites/Personnages/N Kounou/nkounou_climb8.png" id="66"]
+[ext_resource type="Texture2D" uid="uid://bkewip0fqker1" path="res://assets/sprites/Personnages/N Kounou/nkounou_climb9.png" id="67"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34wqp"]
 animations = [{
@@ -91,6 +100,38 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("59")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67")
+}],
+"loop": true,
+"name": &"climb",
 "speed": 12.0
 }, {
 "frames": [{
@@ -305,6 +346,9 @@ height = 100.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_7m8n1"]
 radius = 30.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
+size = Vector2(20, 20)
+
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1")
 cookie_dubois = ExtResource("2")
@@ -335,3 +379,9 @@ attack_type = "melee"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
 shape = SubResource("CircleShape2D_7m8n1")
+
+[node name="LedgeDetector" type="Area2D" parent="." unique_id=2041489520]
+position = Vector2(20, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=2041489521]
+shape = SubResource("RectangleShape2D_ledge")

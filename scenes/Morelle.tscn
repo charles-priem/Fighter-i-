@@ -49,6 +49,15 @@
 [ext_resource type="Texture2D" uid="uid://c1i2xl2fg8xe4" path="res://assets/sprites/Personnages/Morelle/jump7.png" id="51_rq2ym"]
 [ext_resource type="Texture2D" uid="uid://d0gk17ac283is" path="res://assets/sprites/Personnages/Morelle/jump8.png" id="52_0id45"]
 [ext_resource type="Texture2D" uid="uid://kiwedwpmyyuk" path="res://assets/sprites/Personnages/Morelle/jump9.png" id="53_jmejj"]
+[ext_resource type="Texture2D" uid="uid://7x5f7c8s3yra" path="res://assets/sprites/Personnages/Morelle/morelle_climb1.png" id="54_climb1"]
+[ext_resource type="Texture2D" uid="uid://cmrk667mexmsl" path="res://assets/sprites/Personnages/Morelle/morelle_climb2.png" id="55_climb2"]
+[ext_resource type="Texture2D" uid="uid://qd1uw2g12p6y" path="res://assets/sprites/Personnages/Morelle/morelle_climb3.png" id="56_climb3"]
+[ext_resource type="Texture2D" uid="uid://cprt6tqqkqsyb" path="res://assets/sprites/Personnages/Morelle/morelle_climb4.png" id="57_climb4"]
+[ext_resource type="Texture2D" uid="uid://b0evwaxtxbyjd" path="res://assets/sprites/Personnages/Morelle/morelle_climb5.png" id="58_climb5"]
+[ext_resource type="Texture2D" uid="uid://cnbwih0oevsae" path="res://assets/sprites/Personnages/Morelle/morelle_climb6.png" id="59_climb6"]
+[ext_resource type="Texture2D" uid="uid://vt65m2a4ycdc" path="res://assets/sprites/Personnages/Morelle/morelle_climb7.png" id="60_climb7"]
+[ext_resource type="Texture2D" uid="uid://mwu21kynetfc" path="res://assets/sprites/Personnages/Morelle/morelle_climb8.png" id="61_climb8"]
+[ext_resource type="Texture2D" uid="uid://cf2dx1ngniaxk" path="res://assets/sprites/Personnages/Morelle/morelle_climb9.png" id="62_climb9"]
 
 [sub_resource type="SpriteFrames" id="1"]
 animations = [{
@@ -79,6 +88,38 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_climb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_climb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_climb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_climb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_climb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_climb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_climb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_climb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_climb9")
+}],
+"loop": true,
+"name": &"climb",
 "speed": 12.0
 }, {
 "frames": [{
@@ -305,6 +346,9 @@ height = 124.0
 [sub_resource type="CircleShape2D" id="4"]
 radius = 30.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
+size = Vector2(20, 20)
+
 [node name="Player" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1")
 papier_morelle = ExtResource("2")
@@ -335,3 +379,9 @@ attack_type = "melee"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea" unique_id=787161060]
 shape = SubResource("4")
+
+[node name="LedgeDetector" type="Area2D" parent="." unique_id=2041489520]
+position = Vector2(20, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=2041489521]
+shape = SubResource("RectangleShape2D_ledge")

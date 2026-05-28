@@ -146,7 +146,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"climb",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -366,6 +366,8 @@ height = 114.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_melee"]
 radius = 25.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
+
 [node name="Dubois" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1_6nak3")
 cookie_dubois = ExtResource("2_1sso1")
@@ -396,3 +398,9 @@ attack_type = "melee"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea" unique_id=1165229354]
 shape = SubResource("CircleShape2D_melee")
+
+[node name="LedgeDetector" type="Area2D" parent="." unique_id=2041489520]
+position = Vector2(20, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=2041489521]
+shape = SubResource("RectangleShape2D_ledge")

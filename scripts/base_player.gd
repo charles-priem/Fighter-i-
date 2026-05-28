@@ -39,7 +39,9 @@ var dash_dir         : Vector2 = Vector2.ZERO
 # VARIABLES LEDGE GRAB
 var is_grabbing_ledge : bool  = false
 var ledge_timer       : float = 0.0
-const LEDGE_HOLD_TIME : float = 1.0  # secondes max accrochage
+var regrab_timer      : float = 0.0
+const LEDGE_HOLD_TIME : float = 1.2
+const REGRAB_COOLDOWN : float = 0.5
 
 # CONSTANTES
 const FAST_FALL_MULT      : float = 2.5
@@ -53,6 +55,7 @@ signal player_eliminated(player_num)
 
 # REFERENCES
 @onready var sprite = $AnimatedSprite2D
+@onready var ledge_detector = $LedgeDetector
 var voice_player : AudioStreamPlayer2D
 
 # VOICELINES
@@ -86,6 +89,9 @@ func _ready():
 		sprite.flip_h = false
 		facing_left = true
 
+	if ledge_detector:
+		ledge_detector.body_entered.connect(_on_ledge_detected)
+
 	update_hud()
 
 # BOUCLE PHYSIQUE 
@@ -93,6 +99,10 @@ func _physics_process(delta):
 	# Gestion de l'invincibilité
 	if invincible_timer > 0:
 		invincible_timer -= delta
+		
+	# Gestion du cooldown de ré-accrochage
+	if regrab_timer > 0:
+		regrab_timer -= delta
 		
 	# GESTION DE L'ÉTOURDISSEMENT (Hitstun)
 	if stun_timer > 0:
@@ -184,6 +194,10 @@ func handle_movement():
 		if has_node("MeleeArea"):
 			var melee_node = get_node("MeleeArea")
 			melee_node.position.x = abs(melee_node.position.x) * (-1 if facing_left else 1)
+			
+		if has_node("LedgeDetector"):
+			var ledge_node = get_node("LedgeDetector")
+			ledge_node.position.x = abs(ledge_node.position.x) * (-1 if facing_left else 1)
 	else:
 		# S'il lâche la manette
 		if not is_on_floor():
@@ -370,28 +384,37 @@ func throw_projectile(projectile):
 	is_attacking = false
 	
 # LEDGE GRAB 
-func _on_ledge_detected(_body):
+func _on_ledge_detected(body):
+	# Ne pas s'accrocher si on maintient "Bas" ou si le cooldown est actif
+	var down_action = "p" + str(player_number) + "_down"
+	if Input.is_action_pressed(down_action) or regrab_timer > 0:
+		return
+		
 	# Déclencher seulement si dans les airs et en train de tomber
-	if not is_on_floor() and velocity.y > 0 and not is_grabbing_ledge:
-		start_ledge_grab()
-
-func _on_ledge_exited(_body):
-	pass  # On gère la sortie manuellement
+	if not is_on_floor() and velocity.y >= 0 and not is_grabbing_ledge:
+		# Magnétisme : on s'aligne sur le haut de la plateforme détectée
+		# On suppose que le détecteur est à Y=-50, on veut que ce point soit sur le bord
+		if body is StaticBody2D or body is AnimatableBody2D:
+			start_ledge_grab()
 
 func start_ledge_grab():
 	is_grabbing_ledge = true
-	can_air_dash = true # On récupère son dash quand on attrape un rebord !
+	jumps_remaining = max_jumps # On récupère ses sauts !
+	can_air_dash = true        # On récupère son dash !
 	ledge_timer = LEDGE_HOLD_TIME
+	invincible_timer = 0.5     # Courte invincibilité
 	velocity = Vector2.ZERO
+	
+	# Animation de suspension
+	if sprite.sprite_frames.has_animation("ledge_gap"):
+		sprite.play("ledge_gap")
+	elif sprite.sprite_frames.has_animation("climb"):
+		sprite.play("climb")
 
 func handle_ledge_hang(delta):
-	# Figer sur place
 	velocity = Vector2.ZERO
 
-	# Décompter le timer
 	ledge_timer -= delta
-
-	# Tomber si le timer expire
 	if ledge_timer <= 0:
 		release_ledge()
 		return
@@ -399,24 +422,20 @@ func handle_ledge_hang(delta):
 	var jump_action = "p" + str(player_number) + "_jump"
 	var down_action = "p" + str(player_number) + "_down"
 
-	# Remonter sur la plateforme avec saut
 	if Input.is_action_just_pressed(jump_action):
 		climb_up()
-
-	# Lâcher avec bas
-	if Input.is_action_just_pressed(down_action):
+	elif Input.is_action_just_pressed(down_action):
 		release_ledge()
 
 func climb_up():
 	is_grabbing_ledge = false
-	# Donner une impulsion vers le haut et dans la bonne direction
-	velocity.y = -jump_force
-	velocity.x = 150.0 if facing_left else -150.0
-	jumps_remaining = max_jumps
+	regrab_timer = REGRAB_COOLDOWN
+	velocity.y = -jump_force * 0.8 # Saut de remontée légèrement plus faible
+	velocity.x = 200.0 * (-1 if facing_left else 1)
 
 func release_ledge():
 	is_grabbing_ledge = false
-	# Lâcher avec une petite vitesse vers le bas
+	regrab_timer = REGRAB_COOLDOWN
 	velocity.y = 100.0
 
 func play_voice(stream: AudioStream) -> void:

@@ -52,6 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://25bnpg7niiqh" path="res://assets/sprites/Personnages/Lise-Marie/lmv_taking_damage8.png" id="50"]
 [ext_resource type="Texture2D" uid="uid://6iyg1r6pxbp" path="res://assets/sprites/Personnages/Lise-Marie/lmv_taking_damage9.png" id="51"]
 [ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="52"]
+[ext_resource type="Texture2D" uid="uid://c2tnfojso5eit" path="res://assets/sprites/Personnages/Lise-Marie/lmv_grab1-climb.png" id="53"]
 
 [sub_resource type="SpriteFrames" id="1"]
 animations = [{
@@ -86,6 +87,14 @@ animations = [{
 "loop": false,
 "name": &"attack",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -281,6 +290,9 @@ height = 100.0
 [sub_resource type="CircleShape2D" id="4"]
 radius = 30.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ledge"]
+size = Vector2(20, 20)
+
 [node name="LiseMarie" type="CharacterBody2D" unique_id=113358347]
 script = ExtResource("1")
 cap_projectile = ExtResource("2")
@@ -311,3 +323,9 @@ attack_type = "melee"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
 shape = SubResource("4")
+
+[node name="LedgeDetector" type="Area2D" parent="." unique_id=113358348]
+position = Vector2(20, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeDetector" unique_id=113358349]
+shape = SubResource("RectangleShape2D_ledge")
