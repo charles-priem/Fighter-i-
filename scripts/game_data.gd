@@ -30,8 +30,8 @@ const CHARACTER_NAMES = [
 	"McGavigan",
 	"Mele",
 	"Deleplanque",
-	"Justine",
-	"Lise-Marie"
+	"Philippe",
+	"Veillon"
 ]
 
 const CHARACTER_DESC = [
