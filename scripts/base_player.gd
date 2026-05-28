@@ -15,7 +15,7 @@ class_name BasePlayer
 
 # VARIABLES INTERNES 
 var ATTACK_DATA = {
-	"melee": [10.0, 50.0, 50.0]
+	"melee": [10.0, 20.0, 20.0]
 }
 var gravity          = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jumps_remaining  : int   = 2
