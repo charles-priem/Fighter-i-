@@ -1,6 +1,6 @@
-[gd_scene load_steps=55 format=3 uid="uid://dyqad0rwgd0k1"]
+[gd_scene format=3 uid="uid://dyqad0rwgd0k1"]
 
-[ext_resource type="Script" uid="uid://bwpa88sl76otn" path="res://scripts/morelle.gd" id="1"]
+[ext_resource type="Script" uid="uid://bwpa88sl76otn" path="res://scripts/Morelle.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://cajud4qn4feh4" path="res://scenes/papierMorelle.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://cslbgovvo5g5v" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier1.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://ctm6htdl67jjf" path="res://assets/sprites/Personnages/Morelle/morelle_attack_lance_papier2.png" id="4"]
@@ -30,26 +30,25 @@
 [ext_resource type="Texture2D" uid="uid://cxcn0fw6ja4gu" path="res://assets/sprites/Personnages/Morelle/morelle_dash7.png" id="28"]
 [ext_resource type="Texture2D" uid="uid://cb8xwxjxvjx0f" path="res://assets/sprites/Personnages/Morelle/morelle_dash8.png" id="29"]
 [ext_resource type="Texture2D" uid="uid://d363fvb158jwg" path="res://assets/sprites/Personnages/Morelle/morelle_dash9.png" id="30"]
-[ext_resource type="Texture2D" uid="uid://bsjv0yk51jbj0" path="res://assets/sprites/Personnages/Morelle/Morelle_jump1-removebg-preview.png" id="31"]
-[ext_resource type="Texture2D" uid="uid://bd4qqsjs64d4" path="res://assets/sprites/Personnages/Morelle/Morelle_jump2-removebg-preview.png" id="32"]
-[ext_resource type="Texture2D" uid="uid://c2odqtjivs7gj" path="res://assets/sprites/Personnages/Morelle/Morelle_jump3-removebg-preview.png" id="33"]
-[ext_resource type="Texture2D" uid="uid://2bxiort50rlr" path="res://assets/sprites/Personnages/Morelle/Morelle_jump4-removebg-preview.png" id="34"]
-[ext_resource type="Texture2D" uid="uid://1y3mj5xmq77h" path="res://assets/sprites/Personnages/Morelle/Morelle_jump5-removebg-preview.png" id="35"]
-[ext_resource type="Texture2D" uid="uid://b25g2n4kptumu" path="res://assets/sprites/Personnages/Morelle/Morelle_jump6-removebg-preview.png" id="36"]
-[ext_resource type="Texture2D" uid="uid://b3camh87qewu7" path="res://assets/sprites/Personnages/Morelle/Morelle_jump7-removebg-preview.png" id="37"]
-[ext_resource type="Texture2D" uid="uid://dv46vnh0g3610" path="res://assets/sprites/Personnages/Morelle/Morelle_jump8-removebg-preview.png" id="38"]
-[ext_resource type="Texture2D" uid="uid://x71sasgfmpsh" path="res://assets/sprites/Personnages/Morelle/Morelle_jump9-removebg-preview.png" id="39"]
-[ext_resource type="Texture2D" uid="uid://bdm2bimnab7q3" path="res://assets/sprites/Personnages/Morelle/Morelle_jump10-removebg-preview.png" id="40"]
 [ext_resource type="Texture2D" uid="uid://doj8hgxhsb4y2" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage1.png" id="41"]
 [ext_resource type="Texture2D" uid="uid://dicrkt3jhmipp" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage2.png" id="42"]
 [ext_resource type="Texture2D" uid="uid://b1j5hh2fhidsf" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage3.png" id="43"]
 [ext_resource type="Texture2D" uid="uid://bdijeq7o5fbcg" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage4.png" id="44"]
 [ext_resource type="Texture2D" uid="uid://cx7k6ln84qwma" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage5.png" id="45"]
+[ext_resource type="Texture2D" uid="uid://dtpmtaxr270jg" path="res://assets/sprites/Personnages/Morelle/jump1.png" id="45_l382c"]
 [ext_resource type="Texture2D" uid="uid://cfna0t0xcps5p" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage6.png" id="46"]
+[ext_resource type="Texture2D" uid="uid://cx1gme1d1i72s" path="res://assets/sprites/Personnages/Morelle/jump2.png" id="46_g8a8h"]
 [ext_resource type="Texture2D" uid="uid://b4lk1hh7glxd0" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage7.png" id="47"]
+[ext_resource type="Texture2D" uid="uid://dyaovr7vuahxg" path="res://assets/sprites/Personnages/Morelle/jump3.png" id="47_omfhw"]
 [ext_resource type="Texture2D" uid="uid://pvoevtwv0l7e" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage8.png" id="48"]
+[ext_resource type="Texture2D" uid="uid://4858vuufclu7" path="res://assets/sprites/Personnages/Morelle/jump4.png" id="48_mvfna"]
 [ext_resource type="Texture2D" uid="uid://dbabhhtmx3ihu" path="res://assets/sprites/Personnages/Morelle/morelle_taking_damage9.png" id="49"]
+[ext_resource type="Texture2D" uid="uid://depbej5yvl45f" path="res://assets/sprites/Personnages/Morelle/jump5.png" id="49_m7x2s"]
 [ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="50"]
+[ext_resource type="Texture2D" uid="uid://crac3x5o13uk8" path="res://assets/sprites/Personnages/Morelle/jump6.png" id="50_d3eov"]
+[ext_resource type="Texture2D" uid="uid://c1i2xl2fg8xe4" path="res://assets/sprites/Personnages/Morelle/jump7.png" id="51_rq2ym"]
+[ext_resource type="Texture2D" uid="uid://d0gk17ac283is" path="res://assets/sprites/Personnages/Morelle/jump8.png" id="52_0id45"]
+[ext_resource type="Texture2D" uid="uid://kiwedwpmyyuk" path="res://assets/sprites/Personnages/Morelle/jump9.png" id="53_jmejj"]
 
 [sub_resource type="SpriteFrames" id="1"]
 animations = [{
@@ -148,19 +147,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("36")
+"texture": ExtResource("45_l382c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37")
+"texture": ExtResource("46_g8a8h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38")
+"texture": ExtResource("47_omfhw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40")
+"texture": ExtResource("48_mvfna")
 }],
 "loop": true,
 "name": &"fall",
@@ -206,19 +202,31 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("31")
+"texture": ExtResource("45_l382c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32")
+"texture": ExtResource("46_g8a8h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33")
+"texture": ExtResource("47_omfhw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("34")
+"texture": ExtResource("48_mvfna")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35")
+"texture": ExtResource("49_m7x2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_d3eov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_rq2ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_0id45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_jmejj")
 }],
 "loop": true,
 "name": &"jump",
@@ -304,7 +312,8 @@ papier_morelle = ExtResource("2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("1")
-animation = &"idle"
+animation = &"fall"
+frame_progress = 0.2516987
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
@@ -317,12 +326,12 @@ shape = SubResource("2")
 position = Vector2(0, -16)
 shape = SubResource("3")
 
-[node name="MeleeArea" type="Area2D" parent="."]
+[node name="MeleeArea" type="Area2D" parent="." unique_id=1942759553]
 position = Vector2(40, -20)
 monitoring = false
 monitorable = false
 script = ExtResource("50")
 attack_type = "melee"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea" unique_id=787161060]
 shape = SubResource("4")
