@@ -21,9 +21,19 @@ var _is_transitioning: bool = false
 # Chaque entrée contient le nom affiché, la scène à charger et l'image de preview.
 var stages: Array[Dictionary] = [
 	{
-		"display_name": "Map de dev",
-		"scene": preload("res://scenes/stages/dev_stage.tscn"),
-		"preview": preload("res://assets/art/ui/stages/dev_stage_preview.png")
+		"display_name": "Map lunaire",
+		"scene": preload("res://scenes/stages/map_lunaire.tscn"),
+		"preview": preload("res://assets/sprites/map lunaire.png")
+	},
+	{
+		"display_name": "Map foret",
+		"scene": preload("res://scenes/stages/map_foret.tscn"),
+		"preview": preload("res://assets/sprites/map foret.png")
+	},
+	{
+		"display_name": "Map Junia",
+		"scene": preload("res://scenes/stages/map_junia.tscn"),
+		"preview": preload("res://assets/sprites/map_junia.png")
 	}
 ]
 
