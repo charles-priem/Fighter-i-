@@ -36,13 +36,13 @@ func setup(
 
 func set_selected(player: int) -> void:
 	if player == 1:
-		modulate = Color(1.0, 0.5, 0.5, 1.0) # Red-ish for P1
+		modulate = Color(0.5, 0.5, 1.0, 1.0) # Bleu pour J1
 	elif player == 2:
-		modulate = Color(0.5, 0.5, 1.0, 1.0) # Blue-ish for P2
+		modulate = Color(1.0, 0.5, 0.5, 1.0) # Rouge pour J2
 	elif player == 3:
-		modulate = Color(1.0, 0.5, 1.0, 1.0) # Both selected
+		modulate = Color(1.0, 0.5, 1.0, 1.0) # Les deux sélectionnés
 	else:
-		modulate = Color(1.0, 1.0, 1.0, 1.0) # Default
+		modulate = Color(1.0, 1.0, 1.0, 1.0) # Défaut
 
 func _pressed() -> void:
 	if _character_scene == null:
