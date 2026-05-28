@@ -83,3 +83,19 @@ func update_stocks(player_num: int, stocks_remaining: int):
 		icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		stock_container.add_child(icon)
+		
+		# --- MISE A JOUR DE LA JAUGE SPECIALE ---
+func update_special(player_num: int, current_gauge: int, max_gauge: int):
+	# On cherche dynamiquement la ProgressBar dans ta scène
+	var bar_path = "P1Panel/VBoxContainer/P1Special" if player_num == 1 else "P2Panel/VBoxContainer/P2Special"
+	var bar = get_node_or_null(bar_path)
+	
+	if bar:
+		bar.max_value = max_gauge
+		bar.value = current_gauge
+		
+		# Petit effet visuel : la barre devient verte/jaune quand l'attaque est prête !
+		if current_gauge >= max_gauge:
+			bar.modulate = Color(1.0, 0.8, 0.0) # Doré
+		else:
+			bar.modulate = Color(1.0, 1.0, 1.0) # Normal

@@ -19,12 +19,24 @@ func _physics_process(delta):
 func handle_attacks():
 	var attack_action = "p" + str(player_number) + "_attack"
 	if Input.is_action_just_pressed(attack_action):
-		is_attacking = true
 		
-		if attack_effect:
-			var projectile = attack_effect.instantiate()
-			get_tree().current_scene.add_child(projectile)
-			throw_projectile(projectile)
+		# On vérifie si la jauge est pleine (10)
+		if special_gauge >= MAX_SPECIAL_GAUGE:
+			is_attacking = true
+			
+			# On vide la jauge immédiatement pour qu'il reparte à 0
+			special_gauge = 0
+			update_hud() 
+			
+			# --- TOUT CE BLOC EST MAINTENANT BIEN INDENTÉ ---
+			if attack_effect:
+				var projectile = attack_effect.instantiate()
+				get_tree().current_scene.add_child(projectile)
+				throw_projectile(projectile)
+				
+			# J'ai rajouté cette ligne essentielle pour débloquer le personnage après son attaque
+			await get_tree().create_timer(0.2).timeout
+			is_attacking = false
 			
 		await get_tree().create_timer(0.5).timeout
 		is_attacking = false

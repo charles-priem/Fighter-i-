@@ -24,16 +24,27 @@ func get_adversaire() -> BasePlayer:
 func handle_attacks():
 	var attack_action = "p" + str(player_number) + "_attack"
 	if Input.is_action_just_pressed(attack_action):
+		
 		var adversaire = get_adversaire()
 		if adversaire == null:
 			return
-		is_attacking = true
-		var new_gravity = 980 - (adversaire.damage_percent * 13)
-		adversaire.gravity = new_gravity
-		await get_tree().create_timer(2).timeout
-		adversaire.gravity = 980
-		adversaire.take_hit(10, 5, 5, not facing_left, false)
-		is_attacking = false
+			
+		# On vérifie si la jauge est pleine (10)
+		if special_gauge >= MAX_SPECIAL_GAUGE:
+			is_attacking = true
+			
+			# On vide la jauge immédiatement pour qu'il reparte à 0
+			special_gauge = 0
+			update_hud()
+			
+			# --- L'ATTAQUE SPÉCIALE DE SCOTTEZ ---
+			var new_gravity = 980 - (adversaire.damage_percent * 13)
+			adversaire.gravity = new_gravity
+			await get_tree().create_timer(2).timeout
+			adversaire.gravity = 980
+			adversaire.take_hit(50.0, 5.0, 5.0, not facing_left, false)
+			
+			is_attacking = false
 		
 
 func update_animation():

@@ -29,6 +29,8 @@ var taking_damage    : bool  = false
 var spawn_point      : Vector2
 var hud_control      : Node  = null
 var _is_dying        : bool  = false
+var special_gauge    : int   = 0
+const MAX_SPECIAL_GAUGE : int = 10
 
 # Dash
 var is_dashing       : bool  = false
@@ -311,6 +313,7 @@ func die():
 # RESPAWN 
 func respawn():
 	damage_percent = 0.0
+	special_gauge = 0
 	velocity = Vector2.ZERO
 	invincible_timer = 2.0
 	stun_timer = 0.0 # On s'assure d'enlever le stun s'il meurt pendant qu'il vole
@@ -327,6 +330,14 @@ func get_hud():
 
 func set_hud(hud: Node) -> void:
 	hud_control = hud
+	
+	# Augmenter la jauge spéciale
+func add_special_gauge(amount: int = 1):
+	if special_gauge < MAX_SPECIAL_GAUGE:
+		special_gauge += amount
+		if special_gauge > MAX_SPECIAL_GAUGE:
+			special_gauge = MAX_SPECIAL_GAUGE
+		update_hud()
 
 # HUD 
 func update_hud():
@@ -335,6 +346,9 @@ func update_hud():
 	if hud:
 		hud.update_percent(player_number, damage_percent)
 		hud.update_stocks(player_number, stocks)
+		
+		if hud.has_method("update_special"):
+			hud.update_special(player_number, special_gauge, MAX_SPECIAL_GAUGE)
 
 # UTILITAIRE ATTAQUE
 func do_attack(hitbox_name: String, startup: float,

@@ -37,7 +37,7 @@ border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(0.91227055, 4.7168137e-06, 6.738305e-07, 1)
+border_color = Color(0, 0, 1, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -53,7 +53,7 @@ border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(0.009947663, 0.23879623, 1, 1)
+border_color = Color(1, 0, 0, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -205,6 +205,9 @@ horizontal_alignment = 1
 [node name="P1Stocks" type="HBoxContainer" parent="HUD/HUDControl/P1Panel/VBoxContainer" unique_id=307571703]
 layout_mode = 2
 
+[node name="P1Special" type="ProgressBar" parent="HUD/HUDControl/P1Panel/VBoxContainer" unique_id=1590964765]
+layout_mode = 2
+
 [node name="P2Panel" type="PanelContainer" parent="HUD/HUDControl" unique_id=1451034187]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 0
@@ -231,6 +234,9 @@ text = "0%"
 horizontal_alignment = 1
 
 [node name="P2Stocks" type="HBoxContainer" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=1346808228]
+layout_mode = 2
+
+[node name="P2Special" type="ProgressBar" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=979245189]
 layout_mode = 2
 
 [node name="TimePanel" type="PanelContainer" parent="HUD/HUDControl" unique_id=692279510]

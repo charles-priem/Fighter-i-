@@ -19,13 +19,23 @@ func _physics_process(delta):
 func handle_attacks():
 	var attack_action = "p" + str(player_number) + "_attack"
 	if Input.is_action_just_pressed(attack_action):
-		is_attacking = true
-		await get_tree().create_timer(0.4).timeout
-		var projectile = papier_morelle.instantiate()
-		get_tree().current_scene.add_child(projectile)
-		throw_projectile(projectile)
-		await get_tree().create_timer(0.1).timeout
-		is_attacking = false
+		
+		# On vérifie si la jauge est pleine (10)
+		if special_gauge >= MAX_SPECIAL_GAUGE:
+			is_attacking = true
+			
+			# On vide la jauge immédiatement pour qu'il reparte à 0
+			special_gauge = 0
+			update_hud() 
+			
+			# --- TOUT CE BLOC EST MAINTENANT BIEN INDENTÉ ---
+			await get_tree().create_timer(0.4).timeout
+			var projectile = papier_morelle.instantiate()
+			get_tree().current_scene.add_child(projectile)
+			throw_projectile(projectile)
+			
+			await get_tree().create_timer(0.1).timeout
+			is_attacking = false
 
 func update_animation():
 	if is_attacking:

@@ -20,3 +20,6 @@ func _on_body_entered(body):
 		var facing_right = not parent.facing_left
 		# Infliger les dégâts
 		body.take_hit(data[0], data[1], data[2], facing_right, true)
+		# On remplit la jauge de l'attaquant !
+		if parent.has_method("add_special_gauge"):
+			parent.add_special_gauge(1)
