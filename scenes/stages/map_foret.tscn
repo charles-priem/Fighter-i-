@@ -228,10 +228,8 @@ color = Color(1, 1, 1, 0.43529412)
 polygon = PackedVector2Array(-101.91481, -58.38222, 102.00722, -58.38222, 102.00722, 59.57738, -101.267876, 59.57738)
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1605162887]
-visible = false
 
 [node name="HUDControl" type="Control" parent="HUD" unique_id=1148448568]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -270,6 +268,9 @@ horizontal_alignment = 1
 [node name="P1Stocks" type="HBoxContainer" parent="HUD/HUDControl/P1Panel/VBoxContainer" unique_id=307571703]
 layout_mode = 2
 
+[node name="P1Special" type="ProgressBar" parent="HUD/HUDControl/P1Panel/VBoxContainer" unique_id=546926172]
+layout_mode = 2
+
 [node name="P2Panel" type="PanelContainer" parent="HUD/HUDControl" unique_id=1451034187]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 0
@@ -296,6 +297,9 @@ text = "0%"
 horizontal_alignment = 1
 
 [node name="P2Stocks" type="HBoxContainer" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=1346808228]
+layout_mode = 2
+
+[node name="P2Special" type="ProgressBar" parent="HUD/HUDControl/P2Panel/VBoxContainer" unique_id=136055029]
 layout_mode = 2
 
 [node name="TimePanel" type="PanelContainer" parent="HUD/HUDControl" unique_id=692279510]
