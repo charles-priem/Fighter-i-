@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7m2bkrlo5kn8"
-path="res://.godot/imported/samuel_punch1.png-05e9e64613f5449259681bbefde61c70.ctex"
+uid="uid://bcncw8frxpwya"
+path="res://.godot/imported/jump2.png-2f2b421c866bcb6b3ba207a65bb06b8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Personnages/Deleplanque/samuel_punch1.png"
-dest_files=["res://.godot/imported/samuel_punch1.png-05e9e64613f5449259681bbefde61c70.ctex"]
+source_file="res://assets/sprites/Personnages/Blandre/jump2.png"
+dest_files=["res://.godot/imported/jump2.png-2f2b421c866bcb6b3ba207a65bb06b8e.ctex"]
 
 [params]
 

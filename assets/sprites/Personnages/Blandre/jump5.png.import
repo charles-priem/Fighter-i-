@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dieoojtxfvhs8"
-path="res://.godot/imported/blandre_jump3.png-dbb7548e9b4eb9a9b7b0ca66424d8823.ctex"
+uid="uid://b4cw7b84chwoq"
+path="res://.godot/imported/jump5.png-a827e5ae29d9b2880fd18d0b47ff96e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Personnages/Blandre/blandre_jump3.png"
-dest_files=["res://.godot/imported/blandre_jump3.png-dbb7548e9b4eb9a9b7b0ca66424d8823.ctex"]
+source_file="res://assets/sprites/Personnages/Blandre/jump5.png"
+dest_files=["res://.godot/imported/jump5.png-a827e5ae29d9b2880fd18d0b47ff96e9.ctex"]
 
 [params]
 

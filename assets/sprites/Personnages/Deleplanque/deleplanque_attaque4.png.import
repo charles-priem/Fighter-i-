@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://etlsstaq5o7t"
-path="res://.godot/imported/samuel_punch4.png-55dbe52e64250e876b71f14973062f13.ctex"
+uid="uid://dbneq2kgsybw5"
+path="res://.godot/imported/deleplanque_attaque4.png-3a62eaf00ee4ba96a0b0020deede978e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Personnages/Deleplanque/samuel_punch4.png"
-dest_files=["res://.godot/imported/samuel_punch4.png-55dbe52e64250e876b71f14973062f13.ctex"]
+source_file="res://assets/sprites/Personnages/Deleplanque/deleplanque_attaque4.png"
+dest_files=["res://.godot/imported/deleplanque_attaque4.png-3a62eaf00ee4ba96a0b0020deede978e.ctex"]
 
 [params]
 

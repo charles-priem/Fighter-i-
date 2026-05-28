@@ -47,10 +47,15 @@
 [ext_resource type="Texture2D" uid="uid://bqo1jcmh5xxdt" path="res://assets/sprites/Personnages/Deleplanque/samuel_climb9.png" id="45_climb9"]
 [ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="46"]
 [ext_resource type="Texture2D" uid="uid://t5h0ljmdn1fi" path="res://assets/sprites/Personnages/Deleplanque/Samuel_attackpng1.png" id="47"]
+[ext_resource type="Texture2D" uid="uid://b47petnl17ilf" path="res://assets/sprites/Personnages/Deleplanque/deleplanque_attaque0.png" id="47_ovwsn"]
 [ext_resource type="Texture2D" uid="uid://c1ieh13prrwu3" path="res://assets/sprites/Personnages/Deleplanque/Samuel_attackpng2.png" id="48"]
+[ext_resource type="Texture2D" uid="uid://bj52amplsvv3f" path="res://assets/sprites/Personnages/Deleplanque/deleplanque_attaque1.png" id="48_va41e"]
 [ext_resource type="Texture2D" uid="uid://cfce6hdbb5ang" path="res://assets/sprites/Personnages/Deleplanque/Samuel_attackpng3.png" id="49"]
+[ext_resource type="Texture2D" uid="uid://d4v5ycpe8x7g" path="res://assets/sprites/Personnages/Deleplanque/deleplanque_attaque2.png" id="49_dvex4"]
 [ext_resource type="Texture2D" uid="uid://cxk1mdx77xa5e" path="res://assets/sprites/Personnages/Deleplanque/Samuel_attackpng4.png" id="50"]
+[ext_resource type="Texture2D" uid="uid://dgjfajy1ct6n" path="res://assets/sprites/Personnages/Deleplanque/deleplanque_attaque3.png" id="50_xtjmp"]
 [ext_resource type="Texture2D" uid="uid://c4gkcm0gnv26r" path="res://assets/sprites/Personnages/Deleplanque/Samuel_attackpng5.png" id="51"]
+[ext_resource type="Texture2D" uid="uid://dbneq2kgsybw5" path="res://assets/sprites/Personnages/Deleplanque/deleplanque_attaque4.png" id="51_ojonn"]
 [ext_resource type="Texture2D" uid="uid://1gi4skv256vb" path="res://assets/sprites/Personnages/Deleplanque/Samuel_attackpng6.png" id="52"]
 [ext_resource type="Texture2D" uid="uid://cxg8th2oet8pg" path="res://assets/sprites/Personnages/Deleplanque/Samuel_attackpng7.png" id="53"]
 [ext_resource type="Texture2D" uid="uid://dapbsmjuwjttp" path="res://assets/sprites/Personnages/Deleplanque/Samuel_attackpng8.png" id="54"]
@@ -223,31 +228,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("28_dash1")
+"texture": ExtResource("47_ovwsn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_dash2")
+"texture": ExtResource("48_va41e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_dash3")
+"texture": ExtResource("49_dvex4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_dash4")
+"texture": ExtResource("50_xtjmp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_dash5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_dash6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_dash7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_dash8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_dash9")
+"texture": ExtResource("51_ojonn")
 }],
 "loop": false,
 "name": &"melee",
@@ -302,6 +295,7 @@ script = ExtResource("1_deleplanque_script")
 sac_projectile = ExtResource("56")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1309648914]
+position = Vector2(13, -1)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_deleplanque")
 animation = &"melee"

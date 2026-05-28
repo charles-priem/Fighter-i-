@@ -31,10 +31,14 @@ func handle_attacks():
 func update_animation():
 	if is_attacking:
 		if animated_sprite.animation == &"melee":
+			animated_sprite.flip_h = facing_left
 			return
 		if animated_sprite.animation != &"attack":
 			animated_sprite.play("attack")
+			animated_sprite.flip_h = not facing_left
 		return
+	
+	animated_sprite.flip_h = not facing_left
 	if not is_on_floor():
 		if velocity.y < 0:
 			animated_sprite.play("jump")

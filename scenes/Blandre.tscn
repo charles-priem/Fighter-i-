@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dkhew6r6jws05"]
+[gd_scene format=3 uid="uid://dkhew6r6jws05"]
 
 [ext_resource type="Script" uid="uid://djcqcuvuton3y" path="res://scripts/Blandre.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://cy4timxg6rb3c" path="res://assets/sprites/Personnages/Blandre/blandre_attack1.png" id="2"]
@@ -13,12 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://dhytmc35avapw" path="res://assets/sprites/Personnages/Blandre/blandre_climb3.png" id="11"]
 [ext_resource type="Texture2D" uid="uid://3oakvpl7rqol" path="res://assets/sprites/Personnages/Blandre/blandre_climb4.png" id="12"]
 [ext_resource type="Texture2D" uid="uid://h5ftbyj2dnlq" path="res://assets/sprites/Personnages/Blandre/blandre_climb5.png" id="13"]
-[ext_resource type="Texture2D" uid="uid://81qr5q8enj6s" path="res://assets/sprites/Personnages/Blandre/blandre_dash1.png" id="21"]
-[ext_resource type="Texture2D" uid="uid://jdbwa3b2mhks" path="res://assets/sprites/Personnages/Blandre/blandre_dash2.png" id="22"]
-[ext_resource type="Texture2D" uid="uid://cyyx0h3hkmjwm" path="res://assets/sprites/Personnages/Blandre/blandre_dash3.png" id="23"]
-[ext_resource type="Texture2D" uid="uid://d2nclsohljbl7" path="res://assets/sprites/Personnages/Blandre/blandre_dash4.png" id="24"]
-[ext_resource type="Texture2D" uid="uid://wx1msttdffdp" path="res://assets/sprites/Personnages/Blandre/blandre_dash5.png" id="25"]
-[ext_resource type="Texture2D" uid="uid://b0pake15sk7tl" path="res://assets/sprites/Personnages/Blandre/blandre_dash6.png" id="26"]
 [ext_resource type="Texture2D" uid="uid://cnppkg663ce8a" path="res://assets/sprites/Personnages/Blandre/blandre_idle1.png" id="14"]
 [ext_resource type="Texture2D" uid="uid://n61vyj5iv3n4" path="res://assets/sprites/Personnages/Blandre/blandre_idle2.png" id="15"]
 [ext_resource type="Texture2D" uid="uid://vva75wfuote5" path="res://assets/sprites/Personnages/Blandre/blandre_idle3.png" id="16"]
@@ -26,20 +20,26 @@
 [ext_resource type="Texture2D" uid="uid://bgb1no8tm703b" path="res://assets/sprites/Personnages/Blandre/blandre_idle5.png" id="18"]
 [ext_resource type="Texture2D" uid="uid://bvaggd4oieh8w" path="res://assets/sprites/Personnages/Blandre/blandre_idle6.png" id="19"]
 [ext_resource type="Texture2D" uid="uid://bf7k5aiaddear" path="res://assets/sprites/Personnages/Blandre/blandre_idle7.png" id="20"]
-[ext_resource type="Texture2D" uid="uid://l0gy1xkuuu0r" path="res://assets/sprites/Personnages/Blandre/blandre_jump.png" id="27"]
-[ext_resource type="Texture2D" uid="uid://cchnhumq3dglg" path="res://assets/sprites/Personnages/Blandre/blandre_jump2.png" id="28"]
-[ext_resource type="Texture2D" uid="uid://cyuju2yg4jl1s" path="res://assets/sprites/Personnages/Blandre/blandre_jump3.png" id="29"]
-[ext_resource type="Texture2D" uid="uid://dsi8sm4oo4xr7" path="res://assets/sprites/Personnages/Blandre/blandre_jump4.png" id="30"]
-[ext_resource type="Texture2D" uid="uid://bwef25jl46gy4" path="res://assets/sprites/Personnages/Blandre/blandre_jump5.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://81qr5q8enj6s" path="res://assets/sprites/Personnages/Blandre/blandre_dash1.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://jdbwa3b2mhks" path="res://assets/sprites/Personnages/Blandre/blandre_dash2.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://cyyx0h3hkmjwm" path="res://assets/sprites/Personnages/Blandre/blandre_dash3.png" id="23"]
+[ext_resource type="Texture2D" uid="uid://d2nclsohljbl7" path="res://assets/sprites/Personnages/Blandre/blandre_dash4.png" id="24"]
+[ext_resource type="Texture2D" uid="uid://wx1msttdffdp" path="res://assets/sprites/Personnages/Blandre/blandre_dash5.png" id="25"]
+[ext_resource type="Texture2D" uid="uid://b0pake15sk7tl" path="res://assets/sprites/Personnages/Blandre/blandre_dash6.png" id="26"]
 [ext_resource type="Texture2D" uid="uid://mi2hp0e5pt83" path="res://assets/sprites/Personnages/Blandre/blandre_taking_damage1.png" id="32"]
 [ext_resource type="Texture2D" uid="uid://c6k4r413dx826" path="res://assets/sprites/Personnages/Blandre/blandre_taking_damage2.png" id="33"]
 [ext_resource type="Texture2D" uid="uid://c0nk56rksg4ap" path="res://assets/sprites/Personnages/Blandre/blandre_taking_damage3.png" id="34"]
 [ext_resource type="Texture2D" uid="uid://by3aae78w8blq" path="res://assets/sprites/Personnages/Blandre/blandre_taking_damage4.png" id="35"]
 [ext_resource type="Texture2D" uid="uid://b18lu5pgjx0x" path="res://assets/sprites/Personnages/Blandre/blandre_taking_damage5.png" id="36"]
+[ext_resource type="Texture2D" uid="uid://pjqhgdh6u2d6" path="res://assets/sprites/Personnages/Blandre/jump1.png" id="36_ylomh"]
 [ext_resource type="Texture2D" uid="uid://mntkk3ibme15" path="res://assets/sprites/Personnages/Blandre/blandre_taking_damage6.png" id="37"]
+[ext_resource type="Texture2D" uid="uid://bcncw8frxpwya" path="res://assets/sprites/Personnages/Blandre/jump2.png" id="37_tp5cd"]
 [ext_resource type="Texture2D" uid="uid://6x4a4nr1ujnp" path="res://assets/sprites/Personnages/Blandre/blandre_taking_damage7.png" id="38"]
+[ext_resource type="Texture2D" uid="uid://okp42v8qh3ki" path="res://assets/sprites/Personnages/Blandre/jump3.png" id="38_hxwgh"]
 [ext_resource type="Texture2D" uid="uid://bhq5j1rjm7ij0" path="res://assets/sprites/Personnages/Blandre/blandre_walk1.png" id="39"]
+[ext_resource type="Texture2D" uid="uid://h5rg2s7r02ri" path="res://assets/sprites/Personnages/Blandre/jump4.png" id="39_qn56t"]
 [ext_resource type="Texture2D" uid="uid://d0jpdjvfej0s8" path="res://assets/sprites/Personnages/Blandre/blandre_walk2.png" id="40"]
+[ext_resource type="Texture2D" uid="uid://b4cw7b84chwoq" path="res://assets/sprites/Personnages/Blandre/jump5.png" id="40_dqoub"]
 [ext_resource type="Texture2D" uid="uid://bqh4iq50o7rre" path="res://assets/sprites/Personnages/Blandre/blandre_walk3.png" id="41"]
 [ext_resource type="Texture2D" uid="uid://cu2f6djxj58oj" path="res://assets/sprites/Personnages/Blandre/blandre_walk4.png" id="42"]
 [ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="43"]
@@ -143,10 +143,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("30")
+"texture": ExtResource("38_hxwgh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31")
+"texture": ExtResource("39_qn56t")
 }],
 "loop": true,
 "name": &"fall",
@@ -180,17 +180,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("27")
+"texture": ExtResource("36_ylomh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28")
+"texture": ExtResource("37_tp5cd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29")
+"texture": ExtResource("38_hxwgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_qn56t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_dqoub")
 }],
 "loop": true,
 "name": &"jump",
-"speed": 15.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -233,7 +239,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 20.0
+"speed": 13.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="2"]
@@ -254,6 +260,7 @@ script = ExtResource("1")
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("1")
 animation = &"run"
+frame_progress = 0.13857296
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]
@@ -266,12 +273,12 @@ shape = SubResource("2")
 position = Vector2(-4, -15)
 shape = SubResource("3")
 
-[node name="MeleeArea" type="Area2D" parent="."]
+[node name="MeleeArea" type="Area2D" parent="." unique_id=556117190]
 position = Vector2(40, -20)
 monitoring = false
 monitorable = false
 script = ExtResource("43")
 attack_type = "melee"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea" unique_id=969702049]
 shape = SubResource("4")

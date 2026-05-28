@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dieoojtxfvhs8"
-path="res://.godot/imported/blandre_jump3.png-dbb7548e9b4eb9a9b7b0ca66424d8823.ctex"
+uid="uid://dgjfajy1ct6n"
+path="res://.godot/imported/deleplanque_attaque3.png-66a69503c0d9ea055c3d86b5c97a467c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Personnages/Blandre/blandre_jump3.png"
-dest_files=["res://.godot/imported/blandre_jump3.png-dbb7548e9b4eb9a9b7b0ca66424d8823.ctex"]
+source_file="res://assets/sprites/Personnages/Deleplanque/deleplanque_attaque3.png"
+dest_files=["res://.godot/imported/deleplanque_attaque3.png-66a69503c0d9ea055c3d86b5c97a467c.ctex"]
 
 [params]
 
