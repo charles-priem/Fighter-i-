@@ -1,6 +1,7 @@
 extends BasePlayer
 
 @onready var animated_sprite = $AnimatedSprite2D
+@export var projectile_mele: PackedScene
 
 func _ready():
 	super._ready()
@@ -14,6 +15,30 @@ func _ready():
 func _physics_process(delta):
 	super._physics_process(delta)
 	update_animation()
+
+func handle_attacks():
+	var attack_action = "p" + str(player_number) + "_attack"
+	if Input.is_action_just_pressed(attack_action):
+		
+		# On vérifie si la jauge est pleine (10)
+		if special_gauge >= MAX_SPECIAL_GAUGE:
+			is_attacking = true
+			
+			# On vide la jauge
+			special_gauge = 0
+			update_hud() 
+			
+			# On joue la ligne de voix spéciale
+			play_voice(voice_special)
+			
+			await get_tree().create_timer(0.4).timeout
+			if projectile_mele:
+				var projectile = projectile_mele.instantiate()
+				get_tree().current_scene.add_child(projectile)
+				throw_projectile(projectile)
+				
+			await get_tree().create_timer(0.2).timeout
+			is_attacking = false
 
 func update_animation():
 	if is_attacking:
@@ -44,3 +69,5 @@ func update_animation():
 		taking_damage = false
 	else:
 		animated_sprite.play("idle")
+
+		

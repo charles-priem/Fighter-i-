@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dn6bw15bjed5w"]
 
 [ext_resource type="Script" uid="uid://ctkmoiajd2gxy" path="res://scripts/Mele.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://dd1ty3w812nxo" path="res://assets/sprites/Personnages/Mele/Mele_attack1.png" id="2"]
 [ext_resource type="AudioStream" uid="uid://rt0wlbruycdx" path="res://assets/audio/voicelines/Mele/kamehamechat_mele.wav" id="2_b8wmt"]
 [ext_resource type="Texture2D" uid="uid://dv1us3yog8lsc" path="res://assets/sprites/Personnages/Mele/Mele_attack2.png" id="3"]
 [ext_resource type="AudioStream" uid="uid://cuab4ieif8ooi" path="res://assets/audio/voicelines/Mele/etat_quantique_mele.wav" id="3_x6mwx"]
@@ -10,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ccpfgd0rrhrt1" path="res://assets/sprites/Personnages/Mele/Mele_attack4.png" id="5"]
 [ext_resource type="AudioStream" uid="uid://cep27qtgeuho8" path="res://assets/audio/voicelines/Mele/unites2_mele.wav" id="5_n82br"]
 [ext_resource type="Texture2D" uid="uid://edya4g5lb4gx" path="res://assets/sprites/Personnages/Mele/Mele_attack5.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://bs0j8neq0crie" path="res://assets/sprites/Personnages/Mele/mele_attaque4.png" id="6_n82br"]
 [ext_resource type="Texture2D" uid="uid://biprdu8dvyc1w" path="res://assets/sprites/Personnages/Mele/Mele_attack6.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://d2tlcrv5mqch0" path="res://assets/sprites/Personnages/Mele/Mele_attack7.png" id="8"]
 [ext_resource type="Texture2D" uid="uid://keexu27khahw" path="res://assets/sprites/Personnages/Mele/Mele_attack8.png" id="9"]
@@ -37,7 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://jm7ymoe4c41p" path="res://assets/sprites/Personnages/Mele/Mele_dash6.png" id="31"]
 [ext_resource type="Texture2D" uid="uid://bbqtp0v4hhr3t" path="res://assets/sprites/Personnages/Mele/Mele_dash7.png" id="32"]
 [ext_resource type="Texture2D" uid="uid://cbybuifwhi3ko" path="res://assets/sprites/Personnages/Mele/Mele_dash8.png" id="33"]
-[ext_resource type="Texture2D" uid="uid://c3nb51wfk65h2" path="res://assets/sprites/Personnages/Mele/Mele_jumping6.png" id="34"]
 [ext_resource type="Texture2D" uid="uid://besklsbpnv112" path="res://assets/sprites/Personnages/Mele/Mele_jumping7.png" id="35"]
 [ext_resource type="Texture2D" uid="uid://djy6ecotjf4to" path="res://assets/sprites/Personnages/Mele/Mele_idle1.png" id="36"]
 [ext_resource type="Texture2D" uid="uid://cn16vwcak4eyd" path="res://assets/sprites/Personnages/Mele/Mele_idle2.png" id="37"]
@@ -55,16 +54,20 @@
 [ext_resource type="Texture2D" uid="uid://cflik6v4ap184" path="res://assets/sprites/Personnages/Mele/Mele_walk2.png" id="49"]
 [ext_resource type="Texture2D" uid="uid://cin3kyu5gfq1v" path="res://assets/sprites/Personnages/Mele/Mele_walk3.png" id="50"]
 [ext_resource type="Texture2D" uid="uid://cqndjdca6ymgg" path="res://assets/sprites/Personnages/Mele/Mele_walk4.png" id="51"]
+[ext_resource type="Texture2D" uid="uid://dpxwbykk2131e" path="res://assets/sprites/Personnages/Mele/mele_attaque0.png" id="51_y3cuo"]
 [ext_resource type="Texture2D" uid="uid://dgentnqsmgmg8" path="res://assets/sprites/Personnages/Mele/Mele_walk5.png" id="52"]
+[ext_resource type="Texture2D" uid="uid://cj7nc5tn0o404" path="res://assets/sprites/Personnages/Mele/mele_attaque1.png" id="52_u2w3d"]
 [ext_resource type="Texture2D" uid="uid://dn6kksnuu3j24" path="res://assets/sprites/Personnages/Mele/Mele_walk6.png" id="53"]
+[ext_resource type="Texture2D" uid="uid://bf8r6dis6mdav" path="res://assets/sprites/Personnages/Mele/mele_attaque2.png" id="53_u57sd"]
 [ext_resource type="Texture2D" uid="uid://x5kotqekh40b" path="res://assets/sprites/Personnages/Mele/Mele_walk7.png" id="54"]
+[ext_resource type="Texture2D" uid="uid://clcdb8kuywb00" path="res://assets/sprites/Personnages/Mele/mele_attaque3.png" id="54_55jmb"]
 [ext_resource type="Script" uid="uid://d1g2ky5ris2sd" path="res://scripts/hitbox.gd" id="55"]
 
 [sub_resource type="SpriteFrames" id="1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2")
+"texture": ExtResource("6_n82br")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3")
@@ -179,9 +182,6 @@ animations = [{
 "speed": 50.0
 }, {
 "frames": [{
-"duration": 1.5,
-"texture": ExtResource("34")
-}, {
 "duration": 1.0,
 "texture": ExtResource("35")
 }],
@@ -237,31 +237,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2")
+"texture": ExtResource("51_y3cuo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3")
+"texture": ExtResource("52_u2w3d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4")
+"texture": ExtResource("53_u57sd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5")
+"texture": ExtResource("54_55jmb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10")
+"texture": ExtResource("6_n82br")
 }],
 "loop": false,
 "name": &"melee",
@@ -317,8 +305,7 @@ voice_die = ExtResource("5_n82br")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1857223151]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("1")
-animation = &"fall"
-frame_progress = 0.55186
+animation = &"attack"
 offset = Vector2(0, -33)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=618495778]

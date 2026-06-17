@@ -40,9 +40,12 @@ func handle_attacks():
 			# --- L'ATTAQUE SPÉCIALE DE SCOTTEZ ---
 			var new_gravity = 980 - (adversaire.damage_percent * 13)
 			adversaire.gravity = new_gravity
+			
 			await get_tree().create_timer(2).timeout
-			adversaire.gravity = 980
-			adversaire.take_hit(50.0, 5.0, 5.0, not facing_left, false)
+			
+			if is_instance_valid(adversaire):
+				adversaire.gravity = 980
+				adversaire.take_hit(50.0, 5.0, 5.0, not facing_left, false)
 			
 			is_attacking = false
 		
