@@ -30,7 +30,7 @@ var spawn_point      : Vector2
 var hud_control      : Node  = null
 var _is_dying        : bool  = false
 var special_gauge    : int   = 0
-const MAX_SPECIAL_GAUGE : int = 10
+const MAX_SPECIAL_GAUGE : int = 5
 
 # Dash
 var is_dashing       : bool  = false
@@ -49,7 +49,7 @@ const REGRAB_COOLDOWN : float = 0.5
 const FAST_FALL_MULT      : float = 2.5
 const PROJECTILE_SPEED    : float = 2000.0
 const DEPLACEMENT_ATTAQUE : float = 75
-const VOICE_LINE_CHANCE   : float = 0.10
+const VOICE_LINE_CHANCE   : float = 0.25
 
 # SIGNAUX
 signal stock_lost(player_num, stocks_remaining)

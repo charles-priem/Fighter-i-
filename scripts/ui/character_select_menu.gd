@@ -53,7 +53,7 @@ var characters: Array[Dictionary] = [
 		"preview": preload("res://assets/sprites/Personnages/Morelle/morelle_idle1.webp")
 	},
 	{
-		"display_name": "N Kounou",
+		"display_name": "N Konou",
 		"scene": preload("res://scenes/NKounou.tscn"),
 		"preview": preload("res://assets/sprites/Personnages/N Kounou/nkounou_idle 2.webp")
 	},
