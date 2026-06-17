@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ctkmoiajd2gxy" path="res://scripts/Mele.gd" id="1"]
 [ext_resource type="AudioStream" uid="uid://rt0wlbruycdx" path="res://assets/audio/voicelines/Mele/kamehamechat_mele.wav" id="2_b8wmt"]
+[ext_resource type="PackedScene" uid="uid://blb783efrbt85" path="res://scenes/mele_projectile.tscn" id="2_y3cuo"]
 [ext_resource type="Texture2D" uid="uid://dv1us3yog8lsc" path="res://assets/sprites/Personnages/Mele/Mele_attack2.png" id="3"]
 [ext_resource type="AudioStream" uid="uid://cuab4ieif8ooi" path="res://assets/audio/voicelines/Mele/etat_quantique_mele.wav" id="3_x6mwx"]
 [ext_resource type="Texture2D" uid="uid://b67v6j6i150yv" path="res://assets/sprites/Personnages/Mele/Mele_attack3.png" id="4"]
@@ -237,6 +238,9 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
 "texture": ExtResource("51_y3cuo")
 }, {
 "duration": 1.0,
@@ -297,6 +301,7 @@ radius = 30.0
 
 [node name="Mele" type="CharacterBody2D" unique_id=2041489519]
 script = ExtResource("1")
+mele_projectile = ExtResource("2_y3cuo")
 voice_select = ExtResource("2_b8wmt")
 voice_hurt = ExtResource("3_x6mwx")
 voice_special = ExtResource("4_u0ute")

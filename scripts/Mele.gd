@@ -1,7 +1,7 @@
 extends BasePlayer
 
 @onready var animated_sprite = $AnimatedSprite2D
-@export var projectile_mele: PackedScene
+@export var mele_projectile: PackedScene
 
 func _ready():
 	super._ready()
@@ -32,8 +32,8 @@ func handle_attacks():
 			play_voice(voice_special)
 			
 			await get_tree().create_timer(0.4).timeout
-			if projectile_mele:
-				var projectile = projectile_mele.instantiate()
+			if mele_projectile:
+				var projectile = mele_projectile.instantiate()
 				get_tree().current_scene.add_child(projectile)
 				throw_projectile(projectile)
 				
